@@ -32,6 +32,12 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
     setRevealed(false);
   }, [word.id]);
 
+  useEffect(() => {
+    return () => {
+      void Speech.stop();
+    };
+  }, []);
+
   const knownNext = useMemo(
     () => STAGE_LABEL[transitionStage(currentStage, 'KNOWN')],
     [currentStage],
@@ -92,7 +98,11 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
           onPress={() => {
             if (!revealed) setRevealed(true);
           }}
-          style={({ pressed }) => [styles.card, !revealed && pressed && styles.cardPressed]}
+          style={({ pressed }) => [
+            styles.card,
+            !revealed && styles.cardHidden,
+            !revealed && pressed && styles.cardPressed,
+          ]}
         >
           <View style={styles.cardActions}>
             <View style={[styles.levelDot, { backgroundColor: accent }]} />
@@ -134,7 +144,7 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
                         pressed && styles.pressed,
                       ]}
                     >
-                      <Text style={[styles.exampleSpeakerText, { color: accent }]}>▶ 듣기</Text>
+                      <Text style={[styles.exampleSpeakerText, { color: accent }]}>🔊 예문 듣기</Text>
                     </Pressable>
                   </View>
                   <Text style={styles.exampleZh}>{word.exampleZh}</Text>
@@ -148,13 +158,16 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
       </ScrollView>
 
       <View style={styles.bottom}>
+        <Text style={styles.answerGuide}>
+          {revealed ? '기억 상태를 선택하세요' : '뜻을 떠올린 뒤 아래에서 선택하세요'}
+        </Text>
         <View style={styles.buttons}>
           <Pressable
             onPress={() => onAnswer('RELEARN')}
             style={({ pressed }) => [styles.actionButton, styles.relearnButton, pressed && styles.pressed]}
           >
             <Text style={styles.relearnText}>다시 학습</Text>
-            <Text style={styles.relearnSub}>↓ {relearnNext}</Text>
+            <Text style={styles.relearnSub}>다음: {relearnNext}</Text>
           </Pressable>
 
           <Pressable
@@ -166,7 +179,7 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
             ]}
           >
             <Text style={styles.knownText}>알고 있음</Text>
-            <Text style={styles.knownSub}>↑ {knownNext}</Text>
+            <Text style={styles.knownSub}>다음: {knownNext}</Text>
           </Pressable>
         </View>
       </View>
@@ -183,8 +196,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 14,
-    paddingTop: 4,
-    height: 58,
+    paddingTop: 2,
+    height: 56,
   },
   closeButton: {
     width: 44,
@@ -201,7 +214,7 @@ const styles = StyleSheet.create({
   counterWrap: {
     flex: 1,
     alignItems: 'center',
-    gap: 8,
+    gap: 7,
     paddingHorizontal: 6,
   },
   counter: {
@@ -226,16 +239,16 @@ const styles = StyleSheet.create({
   scroll: {
     flexGrow: 1,
     paddingHorizontal: 16,
-    paddingBottom: 18,
+    paddingBottom: 14,
   },
   stageRow: {
     alignItems: 'center',
-    marginTop: 12,
-    marginBottom: 12,
+    marginTop: 8,
+    marginBottom: 10,
   },
   stageChip: {
     borderRadius: 99,
-    paddingHorizontal: 13,
+    paddingHorizontal: 14,
     paddingVertical: 7,
   },
   stageLabel: {
@@ -246,19 +259,21 @@ const styles = StyleSheet.create({
     width: '100%',
     maxWidth: 520,
     alignSelf: 'center',
-    minHeight: 430,
     backgroundColor: '#FFFFFF',
-    borderRadius: 25,
+    borderRadius: 24,
     borderWidth: 1,
     borderColor: '#E9E6DF',
     paddingHorizontal: 20,
-    paddingTop: 18,
+    paddingTop: 17,
     paddingBottom: 20,
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 6 },
+    shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.05,
-    shadowRadius: 16,
+    shadowRadius: 14,
     elevation: 2,
+  },
+  cardHidden: {
+    minHeight: 355,
   },
   cardPressed: {
     transform: [{ scale: 0.995 }],
@@ -292,23 +307,23 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   wordZone: {
-    minHeight: 280,
+    minHeight: 245,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 4,
   },
   wordZoneRevealed: {
-    minHeight: 180,
+    minHeight: 145,
   },
   word: {
     color: COLORS.text,
-    fontSize: 70,
-    lineHeight: 88,
+    fontSize: 66,
+    lineHeight: 82,
     fontWeight: '500',
     textAlign: 'center',
   },
   tapHintWrap: {
-    marginTop: 20,
+    marginTop: 18,
     backgroundColor: '#F7F5F1',
     paddingHorizontal: 13,
     paddingVertical: 7,
@@ -323,19 +338,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderTopWidth: 1,
     borderTopColor: COLORS.line,
-    paddingTop: 20,
+    paddingTop: 18,
   },
   pinyin: {
     color: COLORS.text,
-    fontSize: 23,
+    fontSize: 22,
     fontWeight: '800',
     textAlign: 'center',
   },
   meaning: {
     color: COLORS.text,
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: '800',
-    marginTop: 7,
+    marginTop: 6,
     textAlign: 'center',
   },
   pos: {
@@ -346,9 +361,9 @@ const styles = StyleSheet.create({
   exampleBox: {
     width: '100%',
     backgroundColor: '#F8F7F4',
-    borderRadius: 17,
-    padding: 15,
-    marginTop: 18,
+    borderRadius: 16,
+    padding: 14,
+    marginTop: 16,
   },
   exampleHeader: {
     flexDirection: 'row',
@@ -365,7 +380,7 @@ const styles = StyleSheet.create({
     minHeight: 32,
     borderRadius: 99,
     borderWidth: 1,
-    paddingHorizontal: 12,
+    paddingHorizontal: 11,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#FFFFFF',
@@ -394,11 +409,18 @@ const styles = StyleSheet.create({
   },
   bottom: {
     paddingHorizontal: 16,
-    paddingTop: 10,
-    paddingBottom: Platform.OS === 'android' ? 26 : 14,
+    paddingTop: 9,
+    paddingBottom: Platform.OS === 'android' ? 50 : 14,
     backgroundColor: COLORS.background,
     borderTopWidth: 1,
     borderTopColor: '#ECE9E2',
+  },
+  answerGuide: {
+    color: COLORS.subtext,
+    fontSize: 10,
+    fontWeight: '700',
+    textAlign: 'center',
+    marginBottom: 8,
   },
   buttons: {
     flexDirection: 'row',
@@ -409,7 +431,7 @@ const styles = StyleSheet.create({
   },
   actionButton: {
     flex: 1,
-    minHeight: 62,
+    minHeight: 60,
     borderRadius: 18,
     alignItems: 'center',
     justifyContent: 'center',
@@ -438,7 +460,7 @@ const styles = StyleSheet.create({
   },
   knownSub: {
     color: '#FFFFFF',
-    opacity: 0.8,
+    opacity: 0.82,
     fontSize: 10,
     fontWeight: '700',
   },
