@@ -45,6 +45,12 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
     Speech.speak(word.word, { language: 'zh-CN', rate: 0.78, pitch: 1.0 });
   };
 
+  const speakExample = () => {
+    if (!word.exampleZh) return;
+    Speech.stop();
+    Speech.speak(word.exampleZh, { language: 'zh-CN', rate: 0.72, pitch: 1.0 });
+  };
+
   return (
     <SafeAreaView style={styles.safe}>
       <View style={styles.topBar}>
@@ -86,6 +92,20 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
 
               {word.exampleZh ? (
                 <View style={styles.exampleBox}>
+                  <View style={styles.exampleHeader}>
+                    <Text style={styles.exampleLabel}>예문</Text>
+                    <Pressable
+                      onPress={speakExample}
+                      hitSlop={8}
+                      style={({ pressed }) => [
+                        styles.exampleSpeakerButton,
+                        { borderColor: accent },
+                        pressed && styles.pressed,
+                      ]}
+                    >
+                      <Text style={[styles.exampleSpeakerText, { color: accent }]}>🔊 예문 듣기</Text>
+                    </Pressable>
+                  </View>
                   <Text style={styles.exampleZh}>{word.exampleZh}</Text>
                   {word.examplePinyin ? <Text style={styles.examplePinyin}>{word.examplePinyin}</Text> : null}
                   {word.exampleKo ? <Text style={styles.exampleKo}>{word.exampleKo}</Text> : null}
@@ -157,6 +177,18 @@ const styles = StyleSheet.create({
   meaning: { color: COLORS.text, fontSize: 18, fontWeight: '800', marginTop: 9, textAlign: 'center' },
   pos: { color: COLORS.subtext, fontSize: 11, marginTop: 7 },
   exampleBox: { width: '100%', backgroundColor: '#F8F7F4', borderRadius: 18, padding: 16, marginTop: 23 },
+  exampleHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 },
+  exampleLabel: { color: COLORS.subtext, fontSize: 11, fontWeight: '800' },
+  exampleSpeakerButton: {
+    minHeight: 34,
+    borderRadius: 99,
+    borderWidth: 1,
+    paddingHorizontal: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FFFFFF',
+  },
+  exampleSpeakerText: { fontSize: 12, fontWeight: '800' },
   exampleZh: { color: COLORS.text, fontSize: 17, fontWeight: '700', lineHeight: 25 },
   examplePinyin: { color: COLORS.subtext, fontSize: 12, marginTop: 5, lineHeight: 18 },
   exampleKo: { color: COLORS.text, fontSize: 13, marginTop: 8, lineHeight: 20 },
