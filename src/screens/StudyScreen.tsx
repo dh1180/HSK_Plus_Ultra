@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
+  Platform,
   Pressable,
   SafeAreaView,
   ScrollView,
@@ -40,14 +41,14 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
     [currentStage],
   );
 
-  const speak = () => {
-    Speech.stop();
+  const speakWord = () => {
+    void Speech.stop();
     Speech.speak(word.word, { language: 'zh-CN', rate: 0.78, pitch: 1.0 });
   };
 
   const speakExample = () => {
     if (!word.exampleZh) return;
-    Speech.stop();
+    void Speech.stop();
     Speech.speak(word.exampleZh, { language: 'zh-CN', rate: 0.72, pitch: 1.0 });
   };
 
@@ -57,34 +58,64 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
         <Pressable onPress={onClose} hitSlop={12} style={styles.closeButton}>
           <Text style={styles.close}>×</Text>
         </Pressable>
+
         <View style={styles.counterWrap}>
           <Text style={styles.counter}>{index + 1} / {total}</Text>
           <View style={styles.track}>
-            <View style={[styles.fill, { width: `${((index + 1) / total) * 100}%`, backgroundColor: accent }]} />
+            <View
+              style={[
+                styles.fill,
+                {
+                  width: `${((index + 1) / total) * 100}%`,
+                  backgroundColor: accent,
+                },
+              ]}
+            />
           </View>
         </View>
+
         <View style={styles.closeButton} />
       </View>
 
-      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.scroll}
+        showsVerticalScrollIndicator={false}
+      >
         <View style={styles.stageRow}>
-          <Text style={styles.stageLabel}>{reviewTimingText(item)}</Text>
+          <View style={[styles.stageChip, { backgroundColor: `${accent}18` }]}>
+            <Text style={[styles.stageLabel, { color: accent }]}>{reviewTimingText(item)}</Text>
+          </View>
         </View>
 
-        <Pressable onPress={() => setRevealed(true)} style={styles.card}>
+        <Pressable
+          onPress={() => {
+            if (!revealed) setRevealed(true);
+          }}
+          style={({ pressed }) => [styles.card, !revealed && pressed && styles.cardPressed]}
+        >
           <View style={styles.cardActions}>
             <View style={[styles.levelDot, { backgroundColor: accent }]} />
-            <Pressable onPress={speak} hitSlop={8} style={styles.speakerButton}>
-              <Text style={styles.speaker}>🔊</Text>
+            <Pressable
+              onPress={speakWord}
+              hitSlop={8}
+              style={({ pressed }) => [styles.wordAudioButton, pressed && styles.pressed]}
+            >
+              <Text style={styles.wordAudioIcon}>🔊</Text>
+              <Text style={styles.wordAudioText}>단어 듣기</Text>
             </Pressable>
           </View>
 
-          <View style={styles.wordZone}>
-            <Text style={styles.word}>{word.word}</Text>
-            {!revealed && <Text style={styles.tapHint}>눌러서 뜻 보기</Text>}
+          <View style={[styles.wordZone, revealed && styles.wordZoneRevealed]}>
+            <Text style={styles.word} adjustsFontSizeToFit numberOfLines={1}>{word.word}</Text>
+            {!revealed ? (
+              <View style={styles.tapHintWrap}>
+                <Text style={styles.tapHint}>카드를 눌러 뜻 보기</Text>
+              </View>
+            ) : null}
           </View>
 
-          {revealed && (
+          {revealed ? (
             <View style={styles.revealZone}>
               <Text style={styles.pinyin}>{word.pinyin}</Text>
               <Text style={styles.meaning}>{word.meaningKo}</Text>
@@ -99,11 +130,11 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
                       hitSlop={8}
                       style={({ pressed }) => [
                         styles.exampleSpeakerButton,
-                        { borderColor: accent },
+                        { borderColor: `${accent}80` },
                         pressed && styles.pressed,
                       ]}
                     >
-                      <Text style={[styles.exampleSpeakerText, { color: accent }]}>🔊 예문 듣기</Text>
+                      <Text style={[styles.exampleSpeakerText, { color: accent }]}>▶ 듣기</Text>
                     </Pressable>
                   </View>
                   <Text style={styles.exampleZh}>{word.exampleZh}</Text>
@@ -112,27 +143,30 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
                 </View>
               ) : null}
             </View>
-          )}
+          ) : null}
         </Pressable>
       </ScrollView>
 
       <View style={styles.bottom}>
-        <View style={styles.buttonHints}>
-          <Text style={styles.relearnHint}>↓ {relearnNext}</Text>
-          <Text style={styles.knownHint}>↑ {knownNext}</Text>
-        </View>
         <View style={styles.buttons}>
           <Pressable
             onPress={() => onAnswer('RELEARN')}
             style={({ pressed }) => [styles.actionButton, styles.relearnButton, pressed && styles.pressed]}
           >
             <Text style={styles.relearnText}>다시 학습</Text>
+            <Text style={styles.relearnSub}>↓ {relearnNext}</Text>
           </Pressable>
+
           <Pressable
             onPress={() => onAnswer('KNOWN')}
-            style={({ pressed }) => [styles.actionButton, { backgroundColor: accent }, pressed && styles.pressed]}
+            style={({ pressed }) => [
+              styles.actionButton,
+              { backgroundColor: accent },
+              pressed && styles.pressed,
+            ]}
           >
             <Text style={styles.knownText}>알고 있음</Text>
+            <Text style={styles.knownSub}>↑ {knownNext}</Text>
           </Pressable>
         </View>
       </View>
@@ -141,46 +175,194 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: COLORS.background },
-  topBar: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 18, paddingTop: 6, height: 62 },
-  closeButton: { width: 42, height: 42, alignItems: 'center', justifyContent: 'center' },
-  close: { color: COLORS.text, fontSize: 31, fontWeight: '300', marginTop: -3 },
-  counterWrap: { flex: 1, alignItems: 'center', gap: 7 },
-  counter: { color: COLORS.subtext, fontSize: 12, fontWeight: '800' },
-  track: { height: 4, borderRadius: 99, width: '100%', backgroundColor: COLORS.line, overflow: 'hidden' },
-  fill: { height: 4, borderRadius: 99 },
-  scroll: { flexGrow: 1, paddingHorizontal: 18, paddingBottom: 20 },
-  stageRow: { alignItems: 'center', marginTop: 16, marginBottom: 10 },
-  stageLabel: { color: COLORS.subtext, fontSize: 12, fontWeight: '700' },
+  safe: {
+    flex: 1,
+    backgroundColor: COLORS.background,
+  },
+  topBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 14,
+    paddingTop: 4,
+    height: 58,
+  },
+  closeButton: {
+    width: 44,
+    height: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  close: {
+    color: COLORS.text,
+    fontSize: 31,
+    fontWeight: '300',
+    marginTop: -3,
+  },
+  counterWrap: {
+    flex: 1,
+    alignItems: 'center',
+    gap: 8,
+    paddingHorizontal: 6,
+  },
+  counter: {
+    color: COLORS.subtext,
+    fontSize: 13,
+    fontWeight: '800',
+  },
+  track: {
+    height: 5,
+    borderRadius: 99,
+    width: '100%',
+    backgroundColor: COLORS.line,
+    overflow: 'hidden',
+  },
+  fill: {
+    height: 5,
+    borderRadius: 99,
+  },
+  scrollView: {
+    flex: 1,
+  },
+  scroll: {
+    flexGrow: 1,
+    paddingHorizontal: 16,
+    paddingBottom: 18,
+  },
+  stageRow: {
+    alignItems: 'center',
+    marginTop: 12,
+    marginBottom: 12,
+  },
+  stageChip: {
+    borderRadius: 99,
+    paddingHorizontal: 13,
+    paddingVertical: 7,
+  },
+  stageLabel: {
+    fontSize: 12,
+    fontWeight: '800',
+  },
   card: {
-    minHeight: 480,
+    width: '100%',
+    maxWidth: 520,
+    alignSelf: 'center',
+    minHeight: 430,
     backgroundColor: '#FFFFFF',
-    borderRadius: 28,
+    borderRadius: 25,
     borderWidth: 1,
-    borderColor: COLORS.line,
-    padding: 22,
+    borderColor: '#E9E6DF',
+    paddingHorizontal: 20,
+    paddingTop: 18,
+    paddingBottom: 20,
     shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 10 },
-    shadowOpacity: 0.04,
-    shadowRadius: 22,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.05,
+    shadowRadius: 16,
     elevation: 2,
   },
-  cardActions: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  levelDot: { width: 10, height: 10, borderRadius: 5 },
-  speakerButton: { padding: 7 },
-  speaker: { fontSize: 20 },
-  wordZone: { minHeight: 215, alignItems: 'center', justifyContent: 'center' },
-  word: { color: COLORS.text, fontSize: 76, lineHeight: 92, fontWeight: '500' },
-  tapHint: { color: '#AAA6A0', fontSize: 12, marginTop: 18 },
-  revealZone: { alignItems: 'center', borderTopWidth: 1, borderTopColor: COLORS.line, paddingTop: 25 },
-  pinyin: { color: COLORS.text, fontSize: 24, fontWeight: '700' },
-  meaning: { color: COLORS.text, fontSize: 18, fontWeight: '800', marginTop: 9, textAlign: 'center' },
-  pos: { color: COLORS.subtext, fontSize: 11, marginTop: 7 },
-  exampleBox: { width: '100%', backgroundColor: '#F8F7F4', borderRadius: 18, padding: 16, marginTop: 23 },
-  exampleHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 },
-  exampleLabel: { color: COLORS.subtext, fontSize: 11, fontWeight: '800' },
+  cardPressed: {
+    transform: [{ scale: 0.995 }],
+  },
+  cardActions: {
+    minHeight: 38,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  levelDot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+  },
+  wordAudioButton: {
+    minHeight: 36,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    borderRadius: 99,
+    paddingHorizontal: 11,
+    backgroundColor: '#F7F5F1',
+  },
+  wordAudioIcon: {
+    fontSize: 15,
+  },
+  wordAudioText: {
+    color: COLORS.subtext,
+    fontSize: 11,
+    fontWeight: '800',
+  },
+  wordZone: {
+    minHeight: 280,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 4,
+  },
+  wordZoneRevealed: {
+    minHeight: 180,
+  },
+  word: {
+    color: COLORS.text,
+    fontSize: 70,
+    lineHeight: 88,
+    fontWeight: '500',
+    textAlign: 'center',
+  },
+  tapHintWrap: {
+    marginTop: 20,
+    backgroundColor: '#F7F5F1',
+    paddingHorizontal: 13,
+    paddingVertical: 7,
+    borderRadius: 99,
+  },
+  tapHint: {
+    color: '#99948D',
+    fontSize: 11,
+    fontWeight: '700',
+  },
+  revealZone: {
+    alignItems: 'center',
+    borderTopWidth: 1,
+    borderTopColor: COLORS.line,
+    paddingTop: 20,
+  },
+  pinyin: {
+    color: COLORS.text,
+    fontSize: 23,
+    fontWeight: '800',
+    textAlign: 'center',
+  },
+  meaning: {
+    color: COLORS.text,
+    fontSize: 18,
+    fontWeight: '800',
+    marginTop: 7,
+    textAlign: 'center',
+  },
+  pos: {
+    color: COLORS.subtext,
+    fontSize: 11,
+    marginTop: 6,
+  },
+  exampleBox: {
+    width: '100%',
+    backgroundColor: '#F8F7F4',
+    borderRadius: 17,
+    padding: 15,
+    marginTop: 18,
+  },
+  exampleHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+  },
+  exampleLabel: {
+    color: COLORS.subtext,
+    fontSize: 11,
+    fontWeight: '900',
+  },
   exampleSpeakerButton: {
-    minHeight: 34,
+    minHeight: 32,
     borderRadius: 99,
     borderWidth: 1,
     paddingHorizontal: 12,
@@ -188,18 +370,80 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#FFFFFF',
   },
-  exampleSpeakerText: { fontSize: 12, fontWeight: '800' },
-  exampleZh: { color: COLORS.text, fontSize: 17, fontWeight: '700', lineHeight: 25 },
-  examplePinyin: { color: COLORS.subtext, fontSize: 12, marginTop: 5, lineHeight: 18 },
-  exampleKo: { color: COLORS.text, fontSize: 13, marginTop: 8, lineHeight: 20 },
-  bottom: { paddingHorizontal: 18, paddingTop: 9, paddingBottom: 14, backgroundColor: COLORS.background },
-  buttonHints: { flexDirection: 'row', marginBottom: 7 },
-  relearnHint: { flex: 1, textAlign: 'center', color: COLORS.danger, fontSize: 10, fontWeight: '700' },
-  knownHint: { flex: 1, textAlign: 'center', color: COLORS.success, fontSize: 10, fontWeight: '700' },
-  buttons: { flexDirection: 'row', gap: 10 },
-  actionButton: { flex: 1, height: 58, borderRadius: 19, alignItems: 'center', justifyContent: 'center' },
-  relearnButton: { backgroundColor: '#FFF0EF', borderWidth: 1, borderColor: '#F6C7C4' },
-  relearnText: { color: COLORS.danger, fontWeight: '900', fontSize: 16 },
-  knownText: { color: '#FFFFFF', fontWeight: '900', fontSize: 16 },
-  pressed: { opacity: 0.8, transform: [{ scale: 0.99 }] },
+  exampleSpeakerText: {
+    fontSize: 11,
+    fontWeight: '900',
+  },
+  exampleZh: {
+    color: COLORS.text,
+    fontSize: 17,
+    fontWeight: '700',
+    lineHeight: 25,
+  },
+  examplePinyin: {
+    color: COLORS.subtext,
+    fontSize: 12,
+    marginTop: 5,
+    lineHeight: 18,
+  },
+  exampleKo: {
+    color: COLORS.text,
+    fontSize: 13,
+    marginTop: 8,
+    lineHeight: 20,
+  },
+  bottom: {
+    paddingHorizontal: 16,
+    paddingTop: 10,
+    paddingBottom: Platform.OS === 'android' ? 26 : 14,
+    backgroundColor: COLORS.background,
+    borderTopWidth: 1,
+    borderTopColor: '#ECE9E2',
+  },
+  buttons: {
+    flexDirection: 'row',
+    gap: 10,
+    maxWidth: 520,
+    width: '100%',
+    alignSelf: 'center',
+  },
+  actionButton: {
+    flex: 1,
+    minHeight: 62,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 3,
+  },
+  relearnButton: {
+    backgroundColor: '#FFF2F0',
+    borderWidth: 1,
+    borderColor: '#F2C8C3',
+  },
+  relearnText: {
+    color: COLORS.danger,
+    fontWeight: '900',
+    fontSize: 15,
+  },
+  relearnSub: {
+    color: COLORS.danger,
+    opacity: 0.75,
+    fontSize: 10,
+    fontWeight: '700',
+  },
+  knownText: {
+    color: '#FFFFFF',
+    fontWeight: '900',
+    fontSize: 15,
+  },
+  knownSub: {
+    color: '#FFFFFF',
+    opacity: 0.8,
+    fontSize: 10,
+    fontWeight: '700',
+  },
+  pressed: {
+    opacity: 0.78,
+    transform: [{ scale: 0.99 }],
+  },
 });

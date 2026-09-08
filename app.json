@@ -2,16 +2,21 @@
   "expo": {
     "name": "HSK Plus Ultra",
     "slug": "hsk-plus-ultra",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "backgroundColor": "#F6F5F1",
+    "icon": "./assets/icon.png",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.dh1180.hskplusultra"
     },
     "android": {
-      "package": "com.dh1180.hskplusultra"
+      "package": "com.dh1180.hskplusultra",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFF2B1"
+      }
     },
     "web": {
       "bundler": "metro"
