@@ -1,6 +1,6 @@
 {
   "name": "hsk-plus-ultra",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "main": "index.ts",
   "scripts": {
@@ -9,6 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "sync:hsk": "node scripts/sync-hsk.mjs",
+    "restore:icon": "node scripts/restore-icon.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
