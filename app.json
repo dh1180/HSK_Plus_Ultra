@@ -11,10 +11,7 @@
       "bundleIdentifier": "com.dh1180.hskplusultra"
     },
     "android": {
-      "package": "com.dh1180.hskplusultra",
-      "adaptiveIcon": {
-        "backgroundColor": "#F6F5F1"
-      }
+      "package": "com.dh1180.hskplusultra"
     },
     "web": {
       "bundler": "metro"
