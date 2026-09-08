@@ -1,0 +1,3681 @@
+{
+  "generatedAt": "2026-09-08T19:24:55.281Z",
+  "source": "National Institute of Korean Language Korean Basic Dictionary via spellcheck-ko/korean-dict-nikl",
+  "missingCount": 521,
+  "countByLevel": {
+    "2": {
+      "total": 200,
+      "matched": 184,
+      "missing": 16
+    },
+    "3": {
+      "total": 500,
+      "matched": 470,
+      "missing": 30
+    },
+    "4": {
+      "total": 1000,
+      "matched": 908,
+      "missing": 92
+    },
+    "5": {
+      "total": 1600,
+      "matched": 1451,
+      "missing": 149
+    },
+    "6": {
+      "total": 1800,
+      "matched": 1566,
+      "missing": 234
+    }
+  },
+  "missing": [
+    {
+      "id": "hsk2-0308",
+      "level": 2,
+      "word": "本子",
+      "pinyin": "běnzi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk2-0322",
+      "level": 2,
+      "word": "词",
+      "pinyin": "cí",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk2-0325",
+      "level": 2,
+      "word": "从小",
+      "pinyin": "cóngxiǎo",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk2-0339",
+      "level": 2,
+      "word": "饭馆",
+      "pinyin": "fànguǎn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk2-0348",
+      "level": 2,
+      "word": "过来",
+      "pinyin": "guòlái",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk2-0349",
+      "level": 2,
+      "word": "过年",
+      "pinyin": "guònián",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk2-0365",
+      "level": 2,
+      "word": "记得",
+      "pinyin": "jìde",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk2-0389",
+      "level": 2,
+      "word": "离",
+      "pinyin": "lí",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk2-0391",
+      "level": 2,
+      "word": "楼",
+      "pinyin": "lóu",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk2-0401",
+      "level": 2,
+      "word": "门口",
+      "pinyin": "ménkǒu",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk2-0408",
+      "level": 2,
+      "word": "奶茶",
+      "pinyin": "nǎichá",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk2-0420",
+      "level": 2,
+      "word": "晴",
+      "pinyin": "qíng",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk2-0428",
+      "level": 2,
+      "word": "上网",
+      "pinyin": "shàngwǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk2-0450",
+      "level": 2,
+      "word": "往",
+      "pinyin": "wǎng",
+      "partOfSpeechZh": "动、介"
+    },
+    {
+      "id": "hsk2-0451",
+      "level": 2,
+      "word": "网上",
+      "pinyin": "wǎngshang",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk2-0496",
+      "level": 2,
+      "word": "走路",
+      "pinyin": "zǒulù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0519",
+      "level": 3,
+      "word": "被",
+      "pinyin": "bèi",
+      "partOfSpeechZh": "介"
+    },
+    {
+      "id": "hsk3-0535",
+      "level": 3,
+      "word": "冰激凌",
+      "pinyin": "bīngjīlíng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0539",
+      "level": 3,
+      "word": "不见",
+      "pinyin": "bújiàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0566",
+      "level": 3,
+      "word": "除了",
+      "pinyin": "chúle",
+      "partOfSpeechZh": "介"
+    },
+    {
+      "id": "hsk3-0586",
+      "level": 3,
+      "word": "的话",
+      "pinyin": "dehuà",
+      "partOfSpeechZh": "助"
+    },
+    {
+      "id": "hsk3-0653",
+      "level": 3,
+      "word": "关机",
+      "pinyin": "guānjī",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0659",
+      "level": 3,
+      "word": "过节",
+      "pinyin": "guòjié",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0663",
+      "level": 3,
+      "word": "好多",
+      "pinyin": "hǎoduō",
+      "partOfSpeechZh": "数"
+    },
+    {
+      "id": "hsk3-0707",
+      "level": 3,
+      "word": "街",
+      "pinyin": "jiē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0736",
+      "level": 3,
+      "word": "课本",
+      "pinyin": "kèběn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0738",
+      "level": 3,
+      "word": "课文",
+      "pinyin": "kèwén",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0751",
+      "level": 3,
+      "word": "练",
+      "pinyin": "liàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0755",
+      "level": 3,
+      "word": "聊",
+      "pinyin": "liáo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0756",
+      "level": 3,
+      "word": "聊天儿",
+      "pinyin": "liáotiānr",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0770",
+      "level": 3,
+      "word": "面前",
+      "pinyin": "miànqián",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0782",
+      "level": 3,
+      "word": "难听",
+      "pinyin": "nántīng",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk3-0791",
+      "level": 3,
+      "word": "拍照",
+      "pinyin": "pāizhào",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0813",
+      "level": 3,
+      "word": "然后",
+      "pinyin": "ránhòu",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk3-0815",
+      "level": 3,
+      "word": "认得",
+      "pinyin": "rènde",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0820",
+      "level": 3,
+      "word": "伞",
+      "pinyin": "sǎn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0866",
+      "level": 3,
+      "word": "外卖",
+      "pinyin": "wàimài",
+      "partOfSpeechZh": "动、名"
+    },
+    {
+      "id": "hsk3-0879",
+      "level": 3,
+      "word": "屋子",
+      "pinyin": "wūzi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0955",
+      "level": 3,
+      "word": "园",
+      "pinyin": "yuán",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0956",
+      "level": 3,
+      "word": "员",
+      "pinyin": "yuán",
+      "partOfSpeechZh": "后缀"
+    },
+    {
+      "id": "hsk3-0973",
+      "level": 3,
+      "word": "照相",
+      "pinyin": "zhàoxiàng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0974",
+      "level": 3,
+      "word": "直到",
+      "pinyin": "zhídào",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0977",
+      "level": 3,
+      "word": "只能",
+      "pinyin": "zhǐ néng",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk3-0979",
+      "level": 3,
+      "word": "只要",
+      "pinyin": "zhǐyào",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk3-0990",
+      "level": 3,
+      "word": "字典",
+      "pinyin": "zìdiǎn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0999",
+      "level": 3,
+      "word": "做客",
+      "pinyin": "zuòkè",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1004",
+      "level": 4,
+      "word": "安检",
+      "pinyin": "ānjiǎn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1009",
+      "level": 4,
+      "word": "白酒",
+      "pinyin": "báijiǔ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1017",
+      "level": 4,
+      "word": "报考",
+      "pinyin": "bàokǎo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1031",
+      "level": 4,
+      "word": "便于",
+      "pinyin": "biànyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1039",
+      "level": 4,
+      "word": "并",
+      "pinyin": "bìng",
+      "partOfSpeechZh": "动、副、连"
+    },
+    {
+      "id": "hsk4-1043",
+      "level": 4,
+      "word": "不必",
+      "pinyin": "búbì",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk4-1054",
+      "level": 4,
+      "word": "不光",
+      "pinyin": "bùguāng",
+      "partOfSpeechZh": "副、连"
+    },
+    {
+      "id": "hsk4-1065",
+      "level": 4,
+      "word": "操场",
+      "pinyin": "cāochǎng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1075",
+      "level": 4,
+      "word": "车速",
+      "pinyin": "chēsù",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1076",
+      "level": 4,
+      "word": "车位",
+      "pinyin": "chēwèi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1101",
+      "level": 4,
+      "word": "此外",
+      "pinyin": "cǐwài",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk4-1102",
+      "level": 4,
+      "word": "从此",
+      "pinyin": "cóngcǐ",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk4-1104",
+      "level": 4,
+      "word": "从中",
+      "pinyin": "cóngzhōng",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk4-1112",
+      "level": 4,
+      "word": "答",
+      "pinyin": "dá",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1123",
+      "level": 4,
+      "word": "大巴",
+      "pinyin": "dàbā",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1125",
+      "level": 4,
+      "word": "大夫",
+      "pinyin": "dàifu",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1148",
+      "level": 4,
+      "word": "等到",
+      "pinyin": "děngdào",
+      "partOfSpeechZh": "介"
+    },
+    {
+      "id": "hsk4-1166",
+      "level": 4,
+      "word": "动车",
+      "pinyin": "dòngchē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1172",
+      "level": 4,
+      "word": "短信",
+      "pinyin": "duǎnxìn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1182",
+      "level": 4,
+      "word": "多样",
+      "pinyin": "duōyàng",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk4-1183",
+      "level": 4,
+      "word": "而",
+      "pinyin": "ér",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk4-1187",
+      "level": 4,
+      "word": "法",
+      "pinyin": "fǎ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1206",
+      "level": 4,
+      "word": "否则",
+      "pinyin": "fǒuzé",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk4-1218",
+      "level": 4,
+      "word": "改",
+      "pinyin": "gǎi",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1230",
+      "level": 4,
+      "word": "感人",
+      "pinyin": "gǎnrén",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk4-1253",
+      "level": 4,
+      "word": "功课",
+      "pinyin": "gōngkè",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1304",
+      "level": 4,
+      "word": "坏处",
+      "pinyin": "huàichù",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1356",
+      "level": 4,
+      "word": "将",
+      "pinyin": "jiāng",
+      "partOfSpeechZh": "介、副"
+    },
+    {
+      "id": "hsk4-1366",
+      "level": 4,
+      "word": "降温",
+      "pinyin": "jiàngwēn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1378",
+      "level": 4,
+      "word": "叫作",
+      "pinyin": "jiàozuò",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1383",
+      "level": 4,
+      "word": "节假日",
+      "pinyin": "jiéjiàrì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1397",
+      "level": 4,
+      "word": "京剧",
+      "pinyin": "jīngjù",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1411",
+      "level": 4,
+      "word": "举例",
+      "pinyin": "jǔlì",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1418",
+      "level": 4,
+      "word": "剧院",
+      "pinyin": "jùyuàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1425",
+      "level": 4,
+      "word": "科技",
+      "pinyin": "kējì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1433",
+      "level": 4,
+      "word": "课堂",
+      "pinyin": "kètáng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1451",
+      "level": 4,
+      "word": "来得及",
+      "pinyin": "láidejí",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1468",
+      "level": 4,
+      "word": "俩",
+      "pinyin": "liǎ",
+      "partOfSpeechZh": "数量"
+    },
+    {
+      "id": "hsk4-1481",
+      "level": 4,
+      "word": "另外",
+      "pinyin": "lìngwài",
+      "partOfSpeechZh": "代、副、连"
+    },
+    {
+      "id": "hsk4-1502",
+      "level": 4,
+      "word": "美景",
+      "pinyin": "měijǐng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1524",
+      "level": 4,
+      "word": "男士",
+      "pinyin": "nánshì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1526",
+      "level": 4,
+      "word": "难忘",
+      "pinyin": "nánwàng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1531",
+      "level": 4,
+      "word": "能否",
+      "pinyin": "néng fǒu",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk4-1549",
+      "level": 4,
+      "word": "陪",
+      "pinyin": "péi",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1566",
+      "level": 4,
+      "word": "期中",
+      "pinyin": "qīzhōng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1567",
+      "level": 4,
+      "word": "其次",
+      "pinyin": "qícì",
+      "partOfSpeechZh": "代"
+    },
+    {
+      "id": "hsk4-1569",
+      "level": 4,
+      "word": "起到",
+      "pinyin": "qǐdào",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1574",
+      "level": 4,
+      "word": "千克",
+      "pinyin": "qiānkè",
+      "partOfSpeechZh": "量"
+    },
+    {
+      "id": "hsk4-1585",
+      "level": 4,
+      "word": "琴",
+      "pinyin": "qín",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1592",
+      "level": 4,
+      "word": "球迷",
+      "pinyin": "qiúmí",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1601",
+      "level": 4,
+      "word": "全球",
+      "pinyin": "quánqiú",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1616",
+      "level": 4,
+      "word": "仍",
+      "pinyin": "réng",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk4-1627",
+      "level": 4,
+      "word": "扫码",
+      "pinyin": "sǎomǎ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1632",
+      "level": 4,
+      "word": "上门",
+      "pinyin": "shàngmén",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1635",
+      "level": 4,
+      "word": "少见",
+      "pinyin": "shǎojiàn",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk4-1640",
+      "level": 4,
+      "word": "摄氏度",
+      "pinyin": "shèshìdù",
+      "partOfSpeechZh": "量"
+    },
+    {
+      "id": "hsk4-1641",
+      "level": 4,
+      "word": "身",
+      "pinyin": "shēn",
+      "partOfSpeechZh": "名、量"
+    },
+    {
+      "id": "hsk4-1650",
+      "level": 4,
+      "word": "省",
+      "pinyin": "shěng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1674",
+      "level": 4,
+      "word": "市区",
+      "pinyin": "shìqū",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1675",
+      "level": 4,
+      "word": "试题",
+      "pinyin": "shìtí",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1684",
+      "level": 4,
+      "word": "受不了",
+      "pinyin": "shòubuliǎo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1695",
+      "level": 4,
+      "word": "帅",
+      "pinyin": "shuài",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk4-1728",
+      "level": 4,
+      "word": "提到",
+      "pinyin": "tídào",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1746",
+      "level": 4,
+      "word": "童年",
+      "pinyin": "tóngnián",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1752",
+      "level": 4,
+      "word": "图",
+      "pinyin": "tú",
+      "partOfSpeechZh": "名、（动）"
+    },
+    {
+      "id": "hsk4-1753",
+      "level": 4,
+      "word": "图片",
+      "pinyin": "túpiàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1763",
+      "level": 4,
+      "word": "晚安",
+      "pinyin": "wǎn’ān",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1765",
+      "level": 4,
+      "word": "网购",
+      "pinyin": "wǎnggòu",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1794",
+      "level": 4,
+      "word": "鲜",
+      "pinyin": "xiān",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk4-1800",
+      "level": 4,
+      "word": "线下",
+      "pinyin": "xiànxià",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1849",
+      "level": 4,
+      "word": "演",
+      "pinyin": "yǎn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1866",
+      "level": 4,
+      "word": "已",
+      "pinyin": "yǐ",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk4-1876",
+      "level": 4,
+      "word": "应聘",
+      "pinyin": "yìngpìn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1879",
+      "level": 4,
+      "word": "用来",
+      "pinyin": "yònglái",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1880",
+      "level": 4,
+      "word": "用于",
+      "pinyin": "yòngyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1884",
+      "level": 4,
+      "word": "由",
+      "pinyin": "yóu",
+      "partOfSpeechZh": "介"
+    },
+    {
+      "id": "hsk4-1887",
+      "level": 4,
+      "word": "游玩",
+      "pinyin": "yóuwán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1894",
+      "level": 4,
+      "word": "有着",
+      "pinyin": "yǒuzhe",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1896",
+      "level": 4,
+      "word": "于是",
+      "pinyin": "yúshì",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk4-1906",
+      "level": 4,
+      "word": "约",
+      "pinyin": "yuē",
+      "partOfSpeechZh": "动、副"
+    },
+    {
+      "id": "hsk4-1908",
+      "level": 4,
+      "word": "月饼",
+      "pinyin": "yuèbing",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1910",
+      "level": 4,
+      "word": "月份",
+      "pinyin": "yuèfèn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1915",
+      "level": 4,
+      "word": "再说",
+      "pinyin": "zàishuō",
+      "partOfSpeechZh": "动、连"
+    },
+    {
+      "id": "hsk4-1931",
+      "level": 4,
+      "word": "证",
+      "pinyin": "zhèng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1938",
+      "level": 4,
+      "word": "之",
+      "pinyin": "zhī",
+      "partOfSpeechZh": "助"
+    },
+    {
+      "id": "hsk4-1965",
+      "level": 4,
+      "word": "祝",
+      "pinyin": "zhù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1968",
+      "level": 4,
+      "word": "专门",
+      "pinyin": "zhuānmén",
+      "partOfSpeechZh": "副、形"
+    },
+    {
+      "id": "hsk4-1971",
+      "level": 4,
+      "word": "转发",
+      "pinyin": "zhuǎnfā",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1977",
+      "level": 4,
+      "word": "准时",
+      "pinyin": "zhǔnshí",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk4-1980",
+      "level": 4,
+      "word": "自",
+      "pinyin": "zì",
+      "partOfSpeechZh": "介"
+    },
+    {
+      "id": "hsk4-1991",
+      "level": 4,
+      "word": "座",
+      "pinyin": "zuò",
+      "partOfSpeechZh": "名、量"
+    },
+    {
+      "id": "hsk4-1992",
+      "level": 4,
+      "word": "做法",
+      "pinyin": "zuòfǎ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2013",
+      "level": 5,
+      "word": "半夜",
+      "pinyin": "bànyè",
+      "partOfSpeechZh": "数量、名"
+    },
+    {
+      "id": "hsk5-2020",
+      "level": 5,
+      "word": "宝",
+      "pinyin": "bǎo",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2021",
+      "level": 5,
+      "word": "保",
+      "pinyin": "bǎo",
+      "partOfSpeechZh": "动、名"
+    },
+    {
+      "id": "hsk5-2030",
+      "level": 5,
+      "word": "报到",
+      "pinyin": "bàodào",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2033",
+      "level": 5,
+      "word": "报警",
+      "pinyin": "bàojǐng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2049",
+      "level": 5,
+      "word": "必",
+      "pinyin": "bì",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk5-2067",
+      "level": 5,
+      "word": "饼",
+      "pinyin": "bǐng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2078",
+      "level": 5,
+      "word": "不符",
+      "pinyin": "bùfú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2080",
+      "level": 5,
+      "word": "不然",
+      "pinyin": "bùrán",
+      "partOfSpeechZh": "连、（形）"
+    },
+    {
+      "id": "hsk5-2090",
+      "level": 5,
+      "word": "餐饮",
+      "pinyin": "cānyǐn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2114",
+      "level": 5,
+      "word": "长途",
+      "pinyin": "chángtú",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2122",
+      "level": 5,
+      "word": "吵",
+      "pinyin": "chǎo",
+      "partOfSpeechZh": "形、动"
+    },
+    {
+      "id": "hsk5-2124",
+      "level": 5,
+      "word": "车祸",
+      "pinyin": "chēhuò",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2144",
+      "level": 5,
+      "word": "城区",
+      "pinyin": "chéngqū",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2154",
+      "level": 5,
+      "word": "池",
+      "pinyin": "chí",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2178",
+      "level": 5,
+      "word": "除夕",
+      "pinyin": "chúxī",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2197",
+      "level": 5,
+      "word": "此前",
+      "pinyin": "cǐqián",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2200",
+      "level": 5,
+      "word": "从不",
+      "pinyin": "cóng bù",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-2201",
+      "level": 5,
+      "word": "从而",
+      "pinyin": "cóng’ér",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk5-2231",
+      "level": 5,
+      "word": "大于",
+      "pinyin": "dàyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2277",
+      "level": 5,
+      "word": "点赞",
+      "pinyin": "diǎnzàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2280",
+      "level": 5,
+      "word": "电器",
+      "pinyin": "diànqì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2281",
+      "level": 5,
+      "word": "电商",
+      "pinyin": "diànshāng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2283",
+      "level": 5,
+      "word": "电子版",
+      "pinyin": "diànzǐbǎn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2285",
+      "level": 5,
+      "word": "调研",
+      "pinyin": "diàoyán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2291",
+      "level": 5,
+      "word": "动人",
+      "pinyin": "dòngrén",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2297",
+      "level": 5,
+      "word": "读音",
+      "pinyin": "dúyīn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2314",
+      "level": 5,
+      "word": "二手",
+      "pinyin": "èrshǒu",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2315",
+      "level": 5,
+      "word": "二维码",
+      "pinyin": "èrwéimǎ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2340",
+      "level": 5,
+      "word": "防",
+      "pinyin": "fáng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2366",
+      "level": 5,
+      "word": "扶",
+      "pinyin": "fú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2367",
+      "level": 5,
+      "word": "福",
+      "pinyin": "fú",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2399",
+      "level": 5,
+      "word": "各行各业",
+      "pinyin": "gèháng-gèyè",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-2414",
+      "level": 5,
+      "word": "恭喜",
+      "pinyin": "gōngxǐ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2425",
+      "level": 5,
+      "word": "古老",
+      "pinyin": "gǔlǎo",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2429",
+      "level": 5,
+      "word": "挂号",
+      "pinyin": "guàhào",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2446",
+      "level": 5,
+      "word": "贵姓",
+      "pinyin": "guìxìng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2450",
+      "level": 5,
+      "word": "国画",
+      "pinyin": "guóhuà",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2451",
+      "level": 5,
+      "word": "国庆",
+      "pinyin": "guóqìng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2457",
+      "level": 5,
+      "word": "过期",
+      "pinyin": "guòqī",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2462",
+      "level": 5,
+      "word": "海鲜",
+      "pinyin": "hǎixiān",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2480",
+      "level": 5,
+      "word": "合影",
+      "pinyin": "héyǐng",
+      "partOfSpeechZh": "动、名"
+    },
+    {
+      "id": "hsk5-2492",
+      "level": 5,
+      "word": "互动",
+      "pinyin": "hùdòng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2497",
+      "level": 5,
+      "word": "化",
+      "pinyin": "huà",
+      "partOfSpeechZh": "后缀、（动）"
+    },
+    {
+      "id": "hsk5-2498",
+      "level": 5,
+      "word": "话费",
+      "pinyin": "huàfèi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2502",
+      "level": 5,
+      "word": "环节",
+      "pinyin": "huánjié",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2507",
+      "level": 5,
+      "word": "灰",
+      "pinyin": "huī",
+      "partOfSpeechZh": "名、形"
+    },
+    {
+      "id": "hsk5-2516",
+      "level": 5,
+      "word": "火锅",
+      "pinyin": "huǒguō",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2535",
+      "level": 5,
+      "word": "急需",
+      "pinyin": "jíxū",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2548",
+      "level": 5,
+      "word": "计算机",
+      "pinyin": "jìsuànjī",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2573",
+      "level": 5,
+      "word": "键",
+      "pinyin": "jiàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2586",
+      "level": 5,
+      "word": "降水",
+      "pinyin": "jiàngshuǐ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2587",
+      "level": 5,
+      "word": "浇",
+      "pinyin": "jiāo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2593",
+      "level": 5,
+      "word": "较",
+      "pinyin": "jiào",
+      "partOfSpeechZh": "介、副"
+    },
+    {
+      "id": "hsk5-2624",
+      "level": 5,
+      "word": "惊喜",
+      "pinyin": "jīngxǐ",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2626",
+      "level": 5,
+      "word": "静",
+      "pinyin": "jìng",
+      "partOfSpeechZh": "形、动"
+    },
+    {
+      "id": "hsk5-2633",
+      "level": 5,
+      "word": "居然",
+      "pinyin": "jūrán",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk5-2636",
+      "level": 5,
+      "word": "据",
+      "pinyin": "jù",
+      "partOfSpeechZh": "介"
+    },
+    {
+      "id": "hsk5-2637",
+      "level": 5,
+      "word": "距",
+      "pinyin": "jù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2653",
+      "level": 5,
+      "word": "开水",
+      "pinyin": "kāishuǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2663",
+      "level": 5,
+      "word": "科研",
+      "pinyin": "kēyán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2668",
+      "level": 5,
+      "word": "客服",
+      "pinyin": "kèfú",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2679",
+      "level": 5,
+      "word": "亏",
+      "pinyin": "kuī",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2692",
+      "level": 5,
+      "word": "泪",
+      "pinyin": "lèi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2704",
+      "level": 5,
+      "word": "力",
+      "pinyin": "lì",
+      "partOfSpeechZh": "名、后缀"
+    },
+    {
+      "id": "hsk5-2713",
+      "level": 5,
+      "word": "连忙",
+      "pinyin": "liánmáng",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk5-2734",
+      "level": 5,
+      "word": "浏览",
+      "pinyin": "liúlǎn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2738",
+      "level": 5,
+      "word": "录",
+      "pinyin": "lù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2741",
+      "level": 5,
+      "word": "路人",
+      "pinyin": "lùrén",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2755",
+      "level": 5,
+      "word": "没法儿",
+      "pinyin": "méifǎr",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2800",
+      "level": 5,
+      "word": "年夜饭",
+      "pinyin": "niányèfàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2815",
+      "level": 5,
+      "word": "赔",
+      "pinyin": "péi",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2816",
+      "level": 5,
+      "word": "陪伴",
+      "pinyin": "péibàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2822",
+      "level": 5,
+      "word": "盆",
+      "pinyin": "pén",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2825",
+      "level": 5,
+      "word": "批",
+      "pinyin": "pī",
+      "partOfSpeechZh": "量"
+    },
+    {
+      "id": "hsk5-2826",
+      "level": 5,
+      "word": "批",
+      "pinyin": "pī",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2831",
+      "level": 5,
+      "word": "拼音",
+      "pinyin": "pīnyīn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2832",
+      "level": 5,
+      "word": "品",
+      "pinyin": "pǐn",
+      "partOfSpeechZh": "后缀、（动）"
+    },
+    {
+      "id": "hsk5-2839",
+      "level": 5,
+      "word": "凭",
+      "pinyin": "píng",
+      "partOfSpeechZh": "动、介"
+    },
+    {
+      "id": "hsk5-2853",
+      "level": 5,
+      "word": "其",
+      "pinyin": "qí",
+      "partOfSpeechZh": "代"
+    },
+    {
+      "id": "hsk5-2855",
+      "level": 5,
+      "word": "其余",
+      "pinyin": "qíyú",
+      "partOfSpeechZh": "代"
+    },
+    {
+      "id": "hsk5-2864",
+      "level": 5,
+      "word": "前来",
+      "pinyin": "qiánlái",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2882",
+      "level": 5,
+      "word": "亲情",
+      "pinyin": "qīnqíng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2898",
+      "level": 5,
+      "word": "权",
+      "pinyin": "quán",
+      "partOfSpeechZh": "名、（副）"
+    },
+    {
+      "id": "hsk5-2919",
+      "level": 5,
+      "word": "人际",
+      "pinyin": "rénjì",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2923",
+      "level": 5,
+      "word": "人民",
+      "pinyin": "rénmín",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2924",
+      "level": 5,
+      "word": "人民币",
+      "pinyin": "rénmínbì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2925",
+      "level": 5,
+      "word": "人群",
+      "pinyin": "rénqún",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2935",
+      "level": 5,
+      "word": "如今",
+      "pinyin": "rújīn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2948",
+      "level": 5,
+      "word": "删",
+      "pinyin": "shān",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2951",
+      "level": 5,
+      "word": "山区",
+      "pinyin": "shānqū",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2960",
+      "level": 5,
+      "word": "商务",
+      "pinyin": "shāngwù",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2971",
+      "level": 5,
+      "word": "舍得",
+      "pinyin": "shěde",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2994",
+      "level": 5,
+      "word": "升温",
+      "pinyin": "shēngwēn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2996",
+      "level": 5,
+      "word": "生肖",
+      "pinyin": "shēngxiào",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2998",
+      "level": 5,
+      "word": "省",
+      "pinyin": "shěng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2999",
+      "level": 5,
+      "word": "省份",
+      "pinyin": "shěngfèn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3000",
+      "level": 5,
+      "word": "省会",
+      "pinyin": "shěnghuì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3026",
+      "level": 5,
+      "word": "使得",
+      "pinyin": "shǐde",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3030",
+      "level": 5,
+      "word": "似的",
+      "pinyin": "shìde",
+      "partOfSpeechZh": "助"
+    },
+    {
+      "id": "hsk5-3041",
+      "level": 5,
+      "word": "试用",
+      "pinyin": "shìyòng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3074",
+      "level": 5,
+      "word": "顺",
+      "pinyin": "shùn",
+      "partOfSpeechZh": "动、介、形"
+    },
+    {
+      "id": "hsk5-3087",
+      "level": 5,
+      "word": "酸甜苦辣",
+      "pinyin": "suān-tián-kǔ-là",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-3098",
+      "level": 5,
+      "word": "所",
+      "pinyin": "suǒ",
+      "partOfSpeechZh": "量、名"
+    },
+    {
+      "id": "hsk5-3102",
+      "level": 5,
+      "word": "台阶",
+      "pinyin": "táijiē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3105",
+      "level": 5,
+      "word": "桃",
+      "pinyin": "táo",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3126",
+      "level": 5,
+      "word": "填",
+      "pinyin": "tián",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3159",
+      "level": 5,
+      "word": "推广",
+      "pinyin": "tuīguǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3219",
+      "level": 5,
+      "word": "物业",
+      "pinyin": "wùyè",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3234",
+      "level": 5,
+      "word": "显得",
+      "pinyin": "xiǎnde",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3235",
+      "level": 5,
+      "word": "显然",
+      "pinyin": "xiǎnrán",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-3237",
+      "level": 5,
+      "word": "县",
+      "pinyin": "xiàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3266",
+      "level": 5,
+      "word": "销量",
+      "pinyin": "xiāoliàng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3271",
+      "level": 5,
+      "word": "小于",
+      "pinyin": "xiǎoyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3303",
+      "level": 5,
+      "word": "需",
+      "pinyin": "xū",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3315",
+      "level": 5,
+      "word": "雪糕",
+      "pinyin": "xuěgāo",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3338",
+      "level": 5,
+      "word": "要不",
+      "pinyin": "yàobù",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk5-3339",
+      "level": 5,
+      "word": "要不是",
+      "pinyin": "yàobúshì",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk5-3358",
+      "level": 5,
+      "word": "一路顺风",
+      "pinyin": "yílù-shùnfēng",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-3361",
+      "level": 5,
+      "word": "乙",
+      "pinyin": "yǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3363",
+      "level": 5,
+      "word": "以及",
+      "pinyin": "yǐjí",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk5-3371",
+      "level": 5,
+      "word": "因而",
+      "pinyin": "yīn’ér",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk5-3382",
+      "level": 5,
+      "word": "影片",
+      "pinyin": "yǐngpiàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3383",
+      "level": 5,
+      "word": "影视",
+      "pinyin": "yǐngshì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3402",
+      "level": 5,
+      "word": "由此",
+      "pinyin": "yóu cǐ",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-3407",
+      "level": 5,
+      "word": "油条",
+      "pinyin": "yóutiáo",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3425",
+      "level": 5,
+      "word": "预计",
+      "pinyin": "yùjì",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3428",
+      "level": 5,
+      "word": "原",
+      "pinyin": "yuán",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-3430",
+      "level": 5,
+      "word": "原有",
+      "pinyin": "yuán yǒu",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-3442",
+      "level": 5,
+      "word": "在场",
+      "pinyin": "zàichǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3443",
+      "level": 5,
+      "word": "在乎",
+      "pinyin": "zàihu",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3444",
+      "level": 5,
+      "word": "在内",
+      "pinyin": "zàinèi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3446",
+      "level": 5,
+      "word": "在于",
+      "pinyin": "zàiyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3458",
+      "level": 5,
+      "word": "赠",
+      "pinyin": "zèng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3470",
+      "level": 5,
+      "word": "占线",
+      "pinyin": "zhànxiàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3473",
+      "level": 5,
+      "word": "掌声",
+      "pinyin": "zhǎngshēng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3477",
+      "level": 5,
+      "word": "着凉",
+      "pinyin": "zháoliáng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3488",
+      "level": 5,
+      "word": "争",
+      "pinyin": "zhēng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3491",
+      "level": 5,
+      "word": "整体",
+      "pinyin": "zhěngtǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3496",
+      "level": 5,
+      "word": "正如",
+      "pinyin": "zhèngrú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3502",
+      "level": 5,
+      "word": "直播",
+      "pinyin": "zhíbō",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3509",
+      "level": 5,
+      "word": "治",
+      "pinyin": "zhì",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3520",
+      "level": 5,
+      "word": "中华",
+      "pinyin": "Zhōnghuá",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3521",
+      "level": 5,
+      "word": "中华民族",
+      "pinyin": "Zhōnghuá Mínzú",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-3525",
+      "level": 5,
+      "word": "中外",
+      "pinyin": "zhōngwài",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3537",
+      "level": 5,
+      "word": "逐步",
+      "pinyin": "zhúbù",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk5-3553",
+      "level": 5,
+      "word": "注重",
+      "pinyin": "zhùzhòng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3559",
+      "level": 5,
+      "word": "转告",
+      "pinyin": "zhuǎngào",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3574",
+      "level": 5,
+      "word": "自从",
+      "pinyin": "zìcóng",
+      "partOfSpeechZh": "介"
+    },
+    {
+      "id": "hsk6-3610",
+      "level": 6,
+      "word": "百分点",
+      "pinyin": "bǎifēndiǎn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3624",
+      "level": 6,
+      "word": "保暖",
+      "pinyin": "bǎonuǎn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3625",
+      "level": 6,
+      "word": "保修",
+      "pinyin": "bǎoxiū",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3640",
+      "level": 6,
+      "word": "被迫",
+      "pinyin": "bèipò",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3643",
+      "level": 6,
+      "word": "倍增",
+      "pinyin": "bèizēng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3649",
+      "level": 6,
+      "word": "比方",
+      "pinyin": "bǐfang",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3660",
+      "level": 6,
+      "word": "兵",
+      "pinyin": "bīng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3669",
+      "level": 6,
+      "word": "不料",
+      "pinyin": "búliào",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-3677",
+      "level": 6,
+      "word": "补习",
+      "pinyin": "bǔxí",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3680",
+      "level": 6,
+      "word": "不曾",
+      "pinyin": "bùcéng",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-3682",
+      "level": 6,
+      "word": "不得",
+      "pinyin": "bùdé",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3689",
+      "level": 6,
+      "word": "不已",
+      "pinyin": "bùyǐ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3691",
+      "level": 6,
+      "word": "不止",
+      "pinyin": "bùzhǐ",
+      "partOfSpeechZh": "动、副"
+    },
+    {
+      "id": "hsk6-3702",
+      "level": 6,
+      "word": "采购",
+      "pinyin": "cǎigòu",
+      "partOfSpeechZh": "动、名"
+    },
+    {
+      "id": "hsk6-3730",
+      "level": 6,
+      "word": "场次",
+      "pinyin": "chǎngcì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3732",
+      "level": 6,
+      "word": "场馆",
+      "pinyin": "chǎngguǎn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3734",
+      "level": 6,
+      "word": "厂家",
+      "pinyin": "chǎngjiā",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3735",
+      "level": 6,
+      "word": "场景",
+      "pinyin": "chǎngjǐng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3742",
+      "level": 6,
+      "word": "朝代",
+      "pinyin": "cháodài",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3746",
+      "level": 6,
+      "word": "炒股",
+      "pinyin": "chǎogǔ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3759",
+      "level": 6,
+      "word": "承办",
+      "pinyin": "chéngbàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3761",
+      "level": 6,
+      "word": "成交",
+      "pinyin": "chéngjiāo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3768",
+      "level": 6,
+      "word": "城镇",
+      "pinyin": "chéngzhèn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3780",
+      "level": 6,
+      "word": "抽奖",
+      "pinyin": "chōujiǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3782",
+      "level": 6,
+      "word": "愁",
+      "pinyin": "chóu",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3784",
+      "level": 6,
+      "word": "初步",
+      "pinyin": "chūbù",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-3786",
+      "level": 6,
+      "word": "初等",
+      "pinyin": "chūděng",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-3795",
+      "level": 6,
+      "word": "除非",
+      "pinyin": "chúfēi",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-3811",
+      "level": 6,
+      "word": "闯",
+      "pinyin": "chuǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3817",
+      "level": 6,
+      "word": "纯",
+      "pinyin": "chún",
+      "partOfSpeechZh": "形、副"
+    },
+    {
+      "id": "hsk6-3819",
+      "level": 6,
+      "word": "此刻",
+      "pinyin": "cǐkè",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3824",
+      "level": 6,
+      "word": "从未",
+      "pinyin": "cóngwèi",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-3825",
+      "level": 6,
+      "word": "从业",
+      "pinyin": "cóngyè",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3830",
+      "level": 6,
+      "word": "存储",
+      "pinyin": "cúnchǔ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3840",
+      "level": 6,
+      "word": "打卡",
+      "pinyin": "dǎkǎ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3841",
+      "level": 6,
+      "word": "打雷",
+      "pinyin": "dǎléi",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3845",
+      "level": 6,
+      "word": "大吃一惊",
+      "pinyin": "dàchī-yìjīng",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-3850",
+      "level": 6,
+      "word": "大伙儿",
+      "pinyin": "dàhuǒr",
+      "partOfSpeechZh": "代"
+    },
+    {
+      "id": "hsk6-3874",
+      "level": 6,
+      "word": "档案",
+      "pinyin": "dàng’àn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3878",
+      "level": 6,
+      "word": "倒车",
+      "pinyin": "dǎochē",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3881",
+      "level": 6,
+      "word": "倒是",
+      "pinyin": "dàoshì",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-3882",
+      "level": 6,
+      "word": "得了",
+      "pinyin": "déle",
+      "partOfSpeechZh": "动、助"
+    },
+    {
+      "id": "hsk6-3883",
+      "level": 6,
+      "word": "得以",
+      "pinyin": "déyǐ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3900",
+      "level": 6,
+      "word": "电饭锅",
+      "pinyin": "diànfànguō",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3907",
+      "level": 6,
+      "word": "跌",
+      "pinyin": "diē",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3912",
+      "level": 6,
+      "word": "定时",
+      "pinyin": "dìngshí",
+      "partOfSpeechZh": "动、名"
+    },
+    {
+      "id": "hsk6-3922",
+      "level": 6,
+      "word": "逗",
+      "pinyin": "dòu",
+      "partOfSpeechZh": "动、形"
+    },
+    {
+      "id": "hsk6-3934",
+      "level": 6,
+      "word": "蹲",
+      "pinyin": "dūn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3940",
+      "level": 6,
+      "word": "多元",
+      "pinyin": "duōyuán",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-3946",
+      "level": 6,
+      "word": "儿科",
+      "pinyin": "érkē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3957",
+      "level": 6,
+      "word": "发炎",
+      "pinyin": "fāyán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3962",
+      "level": 6,
+      "word": "番",
+      "pinyin": "fān",
+      "partOfSpeechZh": "量"
+    },
+    {
+      "id": "hsk6-3978",
+      "level": 6,
+      "word": "飞速",
+      "pinyin": "fēisù",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-3985",
+      "level": 6,
+      "word": "分级",
+      "pinyin": "fēnjí",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3986",
+      "level": 6,
+      "word": "分期",
+      "pinyin": "fēnqī",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4010",
+      "level": 6,
+      "word": "负面",
+      "pinyin": "fùmiàn",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4024",
+      "level": 6,
+      "word": "赶忙",
+      "pinyin": "gǎnmáng",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-4039",
+      "level": 6,
+      "word": "稿件",
+      "pinyin": "gǎojiàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4040",
+      "level": 6,
+      "word": "稿子",
+      "pinyin": "gǎozi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4063",
+      "level": 6,
+      "word": "公益",
+      "pinyin": "gōngyì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4079",
+      "level": 6,
+      "word": "股市",
+      "pinyin": "gǔshì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4087",
+      "level": 6,
+      "word": "拐弯",
+      "pinyin": "guǎiwān",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4117",
+      "level": 6,
+      "word": "海内外",
+      "pinyin": "hǎi nèiwài",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-4123",
+      "level": 6,
+      "word": "寒冬",
+      "pinyin": "hándōng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4126",
+      "level": 6,
+      "word": "旱灾",
+      "pinyin": "hànzāi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4128",
+      "level": 6,
+      "word": "毫不",
+      "pinyin": "háo bù",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-4132",
+      "level": 6,
+      "word": "好不",
+      "pinyin": "hǎobù",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-4135",
+      "level": 6,
+      "word": "好客",
+      "pinyin": "hàokè",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4136",
+      "level": 6,
+      "word": "好学",
+      "pinyin": "hàoxué",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4159",
+      "level": 6,
+      "word": "胡子",
+      "pinyin": "húzi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4189",
+      "level": 6,
+      "word": "汇报",
+      "pinyin": "huìbào",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4205",
+      "level": 6,
+      "word": "机动车",
+      "pinyin": "jīdòngchē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4212",
+      "level": 6,
+      "word": "基因",
+      "pinyin": "jīyīn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4215",
+      "level": 6,
+      "word": "即便",
+      "pinyin": "jíbiàn",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-4223",
+      "level": 6,
+      "word": "季军",
+      "pinyin": "jìjūn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4230",
+      "level": 6,
+      "word": "家常",
+      "pinyin": "jiācháng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4233",
+      "level": 6,
+      "word": "家居",
+      "pinyin": "jiājū",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4239",
+      "level": 6,
+      "word": "嫁",
+      "pinyin": "jià",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4242",
+      "level": 6,
+      "word": "监测",
+      "pinyin": "jiāncè",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4253",
+      "level": 6,
+      "word": "简介",
+      "pinyin": "jiǎnjiè",
+      "partOfSpeechZh": "动、名"
+    },
+    {
+      "id": "hsk6-4255",
+      "level": 6,
+      "word": "减压",
+      "pinyin": "jiǎnyā",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4270",
+      "level": 6,
+      "word": "胶带",
+      "pinyin": "jiāodài",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4274",
+      "level": 6,
+      "word": "胶水",
+      "pinyin": "jiāoshuǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4287",
+      "level": 6,
+      "word": "节能",
+      "pinyin": "jiénéng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4290",
+      "level": 6,
+      "word": "截止",
+      "pinyin": "jiézhǐ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4307",
+      "level": 6,
+      "word": "进而",
+      "pinyin": "jìn’ér",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-4313",
+      "level": 6,
+      "word": "精美",
+      "pinyin": "jīngměi",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4321",
+      "level": 6,
+      "word": "精准",
+      "pinyin": "jīngzhǔn",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4333",
+      "level": 6,
+      "word": "酒水",
+      "pinyin": "jiǔshuǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4334",
+      "level": 6,
+      "word": "就读",
+      "pinyin": "jiùdú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4339",
+      "level": 6,
+      "word": "救灾",
+      "pinyin": "jiùzāi",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4355",
+      "level": 6,
+      "word": "决策",
+      "pinyin": "juécè",
+      "partOfSpeechZh": "动、名"
+    },
+    {
+      "id": "hsk6-4369",
+      "level": 6,
+      "word": "看得起",
+      "pinyin": "kàndeqǐ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4371",
+      "level": 6,
+      "word": "看似",
+      "pinyin": "kànsì",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4373",
+      "level": 6,
+      "word": "看重",
+      "pinyin": "kànzhòng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4380",
+      "level": 6,
+      "word": "科幻",
+      "pinyin": "kēhuàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4382",
+      "level": 6,
+      "word": "科普",
+      "pinyin": "kēpǔ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4389",
+      "level": 6,
+      "word": "肯",
+      "pinyin": "kěn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4400",
+      "level": 6,
+      "word": "夸",
+      "pinyin": "kuā",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4401",
+      "level": 6,
+      "word": "夸奖",
+      "pinyin": "kuājiǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4404",
+      "level": 6,
+      "word": "快捷",
+      "pinyin": "kuàijié",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4406",
+      "level": 6,
+      "word": "款式",
+      "pinyin": "kuǎnshì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4412",
+      "level": 6,
+      "word": "啦",
+      "pinyin": "la",
+      "partOfSpeechZh": "助"
+    },
+    {
+      "id": "hsk6-4422",
+      "level": 6,
+      "word": "牢",
+      "pinyin": "láo",
+      "partOfSpeechZh": "名、形"
+    },
+    {
+      "id": "hsk6-4427",
+      "level": 6,
+      "word": "乐于",
+      "pinyin": "lèyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4438",
+      "level": 6,
+      "word": "力度",
+      "pinyin": "lìdù",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4440",
+      "level": 6,
+      "word": "历年",
+      "pinyin": "lìnián",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4444",
+      "level": 6,
+      "word": "联网",
+      "pinyin": "liánwǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4447",
+      "level": 6,
+      "word": "两岸",
+      "pinyin": "liǎng’àn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4457",
+      "level": 6,
+      "word": "流量",
+      "pinyin": "liúliàng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4465",
+      "level": 6,
+      "word": "路况",
+      "pinyin": "lùkuàng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4473",
+      "level": 6,
+      "word": "率",
+      "pinyin": "lǜ",
+      "partOfSpeechZh": "后缀"
+    },
+    {
+      "id": "hsk6-4475",
+      "level": 6,
+      "word": "轮",
+      "pinyin": "lún",
+      "partOfSpeechZh": "名、动、量"
+    },
+    {
+      "id": "hsk6-4486",
+      "level": 6,
+      "word": "嘛",
+      "pinyin": "ma",
+      "partOfSpeechZh": "助"
+    },
+    {
+      "id": "hsk6-4495",
+      "level": 6,
+      "word": "贸易",
+      "pinyin": "màoyì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4501",
+      "level": 6,
+      "word": "迷人",
+      "pinyin": "mírén",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4516",
+      "level": 6,
+      "word": "妙",
+      "pinyin": "miào",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4518",
+      "level": 6,
+      "word": "民歌",
+      "pinyin": "míngē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4524",
+      "level": 6,
+      "word": "名额",
+      "pinyin": "míng’é",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4533",
+      "level": 6,
+      "word": "模特儿",
+      "pinyin": "mótèr",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4544",
+      "level": 6,
+      "word": "南极洲",
+      "pinyin": "Nánjízhōu",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4588",
+      "level": 6,
+      "word": "片面",
+      "pinyin": "piànmiàn",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4601",
+      "level": 6,
+      "word": "评估",
+      "pinyin": "pínggū",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4623",
+      "level": 6,
+      "word": "启事",
+      "pinyin": "qǐshì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4633",
+      "level": 6,
+      "word": "千家万户",
+      "pinyin": "qiānjiā-wànhù",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-4670",
+      "level": 6,
+      "word": "求救",
+      "pinyin": "qiújiù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4672",
+      "level": 6,
+      "word": "求助",
+      "pinyin": "qiúzhù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4680",
+      "level": 6,
+      "word": "全程",
+      "pinyin": "quánchéng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4689",
+      "level": 6,
+      "word": "热度",
+      "pinyin": "rèdù",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4691",
+      "level": 6,
+      "word": "热水器",
+      "pinyin": "rèshuǐqì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4692",
+      "level": 6,
+      "word": "热线",
+      "pinyin": "rèxiàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4693",
+      "level": 6,
+      "word": "热议",
+      "pinyin": "rèyì",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4694",
+      "level": 6,
+      "word": "人工智能",
+      "pinyin": "réngōng zhìnéng",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-4696",
+      "level": 6,
+      "word": "人均",
+      "pinyin": "rénjūn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4703",
+      "level": 6,
+      "word": "认错",
+      "pinyin": "rèncuò",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4708",
+      "level": 6,
+      "word": "仍旧",
+      "pinyin": "réngjiù",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-4711",
+      "level": 6,
+      "word": "日夜",
+      "pinyin": "rìyè",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4725",
+      "level": 6,
+      "word": "赛事",
+      "pinyin": "sàishì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4732",
+      "level": 6,
+      "word": "扫描",
+      "pinyin": "sǎomiáo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4745",
+      "level": 6,
+      "word": "伤亡",
+      "pinyin": "shāngwáng",
+      "partOfSpeechZh": "动、名"
+    },
+    {
+      "id": "hsk6-4749",
+      "level": 6,
+      "word": "上进",
+      "pinyin": "shàngjìn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4754",
+      "level": 6,
+      "word": "少儿",
+      "pinyin": "shào’ér",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4756",
+      "level": 6,
+      "word": "社",
+      "pinyin": "shè",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4760",
+      "level": 6,
+      "word": "摄像",
+      "pinyin": "shèxiàng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4762",
+      "level": 6,
+      "word": "摄像头",
+      "pinyin": "shèxiàngtóu",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4768",
+      "level": 6,
+      "word": "审美",
+      "pinyin": "shěnměi",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4776",
+      "level": 6,
+      "word": "诗词",
+      "pinyin": "shīcí",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4812",
+      "level": 6,
+      "word": "手臂",
+      "pinyin": "shǒubì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4817",
+      "level": 6,
+      "word": "受灾",
+      "pinyin": "shòuzāi",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4824",
+      "level": 6,
+      "word": "属",
+      "pinyin": "shǔ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4825",
+      "level": 6,
+      "word": "薯片",
+      "pinyin": "shǔpiàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4829",
+      "level": 6,
+      "word": "数字化",
+      "pinyin": "shùzìhuà",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4849",
+      "level": 6,
+      "word": "虽",
+      "pinyin": "suī",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-4854",
+      "level": 6,
+      "word": "所",
+      "pinyin": "suǒ",
+      "partOfSpeechZh": "助"
+    },
+    {
+      "id": "hsk6-4866",
+      "level": 6,
+      "word": "汤圆",
+      "pinyin": "tāngyuán",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4875",
+      "level": 6,
+      "word": "特",
+      "pinyin": "tè",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-4895",
+      "level": 6,
+      "word": "田",
+      "pinyin": "tián",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4899",
+      "level": 6,
+      "word": "贴近",
+      "pinyin": "tiējìn",
+      "partOfSpeechZh": "动、形"
+    },
+    {
+      "id": "hsk6-4917",
+      "level": 6,
+      "word": "偷偷",
+      "pinyin": "tōutōu",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-4920",
+      "level": 6,
+      "word": "投诉",
+      "pinyin": "tóusù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4938",
+      "level": 6,
+      "word": "团圆",
+      "pinyin": "tuányuán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4940",
+      "level": 6,
+      "word": "推销",
+      "pinyin": "tuīxiāo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4941",
+      "level": 6,
+      "word": "推行",
+      "pinyin": "tuīxíng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4942",
+      "level": 6,
+      "word": "退税",
+      "pinyin": "tuìshuì",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4946",
+      "level": 6,
+      "word": "托运",
+      "pinyin": "tuōyùn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4972",
+      "level": 6,
+      "word": "为期",
+      "pinyin": "wéiqī",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4974",
+      "level": 6,
+      "word": "为止",
+      "pinyin": "wéizhǐ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4977",
+      "level": 6,
+      "word": "未",
+      "pinyin": "wèi",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-4980",
+      "level": 6,
+      "word": "为此",
+      "pinyin": "wèicǐ",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-4999",
+      "level": 6,
+      "word": "误",
+      "pinyin": "wù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5007",
+      "level": 6,
+      "word": "洗漱",
+      "pinyin": "xǐshù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5013",
+      "level": 6,
+      "word": "吓",
+      "pinyin": "xià",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5016",
+      "level": 6,
+      "word": "夏令营",
+      "pinyin": "xiàlìngyíng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5017",
+      "level": 6,
+      "word": "下线",
+      "pinyin": "xiàxiàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5022",
+      "level": 6,
+      "word": "嫌",
+      "pinyin": "xián",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5023",
+      "level": 6,
+      "word": "显",
+      "pinyin": "xiǎn",
+      "partOfSpeechZh": "形、动"
+    },
+    {
+      "id": "hsk6-5026",
+      "level": 6,
+      "word": "限",
+      "pinyin": "xiàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5034",
+      "level": 6,
+      "word": "相差",
+      "pinyin": "xiāngchà",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5036",
+      "level": 6,
+      "word": "相传",
+      "pinyin": "xiāngchuán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5037",
+      "level": 6,
+      "word": "相等",
+      "pinyin": "xiāngděng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5052",
+      "level": 6,
+      "word": "小偷儿",
+      "pinyin": "xiǎotōur",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5053",
+      "level": 6,
+      "word": "笑容",
+      "pinyin": "xiàoróng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5054",
+      "level": 6,
+      "word": "效应",
+      "pinyin": "xiàoyìng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5062",
+      "level": 6,
+      "word": "新款",
+      "pinyin": "xīnkuǎn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5064",
+      "level": 6,
+      "word": "新媒体",
+      "pinyin": "xīnméitǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5065",
+      "level": 6,
+      "word": "心目",
+      "pinyin": "xīnmù",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5066",
+      "level": 6,
+      "word": "新能源",
+      "pinyin": "xīnnéngyuán",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5076",
+      "level": 6,
+      "word": "型号",
+      "pinyin": "xínghào",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5078",
+      "level": 6,
+      "word": "性价比",
+      "pinyin": "xìngjiàbǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5088",
+      "level": 6,
+      "word": "选修",
+      "pinyin": "xuǎnxiū",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5101",
+      "level": 6,
+      "word": "淹",
+      "pinyin": "yān",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5103",
+      "level": 6,
+      "word": "严",
+      "pinyin": "yán",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-5116",
+      "level": 6,
+      "word": "眼看",
+      "pinyin": "yǎnkàn",
+      "partOfSpeechZh": "副、动"
+    },
+    {
+      "id": "hsk6-5120",
+      "level": 6,
+      "word": "仰",
+      "pinyin": "yǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5122",
+      "level": 6,
+      "word": "养老",
+      "pinyin": "yǎnglǎo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5130",
+      "level": 6,
+      "word": "野",
+      "pinyin": "yě",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-5131",
+      "level": 6,
+      "word": "也好",
+      "pinyin": "yěhǎo",
+      "partOfSpeechZh": "助"
+    },
+    {
+      "id": "hsk6-5139",
+      "level": 6,
+      "word": "衣食住行",
+      "pinyin": "yī-shí-zhù-xíng",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-5140",
+      "level": 6,
+      "word": "医药",
+      "pinyin": "yīyào",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5142",
+      "level": 6,
+      "word": "姨",
+      "pinyin": "yí",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5147",
+      "level": 6,
+      "word": "一道",
+      "pinyin": "yídào",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-5159",
+      "level": 6,
+      "word": "以便",
+      "pinyin": "yǐbiàn",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-5160",
+      "level": 6,
+      "word": "以免",
+      "pinyin": "yǐmiǎn",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-5191",
+      "level": 6,
+      "word": "勇于",
+      "pinyin": "yǒngyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5197",
+      "level": 6,
+      "word": "优化",
+      "pinyin": "yōuhuà",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5203",
+      "level": 6,
+      "word": "有机",
+      "pinyin": "yǒujī",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-5204",
+      "level": 6,
+      "word": "有劲",
+      "pinyin": "yǒujìn",
+      "partOfSpeechZh": "动、形"
+    },
+    {
+      "id": "hsk6-5205",
+      "level": 6,
+      "word": "有序",
+      "pinyin": "yǒuxù",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-5206",
+      "level": 6,
+      "word": "于",
+      "pinyin": "yú",
+      "partOfSpeechZh": "介"
+    },
+    {
+      "id": "hsk6-5208",
+      "level": 6,
+      "word": "与其",
+      "pinyin": "yǔqí",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-5224",
+      "level": 6,
+      "word": "元宵",
+      "pinyin": "yuánxiāo",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5238",
+      "level": 6,
+      "word": "杂",
+      "pinyin": "zá",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-5239",
+      "level": 6,
+      "word": "灾",
+      "pinyin": "zāi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5242",
+      "level": 6,
+      "word": "灾区",
+      "pinyin": "zāiqū",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5246",
+      "level": 6,
+      "word": "赞赏",
+      "pinyin": "zànshǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5251",
+      "level": 6,
+      "word": "噪声",
+      "pinyin": "zàoshēng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5253",
+      "level": 6,
+      "word": "则",
+      "pinyin": "zé",
+      "partOfSpeechZh": "连、（助）"
+    },
+    {
+      "id": "hsk6-5259",
+      "level": 6,
+      "word": "占比",
+      "pinyin": "zhànbǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5271",
+      "level": 6,
+      "word": "招生",
+      "pinyin": "zhāoshēng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5272",
+      "level": 6,
+      "word": "招手",
+      "pinyin": "zhāoshǒu",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5281",
+      "level": 6,
+      "word": "阵雨",
+      "pinyin": "zhènyǔ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5286",
+      "level": 6,
+      "word": "征求",
+      "pinyin": "zhēngqiú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5299",
+      "level": 6,
+      "word": "之所以",
+      "pinyin": "zhīsuǒyǐ",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-5312",
+      "level": 6,
+      "word": "制",
+      "pinyin": "zhì",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5313",
+      "level": 6,
+      "word": "至关重要",
+      "pinyin": "zhìguān-zhòngyào",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-5314",
+      "level": 6,
+      "word": "智力",
+      "pinyin": "zhìlì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5319",
+      "level": 6,
+      "word": "至于",
+      "pinyin": "zhìyú",
+      "partOfSpeechZh": "动、介"
+    },
+    {
+      "id": "hsk6-5324",
+      "level": 6,
+      "word": "钟头",
+      "pinyin": "zhōngtóu",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5336",
+      "level": 6,
+      "word": "州",
+      "pinyin": "zhōu",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5343",
+      "level": 6,
+      "word": "诸多",
+      "pinyin": "zhūduō",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-5359",
+      "level": 6,
+      "word": "专科",
+      "pinyin": "zhuānkē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5361",
+      "level": 6,
+      "word": "专题",
+      "pinyin": "zhuāntí",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5386",
+      "level": 6,
+      "word": "棕色",
+      "pinyin": "zōngsè",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5391",
+      "level": 6,
+      "word": "粽子",
+      "pinyin": "zòngzi",
+      "partOfSpeechZh": "名"
+    }
+  ]
+}
