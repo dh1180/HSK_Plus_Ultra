@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import {
   Pressable,
   SafeAreaView,
@@ -12,7 +12,7 @@ import { buildStudyQueue, countLevelStats } from '../lib/study';
 import { HskLevel, ProgressMap, VocabularyWord } from '../types';
 import { COLORS, LEVEL_META } from '../theme';
 
-type WordTab = 'ALL' | 'LONG_TERM' | 'ACTIVE';
+type WordTab = 'ALL' | 'STUDIED' | 'LONG_TERM' | 'ACTIVE';
 
 interface Props {
   level: HskLevel;
@@ -34,10 +34,14 @@ export function LevelScreen({
   onReviewWord,
 }: Props) {
   const [tab, setTab] = useState<WordTab>('ALL');
+  const [wordListY, setWordListY] = useState(0);
+  const scrollRef = useRef<ScrollView>(null);
   const vocabulary = getLevelVocabulary(level);
   const meta = LEVEL_META[level];
   const stats = countLevelStats(vocabulary, progress);
   const queue = buildStudyQueue(vocabulary, progress, dailyTarget);
+
+  const studiedWords = vocabulary.filter((word) => Boolean(progress[word.id]));
   const longTermWords = vocabulary.filter((word) => progress[word.id]?.stage === 'LONG_TERM');
   const activeWords = vocabulary.filter((word) => {
     const item = progress[word.id];
@@ -45,14 +49,35 @@ export function LevelScreen({
   });
 
   const visibleWords = useMemo(() => {
+    if (tab === 'STUDIED') return studiedWords;
     if (tab === 'LONG_TERM') return longTermWords;
     if (tab === 'ACTIVE') return activeWords;
     return vocabulary;
-  }, [activeWords, longTermWords, tab, vocabulary]);
+  }, [activeWords, longTermWords, studiedWords, tab, vocabulary]);
+
+  const listTitle =
+    tab === 'STUDIED'
+      ? '학습한 단어'
+      : tab === 'LONG_TERM'
+        ? '장기 기억 단어'
+        : tab === 'ACTIVE'
+          ? '복습 중 단어'
+          : `HSK ${level} 전체 단어`;
+
+  const openWordTab = (nextTab: WordTab) => {
+    setTab(nextTab);
+    requestAnimationFrame(() => {
+      scrollRef.current?.scrollTo({ y: Math.max(wordListY - 12, 0), animated: true });
+    });
+  };
 
   return (
     <SafeAreaView style={styles.safe}>
-      <ScrollView contentContainerStyle={styles.page} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        ref={scrollRef}
+        contentContainerStyle={styles.page}
+        showsVerticalScrollIndicator={false}
+      >
         <View style={styles.nav}>
           <Pressable onPress={onBack} hitSlop={10} style={styles.backButton}>
             <Text style={styles.backText}>‹</Text>
@@ -131,66 +156,94 @@ export function LevelScreen({
 
         <Text style={styles.sectionTitle}>HSK {level} 학습 정보</Text>
         <View style={styles.statsCard}>
-          <StatRow label="학습한 단어" value={`${stats.studied} / ${vocabulary.length}`} />
-          <View style={styles.divider} />
-          <StatRow label="장기 기억 단어" value={`${stats.longTerm} / ${vocabulary.length}`} />
-          <View style={styles.divider} />
-          <StatRow label="복습 대기 중" value={`${activeWords.length}`} />
-        </View>
-
-        <View style={styles.tabs}>
-          <TabButton
-            active={tab === 'ALL'}
-            accent={meta.accent}
-            label="단어"
-            onPress={() => setTab('ALL')}
+          <StatRow
+            label="학습한 단어"
+            value={`${stats.studied} / ${vocabulary.length}`}
+            onPress={() => openWordTab('STUDIED')}
           />
-          <TabButton
-            active={tab === 'LONG_TERM'}
-            accent={meta.accent}
-            label={`장기 기억 ${longTermWords.length}`}
-            onPress={() => setTab('LONG_TERM')}
+          <View style={styles.divider} />
+          <StatRow
+            label="장기 기억 단어"
+            value={`${stats.longTerm} / ${vocabulary.length}`}
+            onPress={() => openWordTab('LONG_TERM')}
           />
-          <TabButton
-            active={tab === 'ACTIVE'}
-            accent={meta.accent}
-            label={`학습 중 ${activeWords.length}`}
-            onPress={() => setTab('ACTIVE')}
+          <View style={styles.divider} />
+          <StatRow
+            label="복습 중"
+            value={`${activeWords.length}`}
+            onPress={() => openWordTab('ACTIVE')}
           />
         </View>
 
-        <View style={styles.wordList}>
-          {visibleWords.length === 0 ? (
-            <View style={styles.emptyBox}>
-              <Text style={styles.emptyText}>아직 이 목록에 단어가 없습니다.</Text>
-            </View>
-          ) : (
-            visibleWords.slice(0, 20).map((word) => (
-              <Pressable
-                key={word.id}
-                onPress={() => onReviewWord(word)}
-                style={({ pressed }) => [styles.wordRow, pressed && styles.wordRowPressed]}
-              >
-                <View style={styles.wordLeft}>
-                  <Text style={styles.word}>{word.word}</Text>
-                  <View style={styles.wordTextBlock}>
-                    <Text style={styles.pinyin}>{word.pinyin}</Text>
-                    <Text style={styles.meaning}>{word.meaningKo}</Text>
+        <View
+          onLayout={({ nativeEvent }) => setWordListY(nativeEvent.layout.y)}
+          style={styles.wordSection}
+        >
+          <View style={styles.tabs}>
+            <TabButton
+              active={tab === 'ALL'}
+              accent={meta.accent}
+              label={`전체 ${vocabulary.length}`}
+              onPress={() => setTab('ALL')}
+            />
+            <TabButton
+              active={tab === 'STUDIED'}
+              accent={meta.accent}
+              label={`학습 ${studiedWords.length}`}
+              onPress={() => setTab('STUDIED')}
+            />
+            <TabButton
+              active={tab === 'LONG_TERM'}
+              accent={meta.accent}
+              label={`장기 ${longTermWords.length}`}
+              onPress={() => setTab('LONG_TERM')}
+            />
+            <TabButton
+              active={tab === 'ACTIVE'}
+              accent={meta.accent}
+              label={`복습 ${activeWords.length}`}
+              onPress={() => setTab('ACTIVE')}
+            />
+          </View>
+
+          <View style={styles.listSummary}>
+            <Text style={styles.listTitle}>{listTitle}</Text>
+            <Text style={styles.listCount}>{visibleWords.length}개</Text>
+          </View>
+
+          <View style={styles.wordList}>
+            {visibleWords.length === 0 ? (
+              <View style={styles.emptyBox}>
+                <Text style={styles.emptyText}>아직 이 목록에 단어가 없습니다.</Text>
+              </View>
+            ) : (
+              visibleWords.map((word) => (
+                <Pressable
+                  key={word.id}
+                  onPress={() => onReviewWord(word)}
+                  style={({ pressed }) => [styles.wordRow, pressed && styles.wordRowPressed]}
+                >
+                  <View style={styles.wordLeft}>
+                    <Text style={styles.word}>{word.word}</Text>
+                    <View style={styles.wordTextBlock}>
+                      <Text style={styles.pinyin}>{word.pinyin}</Text>
+                      <Text style={styles.meaning}>{word.meaningKo}</Text>
+                    </View>
                   </View>
-                </View>
-                <View style={styles.stageWrap}>
-                  <Text style={styles.stage}>
-                    {progress[word.id]?.stage === 'LONG_TERM'
-                      ? '장기 기억'
-                      : progress[word.id]?.stage
-                        ? '학습 중'
-                        : '새 단어'}
-                  </Text>
-                  <Text style={styles.chevron}>›</Text>
-                </View>
-              </Pressable>
-            ))
-          )}
+                  <View style={styles.stageWrap}>
+                    <Text style={styles.stage}>
+                      {progress[word.id]?.stage === 'LONG_TERM'
+                        ? '장기 기억'
+                        : progress[word.id]?.stage
+                          ? '복습 중'
+                          : '새 단어'}
+                    </Text>
+                    <Text style={styles.chevron}>›</Text>
+                  </View>
+                </Pressable>
+              ))
+            )}
+          </View>
         </View>
 
         {tab === 'LONG_TERM' && longTermWords.length > 0 ? (
@@ -200,7 +253,7 @@ export function LevelScreen({
         ) : null}
 
         <Text style={styles.dataNote}>
-          현재 화면의 분모는 저장소에 포함된 한국어 스타터 어휘 기준입니다. 전체 공식 어휘 메타데이터는 sync 스크립트로 생성할 수 있습니다.
+          HSK 1은 300개 전체 단어가 포함되어 있습니다. HSK 2~6은 현재 한국어 뜻·예문 데이터를 순차 확장 중입니다.
         </Text>
       </ScrollView>
     </SafeAreaView>
@@ -221,19 +274,32 @@ function TabButton({
   return (
     <Pressable
       onPress={onPress}
-      style={[styles.tab, active && { borderBottomColor: accent, borderBottomWidth: 2 }]}
+      style={[styles.tab, active && { borderBottomColor: accent, borderBottomWidth: 3 }]}
     >
-      <Text style={[styles.tabText, active && { color: accent }]}>{label}</Text>
+      <Text numberOfLines={1} style={[styles.tabText, active && { color: accent }]}>
+        {label}
+      </Text>
     </Pressable>
   );
 }
 
-function StatRow({ label, value }: { label: string; value: string }) {
+function StatRow({
+  label,
+  value,
+  onPress,
+}: {
+  label: string;
+  value: string;
+  onPress: () => void;
+}) {
   return (
-    <View style={styles.statRow}>
+    <Pressable onPress={onPress} style={({ pressed }) => [styles.statRow, pressed && styles.statRowPressed]}>
       <Text style={styles.statLabel}>{label}</Text>
-      <Text style={styles.statValue}>{value}</Text>
-    </View>
+      <View style={styles.statRight}>
+        <Text style={styles.statValue}>{value}</Text>
+        <Text style={styles.statChevron}>›</Text>
+      </View>
+    </Pressable>
   );
 }
 
@@ -268,13 +334,20 @@ const styles = StyleSheet.create({
   studyButton: { height: 54, borderRadius: 18, alignItems: 'center', justifyContent: 'center', marginTop: 14 },
   studyButtonText: { color: '#FFFFFF', fontWeight: '900', fontSize: 16 },
   sectionTitle: { marginTop: 28, marginBottom: 10, fontSize: 17, fontWeight: '900', color: COLORS.text },
-  statsCard: { backgroundColor: '#FFFFFF', borderRadius: 22, paddingHorizontal: 18, borderWidth: 1, borderColor: COLORS.line },
+  statsCard: { backgroundColor: '#FFFFFF', borderRadius: 22, paddingHorizontal: 18, borderWidth: 1, borderColor: COLORS.line, overflow: 'hidden' },
   statRow: { height: 58, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  statRowPressed: { opacity: 0.55 },
   statLabel: { color: COLORS.text, fontSize: 14, fontWeight: '700' },
+  statRight: { flexDirection: 'row', alignItems: 'center', gap: 7 },
   statValue: { color: COLORS.subtext, fontSize: 14, fontWeight: '700' },
-  tabs: { flexDirection: 'row', marginTop: 25, borderBottomWidth: 1, borderBottomColor: COLORS.line },
-  tab: { flex: 1, paddingVertical: 12, alignItems: 'center', borderBottomWidth: 2, borderBottomColor: 'transparent' },
-  tabText: { color: COLORS.subtext, fontSize: 12, fontWeight: '800' },
+  statChevron: { color: '#B6B2AB', fontSize: 22, lineHeight: 24 },
+  wordSection: { marginTop: 25 },
+  tabs: { flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: COLORS.line },
+  tab: { flex: 1, minWidth: 0, paddingVertical: 12, paddingHorizontal: 2, alignItems: 'center', borderBottomWidth: 3, borderBottomColor: 'transparent' },
+  tabText: { color: COLORS.subtext, fontSize: 11, fontWeight: '800' },
+  listSummary: { minHeight: 48, paddingHorizontal: 16, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#FFFFFF', borderBottomWidth: 1, borderBottomColor: COLORS.line },
+  listTitle: { color: COLORS.text, fontSize: 13, fontWeight: '800' },
+  listCount: { color: COLORS.subtext, fontSize: 12, fontWeight: '700' },
   wordList: { backgroundColor: '#FFFFFF', borderBottomLeftRadius: 22, borderBottomRightRadius: 22, overflow: 'hidden' },
   wordRow: { paddingHorizontal: 17, paddingVertical: 14, borderBottomWidth: 1, borderBottomColor: COLORS.line, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 12 },
   wordRowPressed: { backgroundColor: '#F7F6F3' },
