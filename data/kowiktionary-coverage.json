@@ -1,0 +1,7123 @@
+{
+  "generatedAt": "2026-09-08T19:31:12.415Z",
+  "source": "Korean Wiktionary via Kaikki.org wiktextract",
+  "sourceUrl": "https://kaikki.org/kowiktionary/raw-wiktextract-data.jsonl.gz",
+  "inputMissingCount": 521,
+  "matchedCount": 229,
+  "remainingCount": 292,
+  "coveragePercent": 43.95,
+  "scannedLines": 356160,
+  "countByLevel": {
+    "2": {
+      "total": 16,
+      "matched": 10,
+      "missing": 6
+    },
+    "3": {
+      "total": 30,
+      "matched": 21,
+      "missing": 9
+    },
+    "4": {
+      "total": 92,
+      "matched": 43,
+      "missing": 49
+    },
+    "5": {
+      "total": 149,
+      "matched": 63,
+      "missing": 86
+    },
+    "6": {
+      "total": 234,
+      "matched": 92,
+      "missing": 142
+    }
+  },
+  "matched": [
+    {
+      "id": "hsk2-0308",
+      "level": 2,
+      "word": "本子",
+      "pinyin": "běnzi",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "공책",
+        "glosses": [
+          "글씨나 그림 따위를 쓰기 위해서 빈 종이를 매어 놓은 책이다. 종종 공부하거나 학교에서 필기할 때 사용된다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": false,
+        "sourceWord": "本子",
+        "score": 15
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk2-0322",
+      "level": 2,
+      "word": "词",
+      "pinyin": "cí",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "낱말",
+        "glosses": [
+          "하나하나의 말."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "词",
+        "score": 20
+      },
+      "alternatives": [
+        {
+          "koreanWord": "단어",
+          "glosses": [
+            "낱낱의 말. 문법에서 나름대로의 어떤 구실을 하는 말."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "词",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk2-0339",
+      "level": 2,
+      "word": "饭馆",
+      "pinyin": "fànguǎn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "레스토랑."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "饭馆",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "식당",
+          "glosses": [
+            "돈을 내고 음식을 주문하여 먹을 수 있는 곳.",
+            "회사나 학교에서 사원이나 학생들에게 음식을 제공하는 곳. 이 뜻으로는 대개 해당 기관 이름을 앞에 붙여 쓴다."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "饭馆",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk2-0348",
+      "level": 2,
+      "word": "过来",
+      "pinyin": "guòlái",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "해오다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "过来",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk2-0365",
+      "level": 2,
+      "word": "记得",
+      "pinyin": "jìde",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "기억하고 있다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "记得",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "기억하다",
+          "glosses": [
+            "머릿속에 남아서 잊히지 않다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": false,
+          "sourceWord": "记得",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk2-0389",
+      "level": 2,
+      "word": "离",
+      "pinyin": "lí",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "떨어지다.",
+          "빠뜨리다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "离",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk2-0391",
+      "level": 2,
+      "word": "楼",
+      "pinyin": "lóu",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "건물의 층, 층수."
+        ],
+        "pos": "classifier",
+        "directChineseEntry": true,
+        "sourceWord": "楼",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "층",
+          "glosses": [
+            "겹겹이 쌓여있는 칸."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "楼",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk2-0420",
+      "level": 2,
+      "word": "晴",
+      "pinyin": "qíng",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "하늘이 맑다."
+        ],
+        "pos": "adj",
+        "directChineseEntry": true,
+        "sourceWord": "晴",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk2-0450",
+      "level": 2,
+      "word": "往",
+      "pinyin": "wǎng",
+      "partOfSpeechZh": "动、介",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "가다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "往",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk2-0496",
+      "level": 2,
+      "word": "走路",
+      "pinyin": "zǒulù",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "걷다",
+        "glosses": [
+          "다리로 움직이다.",
+          "널려진 무엇을 말거나 또는 위나 옆으로 치워 옮기다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": false,
+        "sourceWord": "走路",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0519",
+      "level": 3,
+      "word": "被",
+      "pinyin": "bèi",
+      "partOfSpeechZh": "介",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~되다."
+        ],
+        "pos": "particle",
+        "directChineseEntry": true,
+        "sourceWord": "被",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "~에게 ~되다."
+          ],
+          "pos": "unknown",
+          "directChineseEntry": true,
+          "sourceWord": "被",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk3-0535",
+      "level": 3,
+      "word": "冰激凌",
+      "pinyin": "bīngjīlíng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "아이스크림."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "冰激凌",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "아이스크림",
+          "glosses": [
+            "유지방을 얼린 다음, 부드럽게 만든 음식."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "冰激凌",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk3-0539",
+      "level": 3,
+      "word": "不见",
+      "pinyin": "bújiàn",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "만나지 않다.",
+          "(물건이) 없어지다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "不见",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0566",
+      "level": 3,
+      "word": "除了",
+      "pinyin": "chúle",
+      "partOfSpeechZh": "介",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~을 제외하고(除了...以外의 형태로 많이 쓰임).",
+          "~외에도."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "除了",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0663",
+      "level": 3,
+      "word": "好多",
+      "pinyin": "hǎoduō",
+      "partOfSpeechZh": "数",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "다수."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "好多",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0707",
+      "level": 3,
+      "word": "街",
+      "pinyin": "jiē",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "거리",
+        "glosses": [
+          "도로 주변에 위치한 사람들이 많이 지나다니는 길."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "街",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0736",
+      "level": 3,
+      "word": "课本",
+      "pinyin": "kèběn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "교과서",
+        "glosses": [
+          "학교에서 학생에게 체계적으로 지식을 전달하기 위한 목적으로 쓰여진 책."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "课本",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0751",
+      "level": 3,
+      "word": "练",
+      "pinyin": "liàn",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "중국인의 성의 하나."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "练",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0755",
+      "level": 3,
+      "word": "聊",
+      "pinyin": "liáo",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "말하다. 애기하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "聊",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "편안하다."
+          ],
+          "pos": "adj",
+          "directChineseEntry": true,
+          "sourceWord": "聊",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk3-0756",
+      "level": 3,
+      "word": "聊天儿",
+      "pinyin": "liáotiānr",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "잡담하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "聊天儿",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0770",
+      "level": 3,
+      "word": "面前",
+      "pinyin": "miànqián",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "눈앞."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "面前",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0791",
+      "level": 3,
+      "word": "拍照",
+      "pinyin": "pāizhào",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "사진을 찍다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "拍照",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0813",
+      "level": 3,
+      "word": "然后",
+      "pinyin": "ránhòu",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "그 다음, 그리고 나서."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "然后",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0820",
+      "level": 3,
+      "word": "伞",
+      "pinyin": "sǎn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "우산",
+        "glosses": [
+          "햇빛이 내리쬐거나 비나 우박이 내릴 때 막아주거나 가려주는 도구."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "伞",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0879",
+      "level": 3,
+      "word": "屋子",
+      "pinyin": "wūzi",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "방.",
+          "집, 가옥."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "屋子",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "방",
+          "glosses": [
+            "사람이 사는 집 안에 사방으로 벽을 세워 만든 칸."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "屋子",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk3-0973",
+      "level": 3,
+      "word": "照相",
+      "pinyin": "zhàoxiàng",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "촬영하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "照相",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0974",
+      "level": 3,
+      "word": "直到",
+      "pinyin": "zhídào",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "계속 ~이 될 까지."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "直到",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0977",
+      "level": 3,
+      "word": "只能",
+      "pinyin": "zhǐ néng",
+      "partOfSpeechZh": "",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~할 수밖에 없다. 다만 ·단지·겨우 ~할 수 있을 뿐이다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "只能",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0979",
+      "level": 3,
+      "word": "只要",
+      "pinyin": "zhǐyào",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~만 한다면."
+        ],
+        "pos": "conj",
+        "directChineseEntry": true,
+        "sourceWord": "只要",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0990",
+      "level": 3,
+      "word": "字典",
+      "pinyin": "zìdiǎn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "사전",
+        "glosses": [
+          "낱말들을 모아서 이들의 뜻, 어원, 용례 등를 풀이하고 밝히거나 또는 용어들, 개념들을 한 데 모아 이들을 풀이한 책. 쓰임새에 따라 언어 사전, 용어 사전, 백과 사전, 인명 사전 따위로 나누어진다."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "字典",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk3-0999",
+      "level": 3,
+      "word": "做客",
+      "pinyin": "zuòkè",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "손님이 되다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "做客",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1009",
+      "level": 4,
+      "word": "白酒",
+      "pinyin": "báijiǔ",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "백주."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "白酒",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1017",
+      "level": 4,
+      "word": "报考",
+      "pinyin": "bàokǎo",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(시험에) 출원하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "报考",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1031",
+      "level": 4,
+      "word": "便于",
+      "pinyin": "biànyú",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~하는 것에 편리하다, ~하는 것이 사정이 좋다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "便于",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1039",
+      "level": 4,
+      "word": "并",
+      "pinyin": "bìng",
+      "partOfSpeechZh": "动、副、连",
+      "best": {
+        "koreanWord": "역시",
+        "glosses": [
+          "말하는 사람을 포함하여. 또한",
+          "지금 말하는 것이 예전과 마찬가지로.",
+          "생각하였던 대로."
+        ],
+        "pos": "adv",
+        "directChineseEntry": false,
+        "sourceWord": "并",
+        "score": 15
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1043",
+      "level": 4,
+      "word": "不必",
+      "pinyin": "búbì",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~할 때에는 미치지 않다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "不必",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1054",
+      "level": 4,
+      "word": "不光",
+      "pinyin": "bùguāng",
+      "partOfSpeechZh": "副、连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~뿐만 아니라."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "不光",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "뿐",
+          "glosses": [
+            "(명사, 대명사, 수사, 부사어 뒤에 붙어서) '그것만이고 더는 없음' 또는 '오직 그렇게 하거나 그러하다는 것'을 나타내는 보조사."
+          ],
+          "pos": "unknown",
+          "directChineseEntry": false,
+          "sourceWord": "不光",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "id": "hsk4-1065",
+      "level": 4,
+      "word": "操场",
+      "pinyin": "cāochǎng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "운동장."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "操场",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1101",
+      "level": 4,
+      "word": "此外",
+      "pinyin": "cǐwài",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "이 외에."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "此外",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1112",
+      "level": 4,
+      "word": "答",
+      "pinyin": "dá",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "대답하다.",
+          "말대꾸하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "答",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1125",
+      "level": 4,
+      "word": "大夫",
+      "pinyin": "dàifu",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "의사(醫師)"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "大夫",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "중국에서 벼슬아치를 세 등급으로 나눈 품계의 하나. 주나라부터 춘추전국시대에 걸친 자신을 나타내는 단어로 영지를 가진 귀족.",
+            "주나라 때에는 경(卿)의 아래, 사(士)의 위에 해당하는 집정관(執政官)의 지위에 있었다. 다시 상대부(上大夫)ㆍ중대부(中大夫)ㆍ하대부(下大夫)로 세분된다.",
+            "진(秦)나라 때의 작위(爵位)의 이름으로, 벼슬의 품계에 붙이는 칭호였다.",
+            "한나라 이후에는, 어사대부(御史大夫)ㆍ광록대부(光祿大夫)와 같은 합성어로 쓰였다.",
+            "고려ㆍ조선 시대에, 벼슬의 품계에 붙이던 칭호. 고려 시대에는 종이품에서 종오품까지 또는 정이품에서 종사품까지의 벼슬에, 조선 시대에는 정일품에서 종사품까지의 벼슬에 붙였다."
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "大夫",
+          "score": 27
+        },
+        {
+          "koreanWord": "의사",
+          "glosses": [
+            "병을 고치는 일을 직업으로 하는 사람."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "大夫",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk4-1172",
+      "level": 4,
+      "word": "短信",
+      "pinyin": "duǎnxìn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "단신; 문자 메시지."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "短信",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1183",
+      "level": 4,
+      "word": "而",
+      "pinyin": "ér",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(앞말이 뒷말의 원인이나 근거 또는 전제 따위가 됨을 나타내거나, 어떤 사실을 먼저 진술하고 관련된 다른 사실을 이어서 설명할 때 써서) -(하)니, ...하자, (두 가지 이상의 사실을 대등하게 벌여 놓아) -(하)고",
+          "(시간상의 선후 관계를 나타내거나 방법 따위를 나타내어) -아, -어, -(하)여 ; (앞 절의 동작이 이루어진 그대로 지속되는 가운데 뒤 절의 동작이 일어남을 나타내어) -(하)고",
+          "(역접)그러나, ...하나, ...이나",
+          "~하여 비로소, ~한 뒤·후에",
+          "(가정) 만일 ~이라면, 만약 ~이라면,"
+        ],
+        "pos": "conj",
+        "directChineseEntry": true,
+        "sourceWord": "而",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "구렛나루"
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "而",
+          "score": 22
+        },
+        {
+          "koreanWord": "",
+          "glosses": [
+            "…와 같다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": true,
+          "sourceWord": "而",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk4-1187",
+      "level": 4,
+      "word": "法",
+      "pinyin": "fǎ",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "법.",
+          "형법, 형벌"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "法",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "본받다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": true,
+          "sourceWord": "法",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk4-1206",
+      "level": 4,
+      "word": "否则",
+      "pinyin": "fǒuzé",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "그렇지 않으면."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "否则",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1218",
+      "level": 4,
+      "word": "改",
+      "pinyin": "gǎi",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "고치다, 개정하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "改",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1253",
+      "level": 4,
+      "word": "功课",
+      "pinyin": "gōngkè",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "수업, 성적.",
+          "숙제, 공부."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "功课",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1304",
+      "level": 4,
+      "word": "坏处",
+      "pinyin": "huàichù",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "해, 나쁜 점."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "坏处",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1356",
+      "level": 4,
+      "word": "将",
+      "pinyin": "jiāng",
+      "partOfSpeechZh": "介、副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "…을(주로 문어에 쓰임)."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "将",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "[문어] 데리다. 거느리다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": true,
+          "sourceWord": "将",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk4-1383",
+      "level": 4,
+      "word": "节假日",
+      "pinyin": "jiéjiàrì",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(법정) 명절과 휴일. 경축일과 휴일."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "节假日",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1425",
+      "level": 4,
+      "word": "科技",
+      "pinyin": "kējì",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "과학과 기술, 과학기술, 과기"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "科技",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1468",
+      "level": 4,
+      "word": "俩",
+      "pinyin": "liǎ",
+      "partOfSpeechZh": "数量",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(그) 두사람, 두개."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "俩",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1481",
+      "level": 4,
+      "word": "另外",
+      "pinyin": "lìngwài",
+      "partOfSpeechZh": "代、副、连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "그것 이외로, 별로."
+        ],
+        "pos": "adv",
+        "directChineseEntry": true,
+        "sourceWord": "另外",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "그것과는 별로."
+          ],
+          "pos": "conj",
+          "directChineseEntry": true,
+          "sourceWord": "另外",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk4-1549",
+      "level": 4,
+      "word": "陪",
+      "pinyin": "péi",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "모시다. 수행하다. 같이 가다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "陪",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1567",
+      "level": 4,
+      "word": "其次",
+      "pinyin": "qícì",
+      "partOfSpeechZh": "代",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "그 다음."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "其次",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1574",
+      "level": 4,
+      "word": "千克",
+      "pinyin": "qiānkè",
+      "partOfSpeechZh": "量",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "킬로그램."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "千克",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1601",
+      "level": 4,
+      "word": "全球",
+      "pinyin": "quánqiú",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "전세계."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "全球",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1616",
+      "level": 4,
+      "word": "仍",
+      "pinyin": "réng",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "여전히. 아직도.",
+          "이에"
+        ],
+        "pos": "adv",
+        "directChineseEntry": true,
+        "sourceWord": "仍",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "인하다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": true,
+          "sourceWord": "仍",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk4-1640",
+      "level": 4,
+      "word": "摄氏度",
+      "pinyin": "shèshìdù",
+      "partOfSpeechZh": "量",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "섭씨온도."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "摄氏度",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1650",
+      "level": 4,
+      "word": "省",
+      "pinyin": "shěng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(중국의 지방행정구분) 성."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "省",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "살피다, 깨닫다.",
+            "덜다.",
+            "절약하다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": true,
+          "sourceWord": "省",
+          "score": 22
+        },
+        {
+          "koreanWord": "아끼다",
+          "glosses": [
+            "무엇을 함부로 쓰지않고 정도에 맞게 쓰다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": false,
+          "sourceWord": "省",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "id": "hsk4-1675",
+      "level": 4,
+      "word": "试题",
+      "pinyin": "shìtí",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "시험문제."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "试题",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1695",
+      "level": 4,
+      "word": "帅",
+      "pinyin": "shuài",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "잘생기다",
+        "glosses": [
+          "(과거형에서만: 잘생겼다, 잘생긴에서만) 얼굴 또는 모습이 보기가 좋다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": false,
+        "sourceWord": "帅",
+        "score": 15
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1752",
+      "level": 4,
+      "word": "图",
+      "pinyin": "tú",
+      "partOfSpeechZh": "名、（动）",
+      "best": {
+        "koreanWord": "꾀하다",
+        "glosses": [
+          "어떤 일을 이루려고 뜻을 두거나 힘을 쓰다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": false,
+        "sourceWord": "图",
+        "score": 15
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1763",
+      "level": 4,
+      "word": "晚安",
+      "pinyin": "wǎn’ān",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "안녕히 주무세요."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "晚安",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1849",
+      "level": 4,
+      "word": "演",
+      "pinyin": "yǎn",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "발전하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "演",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1866",
+      "level": 4,
+      "word": "已",
+      "pinyin": "yǐ",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "이미, 벌써.",
+          "너무",
+          "뿐, 따름",
+          "매우, 대단히, 너무",
+          "반드시",
+          "조금 있다가, 그 후 얼마 되지 아니하여"
+        ],
+        "pos": "adv",
+        "directChineseEntry": true,
+        "sourceWord": "已",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "써, 써서"
+          ],
+          "pos": "unknown",
+          "directChineseEntry": true,
+          "sourceWord": "已",
+          "score": 22
+        },
+        {
+          "koreanWord": "",
+          "glosses": [
+            "이, 이것"
+          ],
+          "pos": "pron",
+          "directChineseEntry": true,
+          "sourceWord": "已",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk4-1884",
+      "level": 4,
+      "word": "由",
+      "pinyin": "yóu",
+      "partOfSpeechZh": "介",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "말미암다.",
+          "맡기다.",
+          "경유하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "由",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "중국인의 성의 하나."
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "由",
+          "score": 22
+        },
+        {
+          "koreanWord": "",
+          "glosses": [
+            "~로 인하여, …로 말미암아, ~를 통하여, ~가(사물이 발생하는 원인 혹은 방식을 이끌어 냄).",
+            ", (따옴◄중화인민공화국 계약법 (1999년) 제65조 / (한국어))",
+            ", (따옴◄위키백과 중국어판 〈董事會〉)"
+          ],
+          "pos": "unknown",
+          "directChineseEntry": true,
+          "sourceWord": "由",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk4-1894",
+      "level": 4,
+      "word": "有着",
+      "pinyin": "yǒuzhe",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "있다, 가지다"
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "有着",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1896",
+      "level": 4,
+      "word": "于是",
+      "pinyin": "yúshì",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "때문",
+        "glosses": [
+          "어떤 일이 일어나게 된 까닭 또는 일이 그렇게 되도록 한 무엇."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "于是",
+        "score": 15
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1915",
+      "level": 4,
+      "word": "再说",
+      "pinyin": "zàishuō",
+      "partOfSpeechZh": "动、连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "그리고, 게다가"
+        ],
+        "pos": "adv",
+        "directChineseEntry": true,
+        "sourceWord": "再说",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1931",
+      "level": 4,
+      "word": "证",
+      "pinyin": "zhèng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "증, 증서, 증명서."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "证",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1938",
+      "level": 4,
+      "word": "之",
+      "pinyin": "zhī",
+      "partOfSpeechZh": "助",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(소유, 수식) ~의 (앞의 단어가 뒤의 단어를 소유하거나 수식한다. 현대어 的에 상당한다.)",
+          "어조사(語助辭). 실제적인 작용을 하지 않는 지시 대명사. 주로 접미사로 쓰인다.",
+          "~을/를 (목적어가 전치됨을 나타냄)",
+          "(주격 조사) 가, 이",
+          "에, ~에 있어서",
+          "와, ~과"
+        ],
+        "pos": "particle",
+        "directChineseEntry": true,
+        "sourceWord": "之",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "나다.",
+            "가다, 이르다, 도달(到達)하다.",
+            "쓰다, 사용하다.",
+            "(영향을) 끼치다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": true,
+          "sourceWord": "之",
+          "score": 22
+        },
+        {
+          "koreanWord": "",
+          "glosses": [
+            "이것, 그것, 이에, 이곳에, 그곳에",
+            "그, 그녀, 그것, 그들, 그것들",
+            "그의",
+            "자칭 또는 대칭에 쓰임."
+          ],
+          "pos": "pron",
+          "directChineseEntry": true,
+          "sourceWord": "之",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk4-1965",
+      "level": 4,
+      "word": "祝",
+      "pinyin": "zhù",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "중국인의 성의 하나. 백가성 제126위."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "祝",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk4-1980",
+      "level": 4,
+      "word": "自",
+      "pinyin": "zì",
+      "partOfSpeechZh": "介",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "본연(本然)",
+          "처음, 시초(始初)",
+          "출처(出處)",
+          "코(=비(鼻)의 고자(古字))"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "自",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "스스로, 몸소, 자기(自己)",
+            "저절로, 자연히(自然-)",
+            "진실로(眞實-)"
+          ],
+          "pos": "adv",
+          "directChineseEntry": true,
+          "sourceWord": "自",
+          "score": 22
+        },
+        {
+          "koreanWord": "",
+          "glosses": [
+            "(고어·문어/이동과 시간의 기점) …에서부터, …에서 시작하여",
+            "(자격)...(으)로써; (이유)...(이)므로"
+          ],
+          "pos": "unknown",
+          "directChineseEntry": true,
+          "sourceWord": "自",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2013",
+      "level": 5,
+      "word": "半夜",
+      "pinyin": "bànyè",
+      "partOfSpeechZh": "数量、名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "자정, 한밤중."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "半夜",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "자정",
+          "glosses": [
+            "밤 12시 또는 0시. 옛날에는 십이 간지를 이용하여 시간을 표시하였는데, 그 중에서 오후 11시(23시)부터 다음날 오전 1시까지를 자시(子時)라고 하고, 그 한가운데인 밤 12시를 자정이라고 하였다. (부록: 한국어 시간의 단위와 표현)"
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "半夜",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2021",
+      "level": 5,
+      "word": "保",
+      "pinyin": "bǎo",
+      "partOfSpeechZh": "动、名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "지키다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "保",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2030",
+      "level": 5,
+      "word": "报到",
+      "pinyin": "bàodào",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "도착을 보고하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "报到",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2049",
+      "level": 5,
+      "word": "必",
+      "pinyin": "bì",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "반드시"
+        ],
+        "pos": "adv",
+        "directChineseEntry": true,
+        "sourceWord": "必",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2080",
+      "level": 5,
+      "word": "不然",
+      "pinyin": "bùrán",
+      "partOfSpeechZh": "连、（形）",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "그렇지 않다."
+        ],
+        "pos": "adj",
+        "directChineseEntry": true,
+        "sourceWord": "不然",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "그렇지 않으면."
+          ],
+          "pos": "conj",
+          "directChineseEntry": true,
+          "sourceWord": "不然",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2090",
+      "level": 5,
+      "word": "餐饮",
+      "pinyin": "cānyǐn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "요식업종. 음식과 음료."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "餐饮",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2122",
+      "level": 5,
+      "word": "吵",
+      "pinyin": "chǎo",
+      "partOfSpeechZh": "形、动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "시끄럽다. 떠들썩하다.",
+          "말다툼하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "吵",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "시끄럽다",
+          "glosses": [
+            "듣기 싫을 정도로 떠들썩하다.",
+            "(비유) 무엇이 말썽을 부리다.",
+            "언론에서 소재로 다뤄지다."
+          ],
+          "pos": "adj",
+          "directChineseEntry": false,
+          "sourceWord": "吵",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2154",
+      "level": 5,
+      "word": "池",
+      "pinyin": "chí",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "못. 연못.",
+          "해자(垓子)",
+          "중국인의 성씨의 하나."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "池",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "연못",
+          "glosses": [
+            "연꽃을 심은 못.",
+            "'못'(넓고 오목하게 팬 땅에 물이 괴어 있는 곳). 늪보다 작다."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "池",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2178",
+      "level": 5,
+      "word": "除夕",
+      "pinyin": "chúxī",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "양력 12월 31일의 밤, 제야."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "除夕",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2201",
+      "level": 5,
+      "word": "从而",
+      "pinyin": "cóng’ér",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "따르다",
+        "glosses": [
+          "다른 사람들을 보고 본을 받아들이거나 영향을 받다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": false,
+        "sourceWord": "从而",
+        "score": 15
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2366",
+      "level": 5,
+      "word": "扶",
+      "pinyin": "fú",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "손으로 받치다/떠받치다/버티다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "扶",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2399",
+      "level": 5,
+      "word": "各行各业",
+      "pinyin": "gèháng-gèyè",
+      "partOfSpeechZh": "",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "다양한 업종."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "各行各业",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2414",
+      "level": 5,
+      "word": "恭喜",
+      "pinyin": "gōngxǐ",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "축하해."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "恭喜",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2429",
+      "level": 5,
+      "word": "挂号",
+      "pinyin": "guàhào",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "접수하다, 등록하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "挂号",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2446",
+      "level": 5,
+      "word": "贵姓",
+      "pinyin": "guìxìng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "성."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "贵姓",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2480",
+      "level": 5,
+      "word": "合影",
+      "pinyin": "héyǐng",
+      "partOfSpeechZh": "动、名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "함께 찍은 사진."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "合影",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2492",
+      "level": 5,
+      "word": "互动",
+      "pinyin": "hùdòng",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "상호작용하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "互动",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2507",
+      "level": 5,
+      "word": "灰",
+      "pinyin": "huī",
+      "partOfSpeechZh": "名、形",
+      "best": {
+        "koreanWord": "재",
+        "glosses": [
+          "어떤 물질이 불 타다 뒤 남는 가루."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "灰",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2535",
+      "level": 5,
+      "word": "急需",
+      "pinyin": "jíxū",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "긴급수요."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "急需",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2548",
+      "level": 5,
+      "word": "计算机",
+      "pinyin": "jìsuànjī",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "계산기",
+        "glosses": [
+          "계산을 빨리 하기 위해 사용하는 기계.",
+          "문화어에서 ‘컴퓨터’를 달리 이르는 말."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "计算机",
+        "score": 20
+      },
+      "alternatives": [
+        {
+          "koreanWord": "컴퓨터",
+          "glosses": [
+            "전자 장치를 이용하여 주어진 문제를 계산으로 빨리 풀이하여 결과를 화면에 나타내 보이도록 고안한 발명품."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "计算机",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2633",
+      "level": 5,
+      "word": "居然",
+      "pinyin": "jūrán",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "의외로도. 놀랍게도"
+        ],
+        "pos": "adv",
+        "directChineseEntry": true,
+        "sourceWord": "居然",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2636",
+      "level": 5,
+      "word": "据",
+      "pinyin": "jù",
+      "partOfSpeechZh": "介",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "據의 간체."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "据",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2637",
+      "level": 5,
+      "word": "距",
+      "pinyin": "jù",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "상거하다(相距~: 서로 떨어져 있다), 떨어지다",
+          "떨어져 있다",
+          "걸터앉다",
+          "이르다, 도달하다(到達~)",
+          "막다, 거부하다(拒否~)",
+          "거절하다(拒絶~), 물리치다",
+          "그치다, 멈추다",
+          "뛰어넘다"
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "距",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "거리."
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "距",
+          "score": 22
+        },
+        {
+          "koreanWord": "거리",
+          "glosses": [
+            "도로 주변에 위치한 사람들이 많이 지나다니는 길."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "距",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2668",
+      "level": 5,
+      "word": "客服",
+      "pinyin": "kèfú",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "고객 서비스"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "客服",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2679",
+      "level": 5,
+      "word": "亏",
+      "pinyin": "kuī",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "손실, 손해."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "亏",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "손실",
+          "glosses": [
+            "어떤 대상에 의해서 일부를 잃어버리는 것."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "亏",
+          "score": 15
+        },
+        {
+          "koreanWord": "손해",
+          "glosses": [
+            "(법률) 법익에 관하여 입은 모든 불이익으로서, 채무의 이행이 있었더라면 채권자가 받았을 이익과 불이행으로 채권자가 현재 받고 있는 이익의 차액을 말함."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "亏",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2704",
+      "level": 5,
+      "word": "力",
+      "pinyin": "lì",
+      "partOfSpeechZh": "名、后缀",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "힘. 체력.",
+          "중국인의 성의 하나."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "力",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "힘",
+          "glosses": [
+            "생물이나 사물이 움직이는 데에 쓰이는 생체적 또는 물리적 작용."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "力",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2741",
+      "level": 5,
+      "word": "路人",
+      "pinyin": "lùrén",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "통행자.",
+          "생판남."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "路人",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2815",
+      "level": 5,
+      "word": "赔",
+      "pinyin": "péi",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "배상하다",
+        "glosses": [
+          "피해를 입은 사람에게 돈을 지불하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": false,
+        "sourceWord": "赔",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2816",
+      "level": 5,
+      "word": "陪伴",
+      "pinyin": "péibàn",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "동반하다",
+        "glosses": [
+          "서로가 함께 가다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": false,
+        "sourceWord": "陪伴",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2825",
+      "level": 5,
+      "word": "批",
+      "pinyin": "pī",
+      "partOfSpeechZh": "量",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "무리. 떼. 패. 무더기. 더미. 일단(一團). 일군(一群). 묶음. 집단. 그룹(group)."
+        ],
+        "pos": "classifier",
+        "directChineseEntry": true,
+        "sourceWord": "批",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2826",
+      "level": 5,
+      "word": "批",
+      "pinyin": "pī",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "무리. 떼. 패. 무더기. 더미. 일단(一團). 일군(一群). 묶음. 집단. 그룹(group)."
+        ],
+        "pos": "classifier",
+        "directChineseEntry": true,
+        "sourceWord": "批",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2831",
+      "level": 5,
+      "word": "拼音",
+      "pinyin": "pīnyīn",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "병음."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "拼音",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2839",
+      "level": 5,
+      "word": "凭",
+      "pinyin": "píng",
+      "partOfSpeechZh": "动、介",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "의지하다. 의거하다. 기대다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "凭",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "증거."
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "凭",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2853",
+      "level": 5,
+      "word": "其",
+      "pinyin": "qí",
+      "partOfSpeechZh": "代",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(남성/여성)그, 그들, (중성)그것, 그것들"
+        ],
+        "pos": "pron",
+        "directChineseEntry": true,
+        "sourceWord": "其",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "어조사(語助辭)"
+          ],
+          "pos": "particle",
+          "directChineseEntry": true,
+          "sourceWord": "其",
+          "score": 22
+        },
+        {
+          "koreanWord": "",
+          "glosses": [
+            "만약, 만일(萬一)",
+            "아마도, 혹은",
+            "어찌, 어째서",
+            "장차(將次), 바야흐로",
+            "이미",
+            "마땅히",
+            "이에, 그래서"
+          ],
+          "pos": "adv",
+          "directChineseEntry": true,
+          "sourceWord": "其",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2855",
+      "level": 5,
+      "word": "其余",
+      "pinyin": "qíyú",
+      "partOfSpeechZh": "代",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "그 외. 나머지"
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "其余",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2898",
+      "level": 5,
+      "word": "权",
+      "pinyin": "quán",
+      "partOfSpeechZh": "名、（副）",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "중국인의 성의 하나. 백가성 제403위."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "权",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2923",
+      "level": 5,
+      "word": "人民",
+      "pinyin": "rénmín",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "인민."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "人民",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2925",
+      "level": 5,
+      "word": "人群",
+      "pinyin": "rénqún",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "사람의 무리, 군중, 집단"
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "人群",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2935",
+      "level": 5,
+      "word": "如今",
+      "pinyin": "rújīn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "지금, 이제, 오늘날"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "如今",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-2998",
+      "level": 5,
+      "word": "省",
+      "pinyin": "shěng",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "살피다, 깨닫다.",
+          "덜다.",
+          "절약하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "省",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "(중국의 지방행정구분) 성."
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "省",
+          "score": 22
+        },
+        {
+          "koreanWord": "아끼다",
+          "glosses": [
+            "무엇을 함부로 쓰지않고 정도에 맞게 쓰다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": false,
+          "sourceWord": "省",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk5-2999",
+      "level": 5,
+      "word": "省份",
+      "pinyin": "shěngfèn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "성(省)"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "省份",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3000",
+      "level": 5,
+      "word": "省会",
+      "pinyin": "shěnghuì",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "성도."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "省会",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3026",
+      "level": 5,
+      "word": "使得",
+      "pinyin": "shǐde",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "사용할 수 있다.",
+          "~에게 ~시키다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "使得",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3041",
+      "level": 5,
+      "word": "试用",
+      "pinyin": "shìyòng",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "시험에서 사용하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "试用",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3098",
+      "level": 5,
+      "word": "所",
+      "pinyin": "suǒ",
+      "partOfSpeechZh": "量、名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "곳, 장소."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "所",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "~하는 바의.",
+            "(为/被 + 명사 + 所 + 동사) ~되다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": true,
+          "sourceWord": "所",
+          "score": 22
+        },
+        {
+          "koreanWord": "",
+          "glosses": [
+            "건축물을 세는 양사."
+          ],
+          "pos": "classifier",
+          "directChineseEntry": true,
+          "sourceWord": "所",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk5-3105",
+      "level": 5,
+      "word": "桃",
+      "pinyin": "táo",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "복숭아."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "桃",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "복숭아",
+          "glosses": [
+            "장미과의 과일. 흰색 또는 분홍색 꽃을 피우며 여름철에 주먹 크기의 열매를 맺는다."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "桃",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk5-3235",
+      "level": 5,
+      "word": "显然",
+      "pinyin": "xiǎnrán",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "분명한."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "显然",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3237",
+      "level": 5,
+      "word": "县",
+      "pinyin": "xiàn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(행정구역상의) 현, 현재 중화인민공화국에서는 직할시나 지구의 하위에 있으며, 향의 상위에 위치해 있는 것."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "县",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3303",
+      "level": 5,
+      "word": "需",
+      "pinyin": "xū",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "기다리다.",
+          "필요하다. 요구되다.",
+          "(조동사의 역할)...하여야 한다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "需",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "필요성"
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "需",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk5-3339",
+      "level": 5,
+      "word": "要不是",
+      "pinyin": "yàobúshì",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "만약 ~이 아니라면, ~이 아니었다면"
+        ],
+        "pos": "conj",
+        "directChineseEntry": true,
+        "sourceWord": "要不是",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3363",
+      "level": 5,
+      "word": "以及",
+      "pinyin": "yǐjí",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "및."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "以及",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "역시",
+          "glosses": [
+            "말하는 사람을 포함하여. 또한",
+            "지금 말하는 것이 예전과 마찬가지로.",
+            "생각하였던 대로."
+          ],
+          "pos": "adv",
+          "directChineseEntry": false,
+          "sourceWord": "以及",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "id": "hsk5-3371",
+      "level": 5,
+      "word": "因而",
+      "pinyin": "yīn’ér",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "그러므로, 그래서"
+        ],
+        "pos": "conj",
+        "directChineseEntry": true,
+        "sourceWord": "因而",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "때문",
+          "glosses": [
+            "어떤 일이 일어나게 된 까닭 또는 일이 그렇게 되도록 한 무엇."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "因而",
+          "score": 15
+        },
+        {
+          "koreanWord": "그러므로",
+          "glosses": [
+            "앞의 내용이 뒤의 내용의 이유나 원인, 근거가 될 때 쓰는 접속 부사."
+          ],
+          "pos": "adv",
+          "directChineseEntry": false,
+          "sourceWord": "因而",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "id": "hsk5-3382",
+      "level": 5,
+      "word": "影片",
+      "pinyin": "yǐngpiàn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "영화.",
+          "영화필름."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "影片",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3402",
+      "level": 5,
+      "word": "由此",
+      "pinyin": "yóu cǐ",
+      "partOfSpeechZh": "",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "이로써. 이리하여.",
+          "여기로부터."
+        ],
+        "pos": "conj",
+        "directChineseEntry": true,
+        "sourceWord": "由此",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3425",
+      "level": 5,
+      "word": "预计",
+      "pinyin": "yùjì",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "예언하다, 예상하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "预计",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3428",
+      "level": 5,
+      "word": "原",
+      "pinyin": "yuán",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "용서하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "原",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3443",
+      "level": 5,
+      "word": "在乎",
+      "pinyin": "zàihu",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~에 있다.",
+          "걱정하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "在乎",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3473",
+      "level": 5,
+      "word": "掌声",
+      "pinyin": "zhǎngshēng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "박수소리."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "掌声",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "박수",
+          "glosses": [
+            "소리를 내며 양손 바닥을 때리는 것."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "掌声",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk5-3477",
+      "level": 5,
+      "word": "着凉",
+      "pinyin": "zháoliáng",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "감기에 걸리다"
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "着凉",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3502",
+      "level": 5,
+      "word": "直播",
+      "pinyin": "zhíbō",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "직파하다.",
+          "생방송하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "直播",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3509",
+      "level": 5,
+      "word": "治",
+      "pinyin": "zhì",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "다스리다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "治",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3537",
+      "level": 5,
+      "word": "逐步",
+      "pinyin": "zhúbù",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "서서히, 차츰, 점점."
+        ],
+        "pos": "adv",
+        "directChineseEntry": true,
+        "sourceWord": "逐步",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk5-3553",
+      "level": 5,
+      "word": "注重",
+      "pinyin": "zhùzhòng",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "중시하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "注重",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3625",
+      "level": 6,
+      "word": "保修",
+      "pinyin": "bǎoxiū",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "무상 보증으로 수리하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "保修",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3640",
+      "level": 6,
+      "word": "被迫",
+      "pinyin": "bèipò",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "강요되다. 어쩔 수 없이 ~ 하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "被迫",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3660",
+      "level": 6,
+      "word": "兵",
+      "pinyin": "bīng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "군사(軍士), 병사(兵士), 병졸(兵卒), 군인(軍人)",
+          "무기(武器), 병기(兵器)",
+          "싸움, 전쟁(戰爭)",
+          "재앙(災殃), 원수(怨讐)"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "兵",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "상하다(傷~), 다치다.",
+            "치다, (무기로써)죽이다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": true,
+          "sourceWord": "兵",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk6-3669",
+      "level": 6,
+      "word": "不料",
+      "pinyin": "búliào",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "뜻밖에, 예상외로, 갑자기, 돌연히."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "不料",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3680",
+      "level": 6,
+      "word": "不曾",
+      "pinyin": "bùcéng",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "결코 ~않다.",
+          "~한 적이 없다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "不曾",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3689",
+      "level": 6,
+      "word": "不已",
+      "pinyin": "bùyǐ",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "멈추지 않다, 끊임 없다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "不已",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "끊임없이"
+          ],
+          "pos": "adv",
+          "directChineseEntry": true,
+          "sourceWord": "不已",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk6-3702",
+      "level": 6,
+      "word": "采购",
+      "pinyin": "cǎigòu",
+      "partOfSpeechZh": "动、名",
+      "best": {
+        "koreanWord": "사다",
+        "glosses": [
+          "【…에서/에게서 …을】 ((‘…에게서’ 대신에 ‘…에게’가 쓰이기도 한다)) 값을 치르고 어떤 물건이나 권리를 받아 자기 것으로 만들다.",
+          "【…을】 가진 것을 팔아 돈을 장만하다.",
+          "【…을】 ((주로 ‘사서’ 꼴로 쓰여)) 안 해도 좋을 일을 일부러 하다.",
+          "【…을】 다른 사람의 태도나 어떤 일의 가치를 칭찬하여 받들다, 인정하다.",
+          "【…을】 대가를 치르고 사람을 부리다.",
+          "【…에게서 …을】((‘…에게서’ 대신에 ‘…에게’나 ‘…으로부터’가 쓰이기도 한다)) 다른사람에게 어떤 감정을 가지게 하다.",
+          "【…에게 …을】 다른 사람을 위해 음식을 함께 먹기 위하여 또는 다른 것을 위하여 대가를 치르다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": false,
+        "sourceWord": "采购",
+        "score": 15
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3734",
+      "level": 6,
+      "word": "厂家",
+      "pinyin": "chǎngjiā",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "제조업자."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "厂家",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "제조업자",
+          "glosses": [
+            "물품을 대량으로 만드는 사업을 경영하는 사람."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "厂家",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk6-3742",
+      "level": 6,
+      "word": "朝代",
+      "pinyin": "cháodài",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "왕조(王朝). 왕조의 연대"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "朝代",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3761",
+      "level": 6,
+      "word": "成交",
+      "pinyin": "chéngjiāo",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "거래(특히, 매매)가 성립하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "成交",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3768",
+      "level": 6,
+      "word": "城镇",
+      "pinyin": "chéngzhèn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "도시와 마을."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "城镇",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3780",
+      "level": 6,
+      "word": "抽奖",
+      "pinyin": "chōujiǎng",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "추첨하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "抽奖",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3784",
+      "level": 6,
+      "word": "初步",
+      "pinyin": "chūbù",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "초보적인."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "初步",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3786",
+      "level": 6,
+      "word": "初等",
+      "pinyin": "chūděng",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "초등"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "初等",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3795",
+      "level": 6,
+      "word": "除非",
+      "pinyin": "chúfēi",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(가정) 만약 ~이 아니라면.",
+          "(조건) ~이 아닌 한."
+        ],
+        "pos": "conj",
+        "directChineseEntry": true,
+        "sourceWord": "除非",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3811",
+      "level": 6,
+      "word": "闯",
+      "pinyin": "chuǎng",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(병음 chuǎng) 돌진하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "闯",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3819",
+      "level": 6,
+      "word": "此刻",
+      "pinyin": "cǐkè",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "이 때, 그 때."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "此刻",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3830",
+      "level": 6,
+      "word": "存储",
+      "pinyin": "cúnchǔ",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "저장하다, 저축하다, 비축하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "存储",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3878",
+      "level": 6,
+      "word": "倒车",
+      "pinyin": "dǎochē",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "중도환승(교통에서, 차, 배 등)."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "倒车",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3883",
+      "level": 6,
+      "word": "得以",
+      "pinyin": "déyǐ",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(~에 의해서) ~할 수가 있다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "得以",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3962",
+      "level": 6,
+      "word": "番",
+      "pinyin": "fān",
+      "partOfSpeechZh": "量",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "중국 서부의 한족이 아닌 자들에 대한 개괄적인 용어; 비한족, 외국인, 외국, 외국의"
+        ],
+        "pos": "adj",
+        "directChineseEntry": true,
+        "sourceWord": "番",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3985",
+      "level": 6,
+      "word": "分级",
+      "pinyin": "fēnjí",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "등급을 나누다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "分级",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-3986",
+      "level": 6,
+      "word": "分期",
+      "pinyin": "fēnqī",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "기간을 나눠서."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "分期",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4024",
+      "level": 6,
+      "word": "赶忙",
+      "pinyin": "gǎnmáng",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "서둘러서."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "赶忙",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4039",
+      "level": 6,
+      "word": "稿件",
+      "pinyin": "gǎojiàn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "원고."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "稿件",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4079",
+      "level": 6,
+      "word": "股市",
+      "pinyin": "gǔshì",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "주식 시장"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "股市",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4128",
+      "level": 6,
+      "word": "毫不",
+      "pinyin": "háo bù",
+      "partOfSpeechZh": "",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "조금도 ~하지 않다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "毫不",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4135",
+      "level": 6,
+      "word": "好客",
+      "pinyin": "hàokè",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "손님선호의."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "好客",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4159",
+      "level": 6,
+      "word": "胡子",
+      "pinyin": "húzi",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "수염",
+        "glosses": [
+          "다 자란 남자의 얼굴에 나는 털.",
+          "동물의 입 주위에 나는 털.",
+          "옥수수 끝머리에 나 있는 털."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "胡子",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4189",
+      "level": 6,
+      "word": "汇报",
+      "pinyin": "huìbào",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "보고하다",
+        "glosses": [
+          "어떤 사실을 말이나 글로 누구에게 또는 어디에 알리다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": false,
+        "sourceWord": "汇报",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4205",
+      "level": 6,
+      "word": "机动车",
+      "pinyin": "jīdòngchē",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "자동차. 동력 엔진 차량."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "机动车",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4212",
+      "level": 6,
+      "word": "基因",
+      "pinyin": "jīyīn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "유전자."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "基因",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "유전자",
+          "glosses": [
+            "유전 형질을 지닌 단위, 염기서열 속에 들어있다."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "基因",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk6-4215",
+      "level": 6,
+      "word": "即便",
+      "pinyin": "jíbiàn",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "설령 ~라도."
+        ],
+        "pos": "conj",
+        "directChineseEntry": true,
+        "sourceWord": "即便",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "곧, 곧바로, 즉시, 지체없이"
+          ],
+          "pos": "adv",
+          "directChineseEntry": true,
+          "sourceWord": "即便",
+          "score": 22
+        },
+        {
+          "koreanWord": "라도",
+          "glosses": [
+            "(‘이다’, ‘아니다’의 어간이나 어미 ‘-으시-’, ‘-더-’, ‘-으리-’ 뒤에 붙어) 설사 그렇다고 가정하여도 다른 경우와 마찬가지로 상관없음을 나타내는 연결 어미."
+          ],
+          "pos": "suffix",
+          "directChineseEntry": false,
+          "sourceWord": "即便",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "id": "hsk6-4223",
+      "level": 6,
+      "word": "季军",
+      "pinyin": "jìjūn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "제3위."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "季军",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4239",
+      "level": 6,
+      "word": "嫁",
+      "pinyin": "jià",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "신부에게 가다, 시집가다, 시집가게 하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "嫁",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4242",
+      "level": 6,
+      "word": "监测",
+      "pinyin": "jiāncè",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(측량 기구·계기를 이용하여) 감시하고 검측(儉測)하다. 검사하다. 모니터링하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "监测",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4253",
+      "level": 6,
+      "word": "简介",
+      "pinyin": "jiǎnjiè",
+      "partOfSpeechZh": "动、名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "간단한 소개."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "简介",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4274",
+      "level": 6,
+      "word": "胶水",
+      "pinyin": "jiāoshuǐ",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(종이를 붙이는데 사용되는) 풀."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "胶水",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4290",
+      "level": 6,
+      "word": "截止",
+      "pinyin": "jiézhǐ",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "끝나다; 끝내다; 닫다; 멈추다; 마감하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "截止",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4339",
+      "level": 6,
+      "word": "救灾",
+      "pinyin": "jiùzāi",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "피재자를 구조하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "救灾",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4380",
+      "level": 6,
+      "word": "科幻",
+      "pinyin": "kēhuàn",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "과학소설."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "科幻",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4389",
+      "level": 6,
+      "word": "肯",
+      "pinyin": "kěn",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "즐기다.",
+          "들어주다, 허락하다, 승낙하다"
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "肯",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "들어주다",
+          "glosses": [
+            "남의 부탁이나 바람을 받아들여 이루어지도록 해 주다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": false,
+          "sourceWord": "肯",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk6-4400",
+      "level": 6,
+      "word": "夸",
+      "pinyin": "kuā",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "과장하다.",
+          "칭찬하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "夸",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4401",
+      "level": 6,
+      "word": "夸奖",
+      "pinyin": "kuājiǎng",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "칭찬하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "夸奖",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "칭찬하다",
+          "glosses": [
+            "상대방에게 훌륭한 점을 말하거나 좋은 말을 하다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": false,
+          "sourceWord": "夸奖",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk6-4404",
+      "level": 6,
+      "word": "快捷",
+      "pinyin": "kuàijié",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "민첩하다."
+        ],
+        "pos": "adj",
+        "directChineseEntry": true,
+        "sourceWord": "快捷",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4406",
+      "level": 6,
+      "word": "款式",
+      "pinyin": "kuǎnshì",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "양식. 스타일",
+          "(옷의) 디자인."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "款式",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4412",
+      "level": 6,
+      "word": "啦",
+      "pinyin": "la",
+      "partOfSpeechZh": "助",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(了 + 啊) 문말에 사용해서 화자의 강한 감정을 나타내는 것."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "啦",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4422",
+      "level": 6,
+      "word": "牢",
+      "pinyin": "láo",
+      "partOfSpeechZh": "名、形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "견고한, 확실한."
+        ],
+        "pos": "adj",
+        "directChineseEntry": true,
+        "sourceWord": "牢",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "(우어) ~하고 있다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": true,
+          "sourceWord": "牢",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk6-4438",
+      "level": 6,
+      "word": "力度",
+      "pinyin": "lìdù",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "강도(强度)"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "力度",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4457",
+      "level": 6,
+      "word": "流量",
+      "pinyin": "liúliàng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "유량",
+          "(모바일, 인터넷의) 데이터.",
+          "(웹사이트의) 트래픽."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "流量",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4473",
+      "level": 6,
+      "word": "率",
+      "pinyin": "lǜ",
+      "partOfSpeechZh": "后缀",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "거느리다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "率",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "우두머리, 장수"
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "率",
+          "score": 22
+        },
+        {
+          "koreanWord": "",
+          "glosses": [
+            "대개, 대체로, 통상"
+          ],
+          "pos": "adv",
+          "directChineseEntry": true,
+          "sourceWord": "率",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk6-4486",
+      "level": 6,
+      "word": "嘛",
+      "pinyin": "ma",
+      "partOfSpeechZh": "助",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(민난어 mā) ~도."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "嘛",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4495",
+      "level": 6,
+      "word": "贸易",
+      "pinyin": "màoyì",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "무역",
+        "glosses": [
+          "국가 간에 일어나는 거래 행위."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "贸易",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4588",
+      "level": 6,
+      "word": "片面",
+      "pinyin": "piànmiàn",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "일방의, 일방적인."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "片面",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4601",
+      "level": 6,
+      "word": "评估",
+      "pinyin": "pínggū",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "평가하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "评估",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4670",
+      "level": 6,
+      "word": "求救",
+      "pinyin": "qiújiù",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "구조를 바라다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "求救",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4680",
+      "level": 6,
+      "word": "全程",
+      "pinyin": "quánchéng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "전 과정, 전체 행정, 전체 여정"
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "全程",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4711",
+      "level": 6,
+      "word": "日夜",
+      "pinyin": "rìyè",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "낮과 밤."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "日夜",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4745",
+      "level": 6,
+      "word": "伤亡",
+      "pinyin": "shāngwáng",
+      "partOfSpeechZh": "动、名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "사상하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "伤亡",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4768",
+      "level": 6,
+      "word": "审美",
+      "pinyin": "shěnměi",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "미(美)를 이해하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "审美",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4812",
+      "level": 6,
+      "word": "手臂",
+      "pinyin": "shǒubì",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "팔",
+        "glosses": [
+          "몸통의 양쪽 어깨에서 뻗어진 신체의 한 부분."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "手臂",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4824",
+      "level": 6,
+      "word": "属",
+      "pinyin": "shǔ",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "속하다.",
+          "(간지) ~해이다.",
+          "부착하다.",
+          "복종하다.",
+          "거느리다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "属",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "무리, 붙이.",
+            "벼슬아치"
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "属",
+          "score": 22
+        },
+        {
+          "koreanWord": "아래",
+          "glosses": [
+            "평면보다 낮은 공간상의 위치 또는 낮은 정도.",
+            "(비유) 어떤 영향이나 지배를 받는 처지를 나타냄."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "属",
+          "score": 15
+        }
+      ]
+    },
+    {
+      "id": "hsk6-4854",
+      "level": 6,
+      "word": "所",
+      "pinyin": "suǒ",
+      "partOfSpeechZh": "助",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~하는 바. 지사(指事)구실을 하는 말.",
+          "~된 것."
+        ],
+        "pos": "particle",
+        "directChineseEntry": true,
+        "sourceWord": "所",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "곳, 장소."
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "所",
+          "score": 22
+        },
+        {
+          "koreanWord": "",
+          "glosses": [
+            "~하는 바의.",
+            "(为/被 + 명사 + 所 + 동사) ~되다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": true,
+          "sourceWord": "所",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk6-4875",
+      "level": 6,
+      "word": "特",
+      "pinyin": "tè",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "특히",
+          "매우."
+        ],
+        "pos": "adv",
+        "directChineseEntry": true,
+        "sourceWord": "特",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "숫소."
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "特",
+          "score": 22
+        },
+        {
+          "koreanWord": "",
+          "glosses": [
+            "남다르다"
+          ],
+          "pos": "adj",
+          "directChineseEntry": true,
+          "sourceWord": "特",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk6-4895",
+      "level": 6,
+      "word": "田",
+      "pinyin": "tián",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "논, 밭.",
+          "중국인의 성의 하나. 백가성 제156위."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "田",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4917",
+      "level": 6,
+      "word": "偷偷",
+      "pinyin": "tōutōu",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "몰래."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "偷偷",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "몰래",
+          "glosses": [
+            "다른 사람의 눈을 피해 가만히."
+          ],
+          "pos": "adv",
+          "directChineseEntry": false,
+          "sourceWord": "偷偷",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk6-4941",
+      "level": 6,
+      "word": "推行",
+      "pinyin": "tuīxíng",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "추진하다, 보급시키다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "推行",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4972",
+      "level": 6,
+      "word": "为期",
+      "pinyin": "wéiqī",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~을 기간으로 하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "为期",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-4977",
+      "level": 6,
+      "word": "未",
+      "pinyin": "wèi",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "아직 ~하지 못하다, 아직 …하지 않다.",
+          "미래(未來), 장차(將次)"
+        ],
+        "pos": "adv",
+        "directChineseEntry": true,
+        "sourceWord": "未",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "아니다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": true,
+          "sourceWord": "未",
+          "score": 22
+        },
+        {
+          "koreanWord": "",
+          "glosses": [
+            "아니냐? 못하느냐?"
+          ],
+          "pos": "particle",
+          "directChineseEntry": true,
+          "sourceWord": "未",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk6-5016",
+      "level": 6,
+      "word": "夏令营",
+      "pinyin": "xiàlìngyíng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "하계캠프."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "夏令营",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5022",
+      "level": 6,
+      "word": "嫌",
+      "pinyin": "xián",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "싫어하다.",
+          "의심하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "嫌",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "싫어하다",
+          "glosses": [
+            "무엇을 꺼림직하게 여기다."
+          ],
+          "pos": "verb",
+          "directChineseEntry": false,
+          "sourceWord": "嫌",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk6-5023",
+      "level": 6,
+      "word": "显",
+      "pinyin": "xiǎn",
+      "partOfSpeechZh": "形、动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "분명한, 뚜렷한, 명확한, 드러난, 눈에 띈."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "显",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5026",
+      "level": 6,
+      "word": "限",
+      "pinyin": "xiàn",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "경계를 이루다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "限",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5053",
+      "level": 6,
+      "word": "笑容",
+      "pinyin": "xiàoróng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "미소",
+        "glosses": [
+          "소리 없이 살며시 입가에 머금는 웃음.",
+          "무엇의 크기가 아주 작음.",
+          "무엇의 수 또는 양이 아주 적음."
+        ],
+        "pos": "noun",
+        "directChineseEntry": false,
+        "sourceWord": "笑容",
+        "score": 20
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5054",
+      "level": 6,
+      "word": "效应",
+      "pinyin": "xiàoyìng",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "효과와 반응"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "效应",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5065",
+      "level": 6,
+      "word": "心目",
+      "pinyin": "xīnmù",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "생각.",
+          "인상."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "心目",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5076",
+      "level": 6,
+      "word": "型号",
+      "pinyin": "xínghào",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "모델, 품종; 모델 번호"
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "型号",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5103",
+      "level": 6,
+      "word": "严",
+      "pinyin": "yán",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "중국인의 성의 하나."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "严",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5130",
+      "level": 6,
+      "word": "野",
+      "pinyin": "yě",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "야생의"
+        ],
+        "pos": "adj",
+        "directChineseEntry": true,
+        "sourceWord": "野",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "들."
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "野",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk6-5147",
+      "level": 6,
+      "word": "一道",
+      "pinyin": "yídào",
+      "partOfSpeechZh": "副",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(강·다리·요리 등의) 하나"
+        ],
+        "pos": "num",
+        "directChineseEntry": true,
+        "sourceWord": "一道",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5159",
+      "level": 6,
+      "word": "以便",
+      "pinyin": "yǐbiàn",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~하기 위해."
+        ],
+        "pos": "conj",
+        "directChineseEntry": true,
+        "sourceWord": "以便",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5160",
+      "level": 6,
+      "word": "以免",
+      "pinyin": "yǐmiǎn",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~을 하지 않고 끝날/해결될 수 있게."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "以免",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5191",
+      "level": 6,
+      "word": "勇于",
+      "pinyin": "yǒngyú",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "용감하게 ~하다."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "勇于",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5205",
+      "level": 6,
+      "word": "有序",
+      "pinyin": "yǒuxù",
+      "partOfSpeechZh": "形",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "순서가 있다, 질서가 있다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "有序",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5208",
+      "level": 6,
+      "word": "与其",
+      "pinyin": "yǔqí",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~하는 것보다는/~하느니."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "与其",
+        "score": 22
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5271",
+      "level": 6,
+      "word": "招生",
+      "pinyin": "zhāoshēng",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "학생을 모집하다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "招生",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5281",
+      "level": 6,
+      "word": "阵雨",
+      "pinyin": "zhènyǔ",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "짧은 폭우."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "阵雨",
+        "score": 22
+      },
+      "alternatives": [
+        {
+          "koreanWord": "폭우",
+          "glosses": [
+            "갑자기 많이 내리는 비."
+          ],
+          "pos": "noun",
+          "directChineseEntry": false,
+          "sourceWord": "阵雨",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "hsk6-5286",
+      "level": 6,
+      "word": "征求",
+      "pinyin": "zhēngqiú",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(세금을) 부과하다, 징수하다.",
+          "(서면이나 구두로 의견을) 구하다·묻다."
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "征求",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5299",
+      "level": 6,
+      "word": "之所以",
+      "pinyin": "zhīsuǒyǐ",
+      "partOfSpeechZh": "连",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "~의 이유는...이다."
+        ],
+        "pos": "conj",
+        "directChineseEntry": true,
+        "sourceWord": "之所以",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5312",
+      "level": 6,
+      "word": "制",
+      "pinyin": "zhì",
+      "partOfSpeechZh": "动",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(칼로) 자르다.",
+          "규율하다.",
+          "제한하다. 통제하다. 억제하다. 금하다.",
+          "다스리다; 결정하다; 압도하다"
+        ],
+        "pos": "verb",
+        "directChineseEntry": true,
+        "sourceWord": "制",
+        "score": 27
+      },
+      "alternatives": [
+        {
+          "koreanWord": "",
+          "glosses": [
+            "천자(天子)의 말",
+            "제도. 준칙. 체계. 규율"
+          ],
+          "pos": "noun",
+          "directChineseEntry": true,
+          "sourceWord": "制",
+          "score": 22
+        }
+      ]
+    },
+    {
+      "id": "hsk6-5314",
+      "level": 6,
+      "word": "智力",
+      "pinyin": "zhìlì",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "지력."
+        ],
+        "pos": "noun",
+        "directChineseEntry": true,
+        "sourceWord": "智力",
+        "score": 27
+      },
+      "alternatives": []
+    },
+    {
+      "id": "hsk6-5324",
+      "level": 6,
+      "word": "钟头",
+      "pinyin": "zhōngtóu",
+      "partOfSpeechZh": "名",
+      "best": {
+        "koreanWord": "",
+        "glosses": [
+          "(회화체) 시간, 시."
+        ],
+        "pos": "unknown",
+        "directChineseEntry": true,
+        "sourceWord": "钟头",
+        "score": 22
+      },
+      "alternatives": []
+    }
+  ],
+  "remaining": [
+    {
+      "id": "hsk2-0325",
+      "level": 2,
+      "word": "从小",
+      "pinyin": "cóngxiǎo",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk2-0349",
+      "level": 2,
+      "word": "过年",
+      "pinyin": "guònián",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk2-0401",
+      "level": 2,
+      "word": "门口",
+      "pinyin": "ménkǒu",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk2-0408",
+      "level": 2,
+      "word": "奶茶",
+      "pinyin": "nǎichá",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk2-0428",
+      "level": 2,
+      "word": "上网",
+      "pinyin": "shàngwǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk2-0451",
+      "level": 2,
+      "word": "网上",
+      "pinyin": "wǎngshang",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0586",
+      "level": 3,
+      "word": "的话",
+      "pinyin": "dehuà",
+      "partOfSpeechZh": "助"
+    },
+    {
+      "id": "hsk3-0653",
+      "level": 3,
+      "word": "关机",
+      "pinyin": "guānjī",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0659",
+      "level": 3,
+      "word": "过节",
+      "pinyin": "guòjié",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0738",
+      "level": 3,
+      "word": "课文",
+      "pinyin": "kèwén",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0782",
+      "level": 3,
+      "word": "难听",
+      "pinyin": "nántīng",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk3-0815",
+      "level": 3,
+      "word": "认得",
+      "pinyin": "rènde",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk3-0866",
+      "level": 3,
+      "word": "外卖",
+      "pinyin": "wàimài",
+      "partOfSpeechZh": "动、名"
+    },
+    {
+      "id": "hsk3-0955",
+      "level": 3,
+      "word": "园",
+      "pinyin": "yuán",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk3-0956",
+      "level": 3,
+      "word": "员",
+      "pinyin": "yuán",
+      "partOfSpeechZh": "后缀"
+    },
+    {
+      "id": "hsk4-1004",
+      "level": 4,
+      "word": "安检",
+      "pinyin": "ānjiǎn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1075",
+      "level": 4,
+      "word": "车速",
+      "pinyin": "chēsù",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1076",
+      "level": 4,
+      "word": "车位",
+      "pinyin": "chēwèi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1102",
+      "level": 4,
+      "word": "从此",
+      "pinyin": "cóngcǐ",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk4-1104",
+      "level": 4,
+      "word": "从中",
+      "pinyin": "cóngzhōng",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk4-1123",
+      "level": 4,
+      "word": "大巴",
+      "pinyin": "dàbā",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1148",
+      "level": 4,
+      "word": "等到",
+      "pinyin": "děngdào",
+      "partOfSpeechZh": "介"
+    },
+    {
+      "id": "hsk4-1166",
+      "level": 4,
+      "word": "动车",
+      "pinyin": "dòngchē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1182",
+      "level": 4,
+      "word": "多样",
+      "pinyin": "duōyàng",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk4-1230",
+      "level": 4,
+      "word": "感人",
+      "pinyin": "gǎnrén",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk4-1366",
+      "level": 4,
+      "word": "降温",
+      "pinyin": "jiàngwēn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1378",
+      "level": 4,
+      "word": "叫作",
+      "pinyin": "jiàozuò",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1397",
+      "level": 4,
+      "word": "京剧",
+      "pinyin": "jīngjù",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1411",
+      "level": 4,
+      "word": "举例",
+      "pinyin": "jǔlì",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1418",
+      "level": 4,
+      "word": "剧院",
+      "pinyin": "jùyuàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1433",
+      "level": 4,
+      "word": "课堂",
+      "pinyin": "kètáng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1451",
+      "level": 4,
+      "word": "来得及",
+      "pinyin": "láidejí",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1502",
+      "level": 4,
+      "word": "美景",
+      "pinyin": "měijǐng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1524",
+      "level": 4,
+      "word": "男士",
+      "pinyin": "nánshì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1526",
+      "level": 4,
+      "word": "难忘",
+      "pinyin": "nánwàng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1531",
+      "level": 4,
+      "word": "能否",
+      "pinyin": "néng fǒu",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk4-1566",
+      "level": 4,
+      "word": "期中",
+      "pinyin": "qīzhōng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1569",
+      "level": 4,
+      "word": "起到",
+      "pinyin": "qǐdào",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1585",
+      "level": 4,
+      "word": "琴",
+      "pinyin": "qín",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1592",
+      "level": 4,
+      "word": "球迷",
+      "pinyin": "qiúmí",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1627",
+      "level": 4,
+      "word": "扫码",
+      "pinyin": "sǎomǎ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1632",
+      "level": 4,
+      "word": "上门",
+      "pinyin": "shàngmén",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1635",
+      "level": 4,
+      "word": "少见",
+      "pinyin": "shǎojiàn",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk4-1641",
+      "level": 4,
+      "word": "身",
+      "pinyin": "shēn",
+      "partOfSpeechZh": "名、量"
+    },
+    {
+      "id": "hsk4-1674",
+      "level": 4,
+      "word": "市区",
+      "pinyin": "shìqū",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1684",
+      "level": 4,
+      "word": "受不了",
+      "pinyin": "shòubuliǎo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1728",
+      "level": 4,
+      "word": "提到",
+      "pinyin": "tídào",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1746",
+      "level": 4,
+      "word": "童年",
+      "pinyin": "tóngnián",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1753",
+      "level": 4,
+      "word": "图片",
+      "pinyin": "túpiàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1765",
+      "level": 4,
+      "word": "网购",
+      "pinyin": "wǎnggòu",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1794",
+      "level": 4,
+      "word": "鲜",
+      "pinyin": "xiān",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk4-1800",
+      "level": 4,
+      "word": "线下",
+      "pinyin": "xiànxià",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1876",
+      "level": 4,
+      "word": "应聘",
+      "pinyin": "yìngpìn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1879",
+      "level": 4,
+      "word": "用来",
+      "pinyin": "yònglái",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1880",
+      "level": 4,
+      "word": "用于",
+      "pinyin": "yòngyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1887",
+      "level": 4,
+      "word": "游玩",
+      "pinyin": "yóuwán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1906",
+      "level": 4,
+      "word": "约",
+      "pinyin": "yuē",
+      "partOfSpeechZh": "动、副"
+    },
+    {
+      "id": "hsk4-1908",
+      "level": 4,
+      "word": "月饼",
+      "pinyin": "yuèbing",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1910",
+      "level": 4,
+      "word": "月份",
+      "pinyin": "yuèfèn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk4-1968",
+      "level": 4,
+      "word": "专门",
+      "pinyin": "zhuānmén",
+      "partOfSpeechZh": "副、形"
+    },
+    {
+      "id": "hsk4-1971",
+      "level": 4,
+      "word": "转发",
+      "pinyin": "zhuǎnfā",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk4-1977",
+      "level": 4,
+      "word": "准时",
+      "pinyin": "zhǔnshí",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk4-1991",
+      "level": 4,
+      "word": "座",
+      "pinyin": "zuò",
+      "partOfSpeechZh": "名、量"
+    },
+    {
+      "id": "hsk4-1992",
+      "level": 4,
+      "word": "做法",
+      "pinyin": "zuòfǎ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2020",
+      "level": 5,
+      "word": "宝",
+      "pinyin": "bǎo",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2033",
+      "level": 5,
+      "word": "报警",
+      "pinyin": "bàojǐng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2067",
+      "level": 5,
+      "word": "饼",
+      "pinyin": "bǐng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2078",
+      "level": 5,
+      "word": "不符",
+      "pinyin": "bùfú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2114",
+      "level": 5,
+      "word": "长途",
+      "pinyin": "chángtú",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2124",
+      "level": 5,
+      "word": "车祸",
+      "pinyin": "chēhuò",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2144",
+      "level": 5,
+      "word": "城区",
+      "pinyin": "chéngqū",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2197",
+      "level": 5,
+      "word": "此前",
+      "pinyin": "cǐqián",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2200",
+      "level": 5,
+      "word": "从不",
+      "pinyin": "cóng bù",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-2231",
+      "level": 5,
+      "word": "大于",
+      "pinyin": "dàyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2277",
+      "level": 5,
+      "word": "点赞",
+      "pinyin": "diǎnzàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2280",
+      "level": 5,
+      "word": "电器",
+      "pinyin": "diànqì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2281",
+      "level": 5,
+      "word": "电商",
+      "pinyin": "diànshāng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2283",
+      "level": 5,
+      "word": "电子版",
+      "pinyin": "diànzǐbǎn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2285",
+      "level": 5,
+      "word": "调研",
+      "pinyin": "diàoyán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2291",
+      "level": 5,
+      "word": "动人",
+      "pinyin": "dòngrén",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2297",
+      "level": 5,
+      "word": "读音",
+      "pinyin": "dúyīn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2314",
+      "level": 5,
+      "word": "二手",
+      "pinyin": "èrshǒu",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2315",
+      "level": 5,
+      "word": "二维码",
+      "pinyin": "èrwéimǎ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2340",
+      "level": 5,
+      "word": "防",
+      "pinyin": "fáng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2367",
+      "level": 5,
+      "word": "福",
+      "pinyin": "fú",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2425",
+      "level": 5,
+      "word": "古老",
+      "pinyin": "gǔlǎo",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2450",
+      "level": 5,
+      "word": "国画",
+      "pinyin": "guóhuà",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2451",
+      "level": 5,
+      "word": "国庆",
+      "pinyin": "guóqìng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2457",
+      "level": 5,
+      "word": "过期",
+      "pinyin": "guòqī",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2462",
+      "level": 5,
+      "word": "海鲜",
+      "pinyin": "hǎixiān",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2497",
+      "level": 5,
+      "word": "化",
+      "pinyin": "huà",
+      "partOfSpeechZh": "后缀、（动）"
+    },
+    {
+      "id": "hsk5-2498",
+      "level": 5,
+      "word": "话费",
+      "pinyin": "huàfèi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2502",
+      "level": 5,
+      "word": "环节",
+      "pinyin": "huánjié",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2516",
+      "level": 5,
+      "word": "火锅",
+      "pinyin": "huǒguō",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2573",
+      "level": 5,
+      "word": "键",
+      "pinyin": "jiàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2586",
+      "level": 5,
+      "word": "降水",
+      "pinyin": "jiàngshuǐ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2587",
+      "level": 5,
+      "word": "浇",
+      "pinyin": "jiāo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2593",
+      "level": 5,
+      "word": "较",
+      "pinyin": "jiào",
+      "partOfSpeechZh": "介、副"
+    },
+    {
+      "id": "hsk5-2624",
+      "level": 5,
+      "word": "惊喜",
+      "pinyin": "jīngxǐ",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2626",
+      "level": 5,
+      "word": "静",
+      "pinyin": "jìng",
+      "partOfSpeechZh": "形、动"
+    },
+    {
+      "id": "hsk5-2653",
+      "level": 5,
+      "word": "开水",
+      "pinyin": "kāishuǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2663",
+      "level": 5,
+      "word": "科研",
+      "pinyin": "kēyán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2692",
+      "level": 5,
+      "word": "泪",
+      "pinyin": "lèi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2713",
+      "level": 5,
+      "word": "连忙",
+      "pinyin": "liánmáng",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk5-2734",
+      "level": 5,
+      "word": "浏览",
+      "pinyin": "liúlǎn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2738",
+      "level": 5,
+      "word": "录",
+      "pinyin": "lù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2755",
+      "level": 5,
+      "word": "没法儿",
+      "pinyin": "méifǎr",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2800",
+      "level": 5,
+      "word": "年夜饭",
+      "pinyin": "niányèfàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2822",
+      "level": 5,
+      "word": "盆",
+      "pinyin": "pén",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2832",
+      "level": 5,
+      "word": "品",
+      "pinyin": "pǐn",
+      "partOfSpeechZh": "后缀、（动）"
+    },
+    {
+      "id": "hsk5-2864",
+      "level": 5,
+      "word": "前来",
+      "pinyin": "qiánlái",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2882",
+      "level": 5,
+      "word": "亲情",
+      "pinyin": "qīnqíng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2919",
+      "level": 5,
+      "word": "人际",
+      "pinyin": "rénjì",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk5-2924",
+      "level": 5,
+      "word": "人民币",
+      "pinyin": "rénmínbì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2948",
+      "level": 5,
+      "word": "删",
+      "pinyin": "shān",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2951",
+      "level": 5,
+      "word": "山区",
+      "pinyin": "shānqū",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2960",
+      "level": 5,
+      "word": "商务",
+      "pinyin": "shāngwù",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-2971",
+      "level": 5,
+      "word": "舍得",
+      "pinyin": "shěde",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2994",
+      "level": 5,
+      "word": "升温",
+      "pinyin": "shēngwēn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-2996",
+      "level": 5,
+      "word": "生肖",
+      "pinyin": "shēngxiào",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3030",
+      "level": 5,
+      "word": "似的",
+      "pinyin": "shìde",
+      "partOfSpeechZh": "助"
+    },
+    {
+      "id": "hsk5-3074",
+      "level": 5,
+      "word": "顺",
+      "pinyin": "shùn",
+      "partOfSpeechZh": "动、介、形"
+    },
+    {
+      "id": "hsk5-3087",
+      "level": 5,
+      "word": "酸甜苦辣",
+      "pinyin": "suān-tián-kǔ-là",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-3102",
+      "level": 5,
+      "word": "台阶",
+      "pinyin": "táijiē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3126",
+      "level": 5,
+      "word": "填",
+      "pinyin": "tián",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3159",
+      "level": 5,
+      "word": "推广",
+      "pinyin": "tuīguǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3219",
+      "level": 5,
+      "word": "物业",
+      "pinyin": "wùyè",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3234",
+      "level": 5,
+      "word": "显得",
+      "pinyin": "xiǎnde",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3266",
+      "level": 5,
+      "word": "销量",
+      "pinyin": "xiāoliàng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3271",
+      "level": 5,
+      "word": "小于",
+      "pinyin": "xiǎoyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3315",
+      "level": 5,
+      "word": "雪糕",
+      "pinyin": "xuěgāo",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3338",
+      "level": 5,
+      "word": "要不",
+      "pinyin": "yàobù",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk5-3358",
+      "level": 5,
+      "word": "一路顺风",
+      "pinyin": "yílù-shùnfēng",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-3361",
+      "level": 5,
+      "word": "乙",
+      "pinyin": "yǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3383",
+      "level": 5,
+      "word": "影视",
+      "pinyin": "yǐngshì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3407",
+      "level": 5,
+      "word": "油条",
+      "pinyin": "yóutiáo",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3430",
+      "level": 5,
+      "word": "原有",
+      "pinyin": "yuán yǒu",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-3442",
+      "level": 5,
+      "word": "在场",
+      "pinyin": "zàichǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3444",
+      "level": 5,
+      "word": "在内",
+      "pinyin": "zàinèi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3446",
+      "level": 5,
+      "word": "在于",
+      "pinyin": "zàiyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3458",
+      "level": 5,
+      "word": "赠",
+      "pinyin": "zèng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3470",
+      "level": 5,
+      "word": "占线",
+      "pinyin": "zhànxiàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3488",
+      "level": 5,
+      "word": "争",
+      "pinyin": "zhēng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3491",
+      "level": 5,
+      "word": "整体",
+      "pinyin": "zhěngtǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3496",
+      "level": 5,
+      "word": "正如",
+      "pinyin": "zhèngrú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3520",
+      "level": 5,
+      "word": "中华",
+      "pinyin": "Zhōnghuá",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3521",
+      "level": 5,
+      "word": "中华民族",
+      "pinyin": "Zhōnghuá Mínzú",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk5-3525",
+      "level": 5,
+      "word": "中外",
+      "pinyin": "zhōngwài",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk5-3559",
+      "level": 5,
+      "word": "转告",
+      "pinyin": "zhuǎngào",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk5-3574",
+      "level": 5,
+      "word": "自从",
+      "pinyin": "zìcóng",
+      "partOfSpeechZh": "介"
+    },
+    {
+      "id": "hsk6-3610",
+      "level": 6,
+      "word": "百分点",
+      "pinyin": "bǎifēndiǎn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3624",
+      "level": 6,
+      "word": "保暖",
+      "pinyin": "bǎonuǎn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3643",
+      "level": 6,
+      "word": "倍增",
+      "pinyin": "bèizēng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3649",
+      "level": 6,
+      "word": "比方",
+      "pinyin": "bǐfang",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3677",
+      "level": 6,
+      "word": "补习",
+      "pinyin": "bǔxí",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3682",
+      "level": 6,
+      "word": "不得",
+      "pinyin": "bùdé",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3691",
+      "level": 6,
+      "word": "不止",
+      "pinyin": "bùzhǐ",
+      "partOfSpeechZh": "动、副"
+    },
+    {
+      "id": "hsk6-3730",
+      "level": 6,
+      "word": "场次",
+      "pinyin": "chǎngcì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3732",
+      "level": 6,
+      "word": "场馆",
+      "pinyin": "chǎngguǎn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3735",
+      "level": 6,
+      "word": "场景",
+      "pinyin": "chǎngjǐng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3746",
+      "level": 6,
+      "word": "炒股",
+      "pinyin": "chǎogǔ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3759",
+      "level": 6,
+      "word": "承办",
+      "pinyin": "chéngbàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3782",
+      "level": 6,
+      "word": "愁",
+      "pinyin": "chóu",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3817",
+      "level": 6,
+      "word": "纯",
+      "pinyin": "chún",
+      "partOfSpeechZh": "形、副"
+    },
+    {
+      "id": "hsk6-3824",
+      "level": 6,
+      "word": "从未",
+      "pinyin": "cóngwèi",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-3825",
+      "level": 6,
+      "word": "从业",
+      "pinyin": "cóngyè",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3840",
+      "level": 6,
+      "word": "打卡",
+      "pinyin": "dǎkǎ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3841",
+      "level": 6,
+      "word": "打雷",
+      "pinyin": "dǎléi",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3845",
+      "level": 6,
+      "word": "大吃一惊",
+      "pinyin": "dàchī-yìjīng",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-3850",
+      "level": 6,
+      "word": "大伙儿",
+      "pinyin": "dàhuǒr",
+      "partOfSpeechZh": "代"
+    },
+    {
+      "id": "hsk6-3874",
+      "level": 6,
+      "word": "档案",
+      "pinyin": "dàng’àn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3881",
+      "level": 6,
+      "word": "倒是",
+      "pinyin": "dàoshì",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-3882",
+      "level": 6,
+      "word": "得了",
+      "pinyin": "déle",
+      "partOfSpeechZh": "动、助"
+    },
+    {
+      "id": "hsk6-3900",
+      "level": 6,
+      "word": "电饭锅",
+      "pinyin": "diànfànguō",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3907",
+      "level": 6,
+      "word": "跌",
+      "pinyin": "diē",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3912",
+      "level": 6,
+      "word": "定时",
+      "pinyin": "dìngshí",
+      "partOfSpeechZh": "动、名"
+    },
+    {
+      "id": "hsk6-3922",
+      "level": 6,
+      "word": "逗",
+      "pinyin": "dòu",
+      "partOfSpeechZh": "动、形"
+    },
+    {
+      "id": "hsk6-3934",
+      "level": 6,
+      "word": "蹲",
+      "pinyin": "dūn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3940",
+      "level": 6,
+      "word": "多元",
+      "pinyin": "duōyuán",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-3946",
+      "level": 6,
+      "word": "儿科",
+      "pinyin": "érkē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-3957",
+      "level": 6,
+      "word": "发炎",
+      "pinyin": "fāyán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-3978",
+      "level": 6,
+      "word": "飞速",
+      "pinyin": "fēisù",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-4010",
+      "level": 6,
+      "word": "负面",
+      "pinyin": "fùmiàn",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4040",
+      "level": 6,
+      "word": "稿子",
+      "pinyin": "gǎozi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4063",
+      "level": 6,
+      "word": "公益",
+      "pinyin": "gōngyì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4087",
+      "level": 6,
+      "word": "拐弯",
+      "pinyin": "guǎiwān",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4117",
+      "level": 6,
+      "word": "海内外",
+      "pinyin": "hǎi nèiwài",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-4123",
+      "level": 6,
+      "word": "寒冬",
+      "pinyin": "hándōng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4126",
+      "level": 6,
+      "word": "旱灾",
+      "pinyin": "hànzāi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4132",
+      "level": 6,
+      "word": "好不",
+      "pinyin": "hǎobù",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-4136",
+      "level": 6,
+      "word": "好学",
+      "pinyin": "hàoxué",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4230",
+      "level": 6,
+      "word": "家常",
+      "pinyin": "jiācháng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4233",
+      "level": 6,
+      "word": "家居",
+      "pinyin": "jiājū",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4255",
+      "level": 6,
+      "word": "减压",
+      "pinyin": "jiǎnyā",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4270",
+      "level": 6,
+      "word": "胶带",
+      "pinyin": "jiāodài",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4287",
+      "level": 6,
+      "word": "节能",
+      "pinyin": "jiénéng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4307",
+      "level": 6,
+      "word": "进而",
+      "pinyin": "jìn’ér",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-4313",
+      "level": 6,
+      "word": "精美",
+      "pinyin": "jīngměi",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4321",
+      "level": 6,
+      "word": "精准",
+      "pinyin": "jīngzhǔn",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4333",
+      "level": 6,
+      "word": "酒水",
+      "pinyin": "jiǔshuǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4334",
+      "level": 6,
+      "word": "就读",
+      "pinyin": "jiùdú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4355",
+      "level": 6,
+      "word": "决策",
+      "pinyin": "juécè",
+      "partOfSpeechZh": "动、名"
+    },
+    {
+      "id": "hsk6-4369",
+      "level": 6,
+      "word": "看得起",
+      "pinyin": "kàndeqǐ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4371",
+      "level": 6,
+      "word": "看似",
+      "pinyin": "kànsì",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4373",
+      "level": 6,
+      "word": "看重",
+      "pinyin": "kànzhòng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4382",
+      "level": 6,
+      "word": "科普",
+      "pinyin": "kēpǔ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4427",
+      "level": 6,
+      "word": "乐于",
+      "pinyin": "lèyú",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4440",
+      "level": 6,
+      "word": "历年",
+      "pinyin": "lìnián",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4444",
+      "level": 6,
+      "word": "联网",
+      "pinyin": "liánwǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4447",
+      "level": 6,
+      "word": "两岸",
+      "pinyin": "liǎng’àn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4465",
+      "level": 6,
+      "word": "路况",
+      "pinyin": "lùkuàng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4475",
+      "level": 6,
+      "word": "轮",
+      "pinyin": "lún",
+      "partOfSpeechZh": "名、动、量"
+    },
+    {
+      "id": "hsk6-4501",
+      "level": 6,
+      "word": "迷人",
+      "pinyin": "mírén",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4516",
+      "level": 6,
+      "word": "妙",
+      "pinyin": "miào",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-4518",
+      "level": 6,
+      "word": "民歌",
+      "pinyin": "míngē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4524",
+      "level": 6,
+      "word": "名额",
+      "pinyin": "míng’é",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4533",
+      "level": 6,
+      "word": "模特儿",
+      "pinyin": "mótèr",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4544",
+      "level": 6,
+      "word": "南极洲",
+      "pinyin": "Nánjízhōu",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4623",
+      "level": 6,
+      "word": "启事",
+      "pinyin": "qǐshì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4633",
+      "level": 6,
+      "word": "千家万户",
+      "pinyin": "qiānjiā-wànhù",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-4672",
+      "level": 6,
+      "word": "求助",
+      "pinyin": "qiúzhù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4689",
+      "level": 6,
+      "word": "热度",
+      "pinyin": "rèdù",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4691",
+      "level": 6,
+      "word": "热水器",
+      "pinyin": "rèshuǐqì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4692",
+      "level": 6,
+      "word": "热线",
+      "pinyin": "rèxiàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4693",
+      "level": 6,
+      "word": "热议",
+      "pinyin": "rèyì",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4694",
+      "level": 6,
+      "word": "人工智能",
+      "pinyin": "réngōng zhìnéng",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-4696",
+      "level": 6,
+      "word": "人均",
+      "pinyin": "rénjūn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4703",
+      "level": 6,
+      "word": "认错",
+      "pinyin": "rèncuò",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4708",
+      "level": 6,
+      "word": "仍旧",
+      "pinyin": "réngjiù",
+      "partOfSpeechZh": "副"
+    },
+    {
+      "id": "hsk6-4725",
+      "level": 6,
+      "word": "赛事",
+      "pinyin": "sàishì",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4732",
+      "level": 6,
+      "word": "扫描",
+      "pinyin": "sǎomiáo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4749",
+      "level": 6,
+      "word": "上进",
+      "pinyin": "shàngjìn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4754",
+      "level": 6,
+      "word": "少儿",
+      "pinyin": "shào’ér",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4756",
+      "level": 6,
+      "word": "社",
+      "pinyin": "shè",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4760",
+      "level": 6,
+      "word": "摄像",
+      "pinyin": "shèxiàng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4762",
+      "level": 6,
+      "word": "摄像头",
+      "pinyin": "shèxiàngtóu",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4776",
+      "level": 6,
+      "word": "诗词",
+      "pinyin": "shīcí",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4817",
+      "level": 6,
+      "word": "受灾",
+      "pinyin": "shòuzāi",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4825",
+      "level": 6,
+      "word": "薯片",
+      "pinyin": "shǔpiàn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4829",
+      "level": 6,
+      "word": "数字化",
+      "pinyin": "shùzìhuà",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4849",
+      "level": 6,
+      "word": "虽",
+      "pinyin": "suī",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-4866",
+      "level": 6,
+      "word": "汤圆",
+      "pinyin": "tāngyuán",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-4899",
+      "level": 6,
+      "word": "贴近",
+      "pinyin": "tiējìn",
+      "partOfSpeechZh": "动、形"
+    },
+    {
+      "id": "hsk6-4920",
+      "level": 6,
+      "word": "投诉",
+      "pinyin": "tóusù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4938",
+      "level": 6,
+      "word": "团圆",
+      "pinyin": "tuányuán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4940",
+      "level": 6,
+      "word": "推销",
+      "pinyin": "tuīxiāo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4942",
+      "level": 6,
+      "word": "退税",
+      "pinyin": "tuìshuì",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4946",
+      "level": 6,
+      "word": "托运",
+      "pinyin": "tuōyùn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4974",
+      "level": 6,
+      "word": "为止",
+      "pinyin": "wéizhǐ",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-4980",
+      "level": 6,
+      "word": "为此",
+      "pinyin": "wèicǐ",
+      "partOfSpeechZh": "连"
+    },
+    {
+      "id": "hsk6-4999",
+      "level": 6,
+      "word": "误",
+      "pinyin": "wù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5007",
+      "level": 6,
+      "word": "洗漱",
+      "pinyin": "xǐshù",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5013",
+      "level": 6,
+      "word": "吓",
+      "pinyin": "xià",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5017",
+      "level": 6,
+      "word": "下线",
+      "pinyin": "xiàxiàn",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5034",
+      "level": 6,
+      "word": "相差",
+      "pinyin": "xiāngchà",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5036",
+      "level": 6,
+      "word": "相传",
+      "pinyin": "xiāngchuán",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5037",
+      "level": 6,
+      "word": "相等",
+      "pinyin": "xiāngděng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5052",
+      "level": 6,
+      "word": "小偷儿",
+      "pinyin": "xiǎotōur",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5062",
+      "level": 6,
+      "word": "新款",
+      "pinyin": "xīnkuǎn",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5064",
+      "level": 6,
+      "word": "新媒体",
+      "pinyin": "xīnméitǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5066",
+      "level": 6,
+      "word": "新能源",
+      "pinyin": "xīnnéngyuán",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5078",
+      "level": 6,
+      "word": "性价比",
+      "pinyin": "xìngjiàbǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5088",
+      "level": 6,
+      "word": "选修",
+      "pinyin": "xuǎnxiū",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5101",
+      "level": 6,
+      "word": "淹",
+      "pinyin": "yān",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5116",
+      "level": 6,
+      "word": "眼看",
+      "pinyin": "yǎnkàn",
+      "partOfSpeechZh": "副、动"
+    },
+    {
+      "id": "hsk6-5120",
+      "level": 6,
+      "word": "仰",
+      "pinyin": "yǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5122",
+      "level": 6,
+      "word": "养老",
+      "pinyin": "yǎnglǎo",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5131",
+      "level": 6,
+      "word": "也好",
+      "pinyin": "yěhǎo",
+      "partOfSpeechZh": "助"
+    },
+    {
+      "id": "hsk6-5139",
+      "level": 6,
+      "word": "衣食住行",
+      "pinyin": "yī-shí-zhù-xíng",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-5140",
+      "level": 6,
+      "word": "医药",
+      "pinyin": "yīyào",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5142",
+      "level": 6,
+      "word": "姨",
+      "pinyin": "yí",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5197",
+      "level": 6,
+      "word": "优化",
+      "pinyin": "yōuhuà",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5203",
+      "level": 6,
+      "word": "有机",
+      "pinyin": "yǒujī",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-5204",
+      "level": 6,
+      "word": "有劲",
+      "pinyin": "yǒujìn",
+      "partOfSpeechZh": "动、形"
+    },
+    {
+      "id": "hsk6-5206",
+      "level": 6,
+      "word": "于",
+      "pinyin": "yú",
+      "partOfSpeechZh": "介"
+    },
+    {
+      "id": "hsk6-5224",
+      "level": 6,
+      "word": "元宵",
+      "pinyin": "yuánxiāo",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5238",
+      "level": 6,
+      "word": "杂",
+      "pinyin": "zá",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-5239",
+      "level": 6,
+      "word": "灾",
+      "pinyin": "zāi",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5242",
+      "level": 6,
+      "word": "灾区",
+      "pinyin": "zāiqū",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5246",
+      "level": 6,
+      "word": "赞赏",
+      "pinyin": "zànshǎng",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5251",
+      "level": 6,
+      "word": "噪声",
+      "pinyin": "zàoshēng",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5253",
+      "level": 6,
+      "word": "则",
+      "pinyin": "zé",
+      "partOfSpeechZh": "连、（助）"
+    },
+    {
+      "id": "hsk6-5259",
+      "level": 6,
+      "word": "占比",
+      "pinyin": "zhànbǐ",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5272",
+      "level": 6,
+      "word": "招手",
+      "pinyin": "zhāoshǒu",
+      "partOfSpeechZh": "动"
+    },
+    {
+      "id": "hsk6-5313",
+      "level": 6,
+      "word": "至关重要",
+      "pinyin": "zhìguān-zhòngyào",
+      "partOfSpeechZh": ""
+    },
+    {
+      "id": "hsk6-5319",
+      "level": 6,
+      "word": "至于",
+      "pinyin": "zhìyú",
+      "partOfSpeechZh": "动、介"
+    },
+    {
+      "id": "hsk6-5336",
+      "level": 6,
+      "word": "州",
+      "pinyin": "zhōu",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5343",
+      "level": 6,
+      "word": "诸多",
+      "pinyin": "zhūduō",
+      "partOfSpeechZh": "形"
+    },
+    {
+      "id": "hsk6-5359",
+      "level": 6,
+      "word": "专科",
+      "pinyin": "zhuānkē",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5361",
+      "level": 6,
+      "word": "专题",
+      "pinyin": "zhuāntí",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5386",
+      "level": 6,
+      "word": "棕色",
+      "pinyin": "zōngsè",
+      "partOfSpeechZh": "名"
+    },
+    {
+      "id": "hsk6-5391",
+      "level": 6,
+      "word": "粽子",
+      "pinyin": "zòngzi",
+      "partOfSpeechZh": "名"
+    }
+  ]
+}
