@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" rx="220" fill="#FFE78A"/>
+  <path d="M0 730C185 630 365 625 520 690C680 757 820 720 1024 565V1024H0Z" fill="#FFD449"/>
+  <g transform="rotate(-9 500 520)">
+    <rect x="190" y="245" width="575" height="590" rx="110" fill="#F3AD00" opacity="0.92"/>
+    <rect x="250" y="165" width="610" height="620" rx="110" fill="#FFFDF6" stroke="#FFF2C5" stroke-width="12"/>
+  </g>
+  <text x="515" y="605" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="238" font-weight="900" letter-spacing="-18" fill="#242220">HSK</text>
+  <g fill="#F5AD00">
+    <rect x="744" y="205" width="60" height="205" rx="30"/>
+    <rect x="671" y="278" width="205" height="60" rx="30"/>
+    <rect x="864" y="188" width="32" height="102" rx="16" transform="rotate(24 880 239)"/>
+    <rect x="886" y="326" width="102" height="32" rx="16" transform="rotate(-18 937 342)"/>
+  </g>
+</svg>
