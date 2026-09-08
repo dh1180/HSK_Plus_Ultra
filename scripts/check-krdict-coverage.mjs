@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const HSK_PATH = new URL('../src/data/generated-hsk.json', import.meta.url);
 const REPORT_PATH = new URL('../data/krdict-coverage.json', import.meta.url);
+const MISSING_PATH = new URL('../data/krdict-missing.json', import.meta.url);
 const KRDICT_BASE = 'https://raw.githubusercontent.com/spellcheck-ko/korean-dict-nikl/master/krdict';
 const KRDICT_FILES = Array.from({ length: 11 }, (_, i) => `${String(i + 1).padStart(3, '0')}.xml`);
 
@@ -110,8 +111,10 @@ async function parseKrdictFile(fileName, index) {
     const koreanWord = clean(lemmaMatch?.[1] ?? '');
     if (!koreanWord) continue;
 
-    const partOfSpeechKo = getFeat(entry.slice(0, entry.indexOf('<Sense')), 'partOfSpeech');
-    const vocabularyLevel = getFeat(entry.slice(0, entry.indexOf('<Sense')), 'vocabularyLevel');
+    const senseStart = entry.indexOf('<Sense');
+    const entryHead = senseStart >= 0 ? entry.slice(0, senseStart) : entry;
+    const partOfSpeechKo = getFeat(entryHead, 'partOfSpeech');
+    const vocabularyLevel = getFeat(entryHead, 'vocabularyLevel');
 
     const senseRegex = /<Sense\b[\s\S]*?<\/Sense>/gu;
     let senseMatch;
@@ -212,6 +215,21 @@ async function main() {
 
   await mkdir(new URL('../data/', import.meta.url), { recursive: true });
   await writeFile(REPORT_PATH, JSON.stringify(report, null, 2), 'utf8');
+  await writeFile(
+    MISSING_PATH,
+    JSON.stringify(
+      {
+        generatedAt: report.generatedAt,
+        source: report.source,
+        missingCount: missing.length,
+        countByLevel,
+        missing,
+      },
+      null,
+      2,
+    ),
+    'utf8',
+  );
 
   console.log(`KRDICT exact coverage: ${matched.length}/${targetWords.length} (${report.coveragePercent}%)`);
   console.log(`Missing: ${missing.length}`);
