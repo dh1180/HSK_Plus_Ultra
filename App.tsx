@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, StatusBar, StyleSheet, View } from 'react-native';
+import {
+  ActivityIndicator,
+  BackHandler,
+  Platform,
+  StatusBar,
+  StyleSheet,
+  View,
+} from 'react-native';
 import { HomeScreen } from './src/screens/HomeScreen';
 import { LevelScreen } from './src/screens/LevelScreen';
 import { StudyScreen } from './src/screens/StudyScreen';
@@ -52,6 +59,30 @@ export default function App() {
       alive = false;
     };
   }, []);
+
+  useEffect(() => {
+    if (Platform.OS !== 'android') return;
+
+    const subscription = BackHandler.addEventListener('hardwareBackPress', () => {
+      if (mode === 'HOME') {
+        return false;
+      }
+
+      if (mode === 'LEVEL') {
+        setMode('HOME');
+        return true;
+      }
+
+      if (mode === 'STUDY' || mode === 'SUMMARY') {
+        setMode('LEVEL');
+        return true;
+      }
+
+      return false;
+    });
+
+    return () => subscription.remove();
+  }, [mode]);
 
   const chooseLevel = (level: HskLevel) => {
     setSelectedLevel(level);
