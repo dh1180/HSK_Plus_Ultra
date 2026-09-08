@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   Pressable,
   SafeAreaView,
@@ -9,8 +9,10 @@ import {
 } from 'react-native';
 import { getLevelVocabulary } from '../data/vocabulary';
 import { buildStudyQueue, countLevelStats } from '../lib/study';
-import { HskLevel, ProgressMap } from '../types';
+import { HskLevel, ProgressMap, VocabularyWord } from '../types';
 import { COLORS, LEVEL_META } from '../theme';
+
+type WordTab = 'ALL' | 'LONG_TERM' | 'ACTIVE';
 
 interface Props {
   level: HskLevel;
@@ -19,6 +21,7 @@ interface Props {
   onChangeTarget: (value: number) => void;
   onBack: () => void;
   onStartStudy: () => void;
+  onReviewWord: (word: VocabularyWord) => void;
 }
 
 export function LevelScreen({
@@ -28,7 +31,9 @@ export function LevelScreen({
   onChangeTarget,
   onBack,
   onStartStudy,
+  onReviewWord,
 }: Props) {
+  const [tab, setTab] = useState<WordTab>('ALL');
   const vocabulary = getLevelVocabulary(level);
   const meta = LEVEL_META[level];
   const stats = countLevelStats(vocabulary, progress);
@@ -38,6 +43,12 @@ export function LevelScreen({
     const item = progress[word.id];
     return item && item.stage !== 'LONG_TERM';
   });
+
+  const visibleWords = useMemo(() => {
+    if (tab === 'LONG_TERM') return longTermWords;
+    if (tab === 'ACTIVE') return activeWords;
+    return vocabulary;
+  }, [activeWords, longTermWords, tab, vocabulary]);
 
   return (
     <SafeAreaView style={styles.safe}>
@@ -128,43 +139,92 @@ export function LevelScreen({
         </View>
 
         <View style={styles.tabs}>
-          <View style={[styles.tab, styles.tabActive]}>
-            <Text style={[styles.tabText, { color: meta.accent }]}>단어</Text>
-          </View>
-          <View style={styles.tab}>
-            <Text style={styles.tabText}>장기 기억 {longTermWords.length}</Text>
-          </View>
-          <View style={styles.tab}>
-            <Text style={styles.tabText}>복습 예정 {activeWords.length}</Text>
-          </View>
+          <TabButton
+            active={tab === 'ALL'}
+            accent={meta.accent}
+            label="단어"
+            onPress={() => setTab('ALL')}
+          />
+          <TabButton
+            active={tab === 'LONG_TERM'}
+            accent={meta.accent}
+            label={`장기 기억 ${longTermWords.length}`}
+            onPress={() => setTab('LONG_TERM')}
+          />
+          <TabButton
+            active={tab === 'ACTIVE'}
+            accent={meta.accent}
+            label={`학습 중 ${activeWords.length}`}
+            onPress={() => setTab('ACTIVE')}
+          />
         </View>
 
         <View style={styles.wordList}>
-          {vocabulary.slice(0, 12).map((word) => (
-            <View key={word.id} style={styles.wordRow}>
-              <View style={styles.wordLeft}>
-                <Text style={styles.word}>{word.word}</Text>
-                <View>
-                  <Text style={styles.pinyin}>{word.pinyin}</Text>
-                  <Text style={styles.meaning}>{word.meaningKo}</Text>
-                </View>
-              </View>
-              <Text style={styles.stage}>
-                {progress[word.id]?.stage === 'LONG_TERM'
-                  ? '장기 기억'
-                  : progress[word.id]?.stage
-                    ? '학습 중'
-                    : '새 단어'}
-              </Text>
+          {visibleWords.length === 0 ? (
+            <View style={styles.emptyBox}>
+              <Text style={styles.emptyText}>아직 이 목록에 단어가 없습니다.</Text>
             </View>
-          ))}
+          ) : (
+            visibleWords.slice(0, 20).map((word) => (
+              <Pressable
+                key={word.id}
+                onPress={() => onReviewWord(word)}
+                style={({ pressed }) => [styles.wordRow, pressed && styles.wordRowPressed]}
+              >
+                <View style={styles.wordLeft}>
+                  <Text style={styles.word}>{word.word}</Text>
+                  <View style={styles.wordTextBlock}>
+                    <Text style={styles.pinyin}>{word.pinyin}</Text>
+                    <Text style={styles.meaning}>{word.meaningKo}</Text>
+                  </View>
+                </View>
+                <View style={styles.stageWrap}>
+                  <Text style={styles.stage}>
+                    {progress[word.id]?.stage === 'LONG_TERM'
+                      ? '장기 기억'
+                      : progress[word.id]?.stage
+                        ? '학습 중'
+                        : '새 단어'}
+                  </Text>
+                  <Text style={styles.chevron}>›</Text>
+                </View>
+              </Pressable>
+            ))
+          )}
         </View>
+
+        {tab === 'LONG_TERM' && longTermWords.length > 0 ? (
+          <Text style={styles.manualHint}>
+            장기 기억 단어도 눌러서 다시 확인할 수 있습니다. 여기서 ‘다시 학습’을 누르면 7일 단계로 내려갑니다.
+          </Text>
+        ) : null}
 
         <Text style={styles.dataNote}>
           현재 화면의 분모는 저장소에 포함된 한국어 스타터 어휘 기준입니다. 전체 공식 어휘 메타데이터는 sync 스크립트로 생성할 수 있습니다.
         </Text>
       </ScrollView>
     </SafeAreaView>
+  );
+}
+
+function TabButton({
+  active,
+  accent,
+  label,
+  onPress,
+}: {
+  active: boolean;
+  accent: string;
+  label: string;
+  onPress: () => void;
+}) {
+  return (
+    <Pressable
+      onPress={onPress}
+      style={[styles.tab, active && { borderBottomColor: accent, borderBottomWidth: 2 }]}
+    >
+      <Text style={[styles.tabText, active && { color: accent }]}>{label}</Text>
+    </Pressable>
   );
 }
 
@@ -213,15 +273,21 @@ const styles = StyleSheet.create({
   statLabel: { color: COLORS.text, fontSize: 14, fontWeight: '700' },
   statValue: { color: COLORS.subtext, fontSize: 14, fontWeight: '700' },
   tabs: { flexDirection: 'row', marginTop: 25, borderBottomWidth: 1, borderBottomColor: COLORS.line },
-  tab: { flex: 1, paddingVertical: 12, alignItems: 'center' },
-  tabActive: { borderBottomWidth: 2, borderBottomColor: COLORS.text },
+  tab: { flex: 1, paddingVertical: 12, alignItems: 'center', borderBottomWidth: 2, borderBottomColor: 'transparent' },
   tabText: { color: COLORS.subtext, fontSize: 12, fontWeight: '800' },
   wordList: { backgroundColor: '#FFFFFF', borderBottomLeftRadius: 22, borderBottomRightRadius: 22, overflow: 'hidden' },
   wordRow: { paddingHorizontal: 17, paddingVertical: 14, borderBottomWidth: 1, borderBottomColor: COLORS.line, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 12 },
+  wordRowPressed: { backgroundColor: '#F7F6F3' },
   wordLeft: { flex: 1, flexDirection: 'row', alignItems: 'center', gap: 14 },
+  wordTextBlock: { flex: 1 },
   word: { width: 64, fontSize: 25, color: COLORS.text, fontWeight: '600' },
   pinyin: { color: COLORS.text, fontSize: 13, fontWeight: '700' },
   meaning: { color: COLORS.subtext, fontSize: 12, marginTop: 2 },
+  stageWrap: { flexDirection: 'row', alignItems: 'center', gap: 5 },
   stage: { color: COLORS.subtext, fontSize: 10, fontWeight: '700' },
+  chevron: { color: '#B6B2AB', fontSize: 19 },
+  emptyBox: { paddingVertical: 30, alignItems: 'center' },
+  emptyText: { color: COLORS.subtext, fontSize: 12 },
+  manualHint: { color: COLORS.subtext, fontSize: 11, lineHeight: 17, marginTop: 12 },
   dataNote: { color: COLORS.subtext, fontSize: 10, lineHeight: 16, marginTop: 14 },
 });
