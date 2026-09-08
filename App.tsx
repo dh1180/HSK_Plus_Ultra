@@ -63,15 +63,22 @@ export default function App() {
     void saveDailyTarget(value);
   };
 
-  const startStudy = () => {
-    const vocabulary = getLevelVocabulary(selectedLevel);
-    const queue = buildStudyQueue(vocabulary, progress, dailyTarget);
-    if (!queue.words.length) return;
-
-    setSessionWords(queue.words);
+  const beginSession = (words: VocabularyWord[]) => {
+    if (!words.length) return;
+    setSessionWords(words);
     setSessionIndex(0);
     setSessionResult(emptyResult());
     setMode('STUDY');
+  };
+
+  const startStudy = () => {
+    const vocabulary = getLevelVocabulary(selectedLevel);
+    const queue = buildStudyQueue(vocabulary, progress, dailyTarget);
+    beginSession(queue.words);
+  };
+
+  const startManualReview = (word: VocabularyWord) => {
+    beginSession([word]);
   };
 
   const answerWord = (answer: StudyAnswer) => {
@@ -130,6 +137,7 @@ export default function App() {
           onChangeTarget={changeTarget}
           onBack={() => setMode('HOME')}
           onStartStudy={startStudy}
+          onReviewWord={startManualReview}
         />
       )}
 
