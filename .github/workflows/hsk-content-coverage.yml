@@ -1,0 +1,38 @@
+name: HSK Korean content coverage
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/check-krdict-coverage.mjs'
+      - '.github/workflows/hsk-content-coverage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13'
+      - name: Sync official HSK vocabulary
+        run: npm run sync:hsk
+      - name: Check Korean dictionary coverage
+        run: node scripts/check-krdict-coverage.mjs
+      - name: Commit coverage report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/krdict-coverage.json
+          if git diff --cached --quiet; then
+            echo "Coverage report unchanged"
+          else
+            git commit -m "data: HSK 2~6 한국어 뜻 매핑 커버리지 기록"
+            git push
+          fi
