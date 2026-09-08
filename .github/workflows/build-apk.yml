@@ -12,6 +12,7 @@ on:
       - 'package-lock.json'
       - 'src/**'
       - 'assets/**'
+      - 'scripts/**'
 
 jobs:
   build-apk:
@@ -37,6 +38,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Restore app icon
+        run: npm run restore:icon
 
       - name: Generate Android project
         run: npx expo prebuild --platform android --no-install
