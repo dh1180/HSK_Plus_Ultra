@@ -1,5 +1,8 @@
 name: Build Android APK
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
   push:
@@ -13,6 +16,8 @@ on:
       - 'src/**'
       - 'assets/**'
       - 'scripts/**'
+      - 'tsconfig.json'
+      - '.gitignore'
 
 jobs:
   build-apk:
@@ -38,6 +43,21 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Sync HSK 1-6 vocabulary
+        run: npm run sync:hsk
+
+      - name: Commit HSK vocabulary snapshot
+        run: |
+          git add src/data/generated-hsk.json
+          if git diff --cached --quiet; then
+            echo "Vocabulary snapshot is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: HSK 1~6 공식 단어 데이터 동기화"
+          git push
 
       - name: Restore app icon
         run: npm run restore:icon

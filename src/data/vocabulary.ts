@@ -1,7 +1,17 @@
 import { HskLevel, VocabularyWord } from '../types';
+import generatedHsk from './generated-hsk.json';
 import { HSK1_001_100 } from './hsk1-001-100';
 import { HSK1_101_200 } from './hsk1-101-200';
 import { HSK1_201_300 } from './hsk1-201-300';
+
+interface GeneratedWord {
+  id: string;
+  level: number;
+  word: string;
+  pinyin: string;
+  partOfSpeechZh: string;
+  sort: number;
+}
 
 const v = (
   level: HskLevel,
@@ -31,8 +41,8 @@ export const HSK1_VOCABULARY: VocabularyWord[] = [
   ...HSK1_201_300,
 ];
 
-// HSK 2~6은 다음 데이터 확장 단계에서 전체 한국어 뜻/예문으로 교체한다.
-const UPPER_LEVEL_STARTER: VocabularyWord[] = [
+// 한국어 뜻을 먼저 손본 단어는 공식 데이터 위에 덮어쓴다.
+const UPPER_LEVEL_CURATED: VocabularyWord[] = [
   v(2, 301, '啊', 'a', '문장 끝에서 어감을 나타내는 조사', '조사'),
   v(2, 302, '爱好', 'àihào', '취미; 좋아하다', '명사·동사'),
   v(2, 303, '白色', 'báisè', '흰색', '명사'),
@@ -99,9 +109,53 @@ const UPPER_LEVEL_STARTER: VocabularyWord[] = [
   v(6, 3612, '摆脱', 'bǎituō', '벗어나다, 떨쳐 버리다', '동사'),
 ];
 
+const curatedById = new Map(UPPER_LEVEL_CURATED.map((word) => [word.id, word]));
+
+const POS_LABEL: Record<string, string> = {
+  名: '명사',
+  动: '동사',
+  形: '형용사',
+  副: '부사',
+  数: '수사',
+  量: '양사',
+  代: '대명사',
+  介: '개사',
+  助: '조사',
+  连: '접속사',
+  叹: '감탄사',
+  方: '방위사',
+  区: '구별사',
+};
+
+function formatPartOfSpeech(raw: string) {
+  if (!raw) return undefined;
+  return raw
+    .split(/[、，,]/u)
+    .map((part) => POS_LABEL[part.trim()] ?? part.trim())
+    .filter(Boolean)
+    .join('·');
+}
+
+const generatedUpperVocabulary: VocabularyWord[] = (generatedHsk.words as GeneratedWord[])
+  .filter((item) => item.level >= 2 && item.level <= 6)
+  .sort((a, b) => a.sort - b.sort)
+  .map((item) => {
+    const curated = curatedById.get(item.id);
+    if (curated) return curated;
+
+    return {
+      id: item.id,
+      level: item.level as HskLevel,
+      word: item.word,
+      pinyin: item.pinyin,
+      meaningKo: '한국어 뜻 데이터 추가 예정',
+      partOfSpeech: formatPartOfSpeech(item.partOfSpeechZh),
+    };
+  });
+
 export const VOCABULARY: VocabularyWord[] = [
   ...HSK1_VOCABULARY,
-  ...UPPER_LEVEL_STARTER,
+  ...generatedUpperVocabulary,
 ];
 
 export function getLevelVocabulary(level: HskLevel) {

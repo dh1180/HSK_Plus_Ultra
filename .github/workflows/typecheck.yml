@@ -14,5 +14,6 @@ jobs:
         with:
           node-version: '22.13'
       - run: npm install
+      - run: npm run sync:hsk
       - run: npm run typecheck
       - run: npx expo export --platform web --output-dir dist

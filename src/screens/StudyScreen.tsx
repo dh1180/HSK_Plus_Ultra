@@ -196,8 +196,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 14,
-    paddingTop: 2,
-    height: 56,
+    paddingTop: 6,
+    height: 62,
   },
   closeButton: {
     width: 44,
@@ -239,12 +239,12 @@ const styles = StyleSheet.create({
   scroll: {
     flexGrow: 1,
     paddingHorizontal: 16,
-    paddingBottom: 14,
+    paddingBottom: 10,
   },
   stageRow: {
     alignItems: 'center',
-    marginTop: 8,
-    marginBottom: 10,
+    marginTop: 16,
+    marginBottom: 12,
   },
   stageChip: {
     borderRadius: 99,
@@ -410,7 +410,7 @@ const styles = StyleSheet.create({
   bottom: {
     paddingHorizontal: 16,
     paddingTop: 9,
-    paddingBottom: Platform.OS === 'android' ? 50 : 14,
+    paddingBottom: Platform.OS === 'android' ? 64 : 20,
     backgroundColor: COLORS.background,
     borderTopWidth: 1,
     borderTopColor: '#ECE9E2',

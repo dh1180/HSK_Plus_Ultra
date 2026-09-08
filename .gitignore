@@ -7,5 +7,4 @@ web-build/
 .env
 .env.*
 !/.env.example
-src/data/generated-hsk.json
 assets/icon.png
