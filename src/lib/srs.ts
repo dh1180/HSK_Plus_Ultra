@@ -84,6 +84,28 @@ export function applyAnswer(
   };
 }
 
+/**
+ * 한 세션에서 `다시 학습`으로 재출제된 단어의 추가 응답을 기록한다.
+ *
+ * 첫 `다시 학습` 응답에서 이미 다음 복습 단계와 시간이 결정되므로,
+ * 세션 안에서 다시 만난 카드의 응답은 stage/nextReviewAt을 다시 바꾸지 않는다.
+ * 예: DAY_3 -> 다시 학습 -> MIN_30 으로 내려간 뒤 같은 세션에서 알고 있음을 눌러도
+ * MIN_30 예약은 유지되고, 현재 세션에서만 재출제가 종료된다.
+ */
+export function recordSessionRetryAnswer(
+  previous: WordProgress,
+  answer: StudyAnswer,
+  now = new Date(),
+): WordProgress {
+  return {
+    ...previous,
+    lastReviewedAt: now.toISOString(),
+    seenCount: previous.seenCount + 1,
+    knownCount: previous.knownCount + (answer === 'KNOWN' ? 1 : 0),
+    relearnCount: previous.relearnCount + (answer === 'RELEARN' ? 1 : 0),
+  };
+}
+
 export function isDue(progress: WordProgress | undefined, now = new Date()) {
   if (!progress || progress.stage === 'LONG_TERM' || !progress.nextReviewAt) return false;
   return new Date(progress.nextReviewAt).getTime() <= now.getTime();
