@@ -52,7 +52,7 @@ export function transitionStage(stage: ReviewStage, answer: StudyAnswer): Review
 
   switch (stage) {
     case 'NEW':
-      // 새 단어는 21일 단계에 준하는 초기 판정. 모르면 한 단계 아래인 3일로.
+      // 새 단어의 첫 실패는 3일 단계로 보낸다.
       return 'DAY_3';
     case 'MIN_30':
       return 'MIN_30';
@@ -87,22 +87,27 @@ export function applyAnswer(
 /**
  * 한 세션에서 `다시 학습`으로 재출제된 단어의 추가 응답을 기록한다.
  *
- * 첫 `다시 학습` 응답에서 이미 다음 복습 단계와 시간이 결정되므로,
- * 세션 안에서 다시 만난 카드의 응답은 stage/nextReviewAt을 다시 바꾸지 않는다.
- * 예: DAY_3 -> 다시 학습 -> MIN_30 으로 내려간 뒤 같은 세션에서 알고 있음을 눌러도
- * MIN_30 예약은 유지되고, 현재 세션에서만 재출제가 종료된다.
+ * 재출제 카드에서 `알고 있음`을 누르면 현재 단계와 다음 복습 예약을 유지하고
+ * 세션 안의 반복만 종료한다.
+ *
+ * 재출제 카드에서 다시 `다시 학습`을 누르면 현재 단계 기준으로 한 번 더 하향한다.
+ * 예: NEW -> 다시 학습 -> DAY_3 -> 재출제에서 다시 학습 -> MIN_30.
+ * MIN_30에서 다시 틀리면 MIN_30을 유지하며 30분 예약을 새로 잡는다.
  */
 export function recordSessionRetryAnswer(
   previous: WordProgress,
   answer: StudyAnswer,
   now = new Date(),
 ): WordProgress {
+  if (answer === 'RELEARN') {
+    return applyAnswer(previous, answer, now);
+  }
+
   return {
     ...previous,
     lastReviewedAt: now.toISOString(),
     seenCount: previous.seenCount + 1,
-    knownCount: previous.knownCount + (answer === 'KNOWN' ? 1 : 0),
-    relearnCount: previous.relearnCount + (answer === 'RELEARN' ? 1 : 0),
+    knownCount: previous.knownCount + 1,
   };
 }
 
