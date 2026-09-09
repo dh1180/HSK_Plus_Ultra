@@ -14,7 +14,7 @@ permissions:
 jobs:
   examples:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -34,8 +34,11 @@ jobs:
       - name: Sync official HSK vocabulary
         run: npm run sync:hsk
 
+      - name: Install CPU PyTorch
+        run: pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
+
       - name: Install example generation dependencies
-        run: pip install --disable-pip-version-check torch transformers sentencepiece pypinyin
+        run: pip install --disable-pip-version-check 'transformers<5' sentencepiece sacremoses pypinyin
 
       - name: Build HSK 2-6 example content
         run: python scripts/build-hsk-examples.py
