@@ -12,7 +12,10 @@ function shuffle<T>(items: T[]): T[] {
 
   for (let i = result.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
-    [result[i], result[j]] = [result[j], result[i]];
+    const current = result[i]!;
+    const target = result[j]!;
+    result[i] = target;
+    result[j] = current;
   }
 
   return result;
@@ -27,12 +30,10 @@ export function buildStudyQueue(
   const due = vocabulary
     .filter((word) => isDue(progress[word.id], now))
     .sort((a, b) => {
-      const aTime = progress[a.id]?.nextReviewAt
-        ? new Date(progress[a.id].nextReviewAt as string).getTime()
-        : Number.MAX_SAFE_INTEGER;
-      const bTime = progress[b.id]?.nextReviewAt
-        ? new Date(progress[b.id].nextReviewAt as string).getTime()
-        : Number.MAX_SAFE_INTEGER;
+      const aReviewAt = progress[a.id]?.nextReviewAt;
+      const bReviewAt = progress[b.id]?.nextReviewAt;
+      const aTime = aReviewAt ? new Date(aReviewAt).getTime() : Number.MAX_SAFE_INTEGER;
+      const bTime = bReviewAt ? new Date(bReviewAt).getTime() : Number.MAX_SAFE_INTEGER;
       return aTime - bTime;
     });
   const unseen = vocabulary.filter((word) => !progress[word.id]);
