@@ -12,7 +12,7 @@ import { LevelScreen } from './src/screens/LevelScreen';
 import { StudyScreen } from './src/screens/StudyScreen';
 import { SummaryScreen } from './src/screens/SummaryScreen';
 import { getLevelVocabulary } from './src/data/vocabulary';
-import { applyAnswer } from './src/lib/srs';
+import { applyAnswer, recordSessionRetryAnswer } from './src/lib/srs';
 import { buildStudyQueue } from './src/lib/study';
 import { loadDailyTarget, loadProgress, saveDailyTarget, saveProgress } from './src/lib/storage';
 import { COLORS, LEVEL_META } from './src/theme';
@@ -41,6 +41,8 @@ export default function App() {
   const [dailyTarget, setDailyTarget] = useState(20);
   const [sessionWords, setSessionWords] = useState<VocabularyWord[]>([]);
   const [sessionIndex, setSessionIndex] = useState(0);
+  const [sessionBaseTotal, setSessionBaseTotal] = useState(0);
+  const [retryingWordIds, setRetryingWordIds] = useState<string[]>([]);
   const [sessionResult, setSessionResult] = useState<StudySessionResult>(emptyResult());
 
   useEffect(() => {
@@ -98,6 +100,8 @@ export default function App() {
     if (!words.length) return;
     setSessionWords(words);
     setSessionIndex(0);
+    setSessionBaseTotal(words.length);
+    setRetryingWordIds([]);
     setSessionResult(emptyResult());
     setMode('STUDY');
   };
@@ -117,7 +121,12 @@ export default function App() {
     if (!word) return;
 
     const previous = progress[word.id];
-    const updatedWord = applyAnswer(previous, answer);
+    const isRetryAttempt = retryingWordIds.includes(word.id);
+    const updatedWord =
+      isRetryAttempt && previous
+        ? recordSessionRetryAnswer(previous, answer)
+        : applyAnswer(previous, answer);
+
     const nextProgress: ProgressMap = {
       ...progress,
       [word.id]: updatedWord,
@@ -135,7 +144,29 @@ export default function App() {
         (previous?.stage !== 'LONG_TERM' && updatedWord.stage === 'LONG_TERM' ? 1 : 0),
     }));
 
-    if (sessionIndex >= sessionWords.length - 1) {
+    let nextRetryingWordIds = retryingWordIds;
+    let nextSessionWords = sessionWords;
+
+    if (answer === 'RELEARN') {
+      if (!isRetryAttempt) {
+        nextRetryingWordIds = [...retryingWordIds, word.id];
+      }
+
+      // 현재 세션의 맨 뒤에 다시 넣는다. 다시 틀리면 또 맨 뒤로 들어가며,
+      // `알고 있음`을 누를 때까지 현재 학습 세션 안에서 계속 재출제된다.
+      nextSessionWords = [...sessionWords, word];
+    } else if (isRetryAttempt) {
+      nextRetryingWordIds = retryingWordIds.filter((id) => id !== word.id);
+    }
+
+    if (nextSessionWords !== sessionWords) {
+      setSessionWords(nextSessionWords);
+    }
+    if (nextRetryingWordIds !== retryingWordIds) {
+      setRetryingWordIds(nextRetryingWordIds);
+    }
+
+    if (sessionIndex >= nextSessionWords.length - 1) {
       setMode('SUMMARY');
     } else {
       setSessionIndex((current) => current + 1);
@@ -153,6 +184,8 @@ export default function App() {
 
   const accent = LEVEL_META[selectedLevel].accent;
   const currentWord = sessionWords[sessionIndex];
+  const currentIsRetry = currentWord ? retryingWordIds.includes(currentWord.id) : false;
+  const displayIndex = Math.min(sessionIndex, Math.max(sessionBaseTotal - 1, 0));
 
   return (
     <>
@@ -175,10 +208,11 @@ export default function App() {
       {mode === 'STUDY' && currentWord && (
         <StudyScreen
           word={currentWord}
-          index={sessionIndex}
-          total={sessionWords.length}
+          index={displayIndex}
+          total={sessionBaseTotal}
           accent={accent}
           progress={progress}
+          isRetry={currentIsRetry}
           onAnswer={answerWord}
           onClose={() => setMode('LEVEL')}
         />
