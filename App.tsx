@@ -42,6 +42,7 @@ export default function App() {
   const [sessionWords, setSessionWords] = useState<VocabularyWord[]>([]);
   const [sessionIndex, setSessionIndex] = useState(0);
   const [sessionBaseTotal, setSessionBaseTotal] = useState(0);
+  const [sessionCompletedCount, setSessionCompletedCount] = useState(0);
   const [retryingWordIds, setRetryingWordIds] = useState<string[]>([]);
   const [sessionResult, setSessionResult] = useState<StudySessionResult>(emptyResult());
 
@@ -101,6 +102,7 @@ export default function App() {
     setSessionWords(words);
     setSessionIndex(0);
     setSessionBaseTotal(words.length);
+    setSessionCompletedCount(0);
     setRetryingWordIds([]);
     setSessionResult(emptyResult());
     setMode('STUDY');
@@ -122,6 +124,11 @@ export default function App() {
 
     const previous = progress[word.id];
     const isRetryAttempt = retryingWordIds.includes(word.id);
+
+    // 첫 `다시 학습`은 반드시 실제 SRS 단계를 내린다.
+    // 예: DAY_3 -> MIN_30, DAY_7 -> DAY_3, DAY_21 -> DAY_7.
+    // 이후 같은 세션에서 다시 보여 주는 카드는 단계/예약 시간을 더 바꾸지 않고
+    // `알고 있음`을 누를 때까지 현재 세션 안에서만 반복한다.
     const updatedWord =
       isRetryAttempt && previous
         ? recordSessionRetryAnswer(previous, answer)
@@ -152,11 +159,18 @@ export default function App() {
         nextRetryingWordIds = [...retryingWordIds, word.id];
       }
 
-      // 현재 세션의 맨 뒤에 다시 넣는다. 다시 틀리면 또 맨 뒤로 들어가며,
-      // `알고 있음`을 누를 때까지 현재 학습 세션 안에서 계속 재출제된다.
+      // 틀린 단어는 즉시 다시 보여 주지 않고 현재 큐의 맨 뒤로 보낸다.
+      // 따라서 최초 20개를 모두 본 뒤 `다시 학습`한 단어들만 다시 나오며,
+      // 재출제에서도 틀리면 다시 맨 뒤로 이동한다.
       nextSessionWords = [...sessionWords, word];
-    } else if (isRetryAttempt) {
-      nextRetryingWordIds = retryingWordIds.filter((id) => id !== word.id);
+    } else {
+      // 진행 숫자는 `알고 있음`으로 해결된 원래 단어 수만 센다.
+      // 1/20에서 `다시 학습`을 누르면 다음 카드도 1/20으로 유지된다.
+      setSessionCompletedCount((current) => Math.min(sessionBaseTotal, current + 1));
+
+      if (isRetryAttempt) {
+        nextRetryingWordIds = retryingWordIds.filter((id) => id !== word.id);
+      }
     }
 
     if (nextSessionWords !== sessionWords) {
@@ -185,7 +199,10 @@ export default function App() {
   const accent = LEVEL_META[selectedLevel].accent;
   const currentWord = sessionWords[sessionIndex];
   const currentIsRetry = currentWord ? retryingWordIds.includes(currentWord.id) : false;
-  const displayIndex = Math.min(sessionIndex, Math.max(sessionBaseTotal - 1, 0));
+  const displayIndex = Math.min(
+    sessionCompletedCount,
+    Math.max(sessionBaseTotal - 1, 0),
+  );
 
   return (
     <>
