@@ -53,8 +53,8 @@ export function StudyScreen({
     [currentStage, isRetry],
   );
   const relearnNext = useMemo(
-    () => (isRetry ? STAGE_LABEL[currentStage] : STAGE_LABEL[transitionStage(currentStage, 'RELEARN')]),
-    [currentStage, isRetry],
+    () => STAGE_LABEL[transitionStage(currentStage, 'RELEARN')],
+    [currentStage],
   );
 
   const speakWord = () => {
