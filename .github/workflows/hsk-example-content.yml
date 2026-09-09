@@ -1,0 +1,70 @@
+name: HSK example content
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-hsk-examples.py'
+      - '.github/workflows/hsk-example-content.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  examples:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Sync official HSK vocabulary
+        run: npm run sync:hsk
+
+      - name: Install example generation dependencies
+        run: pip install --disable-pip-version-check torch transformers sentencepiece pypinyin
+
+      - name: Build HSK 2-6 example content
+        run: python scripts/build-hsk-examples.py
+
+      - name: Validate generated example count
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('src/data/example-content.json').read_text(encoding='utf-8'))
+          assert data['filledCount'] == 5100, data['filledCount']
+          assert data['missingCount'] == 0, data['missingCount']
+          assert len(data['examples']) == 5100, len(data['examples'])
+          for word_id, item in data['examples'].items():
+              assert item.get('exampleZh'), word_id
+              assert item.get('examplePinyin'), word_id
+              assert item.get('exampleKo'), word_id
+          print('HSK 2-6 example coverage: 5100/5100')
+          PY
+
+      - name: Commit example content
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/example-content.json data/example-content-report.json
+          if git diff --cached --quiet; then
+            echo "Example content unchanged"
+          else
+            git commit -m "data: HSK 2~6 예문·병음·한국어 해석 데이터 추가"
+            git pull --rebase origin main
+            git push
+          fi
