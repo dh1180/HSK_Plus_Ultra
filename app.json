@@ -2,7 +2,7 @@
   "expo": {
     "name": "HSK Plus Ultra",
     "slug": "hsk-plus-ultra",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "backgroundColor": "#F6F5F1",
@@ -13,7 +13,7 @@
     },
     "android": {
       "package": "com.dh1180.hskplusultra",
-      "versionCode": 5,
+      "versionCode": 6,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFF2B1"
