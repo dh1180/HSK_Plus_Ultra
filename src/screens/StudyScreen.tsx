@@ -19,11 +19,21 @@ interface Props {
   total: number;
   accent: string;
   progress: ProgressMap;
+  isRetry: boolean;
   onAnswer: (answer: StudyAnswer) => void;
   onClose: () => void;
 }
 
-export function StudyScreen({ word, index, total, accent, progress, onAnswer, onClose }: Props) {
+export function StudyScreen({
+  word,
+  index,
+  total,
+  accent,
+  progress,
+  isRetry,
+  onAnswer,
+  onClose,
+}: Props) {
   const [revealed, setRevealed] = useState(false);
   const item = progress[word.id];
   const currentStage = item?.stage ?? 'NEW';
@@ -39,12 +49,12 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
   }, []);
 
   const knownNext = useMemo(
-    () => STAGE_LABEL[transitionStage(currentStage, 'KNOWN')],
-    [currentStage],
+    () => (isRetry ? STAGE_LABEL[currentStage] : STAGE_LABEL[transitionStage(currentStage, 'KNOWN')]),
+    [currentStage, isRetry],
   );
   const relearnNext = useMemo(
-    () => STAGE_LABEL[transitionStage(currentStage, 'RELEARN')],
-    [currentStage],
+    () => (isRetry ? STAGE_LABEL[currentStage] : STAGE_LABEL[transitionStage(currentStage, 'RELEARN')]),
+    [currentStage, isRetry],
   );
 
   const speakWord = () => {
@@ -159,7 +169,11 @@ export function StudyScreen({ word, index, total, accent, progress, onAnswer, on
 
       <View style={styles.bottom}>
         <Text style={styles.answerGuide}>
-          {revealed ? '기억 상태를 선택하세요' : '뜻을 떠올린 뒤 아래에서 선택하세요'}
+          {isRetry
+            ? '다시 학습한 단어 · 알고 있을 때까지 이번 학습에서 반복됩니다'
+            : revealed
+              ? '기억 상태를 선택하세요'
+              : '뜻을 떠올린 뒤 아래에서 선택하세요'}
         </Text>
         <View style={styles.buttons}>
           <Pressable
