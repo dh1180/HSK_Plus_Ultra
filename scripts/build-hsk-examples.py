@@ -11,7 +11,9 @@ MEANING_PATH = ROOT / 'src' / 'data' / 'korean-meanings.json'
 OUTPUT_PATH = ROOT / 'src' / 'data' / 'example-content.json'
 REPORT_PATH = ROOT / 'data' / 'example-content-report.json'
 SENTENCE_URL = 'https://raw.githubusercontent.com/no7z/hsk-sentences-audio/main/dist/sentences.json'
-TRANSLATION_MODEL = os.environ.get('HSK_KO_TRANSLATION_MODEL', 'Helsinki-NLP/opus-mt-en-ko')
+# 기존 Helsinki-NLP/opus-mt-en-ko는 공개 모델 식별자로 존재하지 않아 Actions에서 401/404가 발생했다.
+# 공개 CC BY 4.0 영어→한국어 Marian 모델을 기본값으로 사용한다.
+TRANSLATION_MODEL = os.environ.get('HSK_KO_TRANSLATION_MODEL', 'samandar1105/translation-eng-kr')
 
 
 def download_json(url: str):
@@ -66,13 +68,13 @@ def translate_english(texts):
 
     unique = list(dict.fromkeys(texts))
     result = {}
-    batch_size = 32
+    batch_size = 24
 
     with torch.inference_mode():
         for start in range(0, len(unique), batch_size):
             batch = unique[start:start + batch_size]
             encoded = tokenizer(batch, return_tensors='pt', padding=True, truncation=True, max_length=128)
-            generated = model.generate(**encoded, max_new_tokens=128, num_beams=4)
+            generated = model.generate(**encoded, max_new_tokens=128, num_beams=3)
             decoded = tokenizer.batch_decode(generated, skip_special_tokens=True)
             for source, target in zip(batch, decoded):
                 result[source] = clean_sentence(target)
@@ -125,7 +127,7 @@ def main():
         count_by_level[level]['total'] += 1
         candidates = by_word.get(word['word'], [])
         if candidates:
-            # Prefer a sentence graded no more than one level away; otherwise use the shortest exact-token example.
+            # 해당 급수와 난이도가 가까우면서 짧은 문장을 우선해 학습 카드에 적합하게 고른다.
             candidate = min(
                 candidates,
                 key=lambda item: (
@@ -180,7 +182,7 @@ def main():
         'countByLevel': count_by_level,
         'sources': {
             'sentences': 'no7z/hsk-sentences-audio (CC BY-SA 4.0)',
-            'koreanTranslation': f'{TRANSLATION_MODEL} machine translation from the source English translation',
+            'koreanTranslation': f'{TRANSLATION_MODEL} (CC BY 4.0) machine translation from the source English translation',
             'fallback': 'HSK Plus Ultra generated neutral example for uncovered words',
         },
         'examples': selected,
