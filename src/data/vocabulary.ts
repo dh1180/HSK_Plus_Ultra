@@ -1,5 +1,6 @@
 import { HskLevel, VocabularyWord } from '../types';
 import generatedHsk from './generated-hsk.json';
+import koreanMeaningData from './korean-meanings.json';
 import { HSK1_001_100 } from './hsk1-001-100';
 import { HSK1_101_200 } from './hsk1-101-200';
 import { HSK1_201_300 } from './hsk1-201-300';
@@ -11,6 +12,12 @@ interface GeneratedWord {
   pinyin: string;
   partOfSpeechZh: string;
   sort: number;
+}
+
+interface KoreanMeaningData {
+  filledCount: number;
+  missingCount: number;
+  meanings: Record<string, string>;
 }
 
 const v = (
@@ -41,7 +48,7 @@ export const HSK1_VOCABULARY: VocabularyWord[] = [
   ...HSK1_201_300,
 ];
 
-// 한국어 뜻을 먼저 손본 단어는 공식 데이터 위에 덮어쓴다.
+// 자동 매핑보다 학습용으로 직접 다듬은 뜻이 더 적절한 단어는 우선 사용한다.
 const UPPER_LEVEL_CURATED: VocabularyWord[] = [
   v(2, 301, '啊', 'a', '문장 끝에서 어감을 나타내는 조사', '조사'),
   v(2, 302, '爱好', 'àihào', '취미; 좋아하다', '명사·동사'),
@@ -110,6 +117,7 @@ const UPPER_LEVEL_CURATED: VocabularyWord[] = [
 ];
 
 const curatedById = new Map(UPPER_LEVEL_CURATED.map((word) => [word.id, word]));
+const upperMeaningById = (koreanMeaningData as KoreanMeaningData).meanings;
 
 const POS_LABEL: Record<string, string> = {
   名: '명사',
@@ -143,12 +151,17 @@ const generatedUpperVocabulary: VocabularyWord[] = (generatedHsk.words as Genera
     const curated = curatedById.get(item.id);
     if (curated) return curated;
 
+    const meaningKo = upperMeaningById[item.id];
+    if (!meaningKo) {
+      throw new Error(`Missing Korean meaning for ${item.id} ${item.word}`);
+    }
+
     return {
       id: item.id,
       level: item.level as HskLevel,
       word: item.word,
       pinyin: item.pinyin,
-      meaningKo: '한국어 뜻 데이터 추가 예정',
+      meaningKo,
       partOfSpeech: formatPartOfSpeech(item.partOfSpeechZh),
     };
   });
