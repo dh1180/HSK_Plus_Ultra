@@ -1,6 +1,7 @@
 import { HskLevel, VocabularyWord } from '../types';
 import generatedHsk from './generated-hsk.json';
 import koreanMeaningData from './korean-meanings.json';
+import exampleContentData from './example-content.json';
 import { HSK1_001_100 } from './hsk1-001-100';
 import { HSK1_101_200 } from './hsk1-101-200';
 import { HSK1_201_300 } from './hsk1-201-300';
@@ -18,6 +19,20 @@ interface KoreanMeaningData {
   filledCount: number;
   missingCount: number;
   meanings: Record<string, string>;
+}
+
+interface ExampleContentItem {
+  exampleZh: string;
+  examplePinyin: string;
+  exampleKo: string;
+  source?: string;
+  sourceId?: string | null;
+}
+
+interface ExampleContentData {
+  filledCount: number;
+  missingCount: number;
+  examples: Record<string, ExampleContentItem>;
 }
 
 const v = (
@@ -118,6 +133,7 @@ const UPPER_LEVEL_CURATED: VocabularyWord[] = [
 
 const curatedById = new Map(UPPER_LEVEL_CURATED.map((word) => [word.id, word]));
 const upperMeaningById = (koreanMeaningData as KoreanMeaningData).meanings;
+const upperExampleById = (exampleContentData as ExampleContentData).examples;
 
 const POS_LABEL: Record<string, string> = {
   名: '명사',
@@ -148,12 +164,20 @@ const generatedUpperVocabulary: VocabularyWord[] = (generatedHsk.words as Genera
   .filter((item) => item.level >= 2 && item.level <= 6)
   .sort((a, b) => a.sort - b.sort)
   .map((item) => {
-    const curated = curatedById.get(item.id);
-    if (curated) return curated;
-
     const meaningKo = upperMeaningById[item.id];
     if (!meaningKo) {
       throw new Error(`Missing Korean meaning for ${item.id} ${item.word}`);
+    }
+
+    const example = upperExampleById[item.id];
+    const curated = curatedById.get(item.id);
+    if (curated) {
+      return {
+        ...curated,
+        exampleZh: curated.exampleZh ?? example?.exampleZh,
+        examplePinyin: curated.examplePinyin ?? example?.examplePinyin,
+        exampleKo: curated.exampleKo ?? example?.exampleKo,
+      };
     }
 
     return {
@@ -163,6 +187,9 @@ const generatedUpperVocabulary: VocabularyWord[] = (generatedHsk.words as Genera
       pinyin: item.pinyin,
       meaningKo,
       partOfSpeech: formatPartOfSpeech(item.partOfSpeechZh),
+      exampleZh: example?.exampleZh,
+      examplePinyin: example?.examplePinyin,
+      exampleKo: example?.exampleKo,
     };
   });
 
