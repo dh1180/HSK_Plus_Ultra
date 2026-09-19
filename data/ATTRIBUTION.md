@@ -30,7 +30,7 @@ HSK 2–6 example content is assembled from open sentence corpora and project-au
   - Mandarin sentences and direct Mandarin↔English / Mandarin↔Korean translation links are downloaded from the official Tatoeba exports.
   - Text export license: CC BY 2.0 FR unless an individual sentence carries another stated license.
   - Downloads: https://tatoeba.org/en/downloads
-- When a source sentence has no direct Korean translation, the source English translation is converted to Korean with the public `samandar1105/translation-eng-kr` model.
+- When a source sentence has no direct Korean translation, the source English translation is converted to Korean with the public `samandar1105/translation-eng-kr` model. If a Tatoeba Mandarin sentence has no linked English or Korean translation, its Chinese text is translated directly to Korean with `shun89/opus-mt-zh-ko` (Apache-2.0).
 - If neither open corpus contains a usable sentence for an HSK entry, HSK Plus Ultra authors a short learning sentence and marks it as `hsk-plus-ultra-authored` in the generated data.
 
 Generated entries retain a `source` and `sourceId` so their origin can be audited.
