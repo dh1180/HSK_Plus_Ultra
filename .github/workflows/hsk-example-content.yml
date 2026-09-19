@@ -14,7 +14,7 @@ permissions:
 jobs:
   examples:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,7 +38,7 @@ jobs:
         run: pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch
 
       - name: Install example generation dependencies
-        run: pip install --disable-pip-version-check 'transformers<5' sentencepiece sacremoses pypinyin
+        run: pip install --disable-pip-version-check transformers sentencepiece pypinyin jieba
 
       - name: Build HSK 2-6 example content
         run: python scripts/build-hsk-examples.py
@@ -57,17 +57,23 @@ jobs:
               assert item.get('examplePinyin'), word_id
               assert item.get('exampleKo'), word_id
           print('HSK 2-6 example coverage: 5100/5100')
+          print('Source counts:', data.get('sourceCounts', {}))
           PY
 
       - name: Commit example content
         run: |
+          cp src/data/example-content.json /tmp/example-content.json
+          cp data/example-content-report.json /tmp/example-content-report.json
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/example-content.json src/data/example-content.json
+          cp /tmp/example-content-report.json data/example-content-report.json
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/data/example-content.json data/example-content-report.json
           if git diff --cached --quiet; then
             echo "Example content unchanged"
           else
-            git commit -m "data: HSK 2~6 예문·병음·한국어 해석 데이터 추가"
-            git pull --rebase origin main
-            git push
+            git commit -m "data: HSK 2~6 실제 예문 데이터 보강"
+            git push origin main
           fi
