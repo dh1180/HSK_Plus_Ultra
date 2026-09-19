@@ -24,6 +24,7 @@ TATOEBA_URLS = {
 }
 
 TRANSLATION_MODEL = os.environ.get('HSK_KO_TRANSLATION_MODEL', 'samandar1105/translation-eng-kr')
+ZH_KO_MODEL = os.environ.get('HSK_ZH_KO_TRANSLATION_MODEL', 'shun89/opus-mt-zh-ko')
 
 
 def download_bytes(url: str) -> bytes:
@@ -165,8 +166,6 @@ def find_tatoeba_examples(words):
 
     eng_links = load_links(TATOEBA_URLS['cmn_eng_links'])
     kor_links = load_links(TATOEBA_URLS['cmn_kor_links'])
-    linked_cmn_ids = set(eng_links) | set(kor_links)
-
     by_first = defaultdict(list)
     for word in words:
         by_first[word[0]].append(word)
@@ -181,9 +180,6 @@ def find_tatoeba_examples(words):
             sentence_id = int(parts[0])
         except ValueError:
             continue
-        if sentence_id not in linked_cmn_ids:
-            continue
-
         chinese = clean_sentence(parts[2])
         if not is_reasonable_chinese_sentence(chinese):
             continue
@@ -242,15 +238,12 @@ def find_tatoeba_examples(words):
 
         example_ko = min(ko_candidates, key=len) if ko_candidates else ''
         example_en = min(en_candidates, key=len) if en_candidates else ''
-        if not example_ko and not example_en:
-            continue
-
         result[word] = {
             'exampleZh': item['chinese'],
             'examplePinyin': sentence_pinyin(item['chinese']),
             'exampleKo': example_ko,
             'exampleEn': example_en,
-            'source': 'tatoeba',
+            'source': 'tatoeba-linked' if (example_ko or example_en) else 'tatoeba-unlinked',
             'sourceId': str(cmn_id),
         }
 
@@ -282,6 +275,35 @@ def translate_english(texts):
             for source, target in zip(batch, decoded):
                 result[source] = clean_sentence(target)
             print(f'Translated {min(start + batch_size, len(unique))}/{len(unique)} unique sentences')
+
+    return result
+
+
+def translate_chinese(texts):
+    if not texts:
+        return {}
+
+    print(f'Loading Chinese→Korean translation model: {ZH_KO_MODEL}')
+    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+    import torch
+
+    tokenizer = AutoTokenizer.from_pretrained(ZH_KO_MODEL)
+    model = AutoModelForSeq2SeqLM.from_pretrained(ZH_KO_MODEL)
+    model.eval()
+
+    unique = list(dict.fromkeys(texts))
+    result = {}
+    batch_size = 24
+
+    with torch.inference_mode():
+        for start in range(0, len(unique), batch_size):
+            batch = unique[start:start + batch_size]
+            encoded = tokenizer(batch, return_tensors='pt', padding=True, truncation=True, max_length=128)
+            generated = model.generate(**encoded, max_new_tokens=128, num_beams=3)
+            decoded = tokenizer.batch_decode(generated, skip_special_tokens=True)
+            for source, target in zip(batch, decoded):
+                result[source] = clean_sentence(target)
+            print(f'Translated zh→ko {min(start + batch_size, len(unique))}/{len(unique)} unique sentences')
 
     return result
 
@@ -323,12 +345,13 @@ def main():
     count_by_level = {}
     source_counts = defaultdict(int)
     english_to_translate = []
+    chinese_to_translate = []
 
     unresolved = []
     for item in target_words:
         word = item['word']
         level = str(item['level'])
-        count_by_level.setdefault(level, {'total': 0, 'no7zExact': 0, 'no7zSubstring': 0, 'tatoeba': 0, 'authored': 0})
+        count_by_level.setdefault(level, {'total': 0, 'no7zExact': 0, 'no7zSubstring': 0, 'tatoebaLinked': 0, 'tatoebaUnlinked': 0, 'authored': 0})
         count_by_level[level]['total'] += 1
 
         candidates = exact_map.get(word)
@@ -371,9 +394,12 @@ def main():
             entry = dict(found)
             if not entry.get('exampleKo') and entry.get('exampleEn'):
                 english_to_translate.append(entry['exampleEn'])
+            elif not entry.get('exampleKo') and not entry.get('exampleEn'):
+                chinese_to_translate.append(entry['exampleZh'])
             selected[item['id']] = entry
-            source_counts['tatoeba'] += 1
-            count_by_level[level]['tatoeba'] += 1
+            bucket = 'tatoebaLinked' if entry['source'] == 'tatoeba-linked' else 'tatoebaUnlinked'
+            source_counts[bucket] += 1
+            count_by_level[level][bucket] += 1
         else:
             still_unresolved.append(item)
 
@@ -387,6 +413,7 @@ def main():
         count_by_level[level]['authored'] += 1
 
     translated = translate_english(english_to_translate)
+    translated_zh = translate_chinese(chinese_to_translate)
 
     for word_id, item in selected.items():
         en = item.pop('exampleEn', '')
@@ -394,6 +421,11 @@ def main():
             ko = translated.get(en, '')
             if not ko:
                 raise RuntimeError(f'Missing Korean translation for {word_id}')
+            item['exampleKo'] = ko
+        if not item.get('exampleKo') and item.get('source') == 'tatoeba-unlinked':
+            ko = translated_zh.get(item['exampleZh'], '')
+            if not ko:
+                raise RuntimeError(f'Missing direct Chinese→Korean translation for {word_id}')
             item['exampleKo'] = ko
 
     missing = [
@@ -414,8 +446,8 @@ def main():
         'countByLevel': count_by_level,
         'sources': {
             'primarySentences': 'no7z/hsk-sentences-audio (CC BY-SA 4.0)',
-            'secondarySentences': 'Tatoeba Mandarin sentence exports and direct translation links (CC BY 2.0 FR)',
-            'koreanTranslation': f'{TRANSLATION_MODEL} (CC BY 4.0) machine translation when a direct Korean translation is unavailable',
+            'secondarySentences': 'Tatoeba Mandarin sentence exports, including sentences without direct translations (CC BY 2.0 FR)',
+            'koreanTranslation': f'{TRANSLATION_MODEL} for English→Korean and {ZH_KO_MODEL} for Chinese→Korean when direct Korean translations are unavailable',
             'authoredFallback': 'HSK Plus Ultra authored only when neither open corpus contains a usable sentence',
         },
         'examples': selected,
