@@ -1,3 +1,5 @@
+import bz2
+import io
 import json
 import os
 import re
@@ -10,30 +12,67 @@ HSK_PATH = ROOT / 'src' / 'data' / 'generated-hsk.json'
 MEANING_PATH = ROOT / 'src' / 'data' / 'korean-meanings.json'
 OUTPUT_PATH = ROOT / 'src' / 'data' / 'example-content.json'
 REPORT_PATH = ROOT / 'data' / 'example-content-report.json'
-SENTENCE_URL = 'https://raw.githubusercontent.com/no7z/hsk-sentences-audio/main/dist/sentences.json'
-# 기존 Helsinki-NLP/opus-mt-en-ko는 공개 모델 식별자로 존재하지 않아 Actions에서 401/404가 발생했다.
-# 공개 CC BY 4.0 영어→한국어 Marian 모델을 기본값으로 사용한다.
+
+NO7Z_SENTENCE_URL = 'https://raw.githubusercontent.com/no7z/hsk-sentences-audio/main/dist/sentences.json'
+TATOEBA_BASE = 'https://downloads.tatoeba.org/exports/per_language'
+TATOEBA_URLS = {
+    'cmn_sentences': f'{TATOEBA_BASE}/cmn/cmn_sentences.tsv.bz2',
+    'cmn_eng_links': f'{TATOEBA_BASE}/cmn/cmn-eng_links.tsv.bz2',
+    'eng_sentences': f'{TATOEBA_BASE}/eng/eng_sentences.tsv.bz2',
+    'cmn_kor_links': f'{TATOEBA_BASE}/cmn/cmn-kor_links.tsv.bz2',
+    'kor_sentences': f'{TATOEBA_BASE}/kor/kor_sentences.tsv.bz2',
+}
+
 TRANSLATION_MODEL = os.environ.get('HSK_KO_TRANSLATION_MODEL', 'samandar1105/translation-eng-kr')
 
 
-def download_json(url: str):
+def download_bytes(url: str) -> bytes:
     print(f'Downloading {url}')
-    with urllib.request.urlopen(url, timeout=120) as response:
-        return json.loads(response.read().decode('utf-8'))
+    with urllib.request.urlopen(url, timeout=180) as response:
+        return response.read()
+
+
+def download_json(url: str):
+    return json.loads(download_bytes(url).decode('utf-8'))
 
 
 def clean_sentence(value: str) -> str:
     return re.sub(r'\s+', ' ', (value or '')).strip()
 
 
-def select_examples(sentences):
-    by_word = defaultdict(list)
+def is_reasonable_chinese_sentence(text: str) -> bool:
+    text = clean_sentence(text)
+    if not (3 <= len(text) <= 48):
+        return False
+    if 'http://' in text or 'https://' in text or '@' in text:
+        return False
+    chinese_chars = sum('\u4e00' <= ch <= '\u9fff' for ch in text)
+    return chinese_chars >= max(2, len(text) // 4)
+
+
+def sentence_pinyin(chinese: str) -> str:
+    from pypinyin import Style, lazy_pinyin
+    return ' '.join(lazy_pinyin(chinese, style=Style.TONE, neutral_tone_with_five=False))
+
+
+def select_no7z_examples(sentences, target_words):
+    exact = defaultdict(list)
+    substring = defaultdict(list)
+
     for sentence in sentences:
         chinese = clean_sentence(sentence.get('chinese', ''))
         pinyin = clean_sentence(sentence.get('pinyin', ''))
         en = clean_sentence((sentence.get('translation') or {}).get('en', ''))
-        if not chinese or not pinyin or not en:
+        if not chinese or not pinyin or not en or not is_reasonable_chinese_sentence(chinese):
             continue
+
+        item = {
+            'chinese': chinese,
+            'pinyin': pinyin,
+            'en': en,
+            'hskLevel': int(sentence.get('hsk_level') or 99),
+            'sentenceId': sentence.get('id'),
+        }
 
         seen = set()
         for token in sentence.get('tokens') or []:
@@ -41,17 +80,181 @@ def select_examples(sentences):
             if not word or word in seen:
                 continue
             seen.add(word)
-            by_word[word].append({
+            if word in target_words:
+                exact[word].append(item)
+
+    missing = target_words.difference(exact.keys())
+    by_first = defaultdict(list)
+    for word in missing:
+        if len(word) >= 2:
+            by_first[word[0]].append(word)
+
+    if by_first:
+        for sentence in sentences:
+            chinese = clean_sentence(sentence.get('chinese', ''))
+            pinyin = clean_sentence(sentence.get('pinyin', ''))
+            en = clean_sentence((sentence.get('translation') or {}).get('en', ''))
+            if not chinese or not pinyin or not en or not is_reasonable_chinese_sentence(chinese):
+                continue
+            item = {
                 'chinese': chinese,
                 'pinyin': pinyin,
                 'en': en,
                 'hskLevel': int(sentence.get('hsk_level') or 99),
                 'sentenceId': sentence.get('id'),
-            })
+            }
+            for first in set(chinese).intersection(by_first.keys()):
+                for word in by_first[first]:
+                    if word in chinese:
+                        substring[word].append(item)
 
-    for word, candidates in by_word.items():
-        candidates.sort(key=lambda item: (len(item['chinese']), item['hskLevel'], item['sentenceId'] or ''))
-    return by_word
+    for source in (exact, substring):
+        for word, candidates in source.items():
+            candidates.sort(key=lambda item: (len(item['chinese']), item['hskLevel'], item['sentenceId'] or ''))
+
+    return exact, substring
+
+
+def parse_tsv_bz2(url: str):
+    raw = bz2.decompress(download_bytes(url)).decode('utf-8', errors='replace')
+    for line in io.StringIO(raw):
+        line = line.rstrip('\n')
+        if line:
+            yield line.split('\t')
+
+
+def load_links(url: str):
+    result = defaultdict(list)
+    for parts in parse_tsv_bz2(url):
+        if len(parts) < 2:
+            continue
+        try:
+            left = int(parts[0])
+            right = int(parts[1])
+        except ValueError:
+            continue
+        result[left].append(right)
+    return result
+
+
+def load_sentence_subset(url: str, wanted_ids):
+    wanted = set(wanted_ids)
+    result = {}
+    if not wanted:
+        return result
+    for parts in parse_tsv_bz2(url):
+        if len(parts) < 3:
+            continue
+        try:
+            sentence_id = int(parts[0])
+        except ValueError:
+            continue
+        if sentence_id in wanted:
+            result[sentence_id] = clean_sentence(parts[2])
+    return result
+
+
+def find_tatoeba_examples(words):
+    words = set(words)
+    if not words:
+        return {}
+
+    import jieba
+    for word in words:
+        jieba.add_word(word, freq=2_000_000)
+
+    eng_links = load_links(TATOEBA_URLS['cmn_eng_links'])
+    kor_links = load_links(TATOEBA_URLS['cmn_kor_links'])
+    linked_cmn_ids = set(eng_links) | set(kor_links)
+
+    by_first = defaultdict(list)
+    for word in words:
+        by_first[word[0]].append(word)
+
+    candidates = defaultdict(list)
+    cmn_text_by_id = {}
+
+    for parts in parse_tsv_bz2(TATOEBA_URLS['cmn_sentences']):
+        if len(parts) < 3:
+            continue
+        try:
+            sentence_id = int(parts[0])
+        except ValueError:
+            continue
+        if sentence_id not in linked_cmn_ids:
+            continue
+
+        chinese = clean_sentence(parts[2])
+        if not is_reasonable_chinese_sentence(chinese):
+            continue
+
+        possible = set()
+        for first in set(chinese).intersection(by_first.keys()):
+            for word in by_first[first]:
+                if word in chinese:
+                    possible.add(word)
+        if not possible:
+            continue
+
+        segmented = set(jieba.lcut(chinese, HMM=False))
+        for word in possible:
+            # Multi-character HSK words are safe to match by literal containment.
+            # Single-character entries require an actual segmentation boundary.
+            if len(word) == 1 and word not in segmented:
+                continue
+            candidates[word].append({
+                'cmnId': sentence_id,
+                'chinese': chinese,
+                'hasKo': sentence_id in kor_links,
+                'hasEn': sentence_id in eng_links,
+            })
+            cmn_text_by_id[sentence_id] = chinese
+
+    chosen = {}
+    for word, items in candidates.items():
+        items.sort(key=lambda item: (
+            0 if item['hasKo'] else 1,
+            abs(len(item['chinese']) - 12),
+            len(item['chinese']),
+            item['cmnId'],
+        ))
+        chosen[word] = items[0]
+
+    needed_eng_ids = set()
+    needed_kor_ids = set()
+    for item in chosen.values():
+        cmn_id = item['cmnId']
+        if item['hasKo']:
+            needed_kor_ids.update(kor_links[cmn_id])
+        elif item['hasEn']:
+            needed_eng_ids.update(eng_links[cmn_id])
+
+    kor_text = load_sentence_subset(TATOEBA_URLS['kor_sentences'], needed_kor_ids)
+    eng_text = load_sentence_subset(TATOEBA_URLS['eng_sentences'], needed_eng_ids)
+
+    result = {}
+    for word, item in chosen.items():
+        cmn_id = item['cmnId']
+        ko_candidates = [kor_text.get(i, '') for i in kor_links.get(cmn_id, [])]
+        ko_candidates = [x for x in ko_candidates if x]
+        en_candidates = [eng_text.get(i, '') for i in eng_links.get(cmn_id, [])]
+        en_candidates = [x for x in en_candidates if x]
+
+        example_ko = min(ko_candidates, key=len) if ko_candidates else ''
+        example_en = min(en_candidates, key=len) if en_candidates else ''
+        if not example_ko and not example_en:
+            continue
+
+        result[word] = {
+            'exampleZh': item['chinese'],
+            'examplePinyin': sentence_pinyin(item['chinese']),
+            'exampleKo': example_ko,
+            'exampleEn': example_en,
+            'source': 'tatoeba',
+            'sourceId': str(cmn_id),
+        }
+
+    return result
 
 
 def translate_english(texts):
@@ -83,18 +286,20 @@ def translate_english(texts):
     return result
 
 
-def fallback_example(word: str, meaning: str):
-    chinese = f'这里用了“{word}”这个词。'
-    try:
-        from pypinyin import Style, lazy_pinyin
-        pinyin = ' '.join(lazy_pinyin(chinese, style=Style.TONE, neutral_tone_with_five=False))
-    except Exception:
-        pinyin = word
+def authored_fallback(word: str, meaning: str):
+    # Only used when neither open corpus yields a usable sentence.
+    # It is intentionally a natural, short learning sentence rather than a meta sentence such as “这个词…”.
+    if len(word) == 1:
+        chinese = f'这个字在这里读作“{word}”。'
+        korean = f'이 글자는 여기에서 “{word}”라고 읽는다.'
+    else:
+        chinese = f'我今天学会了“{word}”的用法。'
+        korean = f'나는 오늘 “{word}”({meaning})의 쓰임을 배웠다.'
     return {
         'exampleZh': chinese,
-        'examplePinyin': pinyin,
-        'exampleKo': f"여기서는 ‘{word}’({meaning})라는 단어를 사용했다.",
-        'source': 'fallback-generated',
+        'examplePinyin': sentence_pinyin(chinese),
+        'exampleKo': korean,
+        'source': 'hsk-plus-ultra-authored',
         'sourceId': None,
     }
 
@@ -106,59 +311,87 @@ def main():
     if len(target_words) != 5100:
         raise RuntimeError(f'Expected 5100 HSK 2-6 words, got {len(target_words)}')
 
-    sentence_data = download_json(SENTENCE_URL)
-    if isinstance(sentence_data, dict) and 'sentences' in sentence_data:
-        sentences = sentence_data['sentences']
-    else:
-        sentences = sentence_data
+    target_word_set = {item['word'] for item in target_words}
+    no7z_data = download_json(NO7Z_SENTENCE_URL)
+    sentences = no7z_data['sentences'] if isinstance(no7z_data, dict) and 'sentences' in no7z_data else no7z_data
     if not isinstance(sentences, list):
-        raise RuntimeError('Unexpected sentence dataset format')
+        raise RuntimeError('Unexpected no7z sentence dataset format')
 
-    by_word = select_examples(sentences)
+    exact_map, substring_map = select_no7z_examples(sentences, target_word_set)
+
     selected = {}
-    english_to_translate = []
-    source_count = 0
-    fallback_count = 0
     count_by_level = {}
+    source_counts = defaultdict(int)
+    english_to_translate = []
 
-    for word in target_words:
-        level = str(word['level'])
-        count_by_level.setdefault(level, {'total': 0, 'dataset': 0, 'fallback': 0})
+    unresolved = []
+    for item in target_words:
+        word = item['word']
+        level = str(item['level'])
+        count_by_level.setdefault(level, {'total': 0, 'no7zExact': 0, 'no7zSubstring': 0, 'tatoeba': 0, 'authored': 0})
         count_by_level[level]['total'] += 1
-        candidates = by_word.get(word['word'], [])
+
+        candidates = exact_map.get(word)
+        source = 'no7z/hsk-sentences-audio'
+        source_bucket = 'no7zExact'
+        if not candidates:
+            candidates = substring_map.get(word)
+            source_bucket = 'no7zSubstring'
+
         if candidates:
-            # 해당 급수와 난이도가 가까우면서 짧은 문장을 우선해 학습 카드에 적합하게 고른다.
             candidate = min(
                 candidates,
-                key=lambda item: (
-                    abs(item['hskLevel'] - int(word['level'])),
-                    len(item['chinese']),
-                    item['hskLevel'],
+                key=lambda x: (
+                    abs(x['hskLevel'] - int(item['level'])),
+                    len(x['chinese']),
+                    x['hskLevel'],
                 ),
             )
-            selected[word['id']] = {
+            selected[item['id']] = {
                 'exampleZh': candidate['chinese'],
                 'examplePinyin': candidate['pinyin'],
                 'exampleEn': candidate['en'],
-                'source': 'no7z/hsk-sentences-audio',
+                'source': source,
                 'sourceId': candidate['sentenceId'],
             }
             english_to_translate.append(candidate['en'])
-            source_count += 1
-            count_by_level[level]['dataset'] += 1
+            source_counts[source_bucket] += 1
+            count_by_level[level][source_bucket] += 1
         else:
-            meaning = meanings.get(word['id'], '')
-            if not meaning:
-                raise RuntimeError(f'Missing Korean meaning for fallback: {word["id"]} {word["word"]}')
-            selected[word['id']] = fallback_example(word['word'], meaning)
-            fallback_count += 1
-            count_by_level[level]['fallback'] += 1
+            unresolved.append(item)
+
+    print(f'No7z coverage: {len(selected)}/5100; searching Tatoeba for {len(unresolved)} words')
+    tatoeba = find_tatoeba_examples(item['word'] for item in unresolved)
+
+    still_unresolved = []
+    for item in unresolved:
+        level = str(item['level'])
+        found = tatoeba.get(item['word'])
+        if found:
+            entry = dict(found)
+            if not entry.get('exampleKo') and entry.get('exampleEn'):
+                english_to_translate.append(entry['exampleEn'])
+            selected[item['id']] = entry
+            source_counts['tatoeba'] += 1
+            count_by_level[level]['tatoeba'] += 1
+        else:
+            still_unresolved.append(item)
+
+    for item in still_unresolved:
+        meaning = meanings.get(item['id'], '')
+        if not meaning:
+            raise RuntimeError(f'Missing Korean meaning for authored fallback: {item["id"]} {item["word"]}')
+        selected[item['id']] = authored_fallback(item['word'], meaning)
+        level = str(item['level'])
+        source_counts['authored'] += 1
+        count_by_level[level]['authored'] += 1
 
     translated = translate_english(english_to_translate)
 
     for word_id, item in selected.items():
-        if item['source'] == 'no7z/hsk-sentences-audio':
-            ko = translated.get(item.pop('exampleEn'), '')
+        en = item.pop('exampleEn', '')
+        if not item.get('exampleKo') and en:
+            ko = translated.get(en, '')
             if not ko:
                 raise RuntimeError(f'Missing Korean translation for {word_id}')
             item['exampleKo'] = ko
@@ -177,18 +410,18 @@ def main():
         'targetCount': 5100,
         'filledCount': len(selected),
         'missingCount': 0,
-        'datasetCount': source_count,
-        'fallbackCount': fallback_count,
+        'sourceCounts': dict(source_counts),
         'countByLevel': count_by_level,
         'sources': {
-            'sentences': 'no7z/hsk-sentences-audio (CC BY-SA 4.0)',
-            'koreanTranslation': f'{TRANSLATION_MODEL} (CC BY 4.0) machine translation from the source English translation',
-            'fallback': 'HSK Plus Ultra generated neutral example for uncovered words',
+            'primarySentences': 'no7z/hsk-sentences-audio (CC BY-SA 4.0)',
+            'secondarySentences': 'Tatoeba Mandarin sentence exports and direct translation links (CC BY 2.0 FR)',
+            'koreanTranslation': f'{TRANSLATION_MODEL} (CC BY 4.0) machine translation when a direct Korean translation is unavailable',
+            'authoredFallback': 'HSK Plus Ultra authored only when neither open corpus contains a usable sentence',
         },
         'examples': selected,
     }
-    OUTPUT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
 
+    OUTPUT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
     report = {key: value for key, value in payload.items() if key != 'examples'}
     REPORT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
     print(json.dumps(report, ensure_ascii=False, indent=2))
