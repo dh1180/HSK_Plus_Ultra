@@ -79,6 +79,8 @@ async function main() {
 
   const output = {
     generatedAt: new Date().toISOString(),
+    reviewStatus: 'unreviewed-candidates',
+    reviewNote: 'Dictionary reverse mappings do not verify Chinese sense or part of speech. Runtime editorial overrides take priority.',
     targetCount: targetWords.length,
     filledCount,
     missingCount: 0,

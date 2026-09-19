@@ -1,8 +1,7 @@
+import { SafeAreaView } from 'react-native-safe-area-context';
 import React, { useEffect, useMemo, useState } from 'react';
 import {
-  Platform,
   Pressable,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -15,7 +14,7 @@ import { reviewTimingText, STAGE_LABEL, transitionStage } from '../lib/srs';
 
 interface Props {
   word: VocabularyWord;
-  index: number;
+  completed: number;
   total: number;
   accent: string;
   progress: ProgressMap;
@@ -26,7 +25,7 @@ interface Props {
 
 export function StudyScreen({
   word,
-  index,
+  completed,
   total,
   accent,
   progress,
@@ -35,8 +34,10 @@ export function StudyScreen({
   onClose,
 }: Props) {
   const [revealed, setRevealed] = useState(false);
+  const [speechError, setSpeechError] = useState(false);
   const item = progress[word.id];
   const currentStage = item?.stage ?? 'NEW';
+  const isDraft = word.meaningStatus === 'dictionary-draft';
 
   useEffect(() => {
     setRevealed(false);
@@ -44,7 +45,7 @@ export function StudyScreen({
 
   useEffect(() => {
     return () => {
-      void Speech.stop();
+      void Speech.stop().catch(() => undefined);
     };
   }, []);
 
@@ -57,32 +58,37 @@ export function StudyScreen({
     [currentStage],
   );
 
-  const speakWord = () => {
-    void Speech.stop();
-    Speech.speak(word.word, { language: 'zh-CN', rate: 0.78, pitch: 1.0 });
+  const speak = async (text: string, rate: number) => {
+    setSpeechError(false);
+    try {
+      await Speech.stop();
+      Speech.speak(text, {
+        language: 'zh-CN', rate, pitch: 1.0,
+        onError: () => setSpeechError(true),
+      });
+    } catch {
+      setSpeechError(true);
+    }
   };
 
-  const speakExample = () => {
-    if (!word.exampleZh) return;
-    void Speech.stop();
-    Speech.speak(word.exampleZh, { language: 'zh-CN', rate: 0.72, pitch: 1.0 });
-  };
+  const speakWord = () => { void speak(word.word, 0.78); };
+  const speakExample = () => { if (word.exampleZh) void speak(word.exampleZh, 0.72); };
 
   return (
     <SafeAreaView style={styles.safe}>
       <View style={styles.topBar}>
-        <Pressable onPress={onClose} hitSlop={12} style={styles.closeButton}>
+        <Pressable accessibilityRole="button" accessibilityLabel="학습 닫기" onPress={onClose} hitSlop={12} style={styles.closeButton}>
           <Text style={styles.close}>×</Text>
         </Pressable>
 
         <View style={styles.counterWrap}>
-          <Text style={styles.counter}>{index + 1} / {total}</Text>
+          <Text style={styles.counter}>{completed} / {total} 완료</Text>
           <View style={styles.track}>
             <View
               style={[
                 styles.fill,
                 {
-                  width: `${((index + 1) / total) * 100}%`,
+                  width: `${(completed / total) * 100}%`,
                   backgroundColor: accent,
                 },
               ]}
@@ -105,6 +111,8 @@ export function StudyScreen({
         </View>
 
         <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={revealed ? `${word.word}, ${word.meaningKo}` : `${word.word}, 뜻 보기`}
           onPress={() => {
             if (!revealed) setRevealed(true);
           }}
@@ -117,7 +125,9 @@ export function StudyScreen({
           <View style={styles.cardActions}>
             <View style={[styles.levelDot, { backgroundColor: accent }]} />
             <Pressable
-              onPress={speakWord}
+              accessibilityRole="button"
+              accessibilityLabel="중국어 단어 듣기"
+              onPress={(event) => { event.stopPropagation(); speakWord(); }}
               hitSlop={8}
               style={({ pressed }) => [styles.wordAudioButton, pressed && styles.pressed]}
             >
@@ -139,6 +149,9 @@ export function StudyScreen({
             <View style={styles.revealZone}>
               <Text style={styles.pinyin}>{word.pinyin}</Text>
               <Text style={styles.meaning}>{word.meaningKo}</Text>
+              <Text style={styles.qualityNote}>{word.meaningStatus === 'dictionary-draft'
+                ? '자동 매핑 뜻 · 의미와 품사 검토 필요'
+                : word.meaningStatus === 'editorial' ? 'AI 보조 교정 · 교사 검수 전' : '프로젝트 작성 뜻'}</Text>
               {word.partOfSpeech ? <Text style={styles.pos}>{word.partOfSpeech}</Text> : null}
 
               {word.exampleZh ? (
@@ -146,7 +159,9 @@ export function StudyScreen({
                   <View style={styles.exampleHeader}>
                     <Text style={styles.exampleLabel}>예문</Text>
                     <Pressable
-                      onPress={speakExample}
+                      accessibilityRole="button"
+                      accessibilityLabel="중국어 예문 듣기"
+                      onPress={(event) => { event.stopPropagation(); speakExample(); }}
                       hitSlop={8}
                       style={({ pressed }) => [
                         styles.exampleSpeakerButton,
@@ -157,37 +172,48 @@ export function StudyScreen({
                       <Text style={[styles.exampleSpeakerText, { color: accent }]}>🔊 예문 듣기</Text>
                     </Pressable>
                   </View>
-                  <Text style={styles.exampleZh}>{word.exampleZh}</Text>
+                  <Text style={styles.exampleZh}>{word.exampleZh.split(word.word).map((part, partIndex) => (
+                    <React.Fragment key={partIndex}>{partIndex > 0 && <Text style={{ color: accent, fontWeight: '900' }}>{word.word}</Text>}{part}</React.Fragment>
+                  ))}</Text>
                   {word.examplePinyin ? <Text style={styles.examplePinyin}>{word.examplePinyin}</Text> : null}
                   {word.exampleKo ? <Text style={styles.exampleKo}>{word.exampleKo}</Text> : null}
+                  <Text style={styles.qualityNote}>{word.exampleSource}</Text>
                 </View>
-              ) : null}
+              ) : <Text style={styles.qualityNote}>예문 검토 중 · 확인되지 않은 자동 생성 예문은 표시하지 않습니다.</Text>}
             </View>
           ) : null}
         </Pressable>
       </ScrollView>
 
       <View style={styles.bottom}>
+        {speechError && <Text accessibilityRole="alert" style={styles.qualityNote}>음성을 재생하지 못했습니다. 기기의 중국어 음성 설정을 확인해 주세요.</Text>}
         <Text style={styles.answerGuide}>
-          {isRetry
+          {isDraft ? '뜻 검토 중 · 참고 열람만 가능하며 학습 기록에 반영하지 않습니다' : isRetry
             ? '다시 학습한 단어 · 알고 있을 때까지 이번 학습에서 반복됩니다'
             : revealed
               ? '기억 상태를 선택하세요'
-              : '뜻을 떠올린 뒤 아래에서 선택하세요'}
+              : '카드를 눌러 뜻을 확인한 뒤 선택하세요'}
         </Text>
         <View style={styles.buttons}>
           <Pressable
+            accessibilityRole="button"
+            disabled={!revealed || isDraft}
+            accessibilityState={{ disabled: !revealed || isDraft }}
             onPress={() => onAnswer('RELEARN')}
-            style={({ pressed }) => [styles.actionButton, styles.relearnButton, pressed && styles.pressed]}
+            style={({ pressed }) => [styles.actionButton, styles.relearnButton, (!revealed || isDraft) && styles.disabled, pressed && styles.pressed]}
           >
             <Text style={styles.relearnText}>다시 학습</Text>
             <Text style={styles.relearnSub}>다음: {relearnNext}</Text>
           </Pressable>
 
           <Pressable
+            accessibilityRole="button"
+            disabled={!revealed || isDraft}
+            accessibilityState={{ disabled: !revealed || isDraft }}
             onPress={() => onAnswer('KNOWN')}
             style={({ pressed }) => [
               styles.actionButton,
+              (!revealed || isDraft) && styles.disabled,
               { backgroundColor: accent },
               pressed && styles.pressed,
             ]}
@@ -202,6 +228,8 @@ export function StudyScreen({
 }
 
 const styles = StyleSheet.create({
+  disabled: { opacity: 0.45 },
+  qualityNote: { color: COLORS.subtext, fontSize: 12, lineHeight: 18, marginTop: 10, textAlign: 'left' },
   safe: {
     flex: 1,
     backgroundColor: COLORS.background,
@@ -304,7 +332,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   wordAudioButton: {
-    minHeight: 36,
+    minHeight: 44,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 5,
@@ -344,7 +372,7 @@ const styles = StyleSheet.create({
     borderRadius: 99,
   },
   tapHint: {
-    color: '#99948D',
+    color: COLORS.subtext,
     fontSize: 11,
     fontWeight: '700',
   },
@@ -391,7 +419,7 @@ const styles = StyleSheet.create({
     fontWeight: '900',
   },
   exampleSpeakerButton: {
-    minHeight: 32,
+    minHeight: 44,
     borderRadius: 99,
     borderWidth: 1,
     paddingHorizontal: 11,
@@ -424,7 +452,7 @@ const styles = StyleSheet.create({
   bottom: {
     paddingHorizontal: 16,
     paddingTop: 9,
-    paddingBottom: Platform.OS === 'android' ? 64 : 20,
+    paddingBottom: 12,
     backgroundColor: COLORS.background,
     borderTopWidth: 1,
     borderTopColor: '#ECE9E2',

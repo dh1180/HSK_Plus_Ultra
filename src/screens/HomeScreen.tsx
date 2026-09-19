@@ -1,6 +1,6 @@
+import { SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
 import {
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -21,7 +21,7 @@ const levels: HskLevel[] = [1, 2, 3, 4, 5, 6];
 
 export function HomeScreen({ progress, onSelectLevel }: Props) {
   const { width } = useWindowDimensions();
-  const cardWidth = Math.min(Math.max(width * 0.72, 280), 380);
+  const cardWidth = Math.min(Math.max(width * 0.78, 250), width - 44, 380);
 
   return (
     <SafeAreaView style={styles.safe}>
@@ -31,9 +31,7 @@ export function HomeScreen({ progress, onSelectLevel }: Props) {
             <Text style={styles.brand}>HSK Plus Ultra</Text>
             <Text style={styles.subtitle}>기억할 때까지, 필요한 순간에 다시</Text>
           </View>
-          <View style={styles.streak}>
-            <Text style={styles.streakText}>🔥 1</Text>
-          </View>
+
         </View>
 
         <View style={styles.ruleCard}>
@@ -42,6 +40,7 @@ export function HomeScreen({ progress, onSelectLevel }: Props) {
         </View>
 
         <Text style={styles.sectionTitle}>목표 급수를 선택하세요</Text>
+        <View style={styles.levelShortcuts}>{levels.map(level => <Pressable key={level} accessibilityRole="button" accessibilityLabel={`HSK ${level} 바로가기`} onPress={() => onSelectLevel(level)} style={[styles.shortcut, { backgroundColor: LEVEL_META[level].soft }]}><Text style={{ color: COLORS.text, fontWeight: '800' }}>{level}급</Text></Pressable>)}</View>
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -58,6 +57,8 @@ export function HomeScreen({ progress, onSelectLevel }: Props) {
             return (
               <Pressable
                 key={level}
+                accessibilityRole="button"
+                accessibilityLabel={`HSK ${level} 학습하기`}
                 onPress={() => onSelectLevel(level)}
                 style={({ pressed }) => [
                   styles.levelCard,
@@ -86,7 +87,7 @@ export function HomeScreen({ progress, onSelectLevel }: Props) {
                     ]}
                   />
                 </View>
-                <Text style={styles.progressLabel}>현재 탑재 데이터 학습 {studied} / {demoWords.length}</Text>
+                <Text style={styles.progressLabel}>학습한 단어 {studied} / {demoWords.length}</Text>
 
                 <View style={[styles.startButton, { backgroundColor: meta.accent }]}>
                   <Text style={styles.startButtonText}>학습하기</Text>
@@ -100,7 +101,7 @@ export function HomeScreen({ progress, onSelectLevel }: Props) {
         <View style={styles.note}>
           <Text style={styles.noteTitle}>HSK 3.0 기준</Text>
           <Text style={styles.noteText}>
-            앱 구조는 HSK 1~6을 지원하며, 현재 저장소에는 UI·학습 로직 검증용 한국어 스타터 어휘가 포함되어 있습니다.
+            HSK 1~6 총 5,400개 항목이 있습니다. 급수별 신규 어휘를 학습하며, 하위 급수 단어는 각 급수에서 복습합니다. 2급 전체와 일부 다의어를 교정했고, 나머지 자동 매핑 뜻은 검토가 필요합니다.
           </Text>
         </View>
       </ScrollView>
@@ -109,6 +110,8 @@ export function HomeScreen({ progress, onSelectLevel }: Props) {
 }
 
 const styles = StyleSheet.create({
+  levelShortcuts: { flexDirection: 'row', gap: 6, paddingHorizontal: 22, marginBottom: 16 },
+  shortcut: { flex: 1, maxWidth: 70, minHeight: 44, alignItems: 'center', justifyContent: 'center', borderRadius: 12 },
   safe: { flex: 1, backgroundColor: COLORS.background },
   page: { paddingTop: 18, paddingBottom: 40 },
   header: {
@@ -117,7 +120,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  brand: { fontSize: 28, fontWeight: '800', color: COLORS.text, letterSpacing: -0.6 },
+  brand: { fontSize: 26, fontWeight: '800', color: COLORS.text, letterSpacing: -0.6 },
   subtitle: { marginTop: 5, color: COLORS.subtext, fontSize: 14 },
   streak: { backgroundColor: '#FFFFFF', borderRadius: 18, paddingHorizontal: 13, paddingVertical: 8 },
   streakText: { fontWeight: '700', color: COLORS.text },

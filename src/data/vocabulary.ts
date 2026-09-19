@@ -1,7 +1,7 @@
 import { HskLevel, VocabularyWord } from '../types';
 import generatedHsk from './generated-hsk.json';
 import koreanMeaningData from './korean-meanings.json';
-import exampleContentData from './example-content.json';
+import contentOverrides from './content-overrides.json';
 import { HSK1_001_100 } from './hsk1-001-100';
 import { HSK1_101_200 } from './hsk1-101-200';
 import { HSK1_201_300 } from './hsk1-201-300';
@@ -19,20 +19,6 @@ interface KoreanMeaningData {
   filledCount: number;
   missingCount: number;
   meanings: Record<string, string>;
-}
-
-interface ExampleContentItem {
-  exampleZh: string;
-  examplePinyin: string;
-  exampleKo: string;
-  source?: string;
-  sourceId?: string | null;
-}
-
-interface ExampleContentData {
-  filledCount: number;
-  missingCount: number;
-  examples: Record<string, ExampleContentItem>;
 }
 
 const v = (
@@ -61,7 +47,7 @@ export const HSK1_VOCABULARY: VocabularyWord[] = [
   ...HSK1_001_100,
   ...HSK1_101_200,
   ...HSK1_201_300,
-];
+].map((word) => ({ ...word, meaningStatus: 'project-authored', exampleStatus: 'project-authored', exampleSource: 'HSK Plus Ultra 자체 작성' }));
 
 // 자동 매핑보다 학습용으로 직접 다듬은 뜻이 더 적절한 단어는 우선 사용한다.
 const UPPER_LEVEL_CURATED: VocabularyWord[] = [
@@ -133,7 +119,7 @@ const UPPER_LEVEL_CURATED: VocabularyWord[] = [
 
 const curatedById = new Map(UPPER_LEVEL_CURATED.map((word) => [word.id, word]));
 const upperMeaningById = (koreanMeaningData as KoreanMeaningData).meanings;
-const upperExampleById = (exampleContentData as ExampleContentData).examples;
+const overrides: Record<string, { word: string; pinyin: string; meaningKo: string; exampleZh: string; examplePinyin: string; exampleKo: string }> = contentOverrides;
 
 const POS_LABEL: Record<string, string> = {
   名: '명사',
@@ -154,6 +140,7 @@ const POS_LABEL: Record<string, string> = {
 function formatPartOfSpeech(raw: string) {
   if (!raw) return undefined;
   return raw
+    .replace(/[（）()]/gu, '')
     .split(/[、，,]/u)
     .map((part) => POS_LABEL[part.trim()] ?? part.trim())
     .filter(Boolean)
@@ -169,27 +156,26 @@ const generatedUpperVocabulary: VocabularyWord[] = (generatedHsk.words as Genera
       throw new Error(`Missing Korean meaning for ${item.id} ${item.word}`);
     }
 
-    const example = upperExampleById[item.id];
     const curated = curatedById.get(item.id);
-    if (curated) {
-      return {
-        ...curated,
-        exampleZh: curated.exampleZh ?? example?.exampleZh,
-        examplePinyin: curated.examplePinyin ?? example?.examplePinyin,
-        exampleKo: curated.exampleKo ?? example?.exampleKo,
-      };
+    const correction = overrides[item.id];
+    if (correction && (correction.word !== item.word || correction.pinyin !== item.pinyin)) {
+      throw new Error(`Stale content correction for ${item.id}: vocabulary identity changed`);
     }
-
     return {
       id: item.id,
       level: item.level as HskLevel,
       word: item.word,
-      pinyin: item.pinyin,
-      meaningKo,
-      partOfSpeech: formatPartOfSpeech(item.partOfSpeechZh),
-      exampleZh: example?.exampleZh,
-      examplePinyin: example?.examplePinyin,
-      exampleKo: example?.exampleKo,
+      pinyin: curated?.pinyin ?? item.pinyin,
+      meaningKo: correction?.meaningKo ?? curated?.meaningKo ?? meaningKo,
+      meaningStatus: correction ? 'editorial' : curated ? 'project-authored' : 'dictionary-draft',
+      partOfSpeech: curated?.partOfSpeech ?? formatPartOfSpeech(item.partOfSpeechZh),
+      // Generated corpus entries are candidates, not approved learning content.
+      // Only a word-ID + pronunciation-bound correction may publish an upper-level example.
+      exampleZh: correction?.exampleZh,
+      examplePinyin: correction?.examplePinyin,
+      exampleKo: correction?.exampleKo,
+      exampleStatus: correction ? 'editorial' : 'pending',
+      exampleSource: correction ? 'HSK Plus Ultra 자체 작성 · AI 보조 교정' : undefined,
     };
   });
 

@@ -27,7 +27,9 @@ export function buildStudyQueue(
   target: number,
   now = new Date(),
 ): QueueBreakdown {
-  const due = vocabulary
+  const limit = Number.isFinite(target) ? Math.max(0, Math.floor(target)) : 0;
+  const eligible = vocabulary.filter(word => word.meaningStatus !== 'dictionary-draft');
+  const due = eligible
     .filter((word) => isDue(progress[word.id], now))
     .sort((a, b) => {
       const aReviewAt = progress[a.id]?.nextReviewAt;
@@ -36,12 +38,12 @@ export function buildStudyQueue(
       const bTime = bReviewAt ? new Date(bReviewAt).getTime() : Number.MAX_SAFE_INTEGER;
       return aTime - bTime;
     });
-  const unseen = vocabulary.filter((word) => !progress[word.id]);
+  const unseen = eligible.filter((word) => !progress[word.id] || progress[word.id]?.stage === 'NEW');
 
   // 복습이 밀렸다면 오래 기다린 복습을 우선 포함하고,
   // 남는 학습량을 새 단어로 채운다.
-  const reviewWords = due.slice(0, target);
-  const remaining = Math.max(0, target - reviewWords.length);
+  const reviewWords = due.slice(0, limit);
+  const remaining = Math.max(0, limit - reviewWords.length);
   const newWords = unseen.slice(0, remaining);
 
   // 어떤 단어가 선택되는지는 SRS 우선순위를 유지하되,
@@ -53,7 +55,7 @@ export function buildStudyQueue(
   };
 }
 
-export function countLevelStats(vocabulary: VocabularyWord[], progress: ProgressMap) {
+export function countLevelStats(vocabulary: VocabularyWord[], progress: ProgressMap, now = new Date()) {
   const entries = vocabulary
     .map((word) => progress[word.id])
     .filter((item): item is NonNullable<typeof item> => Boolean(item));
@@ -61,6 +63,6 @@ export function countLevelStats(vocabulary: VocabularyWord[], progress: Progress
   return {
     studied: entries.length,
     longTerm: entries.filter((item) => item.stage === 'LONG_TERM').length,
-    due: vocabulary.filter((word) => isDue(progress[word.id])).length,
+    due: vocabulary.filter((word) => isDue(progress[word.id], now)).length,
   };
 }

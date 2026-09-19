@@ -10,7 +10,11 @@
     "web": "expo start --web",
     "sync:hsk": "node scripts/sync-hsk.mjs",
     "restore:icon": "node scripts/restore-icon.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "audit:content": "node --import tsx scripts/audit-content.ts",
+    "check": "npm run typecheck && npm test && npm run audit:content",
+    "test:browser": "node tests/browser.cjs"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "2.2.0",
@@ -19,11 +23,14 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
     "react-native-web": "~0.21.0"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
+    "playwright": "^1.62.1",
     "sharp": "0.33.5",
+    "tsx": "^4.23.13",
     "typescript": "~6.0.3"
   }
 }

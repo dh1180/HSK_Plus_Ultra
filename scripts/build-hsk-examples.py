@@ -81,7 +81,7 @@ def select_no7z_examples(sentences, target_words):
             if not word or word in seen:
                 continue
             seen.add(word)
-            if word in target_words:
+            if word in target_words and word in chinese:
                 exact[word].append(item)
 
     missing = target_words.difference(exact.keys())
@@ -194,7 +194,7 @@ def find_tatoeba_examples(words):
 
         segmented = set(jieba.lcut(chinese, HMM=False))
         for word in possible:
-            # Multi-character HSK words are safe to match by literal containment.
+            # Literal containment is only a candidate search, never sense verification.
             # Single-character entries require an actual segmentation boundary.
             if len(word) == 1 and word not in segmented:
                 continue
@@ -308,21 +308,12 @@ def translate_chinese(texts):
     return result
 
 
-def authored_fallback(word: str, meaning: str):
-    # Only used when neither open corpus yields a usable sentence.
-    # It is intentionally a natural, short learning sentence rather than a meta sentence such as “这个词…”.
-    if len(word) == 1:
-        chinese = f'这个字在这里读作“{word}”。'
-        korean = f'이 글자는 여기에서 “{word}”라고 읽는다.'
-    else:
-        chinese = f'我今天学会了“{word}”的用法。'
-        korean = f'나는 오늘 “{word}”({meaning})의 쓰임을 배웠다.'
+def missing_candidate(word: str):
+    # A quoted headword is not a usage example. Leave this explicitly missing.
     return {
-        'exampleZh': chinese,
-        'examplePinyin': sentence_pinyin(chinese),
-        'exampleKo': korean,
-        'source': 'hsk-plus-ultra-authored',
-        'sourceId': None,
+        'exampleZh': '', 'examplePinyin': '', 'exampleKo': '',
+        'source': 'missing', 'sourceId': None,
+        'reviewStatus': 'missing', 'targetWord': word,
     }
 
 
@@ -351,7 +342,7 @@ def main():
     for item in target_words:
         word = item['word']
         level = str(item['level'])
-        count_by_level.setdefault(level, {'total': 0, 'no7zExact': 0, 'no7zSubstring': 0, 'tatoebaLinked': 0, 'tatoebaUnlinked': 0, 'authored': 0})
+        count_by_level.setdefault(level, {'total': 0, 'no7zExact': 0, 'no7zSubstring': 0, 'tatoebaLinked': 0, 'tatoebaUnlinked': 0, 'missing': 0})
         count_by_level[level]['total'] += 1
 
         candidates = exact_map.get(word)
@@ -406,17 +397,26 @@ def main():
     for item in still_unresolved:
         meaning = meanings.get(item['id'], '')
         if not meaning:
-            raise RuntimeError(f'Missing Korean meaning for authored fallback: {item["id"]} {item["word"]}')
-        selected[item['id']] = authored_fallback(item['word'], meaning)
+            raise RuntimeError(f'Missing Korean meaning for candidate: {item["id"]} {item["word"]}')
+        selected[item['id']] = missing_candidate(item['word'])
         level = str(item['level'])
-        source_counts['authored'] += 1
-        count_by_level[level]['authored'] += 1
+        source_counts['missing'] += 1
+        count_by_level[level]['missing'] += 1
 
     translated = translate_english(english_to_translate)
     translated_zh = translate_chinese(chinese_to_translate)
 
     for word_id, item in selected.items():
-        en = item.pop('exampleEn', '')
+        en = item.get('exampleEn', '')
+        item.setdefault('reviewStatus', 'unreviewed')
+        if item.get('exampleKo'):
+            item['translationMethod'] = 'linked-korean'
+        elif en:
+            item['translationMethod'] = 'machine-en-ko'
+            item['translationModel'] = TRANSLATION_MODEL
+        elif item.get('source') == 'tatoeba-unlinked':
+            item['translationMethod'] = 'machine-zh-ko'
+            item['translationModel'] = ZH_KO_MODEL
         if not item.get('exampleKo') and en:
             ko = translated.get(en, '')
             if not ko:
@@ -432,26 +432,33 @@ def main():
         word_id for word_id, item in selected.items()
         if not item.get('exampleZh') or not item.get('examplePinyin') or not item.get('exampleKo')
     ]
-    if missing:
-        raise RuntimeError(f'Example content missing for {len(missing)} words: {missing[:10]}')
+    # Coverage and quality are distinct. Missing entries stay out of runtime.
+    print(f'Missing candidates: {len(missing)}')
     if len(selected) != 5100:
         raise RuntimeError(f'Expected 5100 example entries, got {len(selected)}')
 
     payload = {
         'generatedAt': __import__('datetime').datetime.now(__import__('datetime').timezone.utc).isoformat(),
         'targetCount': 5100,
-        'filledCount': len(selected),
-        'missingCount': 0,
+        'filledCount': len(selected) - len(missing),
+        'missingCount': len(missing),
         'sourceCounts': dict(source_counts),
         'countByLevel': count_by_level,
         'sources': {
             'primarySentences': 'no7z/hsk-sentences-audio (CC BY-SA 4.0)',
             'secondarySentences': 'Tatoeba Mandarin sentence exports, including sentences without direct translations (CC BY 2.0 FR)',
             'koreanTranslation': f'{TRANSLATION_MODEL} for English→Korean and {ZH_KO_MODEL} for Chinese→Korean when direct Korean translations are unavailable',
-            'authoredFallback': 'HSK Plus Ultra authored only when neither open corpus contains a usable sentence',
+            'missingPolicy': 'No fabricated usage examples; missing candidates remain empty',
+            'reviewPolicy': 'All generated sentences and translations are unreviewed candidates. Publish only through word-ID-bound content-overrides.json after editorial review.',
         },
         'examples': selected,
     }
+
+    by_id = {word['id']: word for word in target_words}
+    for word_id, candidate in selected.items():
+        candidate['targetWord'] = by_id[word_id]['word']
+        candidate['targetPinyin'] = by_id[word_id]['pinyin']
+        candidate['targetSourceWord'] = by_id[word_id].get('sourceWord')
 
     OUTPUT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
     report = {key: value for key, value in payload.items() if key != 'examples'}

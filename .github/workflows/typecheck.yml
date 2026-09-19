@@ -13,7 +13,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22.13'
-      - run: npm install
-      - run: npm run sync:hsk
-      - run: npm run typecheck
+      - run: npm ci
+      - run: npm run check
+      - run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - run: npm run restore:icon
       - run: npx expo export --platform web --output-dir dist
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
