@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-09-19T05:28:34.745389+00:00",
+  "targetCount": 5100,
+  "filledCount": 5100,
+  "missingCount": 0,
+  "sourceCounts": {
+    "no7zExact": 4090,
+    "no7zSubstring": 48,
+    "tatoeba": 737,
+    "authored": 225
+  },
+  "countByLevel": {
+    "2": {
+      "total": 200,
+      "no7zExact": 197,
+      "no7zSubstring": 1,
+      "tatoeba": 2,
+      "authored": 0
+    },
+    "3": {
+      "total": 500,
+      "no7zExact": 489,
+      "no7zSubstring": 1,
+      "tatoeba": 9,
+      "authored": 1
+    },
+    "4": {
+      "total": 1000,
+      "no7zExact": 929,
+      "no7zSubstring": 6,
+      "tatoeba": 51,
+      "authored": 14
+    },
+    "5": {
+      "total": 1600,
+      "no7zExact": 1394,
+      "no7zSubstring": 22,
+      "tatoeba": 151,
+      "authored": 33
+    },
+    "6": {
+      "total": 1800,
+      "no7zExact": 1081,
+      "no7zSubstring": 18,
+      "tatoeba": 524,
+      "authored": 177
+    }
+  },
+  "sources": {
+    "primarySentences": "no7z/hsk-sentences-audio (CC BY-SA 4.0)",
+    "secondarySentences": "Tatoeba Mandarin sentence exports and direct translation links (CC BY 2.0 FR)",
+    "koreanTranslation": "samandar1105/translation-eng-kr (CC BY 4.0) machine translation when a direct Korean translation is unavailable",
+    "authoredFallback": "HSK Plus Ultra authored only when neither open corpus contains a usable sentence"
+  }
+}
