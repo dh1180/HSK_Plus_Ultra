@@ -1,18 +1,10 @@
 name: HSK Korean content coverage
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/check-krdict-coverage.mjs'
-      - 'scripts/check-kowiktionary-coverage.mjs'
-      - 'scripts/build-korean-meanings.mjs'
-      - 'src/data/fallbacks/**'
-      - '.github/workflows/hsk-content-coverage.yml'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   coverage:
@@ -32,15 +24,11 @@ jobs:
         run: node scripts/check-kowiktionary-coverage.mjs
       - name: Build Korean meanings
         run: node scripts/build-korean-meanings.mjs
-      - name: Commit Korean content data
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/krdict-coverage.json data/krdict-missing.json data/kowiktionary-coverage.json data/content-missing.json src/data/korean-meanings.json
-          if git diff --cached --quiet; then
-            echo "Korean content data unchanged"
-          else
-            git commit -m "data: HSK 2~6 한국어 뜻 5100개 생성"
-            git pull --rebase origin main
-            git push
-          fi
+      - name: Upload candidates for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: meaning-candidates
+          path: |
+            src/data/korean-meanings.json
+            data/content-missing.json
+          if-no-files-found: error

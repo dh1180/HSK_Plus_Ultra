@@ -1,0 +1,667 @@
+{
+  "schemaVersion": 1,
+  "scope": "All 5400 runtime entries; structural checks plus targeted AI-assisted editorial corrections. Not a linguistic certification.",
+  "totalWords": 5400,
+  "editorialCorrections": 305,
+  "visibleExamples": 605,
+  "withheldExamples": 4795,
+  "draftMeanings": 4748,
+  "levels": [
+    {
+      "level": 1,
+      "total": 300,
+      "examples": 300,
+      "draftMeanings": 0
+    },
+    {
+      "level": 2,
+      "total": 200,
+      "examples": 200,
+      "draftMeanings": 0
+    },
+    {
+      "level": 3,
+      "total": 500,
+      "examples": 15,
+      "draftMeanings": 473
+    },
+    {
+      "level": 4,
+      "total": 1000,
+      "examples": 26,
+      "draftMeanings": 963
+    },
+    {
+      "level": 5,
+      "total": 1600,
+      "examples": 34,
+      "draftMeanings": 1554
+    },
+    {
+      "level": 6,
+      "total": 1800,
+      "examples": 30,
+      "draftMeanings": 1758
+    }
+  ],
+  "candidateSnapshot": {
+    "total": 5100,
+    "quotedWordTemplates": 151,
+    "missingTarget": [],
+    "homographs": [
+      {
+        "word": "本",
+        "ids": [
+          "hsk1-0010",
+          "hsk5-2040"
+        ]
+      },
+      {
+        "word": "点",
+        "ids": [
+          "hsk1-0033",
+          "hsk2-0336"
+        ]
+      },
+      {
+        "word": "还",
+        "ids": [
+          "hsk1-0067",
+          "hsk3-0678"
+        ]
+      },
+      {
+        "word": "好",
+        "ids": [
+          "hsk1-0071",
+          "hsk5-2472"
+        ]
+      },
+      {
+        "word": "会",
+        "ids": [
+          "hsk1-0082",
+          "hsk3-0683"
+        ]
+      },
+      {
+        "word": "看",
+        "ids": [
+          "hsk1-0099",
+          "hsk5-2657"
+        ]
+      },
+      {
+        "word": "两",
+        "ids": [
+          "hsk1-0111",
+          "hsk4-1473"
+        ]
+      },
+      {
+        "word": "喂",
+        "ids": [
+          "hsk1-0218",
+          "hsk5-3195"
+        ]
+      },
+      {
+        "word": "只",
+        "ids": [
+          "hsk1-0287",
+          "hsk3-0975"
+        ]
+      },
+      {
+        "word": "啊",
+        "ids": [
+          "hsk2-0301",
+          "hsk4-1001"
+        ]
+      },
+      {
+        "word": "别",
+        "ids": [
+          "hsk2-0311",
+          "hsk5-2066"
+        ]
+      },
+      {
+        "word": "长",
+        "ids": [
+          "hsk2-0314",
+          "hsk3-0968"
+        ]
+      },
+      {
+        "word": "得",
+        "ids": [
+          "hsk2-0332",
+          "hsk3-0583",
+          "hsk3-0587"
+        ]
+      },
+      {
+        "word": "地",
+        "ids": [
+          "hsk2-0333",
+          "hsk3-0589"
+        ]
+      },
+      {
+        "word": "等",
+        "ids": [
+          "hsk2-0334",
+          "hsk4-1147"
+        ]
+      },
+      {
+        "word": "过",
+        "ids": [
+          "hsk2-0347",
+          "hsk2-0351"
+        ]
+      },
+      {
+        "word": "过去",
+        "ids": [
+          "hsk2-0350",
+          "hsk3-0660"
+        ]
+      },
+      {
+        "word": "花",
+        "ids": [
+          "hsk2-0357",
+          "hsk2-0358"
+        ]
+      },
+      {
+        "word": "面",
+        "ids": [
+          "hsk2-0403",
+          "hsk5-2767"
+        ]
+      },
+      {
+        "word": "头",
+        "ids": [
+          "hsk2-0445",
+          "hsk5-3149"
+        ]
+      },
+      {
+        "word": "站",
+        "ids": [
+          "hsk2-0486",
+          "hsk3-0966"
+        ]
+      },
+      {
+        "word": "着",
+        "ids": [
+          "hsk2-0490",
+          "hsk4-1924"
+        ]
+      },
+      {
+        "word": "才",
+        "ids": [
+          "hsk3-0544",
+          "hsk5-2083"
+        ]
+      },
+      {
+        "word": "地方",
+        "ids": [
+          "hsk3-0591",
+          "hsk6-3892"
+        ]
+      },
+      {
+        "word": "该",
+        "ids": [
+          "hsk3-0635",
+          "hsk6-4013"
+        ]
+      },
+      {
+        "word": "干",
+        "ids": [
+          "hsk3-0640",
+          "hsk4-1220"
+        ]
+      },
+      {
+        "word": "为",
+        "ids": [
+          "hsk3-0875",
+          "hsk4-1771",
+          "hsk5-3184"
+        ]
+      },
+      {
+        "word": "行",
+        "ids": [
+          "hsk3-0908",
+          "hsk5-2467"
+        ]
+      },
+      {
+        "word": "中",
+        "ids": [
+          "hsk3-0981",
+          "hsk6-5328"
+        ]
+      },
+      {
+        "word": "种",
+        "ids": [
+          "hsk3-0984",
+          "hsk4-1959"
+        ]
+      },
+      {
+        "word": "背",
+        "ids": [
+          "hsk4-1020",
+          "hsk5-2036"
+        ]
+      },
+      {
+        "word": "乘",
+        "ids": [
+          "hsk4-1078",
+          "hsk6-3757"
+        ]
+      },
+      {
+        "word": "重",
+        "ids": [
+          "hsk4-1086",
+          "hsk4-1960"
+        ]
+      },
+      {
+        "word": "待",
+        "ids": [
+          "hsk4-1131",
+          "hsk6-3856"
+        ]
+      },
+      {
+        "word": "当",
+        "ids": [
+          "hsk4-1135",
+          "hsk5-2250"
+        ]
+      },
+      {
+        "word": "倒",
+        "ids": [
+          "hsk4-1139",
+          "hsk5-2253"
+        ]
+      },
+      {
+        "word": "结果",
+        "ids": [
+          "hsk4-1382",
+          "hsk6-4282"
+        ]
+      },
+      {
+        "word": "空",
+        "ids": [
+          "hsk4-1436",
+          "hsk4-1439"
+        ]
+      },
+      {
+        "word": "量",
+        "ids": [
+          "hsk4-1472",
+          "hsk5-2719"
+        ]
+      },
+      {
+        "word": "落",
+        "ids": [
+          "hsk4-1493",
+          "hsk6-4410"
+        ]
+      },
+      {
+        "word": "生",
+        "ids": [
+          "hsk4-1646",
+          "hsk4-1647"
+        ]
+      },
+      {
+        "word": "省",
+        "ids": [
+          "hsk4-1650",
+          "hsk5-2998"
+        ]
+      },
+      {
+        "word": "数",
+        "ids": [
+          "hsk4-1691",
+          "hsk5-3063"
+        ]
+      },
+      {
+        "word": "转",
+        "ids": [
+          "hsk4-1970",
+          "hsk6-5369"
+        ]
+      },
+      {
+        "word": "称",
+        "ids": [
+          "hsk5-2132",
+          "hsk5-2133"
+        ]
+      },
+      {
+        "word": "冲",
+        "ids": [
+          "hsk5-2158",
+          "hsk6-3779"
+        ]
+      },
+      {
+        "word": "处",
+        "ids": [
+          "hsk5-2179",
+          "hsk5-2182"
+        ]
+      },
+      {
+        "word": "调",
+        "ids": [
+          "hsk5-2284",
+          "hsk5-3130"
+        ]
+      },
+      {
+        "word": "副",
+        "ids": [
+          "hsk5-2369",
+          "hsk6-4007"
+        ]
+      },
+      {
+        "word": "划",
+        "ids": [
+          "hsk5-2496",
+          "hsk6-4167"
+        ]
+      },
+      {
+        "word": "系",
+        "ids": [
+          "hsk5-2539",
+          "hsk5-3226"
+        ]
+      },
+      {
+        "word": "结",
+        "ids": [
+          "hsk5-2600",
+          "hsk6-4281"
+        ]
+      },
+      {
+        "word": "批",
+        "ids": [
+          "hsk5-2825",
+          "hsk5-2826"
+        ]
+      },
+      {
+        "word": "扇",
+        "ids": [
+          "hsk5-2949",
+          "hsk6-4742"
+        ]
+      },
+      {
+        "word": "升",
+        "ids": [
+          "hsk5-2989",
+          "hsk6-4769"
+        ]
+      },
+      {
+        "word": "所",
+        "ids": [
+          "hsk5-3098",
+          "hsk6-4854"
+        ]
+      },
+      {
+        "word": "炸",
+        "ids": [
+          "hsk5-3460",
+          "hsk6-5255"
+        ]
+      },
+      {
+        "word": "支",
+        "ids": [
+          "hsk5-3499",
+          "hsk6-5294"
+        ]
+      },
+      {
+        "word": "局",
+        "ids": [
+          "hsk6-4341",
+          "hsk6-4342"
+        ]
+      },
+      {
+        "word": "卷",
+        "ids": [
+          "hsk6-4353",
+          "hsk6-4354"
+        ]
+      },
+      {
+        "word": "料",
+        "ids": [
+          "hsk6-4450",
+          "hsk6-4451"
+        ]
+      },
+      {
+        "word": "露",
+        "ids": [
+          "hsk6-4461",
+          "hsk6-4463"
+        ]
+      },
+      {
+        "word": "散",
+        "ids": [
+          "hsk6-4726",
+          "hsk6-4728"
+        ]
+      },
+      {
+        "word": "吐",
+        "ids": [
+          "hsk6-4933",
+          "hsk6-4935"
+        ]
+      }
+    ],
+    "suspiciousRepeatedTranslations": [
+      {
+        "translation": "위치 정보",
+        "distinctChineseSentences": 43
+      },
+      {
+        "translation": "모든 것이 완벽하게 작동합니다.",
+        "distinctChineseSentences": 41
+      },
+      {
+        "translation": "이 옷은 정말 예쁘네요.",
+        "distinctChineseSentences": 38
+      },
+      {
+        "translation": "그는 정말 화가 났어요.",
+        "distinctChineseSentences": 36
+      },
+      {
+        "translation": "가격은 저렴합니다.",
+        "distinctChineseSentences": 35
+      },
+      {
+        "translation": "이 제품은 정말 독특합니다.",
+        "distinctChineseSentences": 23
+      },
+      {
+        "translation": "그는 그 말을 지켰습니다.",
+        "distinctChineseSentences": 23
+      },
+      {
+        "translation": "그는 술을 마셨어.",
+        "distinctChineseSentences": 21
+      },
+      {
+        "translation": "모든 것이 완벽합니다.",
+        "distinctChineseSentences": 20
+      },
+      {
+        "translation": "이것은 정말 놀라운 경험입니다.",
+        "distinctChineseSentences": 19
+      },
+      {
+        "translation": "카메라가 카메라를 감지합니다.",
+        "distinctChineseSentences": 16
+      },
+      {
+        "translation": "이 제품은 내구성이 뛰어납니다.",
+        "distinctChineseSentences": 16
+      },
+      {
+        "translation": "그 광고는 정말 재미있었어요.",
+        "distinctChineseSentences": 15
+      },
+      {
+        "translation": "그의 주장은 설득력이 없다.",
+        "distinctChineseSentences": 13
+      },
+      {
+        "translation": "그는 화가 난다.",
+        "distinctChineseSentences": 10
+      },
+      {
+        "translation": "그는 정말 대단해.",
+        "distinctChineseSentences": 10
+      },
+      {
+        "translation": "그는 정말 잘 지내고 있어요.",
+        "distinctChineseSentences": 10
+      },
+      {
+        "translation": "가격은 상당히 저렴합니다.",
+        "distinctChineseSentences": 9
+      },
+      {
+        "translation": "그는 정말 많은 것을 잃었습니다.",
+        "distinctChineseSentences": 8
+      },
+      {
+        "translation": "카메라가 카메라를 니다.",
+        "distinctChineseSentences": 8
+      },
+      {
+        "translation": "그는 그의 상사에게 말했습니다.",
+        "distinctChineseSentences": 8
+      },
+      {
+        "translation": "잘 부탁합니다.",
+        "distinctChineseSentences": 8
+      },
+      {
+        "translation": "배송이 지연되었습니다.",
+        "distinctChineseSentences": 8
+      },
+      {
+        "translation": "그럼 빨리 연락주세요.",
+        "distinctChineseSentences": 8
+      },
+      {
+        "translation": "그는 춤을 췄어요.",
+        "distinctChineseSentences": 6
+      },
+      {
+        "translation": "이 발명품은 내구성이 뛰어납니다.",
+        "distinctChineseSentences": 6
+      },
+      {
+        "translation": "그 두 가지 공통점이 있습니다.",
+        "distinctChineseSentences": 6
+      },
+      {
+        "translation": "그는 벽에 기대어 섰다.",
+        "distinctChineseSentences": 6
+      },
+      {
+        "translation": "이불을 열어주세요.",
+        "distinctChineseSentences": 6
+      },
+      {
+        "translation": "모든 게 완벽해.",
+        "distinctChineseSentences": 6
+      },
+      {
+        "translation": "가격도 저렴합니다.",
+        "distinctChineseSentences": 6
+      },
+      {
+        "translation": "이건 정말 놀라운 경험이에요.",
+        "distinctChineseSentences": 6
+      },
+      {
+        "translation": "그는 잘 지내고 있어요.",
+        "distinctChineseSentences": 5
+      },
+      {
+        "translation": "그는 이상하게 굴었어요.",
+        "distinctChineseSentences": 5
+      },
+      {
+        "translation": "이 발명품은 내구성과 내구성이 뛰어납니다.",
+        "distinctChineseSentences": 5
+      },
+      {
+        "translation": "그는 유명한 화가입니다.",
+        "distinctChineseSentences": 5
+      },
+      {
+        "translation": "그는 이 문제를 해결했습니다.",
+        "distinctChineseSentences": 5
+      },
+      {
+        "translation": "누가 좀 봐주세요.",
+        "distinctChineseSentences": 5
+      },
+      {
+        "translation": "너무 걱정하지 마세요.",
+        "distinctChineseSentences": 5
+      },
+      {
+        "translation": "그의 얼굴 표정이 이상해.",
+        "distinctChineseSentences": 5
+      }
+    ]
+  },
+  "structuralErrors": []
+}

@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const SOURCE = 'https://raw.githubusercontent.com/profesorm/hsk30/main/data/hsk_vocabulary.csv';
 const OUTPUT = new URL('../src/data/generated-hsk.json', import.meta.url);
@@ -80,6 +80,19 @@ async function main() {
 
   words.sort((a, b) => a.sort - b.sort);
 
+  let previous;
+  try { previous = JSON.parse(await readFile(OUTPUT, 'utf8')); }
+  catch (error) { if (error.code !== 'ENOENT') throw error; }
+  if (previous) {
+    const incoming = new Map(words.map(word => [word.id, word]));
+    const changed = previous.words.filter(old => {
+      const next = incoming.get(old.id);
+      return !next || ['word', 'sourceWord', 'pinyin', 'level'].some(key => old[key] !== next[key]);
+    });
+    if (changed.length) {
+      throw new Error(`Vocabulary identity changed for ${changed.length} IDs. Review progress migration and content corrections before replacing the snapshot: ${changed.slice(0, 10).map(word => word.id).join(', ')}`);
+    }
+  }
   await mkdir(new URL('../src/data/', import.meta.url), { recursive: true });
   await writeFile(
     OUTPUT,
