@@ -132,6 +132,7 @@ const wait = (fn) => new Promise((resolve,reject) => {
     await button('백업 파일 불러오기').click();
     await (await picker).setFiles({name:'backup.json',mimeType:'application/json',buffer:Buffer.from(backup)});
     await button('기록 교체').click();
+    await page.getByText('백업으로 교체할까요?',{exact:true}).waitFor({state:'hidden'});
     await checkVisible('학습한 단어 1개 · 한 번에 20개');
     const beforeInvalid = await page.evaluate(() => localStorage.getItem('hsk-plus-ultra:state:v2'));
     const invalidPicker = page.waitForEvent('filechooser');

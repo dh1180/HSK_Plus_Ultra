@@ -49,7 +49,7 @@ export function SettingsScreen({ data, recovery, onBack, onReplace, onReset }: P
         <Text style={styles.body}>버전 {appConfig.expo.version} · HSK Plus Ultra</Text>
       </View>
     </ScrollView>
-    <Modal transparent visible={pending !== null} animationType="fade" onRequestClose={() => { if (!busy) setPending(null); }}>
+    {pending !== null && <Modal transparent visible animationType="fade" onRequestClose={() => { if (!busy) setPending(null); }}>
       <View style={styles.overlay}><View accessibilityViewIsModal style={styles.dialog}>
         <Text accessibilityRole="header" style={styles.heading}>{pending === 'reset' ? '학습 기록을 지울까요?' : '백업으로 교체할까요?'}</Text>
         <Text style={styles.body}>{pending === 'reset' ? '학습 단계와 진행 중인 학습을 모두 지웁니다. 되돌리려면 미리 내보낸 백업이 필요합니다.' : `불러온 ${pending ? Object.keys(pending.progress).length : 0}개 단어의 기록으로 현재 기록을 교체합니다. 현재 기록을 보관하려면 취소 후 먼저 백업해 주세요.`}</Text>
@@ -57,7 +57,7 @@ export function SettingsScreen({ data, recovery, onBack, onReplace, onReset }: P
         {button(pending === 'reset' ? '모두 초기화' : '기록 교체',() => { void run(async () => { if (pending === 'reset') await onReset(); else if (pending) await onReplace(pending); setPending(null); setMessage('기록을 저장했습니다.'); }); },true)}
         {!!message && pending !== null && <Text accessibilityRole="alert" style={styles.notice}>{message}</Text>}
       </View></View>
-    </Modal>
+    </Modal>}
   </SafeAreaView>;
 }
 const styles = StyleSheet.create({
