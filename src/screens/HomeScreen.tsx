@@ -10,16 +10,17 @@ import {
 } from 'react-native';
 import { HskLevel, ProgressMap } from '../types';
 import { COLORS, LEVEL_META } from '../theme';
-import { getLevelVocabulary } from '../data/vocabulary';
+import { getLevelVocabulary, VOCABULARY } from '../data/vocabulary';
 
 interface Props {
   progress: ProgressMap;
   onSelectLevel: (level: HskLevel) => void;
+  onSettings: () => void;
 }
 
 const levels: HskLevel[] = [1, 2, 3, 4, 5, 6];
 
-export function HomeScreen({ progress, onSelectLevel }: Props) {
+export function HomeScreen({ progress, onSelectLevel, onSettings }: Props) {
   const { width } = useWindowDimensions();
   const cardWidth = Math.min(Math.max(width * 0.78, 250), width - 44, 380);
 
@@ -33,6 +34,8 @@ export function HomeScreen({ progress, onSelectLevel }: Props) {
           </View>
 
         </View>
+
+        <Pressable accessibilityRole="button" onPress={onSettings} style={{ marginHorizontal: 22, marginTop: 18, minHeight: 44, padding: 12, borderRadius: 12, backgroundColor: '#FFFFFF' }}><Text style={{ color: COLORS.text, fontWeight: '700' }}>설정 · 기록 백업</Text></Pressable>
 
         <View style={styles.ruleCard}>
           <Text style={styles.ruleTitle}>학습 주기</Text>
@@ -101,7 +104,7 @@ export function HomeScreen({ progress, onSelectLevel }: Props) {
         <View style={styles.note}>
           <Text style={styles.noteTitle}>HSK 3.0 기준</Text>
           <Text style={styles.noteText}>
-            HSK 1~6 총 5,400개 항목이 있습니다. 급수별 신규 어휘를 학습하며, 하위 급수 단어는 각 급수에서 복습합니다. 2급 전체와 일부 다의어를 교정했고, 나머지 자동 매핑 뜻은 검토가 필요합니다.
+            HSK 1~6 총 5,400개 항목이 있습니다. 급수별 신규 어휘를 학습하며, 하위 급수 단어는 각 급수에서 복습합니다. 현재 {VOCABULARY.filter(word => word.meaningStatus !== 'dictionary-draft').length.toLocaleString()}개를 학습할 수 있습니다. 나머지 자동 매핑 뜻은 검토 중입니다.
           </Text>
         </View>
       </ScrollView>

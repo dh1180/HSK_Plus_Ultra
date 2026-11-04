@@ -47,7 +47,7 @@ export function LevelScreen({
   }, []);
   useEffect(() => { setVisibleCount(50); }, [tab, query, level]);
   const [wordListY, setWordListY] = useState(0);
-  const scrollRef = useRef<ScrollView>(null);
+  const scrollRef = useRef<React.ComponentRef<typeof ScrollView>>(null);
   const vocabulary = useMemo(() => getLevelVocabulary(level), [level]);
   const meta = LEVEL_META[level];
   const stats = countLevelStats(vocabulary, progress, now);
@@ -283,7 +283,7 @@ export function LevelScreen({
         ) : null}
 
         <Text style={styles.dataNote}>
-          전체 5,400개 어휘 · 2급 200개 및 일부 다의어 AI 보조 교정. 자동 매핑 뜻은 검토가 필요해 자동 학습에서 제외하며, 미검수 예문은 숨겨집니다. 발음은 기기 TTS로 제공되어 다독음자에서 병음과 다를 수 있습니다.
+          전체 5,400개 어휘 · 1~3급 및 일부 상위급 어휘 AI 교정. 자동 매핑 뜻은 검토가 필요해 자동 학습에서 제외하며, 미검수 예문은 숨겨집니다. 발음은 기기 TTS로 제공되어 다독음자에서 병음과 다를 수 있습니다.
         </Text>
       </ScrollView>
     </SafeAreaView>

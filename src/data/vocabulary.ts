@@ -119,7 +119,7 @@ const UPPER_LEVEL_CURATED: VocabularyWord[] = [
 
 const curatedById = new Map(UPPER_LEVEL_CURATED.map((word) => [word.id, word]));
 const upperMeaningById = (koreanMeaningData as KoreanMeaningData).meanings;
-const overrides: Record<string, { word: string; pinyin: string; meaningKo: string; exampleZh: string; examplePinyin: string; exampleKo: string }> = contentOverrides;
+const overrides: Record<string, { word: string; pinyin: string; meaningKo: string; exampleZh: string; examplePinyin: string; exampleKo: string; source?: string; sourceId?: string | null; sourceUrl?: string; license?: string; reviewNote?: string }> = contentOverrides;
 
 const POS_LABEL: Record<string, string> = {
   名: '명사',
@@ -175,7 +175,7 @@ const generatedUpperVocabulary: VocabularyWord[] = (generatedHsk.words as Genera
       examplePinyin: correction?.examplePinyin,
       exampleKo: correction?.exampleKo,
       exampleStatus: correction ? 'editorial' : 'pending',
-      exampleSource: correction ? 'HSK Plus Ultra 자체 작성 · AI 보조 교정' : undefined,
+      exampleSource: correction ? (correction.source === 'no7z/hsk-sentences-audio' ? `no7z/hsk-sentences-audio · ${correction.sourceId} · CC BY-SA 4.0 · 한국어 번역·병음 AI 교정` : 'HSK Plus Ultra 자체 작성 · AI 교정') : undefined,
     };
   });
 

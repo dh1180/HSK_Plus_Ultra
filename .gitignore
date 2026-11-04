@@ -11,3 +11,10 @@ assets/icon.png
 
 __pycache__/
 *.pyc
+
+# Generated native projects and signing material
+android/
+ios/
+*.jks
+*.keystore
+credentials.json

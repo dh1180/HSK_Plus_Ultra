@@ -1,5 +1,5 @@
 import { SafeAreaView } from 'react-native-safe-area-context';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Pressable,
   ScrollView,
@@ -19,6 +19,7 @@ interface Props {
   accent: string;
   progress: ProgressMap;
   isRetry: boolean;
+  readOnly?: boolean;
   onAnswer: (answer: StudyAnswer) => void;
   onClose: () => void;
 }
@@ -30,14 +31,17 @@ export function StudyScreen({
   accent,
   progress,
   isRetry,
+  readOnly = false,
   onAnswer,
   onClose,
 }: Props) {
   const [revealed, setRevealed] = useState(false);
   const [speechError, setSpeechError] = useState(false);
+  const speechRequest = useRef(0);
   const item = progress[word.id];
   const currentStage = item?.stage ?? 'NEW';
   const isDraft = word.meaningStatus === 'dictionary-draft';
+  const locked = isDraft || readOnly;
 
   useEffect(() => {
     setRevealed(false);
@@ -45,6 +49,7 @@ export function StudyScreen({
 
   useEffect(() => {
     return () => {
+      speechRequest.current++;
       void Speech.stop().catch(() => undefined);
     };
   }, []);
@@ -59,15 +64,21 @@ export function StudyScreen({
   );
 
   const speak = async (text: string, rate: number) => {
+    const request = ++speechRequest.current;
     setSpeechError(false);
     try {
       await Speech.stop();
+      const voices = await Speech.getAvailableVoicesAsync();
+      const voice = voices.find(v => /^zh[-_](CN|SG|Hans)/i.test(v.language));
+      if (request !== speechRequest.current) return;
+      if (!voice) throw new Error('중국어 음성을 사용할 수 없습니다.');
       Speech.speak(text, {
+        voice: voice.identifier,
         language: 'zh-CN', rate, pitch: 1.0,
-        onError: () => setSpeechError(true),
+        onError: () => { if (request === speechRequest.current) setSpeechError(true); },
       });
     } catch {
-      setSpeechError(true);
+      if (request === speechRequest.current) setSpeechError(true);
     }
   };
 
@@ -186,9 +197,9 @@ export function StudyScreen({
       </ScrollView>
 
       <View style={styles.bottom}>
-        {speechError && <Text accessibilityRole="alert" style={styles.qualityNote}>음성을 재생하지 못했습니다. 기기의 중국어 음성 설정을 확인해 주세요.</Text>}
+        {speechError && <Text accessibilityRole="alert" style={styles.qualityNote}>음성을 재생하지 못했습니다. 기기의 중국어(중국 본토) 음성을 설치하고 무음 모드·음량을 확인해 주세요.</Text>}
         <Text style={styles.answerGuide}>
-          {isDraft ? '뜻 검토 중 · 참고 열람만 가능하며 학습 기록에 반영하지 않습니다' : isRetry
+          {readOnly && !isDraft ? '미리보기 · 중단한 세션을 마친 뒤 학습할 수 있습니다' : isDraft ? '뜻 검토 중 · 참고 열람만 가능하며 학습 기록에 반영하지 않습니다' : isRetry
             ? '다시 학습한 단어 · 알고 있을 때까지 이번 학습에서 반복됩니다'
             : revealed
               ? '기억 상태를 선택하세요'
@@ -197,10 +208,10 @@ export function StudyScreen({
         <View style={styles.buttons}>
           <Pressable
             accessibilityRole="button"
-            disabled={!revealed || isDraft}
-            accessibilityState={{ disabled: !revealed || isDraft }}
+            disabled={!revealed || locked}
+            accessibilityState={{ disabled: !revealed || locked }}
             onPress={() => onAnswer('RELEARN')}
-            style={({ pressed }) => [styles.actionButton, styles.relearnButton, (!revealed || isDraft) && styles.disabled, pressed && styles.pressed]}
+            style={({ pressed }) => [styles.actionButton, styles.relearnButton, (!revealed || locked) && styles.disabled, pressed && styles.pressed]}
           >
             <Text style={styles.relearnText}>다시 학습</Text>
             <Text style={styles.relearnSub}>다음: {relearnNext}</Text>
@@ -208,12 +219,12 @@ export function StudyScreen({
 
           <Pressable
             accessibilityRole="button"
-            disabled={!revealed || isDraft}
-            accessibilityState={{ disabled: !revealed || isDraft }}
+            disabled={!revealed || locked}
+            accessibilityState={{ disabled: !revealed || locked }}
             onPress={() => onAnswer('KNOWN')}
             style={({ pressed }) => [
               styles.actionButton,
-              (!revealed || isDraft) && styles.disabled,
+              (!revealed || locked) && styles.disabled,
               { backgroundColor: accent },
               pressed && styles.pressed,
             ]}

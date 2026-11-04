@@ -1,0 +1,36 @@
+{
+  "total": 5400,
+  "reviewed": 1000,
+  "pending": 4400,
+  "stale": [],
+  "unknown": [],
+  "duplicateCount": 0,
+  "pendingByLevel": [
+    {
+      "level": 1,
+      "pending": 0
+    },
+    {
+      "level": 2,
+      "pending": 0
+    },
+    {
+      "level": 3,
+      "pending": 0
+    },
+    {
+      "level": 4,
+      "pending": 1000
+    },
+    {
+      "level": 5,
+      "pending": 1600
+    },
+    {
+      "level": 6,
+      "pending": 1800
+    }
+  ],
+  "releaseReady": false,
+  "note": "This gate verifies editorial coverage and exact reviewed content, not independent linguistic certification, signing credentials or native device behavior."
+}
