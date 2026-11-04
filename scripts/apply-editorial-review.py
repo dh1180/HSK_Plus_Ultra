@@ -23,6 +23,8 @@ def main():
     parser.add_argument('--pinyin', required=True)
     parser.add_argument('--expected-count', required=True, type=int)
     parser.add_argument('--reviewer', required=True)
+    parser.add_argument('--audit', default='data/review/hsk4-review.json',
+                        help='Separate audit file for this reviewed batch; preserves earlier batches.')
     args = parser.parse_args()
     words = {word['sort']: word for word in read('src/data/generated-hsk.json')['words']}
     candidates = read('src/data/example-content.json')['examples']
@@ -31,7 +33,7 @@ def main():
     pinyin_fixes = read(args.pinyin)
     manifest = read('data/review/manifest.json')
     entries = {entry['id']: entry for entry in manifest['entries']}
-    audit_path = ROOT / 'data/review/hsk4-review.json'
+    audit_path = ROOT / args.audit
     prior_audit = {entry['id']: entry for entry in json.loads(audit_path.read_text())['entries']} if audit_path.exists() else {}
     audit = []
     seen = set()
@@ -79,7 +81,7 @@ def main():
     manifest.update(reviewedCount=len(entries), scope='Per-ID AI editorial review only. See entry IDs and per-level release report for actual coverage; remaining entries are not reviewed.', entries=list(entries.values()))
     # Nothing is published until every import row has passed the integrity checks above.
     for path, data in [('src/data/content-overrides.json', overrides), ('data/review/manifest.json', manifest),
-                       ('data/review/hsk4-review.json', {'reviewedCount': len(audit), 'reviewType': 'AI editorial', 'entries': audit})]:
+                       (args.audit, {'reviewedCount': len(audit), 'reviewType': 'AI editorial', 'entries': audit})]:
         (ROOT / path).write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({'importedReviewedRows': len(audit), 'totalReviewedRows': len(entries),
                       'replacedSentences': sum(e['sentenceReplaced'] for e in audit),
