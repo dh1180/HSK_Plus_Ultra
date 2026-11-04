@@ -1,13 +1,19 @@
 # HSK data attribution
 
-HSK Plus Ultra uses a third-party machine-readable transcription of the HSK 3.0 syllabus as its vocabulary reference. This does not make this application or its Korean content officially certified.
+HSK Plus Ultra's 5,400 headwords, pinyin, levels and POS have been compared directly against the official **HSK 考试大纲**, published 2025-11 and effective 2026-07, issued by 中外语言交流合作中心.
 
-Machine-readable vocabulary metadata can be synchronized from:
+- Official PDF: https://hsk.cn-bj.ufileos.com/3.0/%E6%96%B0%E7%89%88HSK%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B21219.pdf
+- Vocabulary section: PDF pages 80–214 (printed pages 77–211).
+- Pinned PDF SHA-256: `d8b6646599bc9a0c9616a4cb06d4b37461f8792f70a3171016d00fcd8eda09ad`.
+- All 5,400 identities match by level, sense-marked source form and normalized pinyin; the existing app IDs are preserved. Official order differs for 1,942 IDs, so using official row numbers as replacement app IDs would corrupt progress connections.
+- The official POS for HSK 5 白 is 副; the earlier transcription's 形、副 and the app's adjective meaning were corrected.
+- Per-entry official ordinal and page references are in `generated-hsk.json`; `data/official-source-audit.json` records the comparison.
 
-- `profesorm/hsk30` — HSK 3.0 2026 Syllabus Dataset
-- Repository: https://github.com/profesorm/hsk30
-- License stated by that repository: CC BY 4.0
-- Upstream official source identified by the dataset: https://www.chinesetest.cn/
+The earlier machine-readable transcription by `profesorm/hsk30` remains identified as the transcription source (CC BY 4.0, https://github.com/profesorm/hsk30). The official PDF is linked for reference and is not bundled or relicensed under that third party's license. A free public download is not treated as permission to redistribute textbook/test sentences commercially.
+
+**This metadata verification does not make the app's Korean definitions or examples official.** The vocabulary table has no per-headword Korean translations or usage sentences. The grammar section lists grammar forms, rather than providing example coverage for all 5,400 words. Project-authored and openly licensed corpus examples remain explicitly labeled as such; an official source is used only where the actual passage and reuse terms can be established.
+
+To reproduce the metadata comparison: `python3 -m pip install -r requirements-content.txt`, then `npm run sync:hsk`. Changed PDF content, duplicate/omitted rows or changed lexical identities cause an error before replacing the snapshot. The printed numbering is kept separately from the app ID.
 
 ## Korean meanings
 
@@ -41,7 +47,11 @@ The HSK source repository keeps sense markers such as `本1`. The sync script pr
 
 `example-content.json` is an archived **unreviewed candidate dataset**, not runtime learning content. Serious machine translation and sense-matching errors were found. No source corpus or model name is a quality certification.
 
-Runtime upper-level examples come only from `content-overrides.json`: 200 HSK 2 entries and 105 sense-specific HSK 3–6 entries newly authored with AI-assisted editorial correction. These are original short examples, not corrected translations of the external corpus sentences, and are not independently teacher-reviewed. HSK 1 retains the project's 300 authored examples. Origin/status is displayed on each card.
+Runtime upper-level examples come only from `content-overrides.json`. HSK 2 retains the 200 project-authored examples, rechecked in this review. HSK 3 now contains all 500 individually edited entries: Chinese corpus sentences are retained where their sense and usage fit, Korean translations are rewritten, incorrect pinyin is corrected, and unsuitable sentences are replaced with project-authored examples. HSK 4–6 retain the previous 90 authored corrections. HSK 1 retains 300 project-authored examples, also rechecked here. None is claimed to be independently human-certified.
+
+Retained no7z records preserve `source`, `sourceId`, `sourceUrl` and `license` in `content-overrides.json`; each card displays source ID and CC BY-SA 4.0. The retained Chinese sentences, adapted pinyin and Korean translations of those sentences are distributed under CC BY-SA 4.0. License: https://creativecommons.org/licenses/by-sa/4.0/ . The archive `example-content.json` retains the previous machine translations for comparison but is not imported as runtime learning content. The few HSK 3 Tatoeba candidates without full author attribution were replaced with project-authored examples rather than republished without that information.
+
+`data/review/manifest.json` records the exact 1,000 HSK 1–3 entries examined for definition, target sense/POS, Chinese usage, Korean translation and pinyin. It does not cover all HSK 4–6 entries. CC-CEDICT (MDBG, CC BY-SA 4.0, https://www.mdbg.net/chinese/dictionary?page=cc-cedict) was consulted for sense distinctions including 的话, 米, 角, 最好, 检票, 中学, 中学生, 员 and 子; no full dictionary is bundled.
 
 The candidate generator retains translation method/model, original English when available, and the target word, pinyin and source form. It leaves missing candidates empty instead of writing quoted-headword templates. Generated workflows upload review artifacts and do not commit candidates to `main`.
 

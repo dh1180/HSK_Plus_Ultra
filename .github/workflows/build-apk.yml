@@ -21,6 +21,10 @@ on:
       - 'tsconfig.json'
       - '.gitignore'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-apk:
     runs-on: ubuntu-latest
@@ -32,7 +36,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.13'
+          node-version: '24'
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -60,7 +64,20 @@ jobs:
         env:
           CI: '1'
 
-      - name: Build standalone release APK
+      - name: Use preinstalled NDK 27 LTS
+        run: |
+          test -f "$ANDROID_HOME/ndk/27.3.13750724/source.properties"
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          path = Path('android/build.gradle')
+          content = path.read_text()
+          marker = 'apply plugin: "expo-root-project"'
+          if content.count(marker) != 1:
+              raise SystemExit('Unexpected Expo root Gradle template; review the NDK override')
+          path.write_text(content.replace(marker, "ext.ndkVersion = '27.3.13750724'\n" + marker))
+          PYTHON
+
+      - name: Build QA APK (not a store signing key)
         working-directory: android
         run: |
           chmod +x gradlew
@@ -69,7 +86,7 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: HSK-Plus-Ultra-APK
+          name: HSK-Plus-Ultra-QA-APK
           path: android/app/build/outputs/apk/release/app-release.apk
           if-no-files-found: error
           retention-days: 14

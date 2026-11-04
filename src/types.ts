@@ -16,6 +16,8 @@ export interface VocabularyWord {
   word: string;
   pinyin: string;
   meaningKo: string;
+  wordSource?: string;
+  wordSourceUrl?: string;
   partOfSpeech?: string;
   meaningStatus?: 'editorial' | 'project-authored' | 'dictionary-draft';
   exampleSource?: string;

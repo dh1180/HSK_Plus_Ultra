@@ -13,6 +13,8 @@ interface GeneratedWord {
   pinyin: string;
   partOfSpeechZh: string;
   sort: number;
+  officialPdfPage?: number;
+  officialOrdinal?: number;
 }
 
 interface KoreanMeaningData {
@@ -119,7 +121,7 @@ const UPPER_LEVEL_CURATED: VocabularyWord[] = [
 
 const curatedById = new Map(UPPER_LEVEL_CURATED.map((word) => [word.id, word]));
 const upperMeaningById = (koreanMeaningData as KoreanMeaningData).meanings;
-const overrides: Record<string, { word: string; pinyin: string; meaningKo: string; exampleZh: string; examplePinyin: string; exampleKo: string }> = contentOverrides;
+const overrides: Record<string, { word: string; pinyin: string; meaningKo: string; partOfSpeech?: string; exampleZh: string; examplePinyin: string; exampleKo: string; source?: string; sourceId?: string | null; sourceUrl?: string; license?: string; reviewNote?: string }> = contentOverrides;
 
 const POS_LABEL: Record<string, string> = {
   名: '명사',
@@ -168,21 +170,23 @@ const generatedUpperVocabulary: VocabularyWord[] = (generatedHsk.words as Genera
       pinyin: curated?.pinyin ?? item.pinyin,
       meaningKo: correction?.meaningKo ?? curated?.meaningKo ?? meaningKo,
       meaningStatus: correction ? 'editorial' : curated ? 'project-authored' : 'dictionary-draft',
-      partOfSpeech: curated?.partOfSpeech ?? formatPartOfSpeech(item.partOfSpeechZh),
+      partOfSpeech: correction?.partOfSpeech ?? formatPartOfSpeech(item.partOfSpeechZh) ?? curated?.partOfSpeech,
       // Generated corpus entries are candidates, not approved learning content.
       // Only a word-ID + pronunciation-bound correction may publish an upper-level example.
       exampleZh: correction?.exampleZh,
       examplePinyin: correction?.examplePinyin,
       exampleKo: correction?.exampleKo,
       exampleStatus: correction ? 'editorial' : 'pending',
-      exampleSource: correction ? 'HSK Plus Ultra 자체 작성 · AI 보조 교정' : undefined,
+      exampleSource: correction ? (correction.source === 'no7z/hsk-sentences-audio' ? `no7z/hsk-sentences-audio · ${correction.sourceId} · CC BY-SA 4.0 · 한국어 번역·병음 AI 교정` : 'HSK Plus Ultra 자체 작성 · AI 교정') : undefined,
     };
   });
+
+const officialById = new Map((generatedHsk.words as GeneratedWord[]).map(word => [word.id,word]));
 
 export const VOCABULARY: VocabularyWord[] = [
   ...HSK1_VOCABULARY,
   ...generatedUpperVocabulary,
-];
+].map(word => ({ ...word, wordSource: `공식 HSK 시험 대강 · PDF ${officialById.get(word.id)!.officialPdfPage}쪽`, wordSourceUrl: `${generatedHsk.officialReference.url}#page=${officialById.get(word.id)!.officialPdfPage}` }));
 
 export function getLevelVocabulary(level: HskLevel) {
   return VOCABULARY.filter((word) => word.level === level);

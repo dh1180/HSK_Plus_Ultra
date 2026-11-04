@@ -32,6 +32,9 @@ const wait = (fn) => new Promise((resolve,reject) => {
   const checkVisible = async (text) => { await page.getByText(text,{exact:true}).waitFor({state:'visible'}); };
   try {
     await page.goto(url);
+    // A real v1 user retains history through the v2 migration.
+    await page.evaluate(() => localStorage.setItem('hsk-plus-ultra:progress:v1',JSON.stringify({'hsk1-0001':{stage:'LONG_TERM',nextReviewAt:null,lastReviewedAt:'2026-09-19T12:00:00.000Z',seenCount:1,knownCount:1,relearnCount:0}})));
+    await page.reload();
     await button('HSK 2 바로가기').click();
     await page.getByRole('textbox', {name:'단어 검색'}).fill('zuobian');
     await button('左边, zuǒbian, 왼쪽, 학습하기').click();
@@ -39,6 +42,9 @@ const wait = (fn) => new Promise((resolve,reject) => {
     await button('左边, 뜻 보기').click();
     await checkVisible('서점은 왼쪽에 있다.');
     await page.getByRole('button', {name:/다시 학습 다음/}).click();
+    await wait(async () => Boolean(await page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:state:v2') || '{}').session?.retryIds.includes('hsk2-0500'))));
+    await page.reload();
+    await button('중단한 학습 이어하기').click();
     await button('左边, 뜻 보기').waitFor();
     assert.equal(await page.getByRole('button', {name:/알고 있음/}).isDisabled(), true);
     await button('左边, 뜻 보기').click();
@@ -47,8 +53,9 @@ const wait = (fn) => new Promise((resolve,reject) => {
     const summary = await page.locator('body').innerText();
     assert.match(summary, /학습한 단어\s*1/);
     assert.match(summary, /다시 학습 응답\s*1/);
-    await wait(async () => Boolean(await page.evaluate(() => localStorage.getItem('hsk-plus-ultra:progress:v1'))));
-    let stored = await page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:progress:v1')));
+    await wait(async () => Boolean(await page.evaluate(() => localStorage.getItem('hsk-plus-ultra:state:v2'))));
+    let stored = await page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:state:v2')).progress);
+    assert.equal(stored['hsk1-0001'].stage,'LONG_TERM');
     assert.equal(stored['hsk2-0500'].stage, 'DAY_3');
     assert.equal(stored['hsk2-0500'].seenCount, 2);
     await page.reload();
@@ -85,13 +92,13 @@ const wait = (fn) => new Promise((resolve,reject) => {
         await fs.mkdir(process.env.SCREENSHOT_DIR,{recursive:true});
         await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,`study-${width}.png`)});
       }
-      await button('학습 닫기').click(); await button('급수 선택으로 돌아가기').click();
+      await button('학습 닫기').click(); await button('남은 세션 종료 · 답변 기록은 유지').click(); await button('급수 선택으로 돌아가기').click();
     }
     // A storage read failure must not become an empty writable progress map.
-    await page.evaluate(() => localStorage.setItem('hsk-plus-ultra:progress:v1', 'null'));
+    await page.evaluate(() => localStorage.setItem('hsk-plus-ultra:state:v2', 'null'));
     await page.reload(); await checkVisible('학습 기록을 불러오지 못했습니다. 기존 기록은 보존됩니다.');
-    assert.equal(await page.evaluate(() => localStorage.getItem('hsk-plus-ultra:progress:v1')), 'null');
-    await page.evaluate(() => localStorage.removeItem('hsk-plus-ultra:progress:v1'));
+    assert.equal(await page.evaluate(() => localStorage.getItem('hsk-plus-ultra:state:v2')), 'null');
+    await page.evaluate(() => localStorage.clear());
     await button('다시 불러오기').click(); await button('HSK 2 바로가기').click();
 
     // A write failure must be visible and recoverable without losing the in-memory answer.
@@ -106,9 +113,40 @@ const wait = (fn) => new Promise((resolve,reject) => {
     await page.evaluate(() => { Storage.prototype.setItem = window.originalSetItem; });
     await button('다시 저장').click();
     await button('다시 저장').waitFor({state:'hidden'});
-    stored = await page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:progress:v1')));
+    stored = await page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:state:v2')).progress);
     assert.equal(stored['hsk2-0302'].stage, 'LONG_TERM');
+    await button('돌아가기').click();
+    await button('급수 선택으로 돌아가기').click();
+    await button('설정 · 기록 백업').click();
+    const downloadPromise = page.waitForEvent('download');
+    await button('기록 백업 내보내기').click();
+    const download = await downloadPromise;
+    const backup = await fs.readFile(await download.path(),'utf8');
+    assert.equal(JSON.parse(backup).data.progress['hsk2-0302'].stage,'LONG_TERM');
+    await button('학습 기록 초기화').click();
+    await button('취소').click();
+    await button('학습 기록 초기화').click();
+    await button('모두 초기화').click();
+    await checkVisible('학습한 단어 0개 · 한 번에 20개');
+    const picker = page.waitForEvent('filechooser');
+    await button('백업 파일 불러오기').click();
+    await (await picker).setFiles({name:'backup.json',mimeType:'application/json',buffer:Buffer.from(backup)});
+    await button('기록 교체').click();
+    await page.getByText('백업으로 교체할까요?',{exact:true}).waitFor({state:'hidden'});
+    await checkVisible('학습한 단어 1개 · 한 번에 20개');
+    const beforeInvalid = await page.evaluate(() => localStorage.getItem('hsk-plus-ultra:state:v2'));
+    const invalidPicker = page.waitForEvent('filechooser');
+    await button('백업 파일 불러오기').click();
+    await (await invalidPicker).setFiles({name:'invalid.json',mimeType:'application/json',buffer:Buffer.from('{}')});
+    await checkVisible('HSK Plus Ultra 백업 파일이 아닙니다.');
+    assert.equal(await page.evaluate(() => localStorage.getItem('hsk-plus-ultra:state:v2')),beforeInvalid);
+    await page.setViewportSize({width:320,height:568});
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),true);
+    if(process.env.SCREENSHOT_DIR) await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,'settings-320.png'),fullPage:true});
+    await page.reload();
+    stored = await page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:state:v2')).progress);
+    assert.equal(stored['hsk2-0302'].stage,'LONG_TERM');
     assert.deepEqual(errors, []);
-    console.log('Browser checks passed: whole-list search, single-word retry concealment, unique summary, persistence/reload, pagination, empty search, draft preview, 4 viewport widths, corrupt storage, write failure/recovery, no uncaught page errors.');
+    console.log('Browser checks passed: v1 migration, paused session reload, backup download/restore, reset confirmation, invalid import preserves original, whole-list search, single-word retry concealment, unique summary, persistence/reload, pagination, empty search, draft preview, 4 viewport widths, corrupt storage, write failure/recovery, no uncaught page errors.');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => server.close());

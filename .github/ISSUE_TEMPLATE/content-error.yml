@@ -1,0 +1,22 @@
+name: 학습 콘텐츠 오류
+description: 단어 뜻·예문·번역·병음 오류를 알려 주세요.
+title: "[Content] "
+body:
+  - type: input
+    id: word
+    attributes:
+      label: 급수와 단어
+      placeholder: HSK 3 · 的话
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: 표시된 내용과 수정 제안
+      description: 화면의 뜻·문장·병음 중 문제가 있는 부분과 이유를 적어 주세요. 참고한 사전이나 출처가 있으면 함께 남겨 주세요.
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: 앱 버전 및 기기 (음성 오류인 경우)

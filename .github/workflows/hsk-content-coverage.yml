@@ -15,7 +15,11 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: '22.13'
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-content.txt
       - name: Sync official HSK vocabulary
         run: npm run sync:hsk
       - name: Check Korean dictionary coverage

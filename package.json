@@ -1,36 +1,46 @@
 {
   "name": "hsk-plus-ultra",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": true,
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web",
-    "sync:hsk": "node scripts/sync-hsk.mjs",
+    "sync:hsk": "python3 scripts/sync-official-hsk.py",
     "restore:icon": "node scripts/restore-icon.mjs",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.ts",
     "audit:content": "node --import tsx scripts/audit-content.ts",
     "check": "npm run typecheck && npm test && npm run audit:content",
-    "test:browser": "node tests/browser.cjs"
+    "test:browser": "node tests/browser.cjs",
+    "release:report": "node --import tsx scripts/check-release.ts --report --write",
+    "release:check": "npm run check && npm audit --audit-level=high && node --import tsx scripts/check-release.ts",
+    "eas-build-post-install": "node scripts/eas-release-gate.mjs"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "2.2.0",
-    "expo": "~57.0.17",
-    "expo-speech": "~57.0.2",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "react-native": "0.86.3",
-    "react-native-safe-area-context": "~5.7.0",
-    "react-native-web": "~0.21.0"
+    "expo": "^58.0.23",
+    "expo-document-picker": "~58.0.4",
+    "expo-file-system": "~58.0.13",
+    "expo-sharing": "~58.0.22",
+    "expo-speech": "~58.0.3",
+    "expo-system-ui": "~58.0.7",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-native": "0.88.1",
+    "react-native-safe-area-context": "~5.11.1",
+    "react-native-web": "~0.21.4"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
     "playwright": "^1.62.1",
-    "sharp": "0.33.5",
+    "sharp": "^0.35.5",
     "tsx": "^4.23.13",
     "typescript": "~6.0.3"
+  },
+  "engines": {
+    "node": ">=24.0.0 <25"
   }
 }
