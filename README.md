@@ -70,9 +70,11 @@ npm run web
 
 ## HSK 어휘 데이터
 
+단어·급수·병음·품사는 공식 HSK 시험 대강 PDF의 5,400개 항목과 직접 대조했습니다. 기존 ID를 보존하고 공식 순번·페이지를 연결했습니다. 각 학습 카드의 ‘공식 어휘 원문 보기’로 원문을 열 수 있습니다. **한국어 뜻과 예문이 공식 자료라는 뜻은 아닙니다.**
+
 현재 5,400개 항목을 검색할 수 있습니다. 1~3급 1,000개는 뜻·용법·번역·병음을 AI가 항목별로 재검토했습니다. **4~6급 4,400개 전수 검수는 미완료**이며, 독립적인 사람의 검수나 실기기 발음 검증을 완료했다고 표시하지 않습니다.
 
-기존 상위급 교정 자료를 포함해 학습 가능한 단어는 1,125개, 표시되는 예문은 1,090개입니다. 이번 전수 검수 1,000개와 학습 가능 수는 다른 기준입니다. 미검수 자동 매핑은 참고 열람으로 유지합니다. `data/review/manifest.json`에는 실제 검토 내용의 해시가 있고, `npm run release:check`는 전수 검수 미완료 또는 검토 내용 변경 시 production 배포를 중단합니다.
+기존 상위급 교정 자료를 포함해 학습 가능한 단어는 1,125개, 표시되는 예문은 1,091개입니다. 1~3급 전수 검수 1,000개 및 5급 白의 추가 교정과 전체 학습 가능 수는 다른 기준입니다. 미검수 자동 매핑은 참고 열람으로 유지합니다. `data/review/manifest.json`에는 실제 검토 내용의 해시가 있고, `npm run release:check`는 전수 검수 미완료 또는 검토 내용 변경 시 production 배포를 중단합니다.
 
 **상용 배포 완료 상태가 아닙니다.** 구현과 남은 배포 요건은 [배포 준비 문서](docs/RELEASE.md), [개인정보 안내](docs/PRIVACY.md)를 참고하세요.
 
@@ -84,7 +86,8 @@ npx expo export --platform web
 npx playwright install chromium
 npm run test:browser               # 웹 화면 조작 검사
 npm run audit:content -- --write    # 점검 결과 재생성
-npm run sync:hsk                    # 필요 시에만 메타데이터 동기화
+python3 -m pip install -r requirements-content.txt
+npm run sync:hsk                    # 고정된 공식 PDF와 대조하여 메타데이터 갱신
 ```
 
 같은 ID의 단어·병음·급수가 바뀌면 동기화를 중단합니다. 먼저 학습 기록 이관과 `content-overrides.json`의 연결을 검토하세요. 생성 워크플로는 수동 실행하며 검토용 artifact만 만듭니다. 생성 결과를 그대로 런타임에 넣지 마세요.

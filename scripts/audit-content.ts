@@ -4,6 +4,7 @@ import { VOCABULARY } from '../src/data/vocabulary';
 import generated from '../src/data/generated-hsk.json';
 import candidates from '../src/data/example-content.json';
 import overrides from '../src/data/content-overrides.json';
+import manifest from '../data/review/manifest.json';
 
 const counts = [300, 200, 500, 1000, 1600, 1800];
 const ids = new Set<string>();
@@ -42,6 +43,9 @@ const report = {
   schemaVersion: 1,
   scope: 'All 5400 runtime entries; structural checks plus targeted AI-assisted editorial corrections. Not a linguistic certification.',
   totalWords: VOCABULARY.length,
+  officialMetadataReferences: generated.words.filter(word => word.officialPdfPage && word.officialOrdinal).length,
+  individuallyReviewedEntries: manifest.reviewedCount,
+  learningEligibleWords: VOCABULARY.filter(word => word.meaningStatus !== 'dictionary-draft').length,
   editorialCorrections: Object.keys(overrides).length,
   visibleExamples: VOCABULARY.filter(word => word.exampleZh).length,
   withheldExamples: VOCABULARY.filter(word => !word.exampleZh).length,

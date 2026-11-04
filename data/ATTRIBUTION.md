@@ -1,13 +1,19 @@
 # HSK data attribution
 
-HSK Plus Ultra uses a third-party machine-readable transcription of the HSK 3.0 syllabus as its vocabulary reference. This does not make this application or its Korean content officially certified.
+HSK Plus Ultra's 5,400 headwords, pinyin, levels and POS have been compared directly against the official **HSK 考试大纲**, published 2025-11 and effective 2026-07, issued by 中外语言交流合作中心.
 
-Machine-readable vocabulary metadata can be synchronized from:
+- Official PDF: https://hsk.cn-bj.ufileos.com/3.0/%E6%96%B0%E7%89%88HSK%E8%80%83%E8%AF%95%E5%A4%A7%E7%BA%B21219.pdf
+- Vocabulary section: PDF pages 80–214 (printed pages 77–211).
+- Pinned PDF SHA-256: `d8b6646599bc9a0c9616a4cb06d4b37461f8792f70a3171016d00fcd8eda09ad`.
+- All 5,400 identities match by level, sense-marked source form and normalized pinyin; the existing app IDs are preserved. Official order differs for 1,942 IDs, so using official row numbers as replacement app IDs would corrupt progress connections.
+- The official POS for HSK 5 白 is 副; the earlier transcription's 形、副 and the app's adjective meaning were corrected.
+- Per-entry official ordinal and page references are in `generated-hsk.json`; `data/official-source-audit.json` records the comparison.
 
-- `profesorm/hsk30` — HSK 3.0 2026 Syllabus Dataset
-- Repository: https://github.com/profesorm/hsk30
-- License stated by that repository: CC BY 4.0
-- Upstream official source identified by the dataset: https://www.chinesetest.cn/
+The earlier machine-readable transcription by `profesorm/hsk30` remains identified as the transcription source (CC BY 4.0, https://github.com/profesorm/hsk30). The official PDF is linked for reference and is not bundled or relicensed under that third party's license. A free public download is not treated as permission to redistribute textbook/test sentences commercially.
+
+**This metadata verification does not make the app's Korean definitions or examples official.** The vocabulary table has no per-headword Korean translations or usage sentences. The grammar section lists grammar forms, rather than providing example coverage for all 5,400 words. Project-authored and openly licensed corpus examples remain explicitly labeled as such; an official source is used only where the actual passage and reuse terms can be established.
+
+To reproduce the metadata comparison: `python3 -m pip install -r requirements-content.txt`, then `npm run sync:hsk`. Changed PDF content, duplicate/omitted rows or changed lexical identities cause an error before replacing the snapshot. The printed numbering is kept separately from the app ID.
 
 ## Korean meanings
 

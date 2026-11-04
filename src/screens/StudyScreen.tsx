@@ -1,6 +1,7 @@
 import { SafeAreaView } from 'react-native-safe-area-context';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
+  Linking,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -37,6 +38,7 @@ export function StudyScreen({
 }: Props) {
   const [revealed, setRevealed] = useState(false);
   const [speechError, setSpeechError] = useState(false);
+  const [linkError, setLinkError] = useState(false);
   const speechRequest = useRef(0);
   const item = progress[word.id];
   const currentStage = item?.stage ?? 'NEW';
@@ -164,6 +166,7 @@ export function StudyScreen({
                 ? '자동 매핑 뜻 · 의미와 품사 검토 필요'
                 : word.meaningStatus === 'editorial' ? 'AI 보조 교정 · 교사 검수 전' : '프로젝트 작성 뜻'}</Text>
               {word.partOfSpeech ? <Text style={styles.pos}>{word.partOfSpeech}</Text> : null}
+              {word.wordSourceUrl && <Pressable accessibilityRole="link" accessibilityLabel="공식 어휘 원문 보기" onPress={event => { event.stopPropagation(); setLinkError(false); void Linking.openURL(word.wordSourceUrl!).catch(() => setLinkError(true)); }} style={{ minHeight: 44, justifyContent: 'center' }}><Text style={styles.qualityNote}>{word.wordSource} · 원문 보기</Text></Pressable>}
 
               {word.exampleZh ? (
                 <View style={styles.exampleBox}>
@@ -197,6 +200,7 @@ export function StudyScreen({
       </ScrollView>
 
       <View style={styles.bottom}>
+        {linkError && <Text accessibilityRole="alert" style={styles.qualityNote}>공식 원문을 열지 못했습니다. 인터넷 연결을 확인해 주세요.</Text>}
         {speechError && <Text accessibilityRole="alert" style={styles.qualityNote}>음성을 재생하지 못했습니다. 기기의 중국어(중국 본토) 음성을 설치하고 무음 모드·음량을 확인해 주세요.</Text>}
         <Text style={styles.answerGuide}>
           {readOnly && !isDraft ? '미리보기 · 중단한 세션을 마친 뒤 학습할 수 있습니다' : isDraft ? '뜻 검토 중 · 참고 열람만 가능하며 학습 기록에 반영하지 않습니다' : isRetry

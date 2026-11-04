@@ -43,7 +43,7 @@ export function SettingsScreen({ data, recovery, onBack, onReplace, onReset }: P
         <Text style={styles.heading}>학습 자료와 이용 안내</Text>
         <Text style={styles.body}>전체 {VOCABULARY.length.toLocaleString()}개 중 현재 {eligible.toLocaleString()}개를 학습할 수 있습니다. 표시된 뜻과 예문은 AI 교정 또는 프로젝트 작성 자료입니다. HSK 공식 인증 자료가 아닙니다. 잘못된 내용은 문의로 알려 주세요.</Text>
         <Text style={styles.body}>발음은 기기마다 다를 수 있으며, 다독음자는 화면의 병음과 함께 확인해 주세요. ‘장기 기억’은 자기 평가에 따른 학습 분류입니다.</Text>
-        <Text style={styles.body}>어휘: profesorm/hsk30 · CC BY 4.0 · 원자료 출처 chinesetest.cn. 교정에 사용한 중국어 예문: no7z/hsk-sentences-audio · CC BY-SA 4.0. 해당 예문과 한국어 번역 수정본은 같은 라이선스로 제공합니다. 각 카드에 출처를 표시하며 전체 기록은 저장소에서 확인할 수 있습니다.</Text>
+        <Text style={styles.body}>어휘·급수·병음·품사: 중외언어교류협력센터의 공식 HSK 시험 대강(2026년 7월 시행)과 대조했습니다. 초기 전사 자료: profesorm/hsk30 · CC BY 4.0. 한국어 뜻과 예문은 공식 번역이 아닙니다. 교정에 사용한 중국어 예문: no7z/hsk-sentences-audio · CC BY-SA 4.0. 해당 예문과 한국어 번역 수정본은 같은 라이선스로 제공합니다. 각 카드에 출처를 표시하며 전체 기록은 저장소에서 확인할 수 있습니다.</Text>
         {button('자료 출처와 라이선스 보기',() => { void run(async () => { await Linking.openURL('https://github.com/dh1180/HSK_Plus_Ultra/blob/main/data/ATTRIBUTION.md'); }); })}
         {button('오류 제보 및 문의',() => { void run(async () => { await Linking.openURL('https://github.com/dh1180/HSK_Plus_Ultra/issues'); }); })}
         <Text style={styles.body}>버전 {appConfig.expo.version} · HSK Plus Ultra</Text>

@@ -2,9 +2,12 @@
   "schemaVersion": 1,
   "scope": "All 5400 runtime entries; structural checks plus targeted AI-assisted editorial corrections. Not a linguistic certification.",
   "totalWords": 5400,
-  "editorialCorrections": 790,
-  "visibleExamples": 1090,
-  "withheldExamples": 4310,
+  "officialMetadataReferences": 5400,
+  "individuallyReviewedEntries": 1001,
+  "learningEligibleWords": 1125,
+  "editorialCorrections": 791,
+  "visibleExamples": 1091,
+  "withheldExamples": 4309,
   "draftMeanings": 4275,
   "levels": [
     {
@@ -34,7 +37,7 @@
     {
       "level": 5,
       "total": 1600,
-      "examples": 34,
+      "examples": 35,
       "draftMeanings": 1554
     },
     {

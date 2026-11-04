@@ -10188,5 +10188,18 @@
     "license": "CC BY-SA 4.0",
     "reviewStatus": "editorial",
     "reviewNote": "AI editorial review of definition, target sense/POS, Chinese usage, Korean translation and pinyin; not independent human certification. Original Chinese retained unless replacement is recorded."
+  },
+  "hsk5-2012": {
+    "word": "白",
+    "pinyin": "bái",
+    "meaningKo": "헛되이; 공짜로; 아무 성과 없이",
+    "partOfSpeech": "부사",
+    "exampleZh": "我在车站白等了一个小时。",
+    "examplePinyin": "Wǒ zài chēzhàn bái děng le yí ge xiǎoshí.",
+    "exampleKo": "나는 역에서 한 시간 동안 헛되이 기다렸다.",
+    "source": "hsk-plus-ultra-authored",
+    "sourceUrl": "https://github.com/dh1180/HSK_Plus_Ultra",
+    "reviewStatus": "editorial",
+    "reviewNote": "Official HSK 2026 vocabulary row 2012 specifies adverb only; replace the adjective sense inherited from the old curated entry. AI editorial review, not an official example or Korean translation."
   }
 }

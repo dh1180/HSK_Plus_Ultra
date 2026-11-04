@@ -4,9 +4,9 @@ import assert from 'node:assert/strict';
 import manifest from '../data/review/manifest.json';
 import { VOCABULARY, getLevelVocabulary } from '../src/data/vocabulary';
 import { buildStudyQueue } from '../src/lib/study';
-test('review evidence binds all 1000 reviewed entries to exactly the published content', () => {
+test('review evidence binds all reviewed entries to exactly the published content', () => {
   const byId = new Map(VOCABULARY.map(w => [w.id,w]));
-  assert.equal(new Set(manifest.entries.map(e => e.id)).size,1000);
+  assert.equal(new Set(manifest.entries.map(e => e.id)).size,1001);
   for (const e of manifest.entries) {
     const word = byId.get(e.id)!;
     const keys = ['exampleKo','examplePinyin','exampleZh','meaningKo','pinyin','word'] as const;
@@ -27,4 +27,22 @@ test('usage examples match target sense rather than a substring in another word'
   assert.match(get('hsk3-0861').examplePinyin!,/cháng/);
   assert.match(get('hsk3-0564').exampleKo!,/퇴원/);
   assert.match(get('hsk3-0501').exampleSource!,/no7z.*CC BY-SA/);
+  assert.equal(get('hsk5-2012').partOfSpeech,'부사');
+  assert.match(get('hsk5-2012').meaningKo,/헛되이/);
+  assert.match(get('hsk5-2012').exampleZh!,/白等/);
+});
+
+test('all 5400 vocabulary entries retain a unique official row and page while app IDs stay stable', async () => {
+  const snapshot = (await import('../src/data/generated-hsk.json')).default;
+  assert.equal(snapshot.officialReference.sha256,'d8b6646599bc9a0c9616a4cb06d4b37461f8792f70a3171016d00fcd8eda09ad');
+  assert.equal(new Set(snapshot.words.map(w => w.officialOrdinal)).size,5400);
+  assert.deepEqual(snapshot.words.map(w => w.officialOrdinal).sort((a,b) => a-b),Array.from({length:5400},(_,i) => i+1));
+  for (const w of snapshot.words) {
+    assert.equal(w.officialPdfPage,80 + Math.floor((w.officialOrdinal - 1) / 40));
+    assert.equal(w.officialPrintedPage,w.officialPdfPage - 3);
+    assert.equal(w.word,w.sourceWord.replace(/\d+$/u,''));
+    assert.ok(VOCABULARY.find(word => word.id === w.id)!.wordSourceUrl?.endsWith(`#page=${w.officialPdfPage}`));
+  }
+  assert.equal(VOCABULARY.find(w => w.id === 'hsk1-0031')!.word,'第');
+  assert.equal(snapshot.words.find(w => w.id === 'hsk1-0031')!.officialOrdinal,32);
 });

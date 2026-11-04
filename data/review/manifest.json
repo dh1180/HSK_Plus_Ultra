@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "reviewedCount": 1000,
-  "scope": "HSK 1–3, all 1000 entries. HSK 4–6 remain pending.",
+  "reviewedCount": 1001,
+  "scope": "HSK 1–3 all 1000 entries, plus HSK 5 adverb 白. HSK 4–6 full review remains pending.",
   "limitations": "AI editorial review, not independent human certification. Structural tests do not establish linguistic correctness.",
   "entries": [
     {
@@ -15993,6 +15993,22 @@
       "word": "作业",
       "pinyin": "zuòyè",
       "contentHash": "9d3a0595576c21449206b6d3afcf3239961b109f5609c71822a0a56f93d5460b",
+      "reviewer": "OpenAI assistant",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk5-2012",
+      "word": "白",
+      "pinyin": "bái",
+      "contentHash": "5e0364ec21a6bfc49af1322af69a8c99802e3dda28b03e31f375dd39d8065741",
       "reviewer": "OpenAI assistant",
       "reviewType": "AI editorial",
       "checks": [
