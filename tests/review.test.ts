@@ -6,7 +6,7 @@ import { VOCABULARY, getLevelVocabulary } from '../src/data/vocabulary';
 import { buildStudyQueue } from '../src/lib/study';
 test('review evidence binds all reviewed entries to exactly the published content', () => {
   const byId = new Map(VOCABULARY.map(w => [w.id,w]));
-  assert.equal(new Set(manifest.entries.map(e => e.id)).size,1501);
+  assert.equal(new Set(manifest.entries.map(e => e.id)).size,2001);
   for (const e of manifest.entries) {
     const word = byId.get(e.id)!;
     const keys = ['exampleKo','examplePinyin','exampleZh','meaningKo','pinyin','word'] as const;
@@ -65,4 +65,25 @@ test('reviewed HSK 4 first half covers all 500 targets without substring-only ex
   assert.match(byId.get('hsk4-1313')!.examplePinyin!,/huó pō/);
   assert.match(byId.get('hsk4-1376')!.examplePinyin!,/jiào xué/);
   assert.match(byId.get('hsk4-1496')!.examplePinyin!,/jiē mǎn/);
+});
+
+test('HSK 4 review covers every target and distinguishes grammatical senses and online terms', () => {
+  const words = getLevelVocabulary(4);
+  assert.equal(words.length,1000);
+  const reviewedIds = new Set(manifest.entries.map(e => e.id));
+  assert.ok(words.every(w => reviewedIds.has(w.id) && w.meaningStatus === 'editorial' && w.exampleZh && w.examplePinyin && w.exampleKo));
+  const get = (id: string) => words.find(w => w.id === id)!;
+  assert.match(get('hsk4-1575').exampleZh!,/千万别迟到/);
+  assert.match(get('hsk4-1657').exampleZh!,/十分高兴/);
+  assert.match(get('hsk4-1710').exampleZh!,/^随着天气/);
+  assert.match(get('hsk4-1799').exampleZh!,/线上教学/);
+  assert.match(get('hsk4-1800').exampleZh!,/线下活动/);
+  assert.match(get('hsk4-1980').exampleZh!,/^自去年以来/);
+  assert.match(get('hsk4-1852').exampleZh!,/一副眼镜/);
+  assert.match(get('hsk4-1712').examplePinyin!,/^sūn zi/);
+  assert.match(get('hsk4-1733').examplePinyin!,/liáng tǐ wēn/);
+  assert.match(get('hsk4-1862').examplePinyin!,/cháng$/);
+  assert.match(get('hsk4-1906').examplePinyin!,/cān jiā/);
+  assert.match(get('hsk4-1978').examplePinyin!,/xià zài/);
+  assert.equal(buildStudyQueue(words,{},1000).words.length,1000);
 });
