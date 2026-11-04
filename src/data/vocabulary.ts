@@ -137,6 +137,9 @@ const POS_LABEL: Record<string, string> = {
   叹: '감탄사',
   方: '방위사',
   区: '구별사',
+  前缀: '접두사',
+  后缀: '접미사',
+  数量: '수량사',
 };
 
 function formatPartOfSpeech(raw: string) {

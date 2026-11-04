@@ -6,7 +6,7 @@ import { VOCABULARY, getLevelVocabulary } from '../src/data/vocabulary';
 import { buildStudyQueue } from '../src/lib/study';
 test('review evidence binds all reviewed entries to exactly the published content', () => {
   const byId = new Map(VOCABULARY.map(w => [w.id,w]));
-  assert.equal(new Set(manifest.entries.map(e => e.id)).size,1001);
+  assert.equal(new Set(manifest.entries.map(e => e.id)).size,1501);
   for (const e of manifest.entries) {
     const word = byId.get(e.id)!;
     const keys = ['exampleKo','examplePinyin','exampleZh','meaningKo','pinyin','word'] as const;
@@ -45,4 +45,24 @@ test('all 5400 vocabulary entries retain a unique official row and page while ap
   }
   assert.equal(VOCABULARY.find(w => w.id === 'hsk1-0031')!.word,'第');
   assert.equal(snapshot.words.find(w => w.id === 'hsk1-0031')!.officialOrdinal,32);
+});
+
+test('reviewed HSK 4 first half covers all 500 targets without substring-only examples', () => {
+  const words = getLevelVocabulary(4).filter(w => Number(w.id.slice(5)) <= 1500);
+  assert.equal(words.length,500);
+  assert.equal(words.every(w => w.meaningStatus === 'editorial' && w.exampleZh && w.examplePinyin && w.exampleKo),true);
+  const byId = new Map(words.map(w => [w.id,w]));
+  assert.match(byId.get('hsk4-1118')!.meaningKo,/방해/);
+  assert.match(byId.get('hsk4-1081')!.meaningKo,/정직/);
+  assert.match(byId.get('hsk4-1166')!.exampleZh!,/坐动车/);
+  assert.doesNotMatch(byId.get('hsk4-1166')!.exampleZh!,/电动车/);
+  assert.match(byId.get('hsk4-1224')!.exampleZh!,/幸福感/);
+  assert.equal(byId.get('hsk4-1224')!.partOfSpeech,'접미사');
+  assert.match(byId.get('hsk4-1124')!.exampleZh!,/大大提高/);
+  assert.match(byId.get('hsk4-1469')!.exampleZh!,/连一句话都/);
+  assert.match(byId.get('hsk4-1125')!.examplePinyin!,/dài fu/);
+  assert.match(byId.get('hsk4-1136')!.examplePinyin!,/le dāng shí/);
+  assert.match(byId.get('hsk4-1313')!.examplePinyin!,/huó pō/);
+  assert.match(byId.get('hsk4-1376')!.examplePinyin!,/jiào xué/);
+  assert.match(byId.get('hsk4-1496')!.examplePinyin!,/jiē mǎn/);
 });
