@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, AppState, BackHandler, Platform, Pressable, Text, StatusBar, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, BackHandler, Platform, Pressable, Text, StatusBar, StyleSheet, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { HomeScreen } from './src/screens/HomeScreen';
 import { LevelScreen } from './src/screens/LevelScreen';
@@ -42,11 +42,6 @@ function StudyApp() {
     current.current = next; setData(next); setSaving(true);
     void saveAppData(next).then(() => { if (version === revision.current) setSaveError(false); }).catch(() => { if (version === revision.current) setSaveError(true); }).finally(() => { if (version === revision.current) setSaving(false); });
   };
-  useEffect(() => {
-    if (!ready) return;
-    const sub = AppState.addEventListener('change',state => { if (state !== 'active') persist(current.current); });
-    return () => sub.remove();
-  },[ready]);
   useEffect(() => {
     if (Platform.OS !== 'web' || (!saving && !saveError)) return;
     const warn = (event: BeforeUnloadEvent) => { event.preventDefault(); event.returnValue = ''; };

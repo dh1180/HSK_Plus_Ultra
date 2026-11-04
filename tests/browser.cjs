@@ -32,6 +32,9 @@ const wait = (fn) => new Promise((resolve,reject) => {
   const checkVisible = async (text) => { await page.getByText(text,{exact:true}).waitFor({state:'visible'}); };
   try {
     await page.goto(url);
+    // A real v1 user retains history through the v2 migration.
+    await page.evaluate(() => localStorage.setItem('hsk-plus-ultra:progress:v1',JSON.stringify({'hsk1-0001':{stage:'LONG_TERM',nextReviewAt:null,lastReviewedAt:'2026-09-19T12:00:00.000Z',seenCount:1,knownCount:1,relearnCount:0}})));
+    await page.reload();
     await button('HSK 2 바로가기').click();
     await page.getByRole('textbox', {name:'단어 검색'}).fill('zuobian');
     await button('左边, zuǒbian, 왼쪽, 학습하기').click();
@@ -52,6 +55,7 @@ const wait = (fn) => new Promise((resolve,reject) => {
     assert.match(summary, /다시 학습 응답\s*1/);
     await wait(async () => Boolean(await page.evaluate(() => localStorage.getItem('hsk-plus-ultra:state:v2'))));
     let stored = await page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:state:v2')).progress);
+    assert.equal(stored['hsk1-0001'].stage,'LONG_TERM');
     assert.equal(stored['hsk2-0500'].stage, 'DAY_3');
     assert.equal(stored['hsk2-0500'].seenCount, 2);
     await page.reload();
@@ -129,10 +133,19 @@ const wait = (fn) => new Promise((resolve,reject) => {
     await (await picker).setFiles({name:'backup.json',mimeType:'application/json',buffer:Buffer.from(backup)});
     await button('기록 교체').click();
     await checkVisible('학습한 단어 1개 · 한 번에 20개');
+    const beforeInvalid = await page.evaluate(() => localStorage.getItem('hsk-plus-ultra:state:v2'));
+    const invalidPicker = page.waitForEvent('filechooser');
+    await button('백업 파일 불러오기').click();
+    await (await invalidPicker).setFiles({name:'invalid.json',mimeType:'application/json',buffer:Buffer.from('{}')});
+    await checkVisible('HSK Plus Ultra 백업 파일이 아닙니다.');
+    assert.equal(await page.evaluate(() => localStorage.getItem('hsk-plus-ultra:state:v2')),beforeInvalid);
+    await page.setViewportSize({width:320,height:568});
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),true);
+    if(process.env.SCREENSHOT_DIR) await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,'settings-320.png'),fullPage:true});
     await page.reload();
     stored = await page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:state:v2')).progress);
     assert.equal(stored['hsk2-0302'].stage,'LONG_TERM');
     assert.deepEqual(errors, []);
-    console.log('Browser checks passed: whole-list search, single-word retry concealment, unique summary, persistence/reload, pagination, empty search, draft preview, 4 viewport widths, corrupt storage, write failure/recovery, no uncaught page errors.');
+    console.log('Browser checks passed: v1 migration, paused session reload, backup download/restore, reset confirmation, invalid import preserves original, whole-list search, single-word retry concealment, unique summary, persistence/reload, pagination, empty search, draft preview, 4 viewport widths, corrupt storage, write failure/recovery, no uncaught page errors.');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => server.close());

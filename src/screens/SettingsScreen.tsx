@@ -24,7 +24,7 @@ export function SettingsScreen({ data, recovery, onBack, onReplace, onReset }: P
     <View style={styles.header}>{button('돌아가기',onBack)}<Text accessibilityRole="header" style={styles.title}>설정 및 기록 관리</Text></View>
     <ScrollView contentContainerStyle={styles.content}>
       {busy && <ActivityIndicator accessibilityLabel="처리 중" />}
-      {!!message && <Text accessibilityRole="alert" style={styles.notice}>{message}</Text>}
+      {!!message && !pending && <Text accessibilityRole="alert" style={styles.notice}>{message}</Text>}
       <View style={styles.card}>
         <Text style={styles.heading}>내 학습 기록</Text>
         <Text style={styles.body}>{recovery ? '기록을 읽지 못했습니다. 원본을 내보내 보관한 뒤 백업을 복원하거나 초기화할 수 있습니다.' : `학습한 단어 ${Object.keys(data.progress).length}개 · 한 번에 ${data.dailyTarget}개`}</Text>
@@ -55,7 +55,7 @@ export function SettingsScreen({ data, recovery, onBack, onReplace, onReset }: P
         <Text style={styles.body}>{pending === 'reset' ? '학습 단계와 진행 중인 학습을 모두 지웁니다. 되돌리려면 미리 내보낸 백업이 필요합니다.' : `불러온 ${pending ? Object.keys(pending.progress).length : 0}개 단어의 기록으로 현재 기록을 교체합니다. 현재 기록을 보관하려면 취소 후 먼저 백업해 주세요.`}</Text>
         {button('취소',() => setPending(null))}
         {button(pending === 'reset' ? '모두 초기화' : '기록 교체',() => { void run(async () => { if (pending === 'reset') await onReset(); else if (pending) await onReplace(pending); setPending(null); setMessage('기록을 저장했습니다.'); }); },true)}
-        {!!message && <Text accessibilityRole="alert" style={styles.notice}>{message}</Text>}
+        {!!message && pending !== null && <Text accessibilityRole="alert" style={styles.notice}>{message}</Text>}
       </View></View>
     </Modal>
   </SafeAreaView>;
