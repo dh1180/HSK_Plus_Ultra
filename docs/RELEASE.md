@@ -41,6 +41,8 @@ npm run test:browser
 
 ## Android
 
+GitHub QA 빌드는 실행기에 설치된 NDK 27.3.13750724를 명시해 사용한다. Expo 기본 NDK 27.1.12297006의 자동 다운로드에서 손상된 ZIP 오류가 발생한 데 따른 CI 설정이다. EAS의 기본 NDK와 구분하며 실제 배포 바이너리도 별도로 시험해야 한다.
+
 1. GitHub PR에서 App checks 및 Build Android APK 확인. artifact `HSK-Plus-Ultra-QA-APK`를 시험 기기에 설치한다. 이전 QA 앱과 서명 키가 다르면 업데이트 설치가 거부될 수 있으므로 먼저 기록을 백업한다.
 2. 실제 기기에서 아래 체크리스트를 수행하고 기기·OS·결과를 기록한다.
 3. 전체 콘텐츠를 검수 원장에 반영하고 release 검사를 통과한다.

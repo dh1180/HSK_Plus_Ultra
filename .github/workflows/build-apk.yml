@@ -64,6 +64,19 @@ jobs:
         env:
           CI: '1'
 
+      - name: Use preinstalled NDK 27 LTS
+        run: |
+          test -f "$ANDROID_HOME/ndk/27.3.13750724/source.properties"
+          python3 - <<'PYTHON'
+          from pathlib import Path
+          path = Path('android/build.gradle')
+          content = path.read_text()
+          marker = 'apply plugin: "expo-root-project"'
+          if content.count(marker) != 1:
+              raise SystemExit('Unexpected Expo root Gradle template; review the NDK override')
+          path.write_text(content.replace(marker, "ext.ndkVersion = '27.3.13750724'\n" + marker))
+          PYTHON
+
       - name: Build QA APK (not a store signing key)
         working-directory: android
         run: |
