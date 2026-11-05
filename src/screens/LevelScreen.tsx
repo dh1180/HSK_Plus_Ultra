@@ -283,7 +283,7 @@ export function LevelScreen({
         ) : null}
 
         <Text style={styles.dataNote}>
-          전체 5,400개 어휘 · 1~3급 및 일부 상위급 어휘 AI 교정. 자동 매핑 뜻은 검토가 필요해 자동 학습에서 제외하며, 미검수 예문은 숨겨집니다. 발음은 기기 TTS로 제공되어 다독음자에서 병음과 다를 수 있습니다.
+          1~6급 전체 5,400개 어휘의 뜻·용법·예문·번역·병음을 AI가 항목별로 검토했습니다. 발음은 기기 TTS로 제공되어 다독음자에서 병음과 다를 수 있습니다.
         </Text>
       </ScrollView>
     </SafeAreaView>

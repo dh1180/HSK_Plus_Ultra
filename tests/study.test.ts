@@ -73,7 +73,7 @@ test('sense-specific corrections prevent false friends and wrong usage', () => {
   assert.notEqual(word('hsk2-0357').exampleZh, word('hsk2-0358').exampleZh);
 });
 test('unverified dictionary mappings are searchable but never enter automatic learning', () => {
-  const draft = VOCABULARY.find(w => w.meaningStatus === 'dictionary-draft')!;
+  const draft = { ...VOCABULARY[0]!, meaningStatus: 'dictionary-draft' as const };
   assert.equal(matchesWord(draft, draft.word), true);
   assert.equal(buildStudyQueue([draft], {}, 20, now).words.length, 0);
   assert.equal(buildStudyQueue([draft], {[draft.id]: base}, 20, now).words.length, 0);

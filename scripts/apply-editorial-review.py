@@ -32,6 +32,7 @@ def main():
     overrides = read('src/data/content-overrides.json')
     meanings = read('src/data/korean-meanings.json')['meanings']
     pinyin_fixes = read(args.pinyin)
+    headword_pinyin = read('src/data/pinyin-overrides.json')
     pos_fixes = read(args.pos) if args.pos else {}
     manifest = read('data/review/manifest.json')
     entries = {entry['id']: entry for entry in manifest['entries']}
@@ -77,8 +78,16 @@ def main():
                 raise ValueError(f'POS exception needs a display label and references: {key}')
             item['partOfSpeech'] = fix['displayKo']
             item['reviewNote'] += ' ' + fix['note']
-        digest = hashlib.sha256(json.dumps({k: item[k] for k in CONTENT_KEYS}, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()
-        entries[key] = {'id': key, 'word': word['word'], 'pinyin': word['pinyin'], 'contentHash': digest,
+        published_content = {k: item[k] for k in CONTENT_KEYS}
+        if key in headword_pinyin:
+            fix = headword_pinyin[key]
+            if (fix['word'], fix['officialPinyin'], fix['officialPartOfSpeechZh']) != (word['word'], word['pinyin'], word['partOfSpeechZh']):
+                raise ValueError(f'Pronunciation correction does not match the official lexical identity: {key}')
+            if not fix['displayPinyin'].strip() or not fix['reference']:
+                raise ValueError(f'Pronunciation correction needs a display value and a reference: {key}')
+            published_content['pinyin'] = fix['displayPinyin']
+        digest = hashlib.sha256(json.dumps(published_content, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()
+        entries[key] = {'id': key, 'word': word['word'], 'pinyin': published_content['pinyin'], 'contentHash': digest,
                         'reviewer': args.reviewer, 'reviewType': 'AI editorial',
                         'checks': ['definition', 'target-sense-and-pos', 'chinese-usage', 'korean-translation', 'pinyin'], 'decision': 'reviewed'}
         if 'partOfSpeech' in item:
