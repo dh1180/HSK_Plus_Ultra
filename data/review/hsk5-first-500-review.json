@@ -1,0 +1,5006 @@
+{
+  "reviewedCount": 500,
+  "reviewType": "AI editorial",
+  "entries": [
+    {
+      "id": "hsk5-2001",
+      "word": "哎",
+      "originalMeaningKo": "후",
+      "originalExampleZh": "哎...没有人翻译我写的句子。",
+      "originalExampleKo": "이런... 아무도 내가 만든 문장을 번역 안 해.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "42d7e483f19e2ec87c86c0d092fb043dfe5a23edc5aa3f663ce9b318b8feb8d0"
+    },
+    {
+      "id": "hsk5-2002",
+      "word": "哎呀",
+      "originalMeaningKo": "아야",
+      "originalExampleZh": "哎呀我不知道啦。",
+      "originalExampleKo": "아잉 몰라요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "d5ff546c0804e76c1a158317a3ba162b033b11cd77cb76fba501ccd0b7808dbb"
+    },
+    {
+      "id": "hsk5-2003",
+      "word": "唉",
+      "originalMeaningKo": "아이",
+      "originalExampleZh": "唉，我已經將答案忘卻了。",
+      "originalExampleKo": "아아, 나는 내 말문을 잊었다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "82576c9e461eb87f1bda0fdcbbb8e23c767960099d6f9296e13a2fc5d203b292"
+    },
+    {
+      "id": "hsk5-2004",
+      "word": "爱护",
+      "originalMeaningKo": "위하다",
+      "originalExampleZh": "要爱护公共设施。",
+      "originalExampleKo": "빠른 배송을 위한 제품입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6a6c2612b80f5053077fc6ec48ce613a18bf433d580e205ba9d9ca5d62b3beb7"
+    },
+    {
+      "id": "hsk5-2005",
+      "word": "安",
+      "originalMeaningKo": "걸리다",
+      "originalExampleZh": "门上安了一个新灯。",
+      "originalExampleKo": "새로운 발명품이 시장에 출시되었습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "d05f31645ebea242138fcdca65871d4e6f54b7fd0f97359fca588c4afc2c328c"
+    },
+    {
+      "id": "hsk5-2006",
+      "word": "安全带",
+      "originalMeaningKo": "안전띠",
+      "originalExampleZh": "系上您的安全带。",
+      "originalExampleKo": "너의 얼굴 표정을 보여줘.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "5f9d195c5b3bdf0fb37c357589e238067074b3d7492481252cd51d617163284e"
+    },
+    {
+      "id": "hsk5-2007",
+      "word": "安慰",
+      "originalMeaningKo": "달래다",
+      "originalExampleZh": "他安慰了伤心的朋友。",
+      "originalExampleKo": "그는 그의 가장 친한 친구를 잃었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "515e45c1303561cc8b7855a6f9be9b6f9aa13e9ebfa2350f4caf82e280d00322"
+    },
+    {
+      "id": "hsk5-2008",
+      "word": "安装",
+      "originalMeaningKo": "달다",
+      "originalExampleZh": "屋子里安装了空调。",
+      "originalExampleKo": "방에는 에어컨이 설치돼 있었어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "aadf73f9b129bb14579f63a65aae79f06d379b2ac5fc833fffeb4f446c168c8e"
+    },
+    {
+      "id": "hsk5-2009",
+      "word": "暗",
+      "originalMeaningKo": "어둡다",
+      "originalExampleZh": "天渐渐暗了。",
+      "originalExampleKo": "이 제품은 정말 독특합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d2f7d6a458d0292740efd5221c9f06960aa3c1e1ef0755bb9e817b87727ca161"
+    },
+    {
+      "id": "hsk5-2010",
+      "word": "熬夜",
+      "originalMeaningKo": "밝히다",
+      "originalExampleZh": "晚上熬夜到這麼晚不好。",
+      "originalExampleKo": "너무 오래 앉아 있기에 좋지 않습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "ac7080d6523e36e08e6ef9a92edcbaacf0f203f5e49a98f55d82003ac27dffbd"
+    },
+    {
+      "id": "hsk5-2011",
+      "word": "把握",
+      "originalMeaningKo": "파악",
+      "originalExampleZh": "把握机遇，迎接挑战。",
+      "originalExampleKo": "세컨드 와인과 와인 레시피를 제공합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7d02ec2851f6a157e7441e9502f4f6f72a8328e0f9e67ae1fe554564367a0c60"
+    },
+    {
+      "id": "hsk5-2012",
+      "word": "白",
+      "originalMeaningKo": "하얗다",
+      "originalExampleZh": "蓝天上有白云。",
+      "originalExampleKo": "푸른색 바탕에 하얀색 바탕이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5e0364ec21a6bfc49af1322af69a8c99802e3dda28b03e31f375dd39d8065741"
+    },
+    {
+      "id": "hsk5-2013",
+      "word": "半夜",
+      "originalMeaningKo": "한밤중, 자정 무렵",
+      "originalExampleZh": "半夜他突然醒了。",
+      "originalExampleKo": "그는 저녁으로 술을 마셨습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1b6ab37c095018df1c874740a05b661e4c613e38c4709677430d45c606deae27"
+    },
+    {
+      "id": "hsk5-2014",
+      "word": "傍晚",
+      "originalMeaningKo": "저녁",
+      "originalExampleZh": "傍晚天变凉了。",
+      "originalExampleKo": "그것은 확실히 잘 작동합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "27e63fffd9bb5e9f68c98a241a29596c3e3972c622aa2a82742cdd5f9cca0476"
+    },
+    {
+      "id": "hsk5-2015",
+      "word": "包裹",
+      "originalMeaningKo": "소포",
+      "originalExampleZh": "我步行去邮局寄包裹。",
+      "originalExampleKo": "나는 포스트 오피스로 가서 미팅을 한다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7b8cf5f8c291d9959dd260f25ae31a2800c4089f1156274a89e8a94aabdb2d2f"
+    },
+    {
+      "id": "hsk5-2016",
+      "word": "包含",
+      "originalMeaningKo": "들다",
+      "originalExampleZh": "这句话包含很多意思。",
+      "originalExampleKo": "이 발명품은 많은 장식물을 담고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "173232ba6da22b201b6299012b0c77041ed7d218c5751671a32da91aa22c25ec"
+    },
+    {
+      "id": "hsk5-2017",
+      "word": "包括",
+      "originalMeaningKo": "포괄되다",
+      "originalExampleZh": "这个价格把运费包括在内。",
+      "originalExampleKo": "그 회사는 세금을 냈습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2da3da90cf81224a5f32794ef2d9409e80e20a68579a5559e57370e405863b46"
+    },
+    {
+      "id": "hsk5-2018",
+      "word": "包装",
+      "originalMeaningKo": "포장",
+      "originalExampleZh": "礼物的包装很漂亮。",
+      "originalExampleKo": "가격도 저렴합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "14108a4923ac6f67609709efe9fcd5005feb304f71870a68b47be07349818f96"
+    },
+    {
+      "id": "hsk5-2019",
+      "word": "薄",
+      "originalMeaningKo": "얇다",
+      "originalExampleZh": "这本书很厚，那本很薄。",
+      "originalExampleKo": "이 책도 그렇고, 저 책도 그렇고.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ee7c12b6649c975f3fe58dca4d05fe7d83e6ef970ac679c96d8b8c7cb8eddc75"
+    },
+    {
+      "id": "hsk5-2020",
+      "word": "宝",
+      "originalMeaningKo": "보물, 귀한 것",
+      "originalExampleZh": "这些书是他的宝。",
+      "originalExampleKo": "모든 게 그의 꿈이에요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4f4e3f6da541c1b4eb5f168045618d2f5a62ae02c7e4f0a7e7ec08530462f521"
+    },
+    {
+      "id": "hsk5-2021",
+      "word": "保",
+      "originalMeaningKo": "보호하다; 보장하다",
+      "originalExampleZh": "开车要保安全。",
+      "originalExampleKo": "별말씀을요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "891fba10b03973c3eb7ef8edb5385da6a01b1e64429794e3669fdc2f94e0f334"
+    },
+    {
+      "id": "hsk5-2022",
+      "word": "保安",
+      "originalMeaningKo": "수위",
+      "originalExampleZh": "保安在大门口工作。",
+      "originalExampleKo": "바닥에서 공기가 새어나오네요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2864f59c9b842fce4b0b7e8773bc65fd03d24c3fb11611958118d014406eb99d"
+    },
+    {
+      "id": "hsk5-2023",
+      "word": "宝贝",
+      "originalMeaningKo": "강아지",
+      "originalExampleZh": "大熊猫是国家的宝贝。",
+      "originalExampleKo": "치즈는 정말 맛있어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7c96f9cf4ea84ec27d40c66b91d9f5b6e5219a9cf487a570d9471014f43660c4"
+    },
+    {
+      "id": "hsk5-2024",
+      "word": "保持",
+      "originalMeaningKo": "잡다",
+      "originalExampleZh": "两边要保持平衡。",
+      "originalExampleKo": "두 가지 색상으로 주문하세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "81fd4b81b7b508580756724d6ed15f58784c6077cd85d6518eaa76c28bc464f8"
+    },
+    {
+      "id": "hsk5-2025",
+      "word": "保存",
+      "originalMeaningKo": "보존하다",
+      "originalExampleZh": "请保存好你的证件。",
+      "originalExampleKo": "너의 얼굴 표정을 지켜줘.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a353b6ac259180ad16a9c8d73815514e9d5e85e04b47da4e9e1b16f32f89dec1"
+    },
+    {
+      "id": "hsk5-2026",
+      "word": "宝贵",
+      "originalMeaningKo": "귀하다",
+      "originalExampleZh": "时间很宝贵。",
+      "originalExampleKo": "접근이 어려워요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f234aa45b33fa00686dcbe4fd647ca07a9e23e7ac642f65fbe1d1d5edd9ee29d"
+    },
+    {
+      "id": "hsk5-2027",
+      "word": "保留",
+      "originalMeaningKo": "보류하다",
+      "originalExampleZh": "请保留你的意见。",
+      "originalExampleKo": "계속 기다려주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "df3b9fafd30c1572ead864667ea8577db197a32ab835d33df5c029bb06cc81a1"
+    },
+    {
+      "id": "hsk5-2028",
+      "word": "保险",
+      "originalMeaningKo": "보험",
+      "originalExampleZh": "我给车保了保险。",
+      "originalExampleKo": "나는 차를 몰았다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "28c2b1c79e3ea2dced90d4ff821bff73b31e4d4c3ac22811676b5f6c2fd574a9"
+    },
+    {
+      "id": "hsk5-2029",
+      "word": "保质期",
+      "originalMeaningKo": "유통 기한",
+      "originalExampleZh": "这个面包的保质期可以吗？",
+      "originalExampleKo": "이 고양이 최고예요?",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "2581dacda4281e1e0bdbf7240b7a13a5ec689dae6d489d7c9c7d768a286f1d3a"
+    },
+    {
+      "id": "hsk5-2030",
+      "word": "报到",
+      "originalMeaningKo": "도착 신고를 하다, 등록하다",
+      "originalExampleZh": "月初我要去报到。",
+      "originalExampleKo": "회의 시작에 제가 보고를 드렸습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "30f1df6619299f72e36145bc6257b352efc6500de79f651c2fc991f9a0d77fe9"
+    },
+    {
+      "id": "hsk5-2031",
+      "word": "报道",
+      "originalMeaningKo": "보도",
+      "originalExampleZh": "传媒报道了这件事。",
+      "originalExampleKo": "이 회사는 이를 증명했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3b91d70d5d8c1108068cecca8bea4d8eda717f1cf7568f36198928282fcb5322"
+    },
+    {
+      "id": "hsk5-2032",
+      "word": "报告",
+      "originalMeaningKo": "보고",
+      "originalExampleZh": "总裁在会上做了报告。",
+      "originalExampleKo": "대표님께서 현장에서 신고를 하셨습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "df972769c8e7488b1bd7029183611e10948e2daf51c511f8fcfe81e73683ce2d"
+    },
+    {
+      "id": "hsk5-2033",
+      "word": "报警",
+      "originalMeaningKo": "경찰에 신고하다, 경보를 울리다",
+      "originalExampleZh": "出事了要报警。",
+      "originalExampleKo": "문제가 발생하면 전화를 걸어주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b742ed485e801059ea249df7b79d559e9122cb6e763f94febe1ec68e454923d7"
+    },
+    {
+      "id": "hsk5-2034",
+      "word": "暴雨",
+      "originalMeaningKo": "폭우",
+      "originalExampleZh": "暴雨过后，天晴了。",
+      "originalExampleKo": "위치 정보",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0e6701af2c8ddec010a614c3fe856ff836eee7e5478985fdb39dfbcfe7473f56"
+    },
+    {
+      "id": "hsk5-2035",
+      "word": "抱怨",
+      "originalMeaningKo": "신음하다",
+      "originalExampleZh": "别抱怨，要珍惜现在。",
+      "originalExampleKo": "걱정하지 마세요, 이제 그만하세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a405575ab359a0bdee1751094033474b98a2ca3337c585afdd19eb2c46af9c71"
+    },
+    {
+      "id": "hsk5-2036",
+      "word": "背",
+      "originalMeaningKo": "등짝",
+      "originalExampleZh": "我会背这篇课文。",
+      "originalExampleKo": "이 문자를 받아볼 수 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5477bb1c689d35e6229c70edfbf4d2f1835fe4e6ebe5880d0f10b847473ea806"
+    },
+    {
+      "id": "hsk5-2037",
+      "word": "背后",
+      "originalMeaningKo": "뒤",
+      "originalExampleZh": "别在背后议论别人。",
+      "originalExampleKo": "걱정 마세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5e03ae8f7d7e50e64f2dabb367e4bfefb864a2170df18e51f3c39a28a66ef5e8"
+    },
+    {
+      "id": "hsk5-2038",
+      "word": "背景",
+      "originalMeaningKo": "배경",
+      "originalExampleZh": "照片的背景是大海。",
+      "originalExampleKo": "가장 큰 문제는 바다입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2079280ecbc5bce8ffbd99eecfba3f9c927800c6a537b338be087edaa130058a"
+    },
+    {
+      "id": "hsk5-2039",
+      "word": "被子",
+      "originalMeaningKo": "이불",
+      "originalExampleZh": "我把被子放在床上了。",
+      "originalExampleKo": "저는 화장실에 화장실을 설치했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f8f5e3d312c2d71ec2df184f39753fa907f075afa58363d4f45cd30ee57e56f2"
+    },
+    {
+      "id": "hsk5-2040",
+      "word": "本",
+      "originalMeaningKo": "권",
+      "originalExampleZh": "这本书有三册。",
+      "originalExampleKo": "이 책에는 세 가지 특징이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "afc4cb08be8f6cd6b94feba68759cb750ea444ab671253834931ccb52e2b1e2a"
+    },
+    {
+      "id": "hsk5-2041",
+      "word": "本地",
+      "originalMeaningKo": "본토",
+      "originalExampleZh": "他是本地人。",
+      "originalExampleKo": "그는 사기꾼입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7ca11a9511768483ba6d24628674d42fe52583436b0413832b648f4ad75cce6d"
+    },
+    {
+      "id": "hsk5-2042",
+      "word": "本领",
+      "originalMeaningKo": "솜씨",
+      "originalExampleZh": "这孩子很有本领。",
+      "originalExampleKo": "이 가방은 매우 가볍습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d25e695cc81043be71a909d0d317bdca78183dbb2e2972d416fa15eca2d83ceb"
+    },
+    {
+      "id": "hsk5-2043",
+      "word": "本人",
+      "originalMeaningKo": "본인",
+      "originalExampleZh": "他本人并不知道这件事。",
+      "originalExampleKo": "그는 그것에 대해 전혀 몰랐습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "26a673239500ca2e4dd8f61681eeceb433d236dc2436998466bfc2e6952ffe2f"
+    },
+    {
+      "id": "hsk5-2044",
+      "word": "本质",
+      "originalMeaningKo": "본성",
+      "originalExampleZh": "这是问题的本质。",
+      "originalExampleKo": "이게 그 회사의 장점입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e2507199b7eed6aa2e737eebfe4f45a82da2b2301c01f0fc5172fdd362d1595c"
+    },
+    {
+      "id": "hsk5-2045",
+      "word": "彼此",
+      "originalMeaningKo": "피차",
+      "originalExampleZh": "彼此尊重，才有友谊。",
+      "originalExampleKo": "모든 것이 완벽하게 작동합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f97d0db63cb3a4e5e35909ba24ec218826c745dec7488a667ca8b705d6a7815d"
+    },
+    {
+      "id": "hsk5-2046",
+      "word": "比分",
+      "originalMeaningKo": "스코어",
+      "originalExampleZh": "两队的比分是二比一。",
+      "originalExampleKo": "가격은 2-1입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1f21c0bc0934f62482fb380f897e1b8851ef0808d8bdd287878eb0999045409b"
+    },
+    {
+      "id": "hsk5-2047",
+      "word": "比例",
+      "originalMeaningKo": "비",
+      "originalExampleZh": "男女比例差不多。",
+      "originalExampleKo": "남성에서 여성으로의 전환은 약 4.5%입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "59f349f391fd824c73a723329483dae507ee40881405ccde667a89ba71de3397"
+    },
+    {
+      "id": "hsk5-2048",
+      "word": "比喻",
+      "originalMeaningKo": "비유",
+      "originalExampleZh": "莎士比亞把世界比喻成一個舞台。",
+      "originalExampleKo": "세상을 한 차원 업그레이드 시켜보세요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "3da4fd67ee643159b9e78d4a46b21e28fda2ceba12f02d349e84eaf809586221"
+    },
+    {
+      "id": "hsk5-2049",
+      "word": "必",
+      "originalMeaningKo": "반드시, 꼭",
+      "originalExampleZh": "做人必讲诚信。",
+      "originalExampleKo": "한 가지는 신중해야 합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "98fc4f2e5d567a8907d69999ab23fb2b47f3e1bc6cb9576f9d7c76e130043ed8"
+    },
+    {
+      "id": "hsk5-2050",
+      "word": "毕竟",
+      "originalMeaningKo": "어디",
+      "originalExampleZh": "他毕竟还是个孩子。",
+      "originalExampleKo": "어쨌든, 그는 단지 친구일 뿐이야.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c3068936e9de001e9eb0563143bec6dd4e24e082c33e0a75769cdada406548a4"
+    },
+    {
+      "id": "hsk5-2051",
+      "word": "避免",
+      "originalMeaningKo": "때우다",
+      "originalExampleZh": "开车要避免危险。",
+      "originalExampleKo": "운동할 때 땀을 흘립니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b0ed3e292040ddb92e78b09939092bd3109263e849449f3538be3081df2e5cac"
+    },
+    {
+      "id": "hsk5-2052",
+      "word": "闭幕式",
+      "originalMeaningKo": "폐막식",
+      "originalExampleZh": "运动会举行了闭幕式。",
+      "originalExampleKo": "이 발명품은 엄청난 성공을 거두었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d9afd5ad086c3a650805544ed417816fe2104048cf320ca4c0cea46c5882b56f"
+    },
+    {
+      "id": "hsk5-2053",
+      "word": "必然",
+      "originalMeaningKo": "필연",
+      "originalExampleZh": "成功不是必然的。",
+      "originalExampleKo": "고기는 안 먹어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "37e126563bb9ac6aeabdb40ef1c3096741710d8a0261dc32b57e3355e58a1cd1"
+    },
+    {
+      "id": "hsk5-2054",
+      "word": "必需",
+      "originalMeaningKo": "필수",
+      "originalExampleZh": "画画儿必需的工具是笔。",
+      "originalExampleKo": "음식의 기본 재료는 빵입니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "bc66050cc6f3be2ffaf6492aa50b8147eb77d858fc5227c63ec60f8e553f3cab"
+    },
+    {
+      "id": "hsk5-2055",
+      "word": "必要",
+      "originalMeaningKo": "필요하다",
+      "originalExampleZh": "没有必要害怕。",
+      "originalExampleKo": "더 이상 걱정할 필요가 없습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "946f8dea61c7803dd246ceed0662452a81c21c28056ccaf4a1cb4ae00440a442"
+    },
+    {
+      "id": "hsk5-2056",
+      "word": "便",
+      "originalMeaningKo": "변",
+      "originalExampleZh": "他便走了。",
+      "originalExampleKo": "그런 다음 그는 말했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "41ffe3a364ea9f52e487351c88b24cc052f04a3145377cf36ec46cd8d235cb1c"
+    },
+    {
+      "id": "hsk5-2057",
+      "word": "变动",
+      "originalMeaningKo": "변동되다",
+      "originalExampleZh": "价格有变动。",
+      "originalExampleKo": "다들 고생하셨습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8f33249595c1433b5fa849e64bc0fdacf53d362e905d1da0efb3d8e63d0bc2f4"
+    },
+    {
+      "id": "hsk5-2058",
+      "word": "便利",
+      "originalMeaningKo": "편익",
+      "originalExampleZh": "这里交通便利。",
+      "originalExampleKo": "여기 진짜 있네.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ad73fc8d1b385488d7d0cbfc2a1f4585affce56722ed2c52879c70f71a5c3fce"
+    },
+    {
+      "id": "hsk5-2059",
+      "word": "便利店",
+      "originalMeaningKo": "편의점",
+      "originalExampleZh": "去便利店的路上開始下雨了。",
+      "originalExampleKo": "편의점에 가는 길에 비가 내리기 시작했어요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "eb07fc81a37e6c3203c623cc07e5de68f9cbe1f6f8b5911e8bb57907cb7c951c"
+    },
+    {
+      "id": "hsk5-2060",
+      "word": "标题",
+      "originalMeaningKo": "표제어",
+      "originalExampleZh": "文件的标题要明确。",
+      "originalExampleKo": "그 외의 사항은 주의해야 합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "13796db5a730c885788cf3021d6a26eb44b667b5532e0072f56ff6736939e5f4"
+    },
+    {
+      "id": "hsk5-2061",
+      "word": "标志",
+      "originalMeaningKo": "대표",
+      "originalExampleZh": "红灯是停车的标志。",
+      "originalExampleKo": "조명이 정지 표시입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "bec6c656931a5e39b2e25b8ec42805e1bb604b0cc62dd8ebcd4470998157d5cc"
+    },
+    {
+      "id": "hsk5-2062",
+      "word": "表达",
+      "originalMeaningKo": "표시되다",
+      "originalExampleZh": "音乐能表达情感。",
+      "originalExampleKo": "음악도 자유롭게 연주할 수 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6517a17a7899d3f5bf4811d20cb663b996ce62aa484b7f77cafd560f2143a4db"
+    },
+    {
+      "id": "hsk5-2063",
+      "word": "表面",
+      "originalMeaningKo": "겉면",
+      "originalExampleZh": "表面上他很平静。",
+      "originalExampleKo": "그가 남긴 편지에는 이렇게 적혀 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "cfb0476c85857fb390709d4b8c02b20d811f6f693c267315de7c477629cd708e"
+    },
+    {
+      "id": "hsk5-2064",
+      "word": "表明",
+      "originalMeaningKo": "표명되다",
+      "originalExampleZh": "他表明了自己的态度。",
+      "originalExampleKo": "그는 정말 잘했어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "9e51448309a5163a0a967a5e5c69fc642ab3c3345d87320263b180370fa797a0"
+    },
+    {
+      "id": "hsk5-2065",
+      "word": "表情",
+      "originalMeaningKo": "표정",
+      "originalExampleZh": "他脸上的表情很奇怪。",
+      "originalExampleKo": "그의 뛰어난 솜씨는 훌륭합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b47ccde2667710412b7f01a21bed45e1b35efc73e2e417a3e621e98f7d6669c7"
+    },
+    {
+      "id": "hsk5-2066",
+      "word": "别",
+      "originalMeaningKo": "달다",
+      "originalExampleZh": "别装傻。",
+      "originalExampleKo": "장난치면 안 돼.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0f1d8e2c5fb8589c052663234d315eb2c5f0e2a278b61d3ee5e029b9fd008153"
+    },
+    {
+      "id": "hsk5-2067",
+      "word": "饼",
+      "originalMeaningKo": "전병, 빵·과자 모양의 음식",
+      "originalExampleZh": "他做了一个饼。",
+      "originalExampleKo": "그는 정말 멋진 일을 했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "43411c7945bdbd7cb674d029f461fa5ad0a6ef6983a76cfeefc088a5516e8520"
+    },
+    {
+      "id": "hsk5-2068",
+      "word": "病房",
+      "originalMeaningKo": "병실",
+      "originalExampleZh": "病房里很安静。",
+      "originalExampleKo": "가격은 저렴합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f27706a47cb5f273faa850a0e4048dd3976b135f00da36cf5decb6148295af80"
+    },
+    {
+      "id": "hsk5-2069",
+      "word": "病情",
+      "originalMeaningKo": "용태",
+      "originalExampleZh": "他的病情好转了。",
+      "originalExampleKo": "그의 얼굴 표정이 이상해.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "366da9469cbb94c0c0373ce1197c5a87abed08ba216c332a38f92c3b79ecf081"
+    },
+    {
+      "id": "hsk5-2070",
+      "word": "拨打",
+      "originalMeaningKo": "호출하다",
+      "originalExampleZh": "他拨打了热线电话。",
+      "originalExampleKo": "그는 핫도그를 샀다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d1b56d328a07e8f14c1512384ce0d30e4050b1978c18003f53e52830d5aae5f6"
+    },
+    {
+      "id": "hsk5-2071",
+      "word": "玻璃",
+      "originalMeaningKo": "유리",
+      "originalExampleZh": "玻璃很容易碎。",
+      "originalExampleKo": "뛰어난 내구성을 제공합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ed49c3de3c94408135e1714daf836dea72c7b9df50b77a922079089eb257f987"
+    },
+    {
+      "id": "hsk5-2072",
+      "word": "博物馆",
+      "originalMeaningKo": "박물관",
+      "originalExampleZh": "我们乘车去博物馆。",
+      "originalExampleKo": "우리는 회의에 참석합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ce52bb289acc946ce59f8528afe67dec13900721f9a51fe3bf70e5652efd63dc"
+    },
+    {
+      "id": "hsk5-2073",
+      "word": "不利",
+      "originalMeaningKo": "불리하다",
+      "originalExampleZh": "抽烟对身体不利。",
+      "originalExampleKo": "당신을 위해 모든 것이 준비되었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8555ee671e3042cc450b7eb219ba06efeddd112ae03aa31b8b4c261fcd05db4a"
+    },
+    {
+      "id": "hsk5-2074",
+      "word": "不幸",
+      "originalMeaningKo": "불행",
+      "originalExampleZh": "这真是不幸的消息。",
+      "originalExampleKo": "이것은 매우 간단한 작업입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ef16bb6b423f8d2c40bbcb83841a92eab060b9018cf83aeec893cb277a924b2c"
+    },
+    {
+      "id": "hsk5-2075",
+      "word": "不要紧",
+      "originalMeaningKo": "까짓것",
+      "originalExampleZh": "错了也不要紧。",
+      "originalExampleKo": "요리하는 건 쉬워요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6a1c140a51957323a1dfaec7f06914628a5d85343dca7a96c50144a2049fc753"
+    },
+    {
+      "id": "hsk5-2076",
+      "word": "补充",
+      "originalMeaningKo": "보충하다",
+      "originalExampleZh": "我补充一点儿意见。",
+      "originalExampleKo": "제가 케이크를 하나 추가해 볼게요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4fbe2f48814983461b028afad6597a21ed4200012f991a9200244fe3159852c1"
+    },
+    {
+      "id": "hsk5-2077",
+      "word": "不得了",
+      "originalMeaningKo": "기똥차다",
+      "originalExampleZh": "他高兴得不得了。",
+      "originalExampleKo": "그는 오버 조이스트였어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "f184072c4438cb85a7c3f272f5d2212b563ed4c6280f0e3d90cf2e44a5bf34f2"
+    },
+    {
+      "id": "hsk5-2078",
+      "word": "不符",
+      "originalMeaningKo": "부합하지 않다, 맞지 않다",
+      "originalExampleZh": "这个故事与事实不符。",
+      "originalExampleKo": "스토리는 스토리와 일치하지 않습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "df816aad753bb5d512b15c5e2e9f64c3d96710a10d45f8bac5691f2448e58557"
+    },
+    {
+      "id": "hsk5-2079",
+      "word": "不良",
+      "originalMeaningKo": "나쁘다",
+      "originalExampleZh": "食物不良会影响健康。",
+      "originalExampleKo": "10만 원이 들이닥쳤습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "1d93753c92e2db94602b5c727b794954d716ab268d0f59bff49c578bbf3c9355"
+    },
+    {
+      "id": "hsk5-2080",
+      "word": "不然",
+      "originalMeaningKo": "그렇지 않으면; 그렇지 않다",
+      "originalExampleZh": "快点儿，不然要迟到了。",
+      "originalExampleKo": "알겠습니다, 그렇지 않으면 취소하겠습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "95639e27865d55e3bd38cc99e4a6ed12a6f25369007b87e16f45505a02f317a4"
+    },
+    {
+      "id": "hsk5-2081",
+      "word": "步行",
+      "originalMeaningKo": "보행하다",
+      "originalExampleZh": "我步行去邮局寄包裹。",
+      "originalExampleKo": "나는 포스트 오피스로 가서 미팅을 한다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1c3e857b16bdf00311237a6cf67a618e6c46dda17bce0757b2c61c844f767c77"
+    },
+    {
+      "id": "hsk5-2082",
+      "word": "不足",
+      "originalMeaningKo": "박약",
+      "originalExampleZh": "这些还不足以说明问题。",
+      "originalExampleKo": "이거는 안 먹어도 돼.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2620d7d0813f551db5d4b7384f02418adaf321a79ab27416caa77c59b3414928"
+    },
+    {
+      "id": "hsk5-2083",
+      "word": "才",
+      "originalMeaningKo": "비로소",
+      "originalExampleZh": "除非你去，我才去。",
+      "originalExampleKo": "네가 하면 내가 갈게.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5e903e77ec0956a3ec999331b377554d170e68cc6a816acf087d83027d2fec0b"
+    },
+    {
+      "id": "hsk5-2084",
+      "word": "裁判",
+      "originalMeaningKo": "심판",
+      "originalExampleZh": "裁判很公正。",
+      "originalExampleKo": "가격은 저렴합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "911f2effbfb0c60865d1f89edffa2221a94b221eed6d5bda49767774cd93f0e4"
+    },
+    {
+      "id": "hsk5-2085",
+      "word": "采访",
+      "originalMeaningKo": "취재하다",
+      "originalExampleZh": "记者采访了运动员。",
+      "originalExampleKo": "카메라가 카메라를 감지합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3bf33bff49fea0f633cc1fc5aedb3c7b3c73969adddc01a8d7b1b8b7ebbdf657"
+    },
+    {
+      "id": "hsk5-2086",
+      "word": "采取",
+      "originalMeaningKo": "나가다",
+      "originalExampleZh": "我们要采取新的措施。",
+      "originalExampleKo": "우리는 새로운 도전을 해야 합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e691ac723bc1fbcd7ebcc81d9eb8bde980b96e3f1489b98d6d059e40b58f83ad"
+    },
+    {
+      "id": "hsk5-2087",
+      "word": "彩色",
+      "originalMeaningKo": "오색",
+      "originalExampleZh": "孩子画了一张彩色的图画。",
+      "originalExampleKo": "카메라는 선명한 사진을 제공합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d6ab3eefbcd026baa849474645f14babe2330707794e332d44d36a69683a4cd9"
+    },
+    {
+      "id": "hsk5-2088",
+      "word": "采用",
+      "originalMeaningKo": "채택하다",
+      "originalExampleZh": "工厂采用了新技术。",
+      "originalExampleKo": "그 회사는 새로운 회사를 설립했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "249b45a925a444bb77e0b50d657ccea5334d904940cde0501ee17de3caff681c"
+    },
+    {
+      "id": "hsk5-2089",
+      "word": "参考",
+      "originalMeaningKo": "참고하다",
+      "originalExampleZh": "请大家参考这份资料。",
+      "originalExampleKo": "이 메일에 답장해 주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "867a21584c2f417e1271916122ee57f0a52765c37436f57bff5ed180faa461e2"
+    },
+    {
+      "id": "hsk5-2090",
+      "word": "餐饮",
+      "originalMeaningKo": "외식업, 음식과 음료",
+      "originalExampleZh": "餐饮业很发达。",
+      "originalExampleKo": "가격도 저렴합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4ee882d9ae729ff9a732be94a939b8d43f14cd09d25185d09114ab4e8b48a479"
+    },
+    {
+      "id": "hsk5-2091",
+      "word": "参与",
+      "originalMeaningKo": "관계하다",
+      "originalExampleZh": "他参与了这个项目的设计。",
+      "originalExampleKo": "그는 프로젝트를 수행하는 데 일부를 담당했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "aaae2c8d2d31dc8a9a93581130dd2e4ef8014bc2e179f796dbf3bd12ce6b5426"
+    },
+    {
+      "id": "hsk5-2092",
+      "word": "藏",
+      "originalMeaningKo": "감추다",
+      "originalExampleZh": "他把秘密藏起来。",
+      "originalExampleKo": "그는 그 말을 지켰습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "94d58ca5d5f36f84558098bd0dbe1b54d496f9dd67f1a4aad6aa3cdaced90f53"
+    },
+    {
+      "id": "hsk5-2093",
+      "word": "操作",
+      "originalMeaningKo": "조작하다",
+      "originalExampleZh": "他善于操作机器。",
+      "originalExampleKo": "그는 잘 지내고 있어.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "95adf29073ad5eaab63691edf84fd943ba006463fbd57f4d3e1f04b8a7189854"
+    },
+    {
+      "id": "hsk5-2094",
+      "word": "册",
+      "originalMeaningKo": "권",
+      "originalExampleZh": "这本书有三册。",
+      "originalExampleKo": "이 책에는 세 가지 특징이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "73e5db053ef47eac5c7ec3d0b7197c781a078c277484b06be041449a8e2c29b1"
+    },
+    {
+      "id": "hsk5-2095",
+      "word": "测",
+      "originalMeaningKo": "재다",
+      "originalExampleZh": "老师测了我们的听力。",
+      "originalExampleKo": "그 회사는 우리 회사를 인수했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e985934c18d582e5a70afeb1b5db86bbcf386397a283ca5412047b62eab27357"
+    },
+    {
+      "id": "hsk5-2096",
+      "word": "测试",
+      "originalMeaningKo": "시험",
+      "originalExampleZh": "明天有一个测试。",
+      "originalExampleKo": "시험판이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c987fc448c681fb86b8c3a963c90ab48a1faa5b6ff97db12d90234ef55641d25"
+    },
+    {
+      "id": "hsk5-2097",
+      "word": "曾",
+      "originalMeaningKo": "한번",
+      "originalExampleZh": "他曾在这里教书。",
+      "originalExampleKo": "그는 여기서 술을 마셨어.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "beb69e34966353801136c0c550822055058a264ae3d4139673067b8ec2a3180c"
+    },
+    {
+      "id": "hsk5-2098",
+      "word": "曾经",
+      "originalMeaningKo": "한번",
+      "originalExampleZh": "他曾经是一名队员。",
+      "originalExampleKo": "그는 명예의 전당에 올랐습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "fc6543b2ed87b7ecf47da95fa0fae4793b3f1793390d3ebe8e0a15d45d6e6dbe"
+    },
+    {
+      "id": "hsk5-2099",
+      "word": "插",
+      "originalMeaningKo": "꽂다",
+      "originalExampleZh": "请把花插在瓶子里。",
+      "originalExampleKo": "창고에 보관해 주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "838bc90cb3f9949b16e3523e615c489ca1f9aed5ddb812aca1adb4fee6097520"
+    },
+    {
+      "id": "hsk5-2100",
+      "word": "差别",
+      "originalMeaningKo": "층",
+      "originalExampleZh": "南北的差别很大。",
+      "originalExampleKo": "북한과 베트남은 무역 분쟁에 직면해 있다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2ed21a53000a2c65d5d2579783f3cc6a3072f38079ab4c3e0527acb2f4bfc496"
+    },
+    {
+      "id": "hsk5-2101",
+      "word": "差距",
+      "originalMeaningKo": "격차",
+      "originalExampleZh": "南北的差距在缩小。",
+      "originalExampleKo": "저소득층이 몰리고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b3995caff68bc44101ed2563731c0e845b36ec134426931c2b8a14149b69e6d7"
+    },
+    {
+      "id": "hsk5-2102",
+      "word": "叉子",
+      "originalMeaningKo": "포크",
+      "originalExampleZh": "他用叉子吃肉。",
+      "originalExampleKo": "위치 정보",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "df91e6c26275b44b93816dd113de1feeff3780b23caeb30e0692b55fa12e4fc5"
+    },
+    {
+      "id": "hsk5-2103",
+      "word": "拆",
+      "originalMeaningKo": "뜯다",
+      "originalExampleZh": "工人拆了旧房子。",
+      "originalExampleKo": "옛집을 찾아 내려가세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4efa0be17d120734e76847e5e3511f0cb3eb4979100a45a98f821a040b56e0ad"
+    },
+    {
+      "id": "hsk5-2104",
+      "word": "产",
+      "originalMeaningKo": "나다",
+      "originalExampleZh": "矿里出产煤。",
+      "originalExampleKo": "이 제품은 정말 독특합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6034fbe0ef52a1d203df23d4daf0918b3edb98a36ee9164ae930f4df7ffc4ced"
+    },
+    {
+      "id": "hsk5-2105",
+      "word": "产量",
+      "originalMeaningKo": "생산량",
+      "originalExampleZh": "公司的产量提高了。",
+      "originalExampleKo": "그 회사의 브랜드는 정말 대단합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "80c528173e33e1aaa43c024f0ade353053270be045cb24c54b9c348bb513bdf0"
+    },
+    {
+      "id": "hsk5-2106",
+      "word": "产品",
+      "originalMeaningKo": "생산물",
+      "originalExampleZh": "产品的品种很多。",
+      "originalExampleKo": "많은 제품 사양이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "45f8c1f7a18f8a32d661a2f90c5975054fc24abb267282c8eddb24fa7541a56f"
+    },
+    {
+      "id": "hsk5-2107",
+      "word": "产业",
+      "originalMeaningKo": "산업",
+      "originalExampleZh": "这个产业发展很快。",
+      "originalExampleKo": "이 제품은 내구성이 뛰어납니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "657fdcdfc10cf26d54af0f4e4ad5500b8c05ac03216c8731d6d7db43acb69092"
+    },
+    {
+      "id": "hsk5-2108",
+      "word": "长处",
+      "originalMeaningKo": "장점",
+      "originalExampleZh": "人人都有长处和短处。",
+      "originalExampleKo": "고객들은 빠르고 쉽게 거래를 할 수 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a3af9168d9ef8bedd3005b81f30ac6994bc81c73fa3b6cc8a3bfdb241ee97bc3"
+    },
+    {
+      "id": "hsk5-2109",
+      "word": "长度",
+      "originalMeaningKo": "길이",
+      "originalExampleZh": "这条路的长度是三公里。",
+      "originalExampleKo": "이 카메라는 3km 길이입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7c71289dc2924f369d8b9a9a9a5b6e085aa7f9cff3f832e7f54ecde8f4426135"
+    },
+    {
+      "id": "hsk5-2110",
+      "word": "长久",
+      "originalMeaningKo": "장구하다",
+      "originalExampleZh": "友谊长久。",
+      "originalExampleKo": "저번에.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "54cf83549ce83524f9106055716a8b62c33a5fd9d9ced4b6db9e8810e62198be"
+    },
+    {
+      "id": "hsk5-2111",
+      "word": "长期",
+      "originalMeaningKo": "장기간",
+      "originalExampleZh": "城市有长期的规划。",
+      "originalExampleKo": "회사는 장기 계획을 가지고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "dbfe1cc19b2f9d1a1ad622e1aa99e9adc1c38ad002aa50e8eddde8970ce7c464"
+    },
+    {
+      "id": "hsk5-2112",
+      "word": "常识",
+      "originalMeaningKo": "상식",
+      "originalExampleZh": "这是生活常识。",
+      "originalExampleKo": "이것은 정말 놀라운 경험입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2fa74bf86d60bfb60ddef812aae2df02d15e63c3e38ec435b9cee934a492599f"
+    },
+    {
+      "id": "hsk5-2113",
+      "word": "尝试",
+      "originalMeaningKo": "시도하다",
+      "originalExampleZh": "他尝试了新方法。",
+      "originalExampleKo": "그는 새로운 방법을 제안했어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e6faec54e30cc8a4477af3d860d01fab5fc86d7561ff064debe6b8d630a2f32b"
+    },
+    {
+      "id": "hsk5-2114",
+      "word": "长途",
+      "originalMeaningKo": "장거리의, 먼 거리",
+      "originalExampleZh": "长途旅行要带够水。",
+      "originalExampleKo": "오래 지속되는 깨끗한 물.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "bc8adb68c58da3b3a13a904aa81975819300c873457e5815151f3f0bcdd5bc5c"
+    },
+    {
+      "id": "hsk5-2115",
+      "word": "长远",
+      "originalMeaningKo": "장구하다",
+      "originalExampleZh": "他有长远的眼光。",
+      "originalExampleKo": "그는 장기 계약을 맺고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "513779f8177bf91c3f58d9ee80287eec239767abe2b79a55236d1dcca042f84f"
+    },
+    {
+      "id": "hsk5-2116",
+      "word": "场所",
+      "originalMeaningKo": "공간",
+      "originalExampleZh": "公共场所不能大声吵。",
+      "originalExampleKo": "해외여행은 추천하지 마세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "398d5a6a7dd4c89747e2fe01ce33cdd2ac72f9403e959e2d1db8bd6454b9d96b"
+    },
+    {
+      "id": "hsk5-2117",
+      "word": "超",
+      "originalMeaningKo": "넘어가다",
+      "originalExampleZh": "羽衣甘藍被稱為超級食物。",
+      "originalExampleKo": "케일은 슈퍼푸드라고 불립니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "504b759b3dc7e1e572e0a82c0abefa47e3db67da5228b691d8462646c3e92e61"
+    },
+    {
+      "id": "hsk5-2118",
+      "word": "超出",
+      "originalMeaningKo": "넘치다",
+      "originalExampleZh": "他超出了我的预期。",
+      "originalExampleKo": "그는 내 말을 지켰어.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "85dc3cbd2c9aa6553dd920e060246a08b5803875a161b47f1cd9a1aefbc3a0eb"
+    },
+    {
+      "id": "hsk5-2119",
+      "word": "超级",
+      "originalMeaningKo": "초특급",
+      "originalExampleZh": "家旁边有一家超级市场。",
+      "originalExampleKo": "내 집 옆에 식당이 있어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0880a475d92efadf839d7f7cb4469745305dc16c17b5439270ea533339d17d25"
+    },
+    {
+      "id": "hsk5-2120",
+      "word": "超速",
+      "originalMeaningKo": "과속하다",
+      "originalExampleZh": "他超速駕駛，被警察逮捕了。",
+      "originalExampleKo": "그 친구는 그를 욕설로 비난했습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "243ff13d3f8de95d25bed713c15cd3c94e145eed369f9aeab51ba2edcd9a1acd"
+    },
+    {
+      "id": "hsk5-2121",
+      "word": "朝",
+      "originalMeaningKo": "두다",
+      "originalExampleZh": "他朝我笑了笑。",
+      "originalExampleKo": "그는 나에게 말했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7f93c992b92bdce991c27240dcdb82142077375b8a7b079b3fc4d1ed0240f22b"
+    },
+    {
+      "id": "hsk5-2122",
+      "word": "吵",
+      "originalMeaningKo": "시끄럽다; 다투다",
+      "originalExampleZh": "公共场所不能大声吵。",
+      "originalExampleKo": "해외여행은 추천하지 마세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "87af144040ec37739fc4a92af82f993a037921524c97223c09c3baf0354af4ba"
+    },
+    {
+      "id": "hsk5-2123",
+      "word": "炒",
+      "originalMeaningKo": "볶다",
+      "originalExampleZh": "他炒了一盘花生。",
+      "originalExampleKo": "그는 여러 개의 펜을 들고 다닌다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "948bcf9a0261a99d1921865387c2e6d7ecd26525a298e8dc5d04e454772d3d3d"
+    },
+    {
+      "id": "hsk5-2124",
+      "word": "车祸",
+      "originalMeaningKo": "교통사고, 차량 사고",
+      "originalExampleZh": "他出了车祸，而且伤了腿。",
+      "originalExampleKo": "그는 교통사고를 당했고 다리를 다쳤습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "f6fb9e0dab63a1d25e99a78c851dcf795764a8b061fb0e507e60f18ffbfe8e4e"
+    },
+    {
+      "id": "hsk5-2125",
+      "word": "车库",
+      "originalMeaningKo": "차고",
+      "originalExampleZh": "我把车库改造成工作室使用。",
+      "originalExampleKo": "저는 사용 설명서를 문서로 작성했습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "73afa6b0b5c68cea65d37cf16cab9cadd83e4e138e6d1284dd3eec37cbc93ce0"
+    },
+    {
+      "id": "hsk5-2126",
+      "word": "车辆",
+      "originalMeaningKo": "차량",
+      "originalExampleZh": "这里限制车辆。",
+      "originalExampleKo": "거기 서요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "9638accff3581c1f389a401871d51f8d0aa8766ce039c8f8c90182bb1fa7e107"
+    },
+    {
+      "id": "hsk5-2127",
+      "word": "车厢",
+      "originalMeaningKo": "차량",
+      "originalExampleZh": "车厢里只报站名不要啰嗦。",
+      "originalExampleKo": "차 안에서는 아무 말도 하지 마세요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "a0830dbb032c684cff8dcb930ab7d1a84094b6d7860290e9c28a6dfa4789d978"
+    },
+    {
+      "id": "hsk5-2128",
+      "word": "车主",
+      "originalMeaningKo": "차주",
+      "originalExampleZh": "他是这辆车的车主。",
+      "originalExampleKo": "그는 자동차 제조업체입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3deebaed94ed182a2f25f4e57ebf640e2297fa1346e60280d88e3d304a7dd208"
+    },
+    {
+      "id": "hsk5-2129",
+      "word": "彻底",
+      "originalMeaningKo": "깨끗하다",
+      "originalExampleZh": "要彻底解决问题。",
+      "originalExampleKo": "이불을 열어주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "81469236309a5d022d49696e45818702c9a8e15c1be480832eb003be49b22bc1"
+    },
+    {
+      "id": "hsk5-2130",
+      "word": "沉",
+      "originalMeaningKo": "가라앉다",
+      "originalExampleZh": "船慢慢沉了。",
+      "originalExampleKo": "이 제품은 정말 독특합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1f47c28ea19ac424cdf5364dc2af4cd392ce8fce445852f024f1b8eb0403dc1e"
+    },
+    {
+      "id": "hsk5-2131",
+      "word": "沉默",
+      "originalMeaningKo": "침묵하다",
+      "originalExampleZh": "他沉默了很久。",
+      "originalExampleKo": "그는 오랜 시간 동안 화가 나 있었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "340f17402c4467eaf408ab3ca6b8efcfb14bfd12741b7247f4332b60d8027440"
+    },
+    {
+      "id": "hsk5-2132",
+      "word": "称",
+      "originalMeaningKo": "달다",
+      "originalExampleZh": "请称一下这条鱼。",
+      "originalExampleKo": "이 문제를 해결해 주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "34d6d08c9f25abd153826ba12b236be779ce5707f69fab55a6e423ed1830da75"
+    },
+    {
+      "id": "hsk5-2133",
+      "word": "称",
+      "originalMeaningKo": "달다",
+      "originalExampleZh": "请称一下这条鱼。",
+      "originalExampleKo": "이 문제를 해결해 주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8c538f8a7133b440fa92746370ebccf65067687be9becbf0fffa15e7c8554b31"
+    },
+    {
+      "id": "hsk5-2134",
+      "word": "称为",
+      "originalMeaningKo": "부르다",
+      "originalExampleZh": "人们把这里称为花园城市。",
+      "originalExampleKo": "사람들은 이에 대해 긍정적인 반응을 보입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5551806c6bd497aad93661a63dc0141f4e180300c55fc394b5e4c4ca1d1e5222"
+    },
+    {
+      "id": "hsk5-2135",
+      "word": "称赞",
+      "originalMeaningKo": "칭찬",
+      "originalExampleZh": "老师称赞了他。",
+      "originalExampleKo": "그 친구가 그 애를 데려갔어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "384112908f8e67debfd7e221be608a9409f83ea91ec72031109afc2e710557a4"
+    },
+    {
+      "id": "hsk5-2136",
+      "word": "成本",
+      "originalMeaningKo": "원가",
+      "originalExampleZh": "物价上涨了，成本也高了。",
+      "originalExampleKo": "모든 게 완벽해졌고 모든 게 완벽해졌어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "55bc70c830c6e781f9ae23929f69e8c022801b1019ebff35d5fc6c433e875b50"
+    },
+    {
+      "id": "hsk5-2137",
+      "word": "承担",
+      "originalMeaningKo": "당하다",
+      "originalExampleZh": "他承担了责任。",
+      "originalExampleKo": "그는 벽에 기대어 섰다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5988f07f70058c6c38d3d41675b88fcb4f2292407fa8c39f017c48aa40c5fc25"
+    },
+    {
+      "id": "hsk5-2138",
+      "word": "程度",
+      "originalMeaningKo": "정도",
+      "originalExampleZh": "他的中文程度很高。",
+      "originalExampleKo": "그의 중국 수준은 높습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a555a6568a51121d7688a6e243f376cefa8f23eb7f640b4c5bf58ba78d88f088"
+    },
+    {
+      "id": "hsk5-2139",
+      "word": "成分",
+      "originalMeaningKo": "요소",
+      "originalExampleZh": "水由两种成分组成。",
+      "originalExampleKo": "물에는 두 가지 종류가 있습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "d75085ef956ec51facf4dde84a44bc10b2494a6f47df5905d5e1650a440b60a3"
+    },
+    {
+      "id": "hsk5-2140",
+      "word": "成果",
+      "originalMeaningKo": "성과",
+      "originalExampleZh": "你不能否定他的成果。",
+      "originalExampleKo": "당신은 그의 말을 믿지 않을 수 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8c4ab23347460c9290c1cdafcb13cccf293c366c51219bc8b25c650f2ed10b96"
+    },
+    {
+      "id": "hsk5-2141",
+      "word": "成就",
+      "originalMeaningKo": "성과",
+      "originalExampleZh": "他取得了很大的成就。",
+      "originalExampleKo": "그는 정말 잘합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "232341034274edfe7dfe8c66dda9c494058471ed15a6190f7de99082697a81aa"
+    },
+    {
+      "id": "hsk5-2142",
+      "word": "成立",
+      "originalMeaningKo": "성립되다",
+      "originalExampleZh": "他创业成功，成立了自己的公司。",
+      "originalExampleKo": "그는 비즈니스 미팅을 열고 자신의 목표를 달성했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b0f89936d653633da08b0f03521b3c594e0d388f275881a337eec1b4ac03955f"
+    },
+    {
+      "id": "hsk5-2143",
+      "word": "成年",
+      "originalMeaningKo": "성년",
+      "originalExampleZh": "美國約 65% 成年人肥胖，這不利於對他們的健康。",
+      "originalExampleKo": "미국 성인의 약 65%가 비만이며, 이는 건강에 좋지 않습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "ea53e6567ee40ad7c1ac546d1027781bf610419832aa73c4a28584945a8ec900"
+    },
+    {
+      "id": "hsk5-2144",
+      "word": "城区",
+      "originalMeaningKo": "도시 지역, 시가지",
+      "originalExampleZh": "城区的房价很高。",
+      "originalExampleKo": "장미꽃이 피고 있어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "28b356a92b892b09e68f959f12b976388ec216e93a26f78a68ebf88430dae2ce"
+    },
+    {
+      "id": "hsk5-2145",
+      "word": "成人",
+      "originalMeaningKo": "성인",
+      "originalExampleZh": "儿童和成人的票价不同。",
+      "originalExampleKo": "빠르고 쉬운 배송을 보장합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ff596c8fe7d350bb583b268a42a16af4abb5d1bb68f3faafcc7fb7b5f3212a27"
+    },
+    {
+      "id": "hsk5-2146",
+      "word": "承认",
+      "originalMeaningKo": "시인하다",
+      "originalExampleZh": "他承认了错误。",
+      "originalExampleKo": "그는 그의 상사에게 말했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "88a4f2576761bedb07337bdf2fa1e3204aadfd4d201a3f25eb39bfa8f7ece2b3"
+    },
+    {
+      "id": "hsk5-2147",
+      "word": "承受",
+      "originalMeaningKo": "버티다",
+      "originalExampleZh": "他承受着很大的压力。",
+      "originalExampleKo": "그는 정말 잘합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "88a749f9a437890a5f9a2722e69c42a4911146f8f30aee46f84450a0af837f4f"
+    },
+    {
+      "id": "hsk5-2148",
+      "word": "成熟",
+      "originalMeaningKo": "성숙되다",
+      "originalExampleZh": "他比以前成熟多了。",
+      "originalExampleKo": "그는 이전보다 훨씬 더 성숙해 졌습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ccd7e75031bd0e3e7c173a6af7d2ae3dbf9b0e8c469dd8efd9adba9017e61734"
+    },
+    {
+      "id": "hsk5-2149",
+      "word": "乘务员",
+      "originalMeaningKo": "승무원",
+      "originalExampleZh": "我今天学会了“乘务员”的用法。",
+      "originalExampleKo": "나는 오늘 “乘务员”(승무원)의 쓰임을 배웠다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "123e371e0b4274dd58267e078d3d42117da5dfc676243e07e44e2df695c1be4e"
+    },
+    {
+      "id": "hsk5-2150",
+      "word": "程序",
+      "originalMeaningKo": "프로그램",
+      "originalExampleZh": "请启动这个程序。",
+      "originalExampleKo": "이 프로그램을 시작해 보세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8a7aa128f48cb094865413ffd13ab55a7256c5ba7ae194e2e668c1ac5d092bd7"
+    },
+    {
+      "id": "hsk5-2151",
+      "word": "成员",
+      "originalMeaningKo": "성원",
+      "originalExampleZh": "他是我们班级的成员。",
+      "originalExampleKo": "그는 우리 반의 일원입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ad87a21ec43999edbd9117ba0ffb7ef6265b969d1e7688a3f4a23e5784fedd55"
+    },
+    {
+      "id": "hsk5-2152",
+      "word": "成长",
+      "originalMeaningKo": "크다",
+      "originalExampleZh": "孩子们在快乐地成长。",
+      "originalExampleKo": "이 제품은 정말 완벽합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "8b0055e654be54a4d8ce679626d2d0d9e9ebf656f9293f1cb65f40949d5e58e2"
+    },
+    {
+      "id": "hsk5-2153",
+      "word": "橙子",
+      "originalMeaningKo": "오렌지",
+      "originalExampleZh": "橙子含有大量的维生素 C。",
+      "originalExampleKo": "오렌지는 많은 비타민C를 함유하고 있다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "84e0dd1fb0a996bab57329985c61b0c5b40c7bf9e18d139ddbe864dd2d1b1d91"
+    },
+    {
+      "id": "hsk5-2154",
+      "word": "池",
+      "originalMeaningKo": "못, 연못, 풀",
+      "originalExampleZh": "我们看见池里有很多活鱼。",
+      "originalExampleKo": "우리는 시장에서 많은 삶을 살고 있습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "4be58073c4cec6351c288acedd236aada0e91662a6213d54890c582a2578aa93"
+    },
+    {
+      "id": "hsk5-2155",
+      "word": "持续",
+      "originalMeaningKo": "가다",
+      "originalExampleZh": "雨持续了三天。",
+      "originalExampleKo": "이 발명품은 세 가지 색상으로 출시되었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6ccd22630716e1502dd4c60f131a4996db1bd794f34d8526b9d5b750fb7895bf"
+    },
+    {
+      "id": "hsk5-2156",
+      "word": "尺子",
+      "originalMeaningKo": "자",
+      "originalExampleZh": "用尺子画线。",
+      "originalExampleKo": "침대 시트를 추가해 주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "516db89dd662382a4e0e9608e42c90b0a86c9972770561cb5e53c88047519215"
+    },
+    {
+      "id": "hsk5-2157",
+      "word": "翅膀",
+      "originalMeaningKo": "날개",
+      "originalExampleZh": "这只燕子的翅膀受伤了。",
+      "originalExampleKo": "이 제비의 날개가 다쳤다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "aecd78f80686b6bd177d94b4b64fdb648a5db00b2fe058f7d3e943645c85be7e"
+    },
+    {
+      "id": "hsk5-2158",
+      "word": "冲",
+      "originalMeaningKo": "타다",
+      "originalExampleZh": "他冲进了教室。",
+      "originalExampleKo": "그는 식당에 들어갔어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b4536a6a2ab17f263f5ecb9df518acbcd718b9087bb744d2b32f67c253ab04ff"
+    },
+    {
+      "id": "hsk5-2159",
+      "word": "充电",
+      "originalMeaningKo": "충전되다",
+      "originalExampleZh": "手机没电了，用充电器充电。",
+      "originalExampleKo": "ICT 엔지니어 28은 이 문제를 해결했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e2b9043562c40b5b263ba78fbf75661e24f1958e5477902e0c3526363c591cfb"
+    },
+    {
+      "id": "hsk5-2160",
+      "word": "充分",
+      "originalMeaningKo": "톡톡하다",
+      "originalExampleZh": "准备得很充分。",
+      "originalExampleKo": "잘 부탁합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "cd9ea8cdef83480cc2f09c57f4c294656a504e3b4ec306fdeeeeea8f22adfd23"
+    },
+    {
+      "id": "hsk5-2161",
+      "word": "充满",
+      "originalMeaningKo": "만발하다",
+      "originalExampleZh": "他对未来充满信念。",
+      "originalExampleKo": "그는 시골에 살고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b4da07acb83a7d7b1c8e31fc6a908eafd12fe49696e5db0dc7592a26a9bc9245"
+    },
+    {
+      "id": "hsk5-2162",
+      "word": "充值",
+      "originalMeaningKo": "충전되다",
+      "originalExampleZh": "我今天学会了“充值”的用法。",
+      "originalExampleKo": "나는 오늘 “充值”(충전되다)의 쓰임을 배웠다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "6f616bce3a8c9365fe8c32d1d83cc70482f7fc31bf0a99d907e23c68872ba65e"
+    },
+    {
+      "id": "hsk5-2163",
+      "word": "充足",
+      "originalMeaningKo": "흡족하다",
+      "originalExampleZh": "水分要充足。",
+      "originalExampleKo": "물이 있어야 해요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c810ae06c26be3b3e107ce1b85322503164f8f0a449ba6677c4b02fe6df87136"
+    },
+    {
+      "id": "hsk5-2164",
+      "word": "重复",
+      "originalMeaningKo": "되받다",
+      "originalExampleZh": "老师要求我们重复练习。",
+      "originalExampleKo": "그 회사는 우리가 더 많은 이익을 얻을 수 있도록 도와주었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6e5813a214aa4c4f39e25efcbf3a56ec3c4d84ca7bc42ec9bdcd745f2231547d"
+    },
+    {
+      "id": "hsk5-2165",
+      "word": "虫子",
+      "originalMeaningKo": "벌레",
+      "originalExampleZh": "叶子上有一只虫子。",
+      "originalExampleKo": "식당에 문제가 있어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0701fbe8083d428be57028168af27f225daee0ad170c926d66baf5920983cce8"
+    },
+    {
+      "id": "hsk5-2166",
+      "word": "宠物",
+      "originalMeaningKo": "애완동물",
+      "originalExampleZh": "他把宠物当成家人。",
+      "originalExampleKo": "그는 그의 가족을 가족으로 지었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f8e64bbee68351d5e857c580ff33dd5718dc9571203e16557954cd5bc01e6c98"
+    },
+    {
+      "id": "hsk5-2167",
+      "word": "抽",
+      "originalMeaningKo": "태우다",
+      "originalExampleZh": "商场在抽奖，我抽了一张。",
+      "originalExampleKo": "밥은 썰면 되는데, 밥은 제가 먹어요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "183c538941fbd2900f6b277a3890449b03b8ae754098644ca9745d2bc7725253"
+    },
+    {
+      "id": "hsk5-2168",
+      "word": "丑",
+      "originalMeaningKo": "밉다",
+      "originalExampleZh": "这件衣服太丑了。",
+      "originalExampleKo": "이 옷은 정말 예쁘네요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "41a520bc0a58a10cb69ee3452d3dcc5ad169115765d450aca257b6d6c7684c76"
+    },
+    {
+      "id": "hsk5-2169",
+      "word": "臭",
+      "originalMeaningKo": "구리다",
+      "originalExampleZh": "这块肉坏了，有点儿臭。",
+      "originalExampleKo": "이 제품은 토스트와 스크래치를 없습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7350cd18fe434d7370e67dfea0dda0cac06f967ef332c1ad3fc650f2bd496f95"
+    },
+    {
+      "id": "hsk5-2170",
+      "word": "初",
+      "originalMeaningKo": "초",
+      "originalExampleZh": "他在七月初動身前往倫敦。",
+      "originalExampleKo": "그는 7월 초에 런던으로 향했다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "d4365b2380d3e096d7391d4ad32d9204a82b1ba2978820a6a0657c71cbdf48f3"
+    },
+    {
+      "id": "hsk5-2171",
+      "word": "出版",
+      "originalMeaningKo": "나오다",
+      "originalExampleZh": "这本书刚出版。",
+      "originalExampleKo": "이 책은 그냥 읽기만 했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8562f94056c0c159069f55a53db40e22dd1c16ef8d3a860ca7bb5b89689c58a5"
+    },
+    {
+      "id": "hsk5-2172",
+      "word": "初级",
+      "originalMeaningKo": "초급",
+      "originalExampleZh": "我在初级班学汉语。",
+      "originalExampleKo": "저는 중국어 교실에서 중국어를 배웠어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e48bfb647c77d0d92ba2cce6d472e748a95b9e12f3c0b559725e715aef02a8fb"
+    },
+    {
+      "id": "hsk5-2173",
+      "word": "初期",
+      "originalMeaningKo": "조기",
+      "originalExampleZh": "初期困难很多。",
+      "originalExampleKo": "여러 가지 문제가 있었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "426f93c1f19d3590c0196d0a6ca5fbe102b2427ae0ae9d3fd82cfd46b465fb4d"
+    },
+    {
+      "id": "hsk5-2174",
+      "word": "出色",
+      "originalMeaningKo": "솟아나다",
+      "originalExampleZh": "他表现出色。",
+      "originalExampleKo": "그는 이상하게 굴었어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "db7b171bb01115d4ff0e895650b1af3c2f011609f815870640788e691725b189"
+    },
+    {
+      "id": "hsk5-2175",
+      "word": "出售",
+      "originalMeaningKo": "팔다",
+      "originalExampleZh": "这个房子正在出售。",
+      "originalExampleKo": "이 집은 청소용입니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "834a7f22ef0c00650a16f046f48b4d1021cb0097c97064f0494fe13371ad5833"
+    },
+    {
+      "id": "hsk5-2176",
+      "word": "出席",
+      "originalMeaningKo": "출석하다",
+      "originalExampleZh": "厂长和局长都出席了开幕式。",
+      "originalExampleKo": "매니저와 매니저는 회의에 참석했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a196693cba19d586dc387797de425c5ca01aa941175ace073c90b76557f3dfe1"
+    },
+    {
+      "id": "hsk5-2177",
+      "word": "出自",
+      "originalMeaningKo": "따오다",
+      "originalExampleZh": "這本小說的名字出自《聖經》。",
+      "originalExampleKo": "은행은 IMF로부터 자금을 받습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "7f5de25fb3a6b709ae2eed278f3e3222e2c26992791e6e287cf16464b9fee5c3"
+    },
+    {
+      "id": "hsk5-2178",
+      "word": "除夕",
+      "originalMeaningKo": "섣달그믐, 중국 설 전날 밤",
+      "originalExampleZh": "除夕全家在一起。",
+      "originalExampleKo": "가족들이 새해를 맞이하고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e5a980a16b82cfe260d43e27b9eff03f438b23043cd8a73f06ad509eda1b9841"
+    },
+    {
+      "id": "hsk5-2179",
+      "word": "处",
+      "originalMeaningKo": "개소",
+      "originalExampleZh": "在第一个信号灯处右转。",
+      "originalExampleKo": "첫 번째 반사광에서 오른쪽으로 돌립니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "233cb966c49205ee285640585337f285153f17d6061527cd32a3d5861d435b31"
+    },
+    {
+      "id": "hsk5-2180",
+      "word": "处理",
+      "originalMeaningKo": "끄다",
+      "originalExampleZh": "公司委托他处理这件事。",
+      "originalExampleKo": "경찰은 그에게 이렇게 말했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "abef5f47918141b8a81c66cd485abfd36bd2e9f5a06482511e947fb66ac92d32"
+    },
+    {
+      "id": "hsk5-2181",
+      "word": "处于",
+      "originalMeaningKo": "놓이다",
+      "originalExampleZh": "他处于困难时期。",
+      "originalExampleKo": "그는 위험한 상황에 처해 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6d3bfa16899e7fb4869fbbedc1bfd7b5e7618548d052be787ad702b5f6d9d9f5"
+    },
+    {
+      "id": "hsk5-2182",
+      "word": "处",
+      "originalMeaningKo": "개소",
+      "originalExampleZh": "在第一个信号灯处右转。",
+      "originalExampleKo": "첫 번째 반사광에서 오른쪽으로 돌립니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "04a9b62eb3cdd95ade357a9698a5e19efb11afe39502c6643da959993b718e99"
+    },
+    {
+      "id": "hsk5-2183",
+      "word": "传",
+      "originalMeaningKo": "돌리다",
+      "originalExampleZh": "这个消息传遍了全世界。",
+      "originalExampleKo": "이 제품은 정말 독특합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3313a3b4a1cc475ebfea5dd0af298d2513aed3baeaf9669c2a421733e5a96cbb"
+    },
+    {
+      "id": "hsk5-2184",
+      "word": "传播",
+      "originalMeaningKo": "옮기다",
+      "originalExampleZh": "文化在民间传播。",
+      "originalExampleKo": "문화 예술은 사람들을 즐겁게 합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "70ebf84d810c7d76bb5432e93c73fc81874ea3455fdaf552b8a7ac5cc3fb9645"
+    },
+    {
+      "id": "hsk5-2185",
+      "word": "传递",
+      "originalMeaningKo": "전달되다",
+      "originalExampleZh": "他把书传递给了同学。",
+      "originalExampleKo": "위치 정보",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "658bb0d0b23cb3e03f86a6324fb6cd00950121e54029ff869c8cb71828f485ec"
+    },
+    {
+      "id": "hsk5-2186",
+      "word": "传说",
+      "originalMeaningKo": "전설",
+      "originalExampleZh": "传说里有很多神。",
+      "originalExampleKo": "그들은 많은 장점을 가지고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "90dcc13728724a33171684328b87a109ed3c5dd4ba5c26a9cdc3158475818b49"
+    },
+    {
+      "id": "hsk5-2187",
+      "word": "传统",
+      "originalMeaningKo": "전통",
+      "originalExampleZh": "这是传统的手工艺。",
+      "originalExampleKo": "이것은 정말 놀라운 경험입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "cab9a3b04d32687d70b783ff8f5aff7f4730f103195f756fd166ddfb65c38d78"
+    },
+    {
+      "id": "hsk5-2188",
+      "word": "窗台",
+      "originalMeaningKo": "창턱",
+      "originalExampleZh": "窗台上放着一杯水。",
+      "originalExampleKo": "창문에 물이 가득 찼어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "38d62530a50d48eaa818f0fa6f870467d3f7eda235e4331bd74d05b89aec4cbd"
+    },
+    {
+      "id": "hsk5-2189",
+      "word": "床单",
+      "originalMeaningKo": "시트",
+      "originalExampleZh": "你可以给我一张床单吗？",
+      "originalExampleKo": "침대 시트 한 장 주실 수 있나요?",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "fd744319ef73d69a55c6bba492283aec1b812e5663dd83df59bf6d561d1be181"
+    },
+    {
+      "id": "hsk5-2190",
+      "word": "创新",
+      "originalMeaningKo": "실험",
+      "originalExampleZh": "我们要不断创新。",
+      "originalExampleKo": "우리는 계속 전진해야 합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "84dace01078bd5271b3f729a7841711dbccfa88396fcf5b0dde2e24f3cbda5ef"
+    },
+    {
+      "id": "hsk5-2191",
+      "word": "创业",
+      "originalMeaningKo": "창업하다",
+      "originalExampleZh": "他创业成功，成立了自己的公司。",
+      "originalExampleKo": "그는 비즈니스 미팅을 열고 자신의 목표를 달성했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "348237c8b37ee3d4905ec91d5cdd5b2d36cfd69ef02dac0f3f9436c438fcbd56"
+    },
+    {
+      "id": "hsk5-2192",
+      "word": "创造",
+      "originalMeaningKo": "세우다",
+      "originalExampleZh": "用双手创造美好生活。",
+      "originalExampleKo": "자신만의 스타일로 좋은 삶을 사세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8a71d2855d7453e68bb4d5f665f674b756ad8c482591b20a33cb9ced69a16afb"
+    },
+    {
+      "id": "hsk5-2193",
+      "word": "创作",
+      "originalMeaningKo": "조작",
+      "originalExampleZh": "作家正在创作新小说。",
+      "originalExampleKo": "그 회사는 새로운 회사를 설립하고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5ea24b605c3b8129563736cbe9e4a0e8d7acce549bd0ec21981bc467228d877d"
+    },
+    {
+      "id": "hsk5-2194",
+      "word": "词汇",
+      "originalMeaningKo": "어휘",
+      "originalExampleZh": "我的口语和词汇都需要提高。",
+      "originalExampleKo": "제 상사와 상사는 일이 필요해요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b5ae80d4cc7314992b5c142932b9d22db99e22b3008f99a071d3524b90f4b05b"
+    },
+    {
+      "id": "hsk5-2195",
+      "word": "辞职",
+      "originalMeaningKo": "사직하다",
+      "originalExampleZh": "他辞职去创立了自己的公司。",
+      "originalExampleKo": "그는 자신의 정체성을 찾기 위해 노력했다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "42e0b1cc0d1063cde4f06f8849eb58694ec50eea376ab5712a0732fd7bd4dc05"
+    },
+    {
+      "id": "hsk5-2196",
+      "word": "此后",
+      "originalMeaningKo": "차후",
+      "originalExampleZh": "此后我们再没见过。",
+      "originalExampleKo": "우리는 그 이후로 다시 만난 적이 없어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1eece7569e1717515f89663579e693835553441048a721972e26c2a09d5d2cb1"
+    },
+    {
+      "id": "hsk5-2197",
+      "word": "此前",
+      "originalMeaningKo": "이전에, 이에 앞서",
+      "originalExampleZh": "此前他没来过。",
+      "originalExampleKo": "그는 전에 오지 않았어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "35c90635cee39574cfe844f02161a8131717e4d1e4f462bfae6ff237fb79b1fd"
+    },
+    {
+      "id": "hsk5-2198",
+      "word": "此时",
+      "originalMeaningKo": "이때",
+      "originalExampleZh": "此时天已经黑了。",
+      "originalExampleKo": "이번에도 안 좋았어.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6332a16576a31ce0fc9e1cf295a53d1d629c900e747f9f9b9691b431a36820c7"
+    },
+    {
+      "id": "hsk5-2199",
+      "word": "刺激",
+      "originalMeaningKo": "자극",
+      "originalExampleZh": "这个消息刺激了他。",
+      "originalExampleKo": "그 친구가 그 애를 데려갔어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "379668271674e6097024aef88d2cc02941de4e4fe15e9f08e62239923f0841f1"
+    },
+    {
+      "id": "hsk5-2200",
+      "word": "从不",
+      "originalMeaningKo": "한 번도 ~하지 않다, 결코 ~않다",
+      "originalExampleZh": "他做事大胆，从不犹豫。",
+      "originalExampleKo": "그는 어떤 실수도 하지 않고, 후회도 하지 않았다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ace628c2869724d1705f30b7db4743447e42a8a5ec00781466b7efef770b558f"
+    },
+    {
+      "id": "hsk5-2201",
+      "word": "从而",
+      "originalMeaningKo": "그리하여, 따라서",
+      "originalExampleZh": "努力工作，从而获得成功。",
+      "originalExampleKo": "세심하고 세심한 관리가 필요합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "12abd636ce10131e2f8d523bc8b9b9cb5f7dc799cdb2e7c7abd7c1fc077ccd19"
+    },
+    {
+      "id": "hsk5-2202",
+      "word": "从前",
+      "originalMeaningKo": "과거",
+      "originalExampleZh": "如今的生活和从前大不同。",
+      "originalExampleKo": "예전의 생활습관과는 다른 생활습관입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d937855b03579284801791e801abe7f71d66cd6ed4b679a8186fa2b7bf0b4b69"
+    },
+    {
+      "id": "hsk5-2203",
+      "word": "从事",
+      "originalMeaningKo": "종사하다",
+      "originalExampleZh": "他从事文艺工作。",
+      "originalExampleKo": "그는 춤을 췄어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0cf1fa1459112f440ecfe4caaf9f0fd4d7135454ead982cb8b4ec02a4a00bde6"
+    },
+    {
+      "id": "hsk5-2204",
+      "word": "促进",
+      "originalMeaningKo": "선양하다",
+      "originalExampleZh": "运动促进健康。",
+      "originalExampleKo": "모든 것이 완벽하게 작동합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c4ddb18c6ae10ce49e43f2b6592ba6778dcbe34ddf20609b218efa417eac465b"
+    },
+    {
+      "id": "hsk5-2205",
+      "word": "促使",
+      "originalMeaningKo": "부추기다",
+      "originalExampleZh": "失败促使他思考。",
+      "originalExampleKo": "그들은 그를 생각하게 만들었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "10ab4ea8d1b63364bebfdb59e849d2393f99f223b5353285f43a76e6edaa984f"
+    },
+    {
+      "id": "hsk5-2206",
+      "word": "促销",
+      "originalMeaningKo": "판촉",
+      "originalExampleZh": "公司在搞促销，很多商品优惠。",
+      "originalExampleKo": "카메라는 카메라와 함께 작동합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b33c2f7d11c9829e3925d374f5f95c0857cc01d825b961a0d08fd29087218689"
+    },
+    {
+      "id": "hsk5-2207",
+      "word": "催",
+      "originalMeaningKo": "내몰다",
+      "originalExampleZh": "蟋蟀的叫声与蛙鸣催我入眠。",
+      "originalExampleKo": "부드러움과 부드러움의 조화는 나에게 활력을 불어 넣는다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "2402c8c57a35a6c030613a58ef49234063a4274be9e3715da093a785ae37f607"
+    },
+    {
+      "id": "hsk5-2208",
+      "word": "存放",
+      "originalMeaningKo": "예치하다",
+      "originalExampleZh": "接線盒可以用來存放攝影機的尾線。",
+      "originalExampleKo": "상자 안에 있는 상자는 그 상자의 앞면을 덮도록 되어 있습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "6d292ffdba651c4bed8d9f6fa92c1c8e6a95f70487e50ff4a2f6c91814441723"
+    },
+    {
+      "id": "hsk5-2209",
+      "word": "存款",
+      "originalMeaningKo": "적금",
+      "originalExampleZh": "他把存款取了出来。",
+      "originalExampleKo": "그는 그의 상사에게 말했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "972cca3701cdb01b737b67f95e50252172f7e3d798ad76868d78ec3bfcb26619"
+    },
+    {
+      "id": "hsk5-2210",
+      "word": "存在",
+      "originalMeaningKo": "존재하다",
+      "originalExampleZh": "公司的档案存在仓库里。",
+      "originalExampleKo": "고객의 요구는 시장에 있습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "4728c1889cdf2fdbd3af54fed6c3d1bc2a3de0918114e3dff856362c162c4f6d"
+    },
+    {
+      "id": "hsk5-2211",
+      "word": "措施",
+      "originalMeaningKo": "조처",
+      "originalExampleZh": "我们要采取新的措施。",
+      "originalExampleKo": "우리는 새로운 도전을 해야 합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8e19e30ef0ceb2d0a72dc7188de2aec1caabc9421fc04c221ce7e0b803aad5e2"
+    },
+    {
+      "id": "hsk5-2212",
+      "word": "达成",
+      "originalMeaningKo": "나다",
+      "originalExampleZh": "两家企业达成了协议。",
+      "originalExampleKo": "두 팀은 계약을 체결했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "07c21ef3bc0e2adbc3846af36d257de14ee50394c434030e545e4b38b82fe8fc"
+    },
+    {
+      "id": "hsk5-2213",
+      "word": "打扮",
+      "originalMeaningKo": "가꾸다",
+      "originalExampleZh": "她打扮得很漂亮。",
+      "originalExampleKo": "그녀는 갑자기 일어섰다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d2a0734bc2e44a2cc95e82b346608fb50e9b9a520fc0e60a2e2f648d6ac33d09"
+    },
+    {
+      "id": "hsk5-2214",
+      "word": "打包",
+      "originalMeaningKo": "싸다",
+      "originalExampleZh": "请把行李打包。",
+      "originalExampleKo": "케이크를 주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "741286542c90a085aab4468358ecb8e471129f8d29d69347b18d22bcb65a6310"
+    },
+    {
+      "id": "hsk5-2215",
+      "word": "打断",
+      "originalMeaningKo": "끊다",
+      "originalExampleZh": "他打断了我的话。",
+      "originalExampleKo": "그는 나에게 말했다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "340283017964682a78e79c406d7a6aa74eaa48071d113bd596c9dd3f86da56f5"
+    },
+    {
+      "id": "hsk5-2216",
+      "word": "打破",
+      "originalMeaningKo": "깨다",
+      "originalExampleZh": "他打破了全国纪录。",
+      "originalExampleKo": "그는 녹음 녹음을 끝냈어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4fe4d8eb85cc2ce42df906fa683c41df7dcbfc10632cabebad4e20a4a24cb226"
+    },
+    {
+      "id": "hsk5-2217",
+      "word": "打听",
+      "originalMeaningKo": "물어보다",
+      "originalExampleZh": "我去打听一下消息。",
+      "originalExampleKo": "나는 내일 저녁을 먹으러 갈게.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "83465a5c6510850b63c082954e5c1af5f0939347b2400f5dddb0e1aec17eadd0"
+    },
+    {
+      "id": "hsk5-2218",
+      "word": "大胆",
+      "originalMeaningKo": "당돌하다",
+      "originalExampleZh": "他有一个大胆的设想。",
+      "originalExampleKo": "그는 특별한 능력을 가지고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0fa77f19142e7c7686cfe71dbd6e785ec0d03f02f4ff8926f5e6f9c22d23e280"
+    },
+    {
+      "id": "hsk5-2219",
+      "word": "大多",
+      "originalMeaningKo": "대부분",
+      "originalExampleZh": "他们大多是学生。",
+      "originalExampleKo": "그 중 몇 개는 신선합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "afe949f7aa740ea0d1454041ddb7648d83e23cbb42d5db58326eb14269ac7b8e"
+    },
+    {
+      "id": "hsk5-2220",
+      "word": "大会",
+      "originalMeaningKo": "대회",
+      "originalExampleZh": "总统和总理出席了大会。",
+      "originalExampleKo": "주방과 주방은 주방을 청소합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "aff98234188d8335f0b94b114f8d7d8cb4f3b2290aa5c7671acb95ed8c7e3787"
+    },
+    {
+      "id": "hsk5-2221",
+      "word": "大力",
+      "originalMeaningKo": "대대적",
+      "originalExampleZh": "政府大力支持环保。",
+      "originalExampleKo": "이 발명품은 반투명한 백라이트를 제공합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "32d8bc84547f82c22d667c3a0d3f82e02854ec11569e428eb1268018f6bb2caf"
+    },
+    {
+      "id": "hsk5-2222",
+      "word": "大妈",
+      "originalMeaningKo": "마누라",
+      "originalExampleZh": "大爷和大妈在操场上散步。",
+      "originalExampleKo": "오래된 건물은 건물 바닥에 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "9dfd84c570365b81536b0b1001754272568b462f2dab1478a4df62d62f21a828"
+    },
+    {
+      "id": "hsk5-2223",
+      "word": "大米",
+      "originalMeaningKo": "쌀",
+      "originalExampleZh": "大米和小麦都是粮食。",
+      "originalExampleKo": "야채와 야채는 두 가지 재료입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f0a181eca38f5d575c1059cae068d2c2e23e3faa3683d295563f0341cc27bcbf"
+    },
+    {
+      "id": "hsk5-2224",
+      "word": "大脑",
+      "originalMeaningKo": "대뇌",
+      "originalExampleZh": "大脑需要休息。",
+      "originalExampleKo": "이 제품은 정말 독특합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "144989df5d2a3c0f44f006c601144ec926fe6e95639a05498f65bb93ac0d76ed"
+    },
+    {
+      "id": "hsk5-2225",
+      "word": "大批",
+      "originalMeaningKo": "대거",
+      "originalExampleZh": "大批游客来了。",
+      "originalExampleKo": "다양한 종류의 음식이 왔어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b872a48e9ece9a44af4f82484bf98b8deeb58c39bb61f29bf7da9565feaf96f4"
+    },
+    {
+      "id": "hsk5-2226",
+      "word": "大厦",
+      "originalMeaningKo": "빌딩",
+      "originalExampleZh": "摩天大厦里的电梯是至关重要的。",
+      "originalExampleKo": "시골에 있는 식당은 정말 맛있어요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "72b90139edf8125e2a2e18355a29759b5df8b9180e302cd964d2421c4ba57209"
+    },
+    {
+      "id": "hsk5-2227",
+      "word": "大事",
+      "originalMeaningKo": "큰일",
+      "originalExampleZh": "这是一件大事。",
+      "originalExampleKo": "이것은 큰 실수입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e499a9b240dd674cd2c0c904eca4740b9f5f314a37cce36350d71f5b3db63766"
+    },
+    {
+      "id": "hsk5-2228",
+      "word": "大象",
+      "originalMeaningKo": "코끼리",
+      "originalExampleZh": "大象、老虎、熊都是动物。",
+      "originalExampleKo": "감자, 감자, 감자가 들어 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "31b79d0a6f6e9baa9492e0447811425700a630cb7e9044f724c42807cd02a139"
+    },
+    {
+      "id": "hsk5-2229",
+      "word": "大型",
+      "originalMeaningKo": "대형",
+      "originalExampleZh": "小区里有大型活动。",
+      "originalExampleKo": "시장에서 큰 행사가 있었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9c4041716d2d53c70858e21702b74e1c5c1144740953344c6718e5d21a5eb0f6"
+    },
+    {
+      "id": "hsk5-2230",
+      "word": "大爷",
+      "originalMeaningKo": "큰아버지",
+      "originalExampleZh": "大爷和大妈在操场上散步。",
+      "originalExampleKo": "오래된 건물은 건물 바닥에 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "9bfa1c0766da0d2a48cbd9021ec4c47d188848d2bbed7f6ac5aafc2f99afb2c5"
+    },
+    {
+      "id": "hsk5-2231",
+      "word": "大于",
+      "originalMeaningKo": "~보다 크다",
+      "originalExampleZh": "十大于五。",
+      "originalExampleKo": "보험은 보험보다 저렴합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a68bfcbec9d44413e54324b6d5555b15249e476e5dedc3f5dd30e0c13a236d9c"
+    },
+    {
+      "id": "hsk5-2232",
+      "word": "大众",
+      "originalMeaningKo": "대중",
+      "originalExampleZh": "这是大众喜爱的节目。",
+      "originalExampleKo": "A는 가장 가까운 지점을 보여줍니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6923ff185a4a41148c0a823a2d9969c01a7a86b92d547b01ef6065997ea2de6b"
+    },
+    {
+      "id": "hsk5-2233",
+      "word": "代",
+      "originalMeaningKo": "대",
+      "originalExampleZh": "我代他向你问好。",
+      "originalExampleKo": "나는 그의 사진에서 당신을 보았습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9e207d01f386265b1eb77a79b26ddaf5b892d02f93071e38d77409a9519aa49c"
+    },
+    {
+      "id": "hsk5-2234",
+      "word": "代表",
+      "originalMeaningKo": "대표",
+      "originalExampleZh": "公司派出了代表。",
+      "originalExampleKo": "카메라가 카메라를 니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "90cba37fff5f2cec56cdb43d4bc92aed0bf26b3807feffed54a2c3a40ad53f89"
+    },
+    {
+      "id": "hsk5-2235",
+      "word": "带动",
+      "originalMeaningKo": "이끌다",
+      "originalExampleZh": "他带动大家一起跑步。",
+      "originalExampleKo": "그는 이미 많은 돈을 벌었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "580aef2b991b641698a568e387503003d0f812a1a63e5a1ce16672958c86a64d"
+    },
+    {
+      "id": "hsk5-2236",
+      "word": "代替",
+      "originalMeaningKo": "대신하다",
+      "originalExampleZh": "机器人可以代替人力。",
+      "originalExampleKo": "동물도 사람의 눈을 즐겁게 할 수 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a3cc6bdb69eb17075e4c0eb54209d3de49f3efeb500861245a72e8e152eb9013"
+    },
+    {
+      "id": "hsk5-2237",
+      "word": "待遇",
+      "originalMeaningKo": "대우",
+      "originalExampleZh": "公司的待遇不错。",
+      "originalExampleKo": "사장님의 요리는 맛있어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c9e1c2c37e118fec54c0d09dc129ee31297773ecf82c67e12d2084f80665904b"
+    },
+    {
+      "id": "hsk5-2238",
+      "word": "单",
+      "originalMeaningKo": "싱글",
+      "originalExampleZh": "不能单看价格。",
+      "originalExampleKo": "너무 서두르지 마세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "65ba4c78dead161bd67256223b1fea83ab74fd95c0b8164660be34251ab9ff2c"
+    },
+    {
+      "id": "hsk5-2239",
+      "word": "单独",
+      "originalMeaningKo": "따로",
+      "originalExampleZh": "我想单独谈谈。",
+      "originalExampleKo": "저는 오늘 저녁 식사하고 싶어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "67ce806f73ceb1c7f122174397c6de9b5b01c7406b5ece5fdde418ea324e493d"
+    },
+    {
+      "id": "hsk5-2240",
+      "word": "担任",
+      "originalMeaningKo": "지니다",
+      "originalExampleZh": "他担任集团的顾问。",
+      "originalExampleKo": "그는 그룹의 리더로 일했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c5af666d5c7ba85019cc4ac0f19a6360fa6952986159c898308e3ba9c105c82f"
+    },
+    {
+      "id": "hsk5-2241",
+      "word": "单一",
+      "originalMeaningKo": "단순하다",
+      "originalExampleZh": "这个方法太单一。",
+      "originalExampleKo": "이 방법은 매우 유연합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "cbc1ec6f550b647e1d37334d0740f62c944bc85efdb99e723c5830aafdb2c2a4"
+    },
+    {
+      "id": "hsk5-2242",
+      "word": "单元",
+      "originalMeaningKo": "단원",
+      "originalExampleZh": "我住三号楼二单元。",
+      "originalExampleKo": "저는 2층 건물 28층에 살고 있습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "9eca081eceae590f1408d1a2b20520ceebb0e0b5883d9ebe0aaf9f1b40d14b5d"
+    },
+    {
+      "id": "hsk5-2243",
+      "word": "胆小",
+      "originalMeaningKo": "간(이) 작다",
+      "originalExampleZh": "他有点儿胆小。",
+      "originalExampleKo": "그는 정말 잘난 척하는 사람이에요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "724e0fef9aa61cdcd21839d14f3f9a2c1eff43ab88a014221e41224f1137f217"
+    },
+    {
+      "id": "hsk5-2244",
+      "word": "淡",
+      "originalMeaningKo": "옅다",
+      "originalExampleZh": "这个茶味道很淡。",
+      "originalExampleKo": "이 차가 맛있어.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "9bdbdf38624c93e36814dc0a8781671b9b6fa7312efd93323021b2be4f1efa95"
+    },
+    {
+      "id": "hsk5-2245",
+      "word": "当地",
+      "originalMeaningKo": "본토",
+      "originalExampleZh": "我们去考察当地的风俗。",
+      "originalExampleKo": "저희는 배송 일정을 조정했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6898cbeabbef6e7dacfbc1f6021cba6d574b074b98baff10336beec8b70af21c"
+    },
+    {
+      "id": "hsk5-2246",
+      "word": "当年",
+      "originalMeaningKo": "당년",
+      "originalExampleZh": "当年他还很小。",
+      "originalExampleKo": "그때 그는 젊었다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "56d7d6af4ec68a53c714d001024a397882c76a2b167bb64a7ba6af1bc509a58d"
+    },
+    {
+      "id": "hsk5-2247",
+      "word": "当前",
+      "originalMeaningKo": "지금",
+      "originalExampleZh": "当前的形势很好。",
+      "originalExampleKo": "현재 상태는 양호합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5d0237108ca1cf444cb4235ea36ebe038758e1d80ef3016381c8004e43e9f0be"
+    },
+    {
+      "id": "hsk5-2248",
+      "word": "当中",
+      "originalMeaningKo": "중",
+      "originalExampleZh": "人群当中有一位老人。",
+      "originalExampleKo": "그 가게는 나이가 많은 남자입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "392b93c50f75abbbdff7aebf13dfe87e6180d1ae2d1cfe77394e610d64ad2f60"
+    },
+    {
+      "id": "hsk5-2249",
+      "word": "挡",
+      "originalMeaningKo": "가로막다",
+      "originalExampleZh": "他用手挡住阳光。",
+      "originalExampleKo": "그는 손으로 공을 밟았다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "733daf68cb2e129a91f680500b3180dae4d0ce9ede0a483c9fe81fa3160a22d0"
+    },
+    {
+      "id": "hsk5-2250",
+      "word": "当",
+      "originalMeaningKo": "지내다",
+      "originalExampleZh": "他当过兵。",
+      "originalExampleKo": "그는 변호사로 일했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "fcb08e106c433437d4a9977f1291b075be15c144d6e24ff961e695d69b52d934"
+    },
+    {
+      "id": "hsk5-2251",
+      "word": "当成",
+      "originalMeaningKo": "바라보다",
+      "originalExampleZh": "他把宠物当成家人。",
+      "originalExampleKo": "그는 그의 가족을 가족으로 지었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "25d49b6ad99978d2b4ee991842c232630b9eaf9c79b53a5b8cb975945281b6c9"
+    },
+    {
+      "id": "hsk5-2252",
+      "word": "当作",
+      "originalMeaningKo": "듣다",
+      "originalExampleZh": "他把玩笑当作真的了。",
+      "originalExampleKo": "그는 한 달도 채 안 되는 기간 동안 술을 마셨습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0d06572566654fc4231440a5aaff46168615817a17952560b0693fab4108d15a"
+    },
+    {
+      "id": "hsk5-2253",
+      "word": "倒",
+      "originalMeaningKo": "쏟다",
+      "originalExampleZh": "倒是他先来了。",
+      "originalExampleKo": "처음 온 사람이에요, 선생님.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "710428d22054d4e731d5d07d157b7b23757adeb17d387b4fffc2eb30f39334af"
+    },
+    {
+      "id": "hsk5-2254",
+      "word": "导演",
+      "originalMeaningKo": "연출가",
+      "originalExampleZh": "导演和演员们都在舞台上。",
+      "originalExampleKo": "가격과 가격은 모두 할인되어 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9b9880c36b393e874d489deabc1dc323c1e32480e980cf25579b955b6fe03b70"
+    },
+    {
+      "id": "hsk5-2255",
+      "word": "导致",
+      "originalMeaningKo": "부르다",
+      "originalExampleZh": "大雨导致堵车。",
+      "originalExampleKo": "여러 가지 색상으로 제공됩니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d3efb1d591c77f5ad4f2fa4bf3d5f71b71ffcf6bdde82915e41b3b0d3922bd00"
+    },
+    {
+      "id": "hsk5-2256",
+      "word": "到达",
+      "originalMeaningKo": "도착하다",
+      "originalExampleZh": "他们先后到达。",
+      "originalExampleKo": "한 번 더 시도해 보세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "609cc3c768ab8d75552155ee111e07bbfc060a43ca8ec911cceda275a55e9cb1"
+    },
+    {
+      "id": "hsk5-2257",
+      "word": "道理",
+      "originalMeaningKo": "도",
+      "originalExampleZh": "这个道理不易懂。",
+      "originalExampleKo": "이 음식은 먹기에 적합하지 않습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c9a47b879f3699cc6193e5d7d6bdd935b1fd253e54943edbe7ec60354fa757ee"
+    },
+    {
+      "id": "hsk5-2258",
+      "word": "到期",
+      "originalMeaningKo": "만료되다",
+      "originalExampleZh": "合同到期了。",
+      "originalExampleKo": "그 광고는 정말 재미있었어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8c57164f459fa89ef7f3ca8c1e82093708224a95b7febe7a5fe9edb69ea8f7fe"
+    },
+    {
+      "id": "hsk5-2259",
+      "word": "登",
+      "originalMeaningKo": "타다",
+      "originalExampleZh": "他登上了高山。",
+      "originalExampleKo": "그는 높은 점수를 받았다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3cca30393ad996cdc4b7f92b275e4c79e8451d4540a93b47b48054b1f5587702"
+    },
+    {
+      "id": "hsk5-2260",
+      "word": "灯光",
+      "originalMeaningKo": "불빛",
+      "originalExampleZh": "舞台的灯光很美。",
+      "originalExampleKo": "가장 큰 장점은 바로 가격입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0949dc4ad8f83e3756accfe72c263946942badae13b682d9b88c27890f543000"
+    },
+    {
+      "id": "hsk5-2261",
+      "word": "登记",
+      "originalMeaningKo": "등기하다",
+      "originalExampleZh": "请先登记姓名。",
+      "originalExampleKo": "먼저 이름을 적어주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "bf0684eab4b57c03b92c304b522df93f52ee5023993680d1a9a23b9e1a7e344e"
+    },
+    {
+      "id": "hsk5-2262",
+      "word": "登录",
+      "originalMeaningKo": "로그인",
+      "originalExampleZh": "输入密码才能登录网络。",
+      "originalExampleKo": "배를 안으로 넣으세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "43228841a398935a7ec4f438f23457ccb4a44d0ca42742c88ffe76c5c5a9b3b8"
+    },
+    {
+      "id": "hsk5-2263",
+      "word": "等待",
+      "originalMeaningKo": "참다",
+      "originalExampleZh": "病人的家属在外面等待。",
+      "originalExampleKo": "그 할머니의 가족은 정말 대단해요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2cb73ea97264c366e411943868eb947cc4f37cf81a961a877121642446c470f6"
+    },
+    {
+      "id": "hsk5-2264",
+      "word": "等候",
+      "originalMeaningKo": "대기하다",
+      "originalExampleZh": "他在门口等候。",
+      "originalExampleKo": "그는 무대에서 춤을 춰요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "da291f97178ec57d4f05a769fd77f5ba87af597be17c3e87e1e44412f13f4b04"
+    },
+    {
+      "id": "hsk5-2265",
+      "word": "等于",
+      "originalMeaningKo": "격",
+      "originalExampleZh": "一吨等于一千公斤。",
+      "originalExampleKo": "한 가지 단점이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "95dc378ef5ff17d1af368e8b613dbd79ecdfc9775767a27239dcc2a38f28dfbe"
+    },
+    {
+      "id": "hsk5-2266",
+      "word": "低头",
+      "originalMeaningKo": "고개를 숙이다",
+      "originalExampleZh": "他低头认了错。",
+      "originalExampleKo": "그는 머리를 맞대고 머리를 맞댄다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c57a073f1967ca3672c310d591d8a3a68ec00a73378aa2268a1f86a5d5667ca6"
+    },
+    {
+      "id": "hsk5-2267",
+      "word": "的确",
+      "originalMeaningKo": "참",
+      "originalExampleZh": "名牌儿的质量的确好。",
+      "originalExampleKo": "핫도그 맛이 정말 좋습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "506d9c116ee71230c4bbb4741fade2da5427e507f481069d31cdf2471bf3e31a"
+    },
+    {
+      "id": "hsk5-2268",
+      "word": "敌人",
+      "originalMeaningKo": "적",
+      "originalExampleZh": "打败了敌人。",
+      "originalExampleKo": "배송이 지연되었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "391f9ce10eceaca9edc6b6d2ee98a54e2da651ba4c0678fcf2babd19cba03135"
+    },
+    {
+      "id": "hsk5-2269",
+      "word": "递",
+      "originalMeaningKo": "건네다",
+      "originalExampleZh": "请帮我递下盐。",
+      "originalExampleKo": "저에게 이메일을 보내주세요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "bd2eb51e134092da160297f4994e038ca65774d69f2fb53c0e2972d5dfa47215"
+    },
+    {
+      "id": "hsk5-2270",
+      "word": "地理",
+      "originalMeaningKo": "지리",
+      "originalExampleZh": "我喜欢地理学和历史。",
+      "originalExampleKo": "저는 우유와 우유를 좋아합니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "ce4986e0d8cebda9d8ea6bcd850604ced41753917be729293a91e795c5768b7a"
+    },
+    {
+      "id": "hsk5-2271",
+      "word": "地面",
+      "originalMeaningKo": "땅바닥",
+      "originalExampleZh": "冰雪化了，地面很湿。",
+      "originalExampleKo": "쌀과 돼지고기를 섞어서 먹으면 맛이 좋아집니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d38d4ba528071122003d6d263a774fc1003eda961519f617c85eb5907deecffb"
+    },
+    {
+      "id": "hsk5-2272",
+      "word": "地区",
+      "originalMeaningKo": "지방",
+      "originalExampleZh": "这个地区很贫困。",
+      "originalExampleKo": "이 옷은 정말 예쁘네요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "57b0bacc01a74c257b46db28e641707844ce02db0d66ed9fa1fee6eb51247dbf"
+    },
+    {
+      "id": "hsk5-2273",
+      "word": "地位",
+      "originalMeaningKo": "지위",
+      "originalExampleZh": "他的地位很高。",
+      "originalExampleKo": "그의 명성은 높습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "682a97b986083fad97b0958ec614c51d11114c7124db5d6f7768cfef615d30b9"
+    },
+    {
+      "id": "hsk5-2274",
+      "word": "地下",
+      "originalMeaningKo": "지하",
+      "originalExampleZh": "地下有停车场。",
+      "originalExampleKo": "오늘 저녁은요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e2d776bd47796adcb3bc08f2e117a50b2a78e249959d13e8d4ee64dd8dc1f5ed"
+    },
+    {
+      "id": "hsk5-2275",
+      "word": "地震",
+      "originalMeaningKo": "지진",
+      "originalExampleZh": "地震是一种灾。",
+      "originalExampleKo": "안무가는 일종의 춤입니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "c2c2a7ef5da999261c5b5227b51e9b9de0bc1d050704f1b36656d228463a1ab5"
+    },
+    {
+      "id": "hsk5-2276",
+      "word": "点心",
+      "originalMeaningKo": "참",
+      "originalExampleZh": "月饼是中国点心的一种。",
+      "originalExampleKo": "가장 큰 문제는 중국 정부의 정책이다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "efdab0f33c31af0d78e39f597513d561e8da35c8b9b2aa54831ce734f9c16e0e"
+    },
+    {
+      "id": "hsk5-2277",
+      "word": "点赞",
+      "originalMeaningKo": "좋아요를 누르다, 추천하다",
+      "originalExampleZh": "我今天学会了“点赞”的用法。",
+      "originalExampleKo": "나는 오늘 “点赞”(좋아요를 누르다, 추천하다)의 쓰임을 배웠다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "64f95a64a26ef580d66c4e4e3fa9ec06f36188b16b9d34107e39aae9d8d2e57b"
+    },
+    {
+      "id": "hsk5-2278",
+      "word": "电池",
+      "originalMeaningKo": "약",
+      "originalExampleZh": "旧电池要回收。",
+      "originalExampleKo": "세리머니는 필수입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c78deb245d9d450446bcd1cba57911837ad4fc36d43e76d44272d8d549513c2a"
+    },
+    {
+      "id": "hsk5-2279",
+      "word": "电动",
+      "originalMeaningKo": "전동",
+      "originalExampleZh": "他骑电动车。",
+      "originalExampleKo": "그는 특별한 경험을 했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2f32afad519cc198fb2e79a550523de5a2ca72a993ac0ab0b5cf5a08e3926100"
+    },
+    {
+      "id": "hsk5-2280",
+      "word": "电器",
+      "originalMeaningKo": "전기 기기, 가전제품",
+      "originalExampleZh": "商店卖电器。",
+      "originalExampleKo": "이 제품은 정말 독특합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8bb205d1aa0a53317f4e8d9907d2807003fe10c1002debeea1a4ec22a75d9e11"
+    },
+    {
+      "id": "hsk5-2281",
+      "word": "电商",
+      "originalMeaningKo": "전자상거래, 이커머스",
+      "originalExampleZh": "我今天学会了“电商”的用法。",
+      "originalExampleKo": "나는 오늘 “电商”(전자상거래, 이커머스)의 쓰임을 배웠다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "a3bb68e731ff2e3cec8d113a8f296131d3ced978ff813dee225a521c410b46e6"
+    },
+    {
+      "id": "hsk5-2282",
+      "word": "电视台",
+      "originalMeaningKo": "방송국",
+      "originalExampleZh": "电视台晚上播出新闻。",
+      "originalExampleKo": "TV 화면이 화면에 표시됩니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1e66f88eeb6f25f8e671270a79b837145a757f1201ec9c109d42b71d549de6cd"
+    },
+    {
+      "id": "hsk5-2283",
+      "word": "电子版",
+      "originalMeaningKo": "전자판, 디지털 버전",
+      "originalExampleZh": "这本书有电子版。",
+      "originalExampleKo": "이 책에는 이메일이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "61200f746e4fa02c00a1f0b69089a572070a801f357dd5a62b0ae84637a33a75"
+    },
+    {
+      "id": "hsk5-2284",
+      "word": "调",
+      "originalMeaningKo": "맞추다",
+      "originalExampleZh": "把温度稍微调高一点儿。",
+      "originalExampleKo": "이불을 열어주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8aef01965a0aa39db290cd4449b3d16f296a5e504fb46a96989ed22e4f3a9536"
+    },
+    {
+      "id": "hsk5-2285",
+      "word": "调研",
+      "originalMeaningKo": "조사·연구하다",
+      "originalExampleZh": "他做了很多调研。",
+      "originalExampleKo": "그는 정말 잘했어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "47339dac8fd843f16c82b59a91d3727b79f77960d03725fbe786512738ffbaf8"
+    },
+    {
+      "id": "hsk5-2286",
+      "word": "定期",
+      "originalMeaningKo": "정기",
+      "originalExampleZh": "车要定期保养。",
+      "originalExampleKo": "모든 것에는 주의가 필요합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f7e4f86ce192080ce4903f8b6806a422b9496160c1ad8d76231775a3a3e6e910"
+    },
+    {
+      "id": "hsk5-2287",
+      "word": "丢失",
+      "originalMeaningKo": "잃다",
+      "originalExampleZh": "我会找到你丢失的戒指。",
+      "originalExampleKo": "오늘 보내주신 메일은 제가 찾아 드릴게요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "116e36acd2ba33e1f3ace2f5fa40243fbea3e382604874deaf585998ff7ab080"
+    },
+    {
+      "id": "hsk5-2288",
+      "word": "冻",
+      "originalMeaningKo": "얼다",
+      "originalExampleZh": "天冷，水冻住了。",
+      "originalExampleKo": "맛있어요, 수증기.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "caf21194023e24bcd8d05dd956a4c16f0110aff4c6e93f36e2cad8545d85dd03"
+    },
+    {
+      "id": "hsk5-2289",
+      "word": "洞",
+      "originalMeaningKo": "동",
+      "originalExampleZh": "墙上有一个洞。",
+      "originalExampleKo": "식당에 식당이 있어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "37d926578aa0abf68f6b0caa3c9b887002434fb20c12c67fc98139cda71fa939"
+    },
+    {
+      "id": "hsk5-2290",
+      "word": "动画",
+      "originalMeaningKo": "애니",
+      "originalExampleZh": "孩子爱看动画。",
+      "originalExampleKo": "사랑채는 사랑채입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "404d16da290f68fe30482255dbc15efffcc46302386de37ed7642ecefcf07164"
+    },
+    {
+      "id": "hsk5-2291",
+      "word": "动人",
+      "originalMeaningKo": "감동적이다, 마음을 움직이다",
+      "originalExampleZh": "那个情景很动人。",
+      "originalExampleKo": "그 장면이 인상적이었어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5fc755de322d5f501d3bdc42464f6fd6bfed98b1390bdf5f7ee1934bdfc1861e"
+    },
+    {
+      "id": "hsk5-2292",
+      "word": "动手",
+      "originalMeaningKo": "손대다",
+      "originalExampleZh": "别动手打架。",
+      "originalExampleKo": "시작은 하지 마세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "72c72c4a912fc8af8ee07280da7115355130afbc7d62c02a5828fc708bfc9779"
+    },
+    {
+      "id": "hsk5-2293",
+      "word": "豆腐",
+      "originalMeaningKo": "두부",
+      "originalExampleZh": "豆腐是豆制品。",
+      "originalExampleKo": "Tosum은 정말 멋진 제품입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a4fa01c1e27acba9cb09e0d29f9db609697d89d543c01e0b70e2ee08f50fd9ce"
+    },
+    {
+      "id": "hsk5-2294",
+      "word": "豆浆",
+      "originalMeaningKo": "두유",
+      "originalExampleZh": "加一些天然酸奶和豆浆。",
+      "originalExampleKo": "몇 가지 자연적인 요구르트와 콩 베리를 추가하십시오.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "b632ac2560e012398a2ec0207dff53d21ef08272f3486b283c4cf6bf2ec949ea"
+    },
+    {
+      "id": "hsk5-2295",
+      "word": "独立",
+      "originalMeaningKo": "독립되다",
+      "originalExampleZh": "他喜欢独立生活。",
+      "originalExampleKo": "그는 정말 맛있는 음식을 좋아해요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7e2db04437527da144958e897797546bfef73b6d3a5c2ce69178294ecbb22981"
+    },
+    {
+      "id": "hsk5-2296",
+      "word": "独特",
+      "originalMeaningKo": "독특하다",
+      "originalExampleZh": "衣服上的图案很独特。",
+      "originalExampleKo": "벽에 걸린 종이가 찢어져 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5acd2ed61103ab46b1604cb10cbc4fa54853361b4c7fa95f71ac23da6aa3f139"
+    },
+    {
+      "id": "hsk5-2297",
+      "word": "读音",
+      "originalMeaningKo": "발음, 읽는 소리",
+      "originalExampleZh": "他的读音很准确。",
+      "originalExampleKo": "그의 주장은 설득력이 없다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "099705e509a7316168ae75014855077580a0540cd098e4f9fbffa54200223ac8"
+    },
+    {
+      "id": "hsk5-2298",
+      "word": "独自",
+      "originalMeaningKo": "홀로",
+      "originalExampleZh": "他独自去了外地。",
+      "originalExampleKo": "그는 너무 일찍 떠났어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0439af3963910c914c64241c58b6daea0e7a5ef07ec52d6246e89192ca883609"
+    },
+    {
+      "id": "hsk5-2299",
+      "word": "堵",
+      "originalMeaningKo": "가로막다",
+      "originalExampleZh": "门被堵住了。",
+      "originalExampleKo": "가격은 저렴합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b10656c9bfc2065fc226d3a4db33f1715b2043abc3b946e19a1e62b707215c68"
+    },
+    {
+      "id": "hsk5-2300",
+      "word": "度",
+      "originalMeaningKo": "도",
+      "originalExampleZh": "今天温度是零下三度。",
+      "originalExampleKo": "오늘은 3일 남았어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "47b35b6158ab2c72b9ee17a0351b406bddff93e8d6ff0aef9e32e0b0f528baf7"
+    },
+    {
+      "id": "hsk5-2301",
+      "word": "短处",
+      "originalMeaningKo": "흉",
+      "originalExampleZh": "人人都有长处和短处。",
+      "originalExampleKo": "고객들은 빠르고 쉽게 거래를 할 수 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1ce7c0e62e07793882d482d648a04b231aebafd039eea6db1f0cf02e7b8d67e3"
+    },
+    {
+      "id": "hsk5-2302",
+      "word": "短期",
+      "originalMeaningKo": "단기",
+      "originalExampleZh": "短期内很难完成。",
+      "originalExampleKo": "더 높은 온도에서 작동하도록 설계되었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b476b6c15ee80e8dc6459338c0bfad0fc222f1529511358963cb5389d7270eeb"
+    },
+    {
+      "id": "hsk5-2303",
+      "word": "断",
+      "originalMeaningKo": "떼다",
+      "originalExampleZh": "别使劲拉，会断的。",
+      "originalExampleKo": "힘겹게 하지마, 괜찮아질 거야.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ad66dc57afcbc90626be47b2c58e28eafed1b994cbbba805083d00045bd9000a"
+    },
+    {
+      "id": "hsk5-2304",
+      "word": "堆",
+      "originalMeaningKo": "무더기",
+      "originalExampleZh": "地上有一堆沙子。",
+      "originalExampleKo": "여러 가지 이유가 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d7451558cc908f0363f0d98d5481cd96f9bed6aa44898e1a56506f41d0bcfe32"
+    },
+    {
+      "id": "hsk5-2305",
+      "word": "对比",
+      "originalMeaningKo": "대비",
+      "originalExampleZh": "对比一下两个方案。",
+      "originalExampleKo": "두 가지 제안을 들어보세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "251f9f9ceed90c82fe3859315eada6945fd926d2dd213aa3d61d5900e3f70067"
+    },
+    {
+      "id": "hsk5-2306",
+      "word": "对待",
+      "originalMeaningKo": "임하다",
+      "originalExampleZh": "要认真对待工作。",
+      "originalExampleKo": "열심히 일하세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e7233ae130d29fd7b63aa20429eae4fbc577d3f00fedd793ebeed7645910acfa"
+    },
+    {
+      "id": "hsk5-2307",
+      "word": "对手",
+      "originalMeaningKo": "적",
+      "originalExampleZh": "他超越了对手。",
+      "originalExampleKo": "그는 그의 상사에게 말했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a95e223e3fc75e84f21b28c123b77e48021469d0f5ebe16b421e3e33dd2b7e41"
+    },
+    {
+      "id": "hsk5-2308",
+      "word": "队伍",
+      "originalMeaningKo": "대오",
+      "originalExampleZh": "队伍出行前要检查。",
+      "originalExampleKo": "비가 내리기 전에.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "54e448f53a2f1785ae82ad7373daff606eca42b9ce8f73c16681cfb4e4f99bea"
+    },
+    {
+      "id": "hsk5-2309",
+      "word": "对象",
+      "originalMeaningKo": "자리",
+      "originalExampleZh": "她还没有结婚的对象。",
+      "originalExampleKo": "그녀는 오늘 저녁 식사를 하지 않았습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "dae277a1db7727be24297bdaa1b00d7c0b7de5d41dc68dc071f93b3aaa9df3f5"
+    },
+    {
+      "id": "hsk5-2310",
+      "word": "吨",
+      "originalMeaningKo": "톤",
+      "originalExampleZh": "一吨等于一千公斤。",
+      "originalExampleKo": "한 가지 단점이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1c5b685b55334ae70fe2471c0b1c6a72f72b7f3cf473b281c091d1c9b7623e1b"
+    },
+    {
+      "id": "hsk5-2311",
+      "word": "朵",
+      "originalMeaningKo": "송이",
+      "originalExampleZh": "他摘了一朵花。",
+      "originalExampleKo": "그는 술을 마셨어.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d4086f47a3779c90ae9afce3f5f199cb000718d0b315d4f588cb2ba0233f427d"
+    },
+    {
+      "id": "hsk5-2312",
+      "word": "躲",
+      "originalMeaningKo": "피하다",
+      "originalExampleZh": "他躲在门后。",
+      "originalExampleKo": "그는 그 말을 지켰습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "464e332ba748da0b8087a4aaa93481eed6377f69a3df45c8d3f2f3659bcf0bb2"
+    },
+    {
+      "id": "hsk5-2313",
+      "word": "儿女",
+      "originalMeaningKo": "아들딸",
+      "originalExampleZh": "他给儿女们买了新背包。",
+      "originalExampleKo": "그는 그의 생일을 위해 새로운 생일을 준비했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "cd913f03c7bb247c88c48dcaced0a0f2cac9717a55372a1597d5b9b9c6560851"
+    },
+    {
+      "id": "hsk5-2314",
+      "word": "二手",
+      "originalMeaningKo": "중고의, 두 번째 손의",
+      "originalExampleZh": "二手车比新车便宜得多。",
+      "originalExampleKo": "모든 것이 완벽합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "8405deae649461d791ecc06f06c7388c4e1ffdc35a4a59df0ee63cc96c11dc17"
+    },
+    {
+      "id": "hsk5-2315",
+      "word": "二维码",
+      "originalMeaningKo": "QR 코드, 2차원 바코드",
+      "originalExampleZh": "他扫了一下二维码。",
+      "originalExampleKo": "그는 QR 코드를 작성했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "33d3852e3e95e12b572bb7469ff9b45ddad80204c86f6bbfcf6ccbf0e79b74bb"
+    },
+    {
+      "id": "hsk5-2316",
+      "word": "发表",
+      "originalMeaningKo": "나다",
+      "originalExampleZh": "他在杂志上发表了文章。",
+      "originalExampleKo": "그는 시장에서 큰 성공을 거두었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "33ea4eafa9b1836518d34ef928e9c28a4bfd7e5bee21caeb91eae617f05ea80e"
+    },
+    {
+      "id": "hsk5-2317",
+      "word": "发布",
+      "originalMeaningKo": "발하다",
+      "originalExampleZh": "政府发布了公告。",
+      "originalExampleKo": "카메라가 카메라를 니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4795463da0427198e24d54a8e148b2ef1df6286aebf1341a3ea0650747a025e3"
+    },
+    {
+      "id": "hsk5-2318",
+      "word": "发达",
+      "originalMeaningKo": "발달되다",
+      "originalExampleZh": "餐饮业很发达。",
+      "originalExampleKo": "가격도 저렴합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "cf23e59f03d7811733e1de3f6684c5d0cdb213a9a900bd2afc8b90f52817fd84"
+    },
+    {
+      "id": "hsk5-2319",
+      "word": "发挥",
+      "originalMeaningKo": "펴다",
+      "originalExampleZh": "他发挥得很好。",
+      "originalExampleKo": "그는 최선을 다했다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b2c2787116db79fe748ba924f0a7b1d4b61f55c4d61685363aec04beb70fd36d"
+    },
+    {
+      "id": "hsk5-2320",
+      "word": "发明",
+      "originalMeaningKo": "발명",
+      "originalExampleZh": "他发明了一种新工具。",
+      "originalExampleKo": "그는 새로운 꿈을 꾸었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9f8fcb556fd0fb2482ad7536a9c8405b864714115935fb50955f5fe5897e6aa0"
+    },
+    {
+      "id": "hsk5-2321",
+      "word": "发起",
+      "originalMeaningKo": "벌이다",
+      "originalExampleZh": "他们发起了抗议。",
+      "originalExampleKo": "누가 좀 봐주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "87518d5b5c8e92089b9c8c4779f6061add826048280e95d8fff7c2bab126c847"
+    },
+    {
+      "id": "hsk5-2322",
+      "word": "发言",
+      "originalMeaningKo": "말하기",
+      "originalExampleZh": "主席在会上发言。",
+      "originalExampleKo": "그 식당은 식당에 있어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "25a6b7cf16c2fa31171909d2e371e9bab4e6f20288872236a5da16d9050aedb3"
+    },
+    {
+      "id": "hsk5-2323",
+      "word": "发音",
+      "originalMeaningKo": "발음",
+      "originalExampleZh": "他的发音很标准。",
+      "originalExampleKo": "그의 직업은 표준입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5327a76569f6239c55faee0f1d8c44371828e3b0af6e3047ebc4e86c642fce71"
+    },
+    {
+      "id": "hsk5-2324",
+      "word": "罚",
+      "originalMeaningKo": "세우다",
+      "originalExampleZh": "违规要罚。",
+      "originalExampleKo": "스파이크가 유행하고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4e717e891896517ccb09d0bb66772161d98d85c6a27c2b2ad8a8ff0ad4dbf9fc"
+    },
+    {
+      "id": "hsk5-2325",
+      "word": "罚款",
+      "originalMeaningKo": "벌금",
+      "originalExampleZh": "开车违规要罚款。",
+      "originalExampleKo": "여러 가지 색상으로 제공됩니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "139a03aa32fa45a3a701d755a5e65a9c84b5404319f53fdc0aa603a77c5ae9e2"
+    },
+    {
+      "id": "hsk5-2326",
+      "word": "法院",
+      "originalMeaningKo": "법원",
+      "originalExampleZh": "他向法院起诉。",
+      "originalExampleKo": "그는 춤을 췄어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3740bf16bed42f6cb39e34fdb248377a55e3a7ed3660000f32988fd3d8b9248e"
+    },
+    {
+      "id": "hsk5-2327",
+      "word": "翻",
+      "originalMeaningKo": "넘기다",
+      "originalExampleZh": "请把书翻到第十页。",
+      "originalExampleKo": "페이지 링크를 누르세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3c18f05af541042b970c0ff7ea73ddfbae15987d1e4672bf76afac54d871f46b"
+    },
+    {
+      "id": "hsk5-2328",
+      "word": "番茄",
+      "originalMeaningKo": "토마토",
+      "originalExampleZh": "番茄和茄子都是蔬菜。",
+      "originalExampleKo": "감자튀김과 감자튀김이 인기입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "eacbfd67f1a0f6d35d64621728ae02f086b4af1781b4dff0052a11bd7b8eac00"
+    },
+    {
+      "id": "hsk5-2329",
+      "word": "繁荣",
+      "originalMeaningKo": "개화하다",
+      "originalExampleZh": "城市越来越繁荣。",
+      "originalExampleKo": "이 발명품은 더 강력합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a6906efaebbb49463c028fe412a5d52bdc6fb770287759bd75f081afb8e9f126"
+    },
+    {
+      "id": "hsk5-2330",
+      "word": "反",
+      "originalMeaningKo": "뒤집다",
+      "originalExampleZh": "衣服穿反了。",
+      "originalExampleKo": "귀하의 제품은 재고가 없습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6a309c72c62f8696169811167c7140eeece1ab1a949cd8fa5174eb5cf37adaa2"
+    },
+    {
+      "id": "hsk5-2331",
+      "word": "反而",
+      "originalMeaningKo": "도리어",
+      "originalExampleZh": "吃药后反而更疼了。",
+      "originalExampleKo": "더 큰 사이즈로 만들어 주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4e50e896c986a4e89b721de824f5b82fe71866b4ceffa789a0ad717cba8b0023"
+    },
+    {
+      "id": "hsk5-2332",
+      "word": "反复",
+      "originalMeaningKo": "반복",
+      "originalExampleZh": "生词要反复练习。",
+      "originalExampleKo": "신종 코로나바이러스 감염증은 예방이 필요하다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3af229d2b6cb1b45952cc58a9e9d7e9c2e4d5582dc262b2836828c70845ea680"
+    },
+    {
+      "id": "hsk5-2333",
+      "word": "返回",
+      "originalMeaningKo": "돌아가다",
+      "originalExampleZh": "他返回了老家。",
+      "originalExampleKo": "그는 그의 친구에게 말했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b5ed992a48cebafe1c2ddb2ee13b79477bdaf4e0d88ab252ee8a9fc2a3e27f47"
+    },
+    {
+      "id": "hsk5-2334",
+      "word": "反应",
+      "originalMeaningKo": "반응",
+      "originalExampleZh": "他的反应很快。",
+      "originalExampleKo": "그는 정말 대단해.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "254a3e0212e5df0f7c9042c1abb5f21fa28871151845fba7201c44c94d2e6dd3"
+    },
+    {
+      "id": "hsk5-2335",
+      "word": "反映",
+      "originalMeaningKo": "반영되다",
+      "originalExampleZh": "这反映了一个问题。",
+      "originalExampleKo": "이것은 문제를 야기합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9066cf2572cb9ad97e4a9b868273f164d3d18efd7eda2b9099014e60a7239983"
+    },
+    {
+      "id": "hsk5-2336",
+      "word": "反正",
+      "originalMeaningKo": "암튼",
+      "originalExampleZh": "反正我不去。",
+      "originalExampleKo": "네, 안 갈게요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7a780f5d7f8039094168f337fc14f7da1ba4cea53bbc8166bd501f605b375db2"
+    },
+    {
+      "id": "hsk5-2337",
+      "word": "范围",
+      "originalMeaningKo": "한",
+      "originalExampleZh": "问题的范围很大。",
+      "originalExampleKo": "공장의 외관은 깔끔합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9f67edacf23a90a11de8fced9056fced8352c308338f108e2cd5980e651b3959"
+    },
+    {
+      "id": "hsk5-2338",
+      "word": "方",
+      "originalMeaningKo": "쪽",
+      "originalExampleZh": "人们曾经相信地球是方的。",
+      "originalExampleKo": "사람들은 지구가 한 편이라고 믿었다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "d9cc3187d5472c4ba7f5fdfb2bc7040644f49be284f029c380ba0c4b36be6996"
+    },
+    {
+      "id": "hsk5-2339",
+      "word": "方案",
+      "originalMeaningKo": "방안",
+      "originalExampleZh": "这个方案有漏洞。",
+      "originalExampleKo": "이 계획에는 몇 가지 수정 사항이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c5794069eeba53f2e567040ed8e0f8f197e4173c2c9911f0599f442435878bc7"
+    },
+    {
+      "id": "hsk5-2340",
+      "word": "防",
+      "originalMeaningKo": "막다, 예방하다, 방어하다",
+      "originalExampleZh": "冬天要注意防火。",
+      "originalExampleKo": "여름철에 비가 많이 내려요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "6045715606d920949a3d4c630b54eb323358292ec0e9b203a17ae576d8c98194"
+    },
+    {
+      "id": "hsk5-2341",
+      "word": "房屋",
+      "originalMeaningKo": "가옥",
+      "originalExampleZh": "这里的房屋都很旧。",
+      "originalExampleKo": "여기 있는 아이들은 다 늙었어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "93819847580863f4e632bf009d1f03dc8663468cbfdd26a0ee957d824ca7a3b5"
+    },
+    {
+      "id": "hsk5-2342",
+      "word": "防止",
+      "originalMeaningKo": "방지하다",
+      "originalExampleZh": "多洗手，防止感冒。",
+      "originalExampleKo": "여러 가지 색상으로 다양한 색상을 선택할 수 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b018543c851f1cedab65a6b7812ac13cd135f93d809b4b09ed4318ef196eb249"
+    },
+    {
+      "id": "hsk5-2343",
+      "word": "仿佛",
+      "originalMeaningKo": "꼭",
+      "originalExampleZh": "这幅画仿佛在动。",
+      "originalExampleKo": "이 로봇은 움직이기 쉽습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f5319e5621c93b5d349e36f87723c66174c1bdb587bcb961f43caa6adaa56c36"
+    },
+    {
+      "id": "hsk5-2344",
+      "word": "访问",
+      "originalMeaningKo": "방문하다",
+      "originalExampleZh": "代表团访问了联合国。",
+      "originalExampleKo": "이 사건은 유엔에 영향을 미쳤습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c6452690bafc81f989e21a70c704b30049900de0a3d8521463e272875aec0b3b"
+    },
+    {
+      "id": "hsk5-2345",
+      "word": "飞行",
+      "originalMeaningKo": "비행하다",
+      "originalExampleZh": "飞机在高空飞行。",
+      "originalExampleKo": "이 제품은 고품질로 제작되었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "61c531ed6d25508026664c75635319ba1ec46158c7589a2b75cfe44ae0ed05f9"
+    },
+    {
+      "id": "hsk5-2346",
+      "word": "飞行员",
+      "originalMeaningKo": "파일럿",
+      "originalExampleZh": "飞行员驾驶着直升机。",
+      "originalExampleKo": "카메라가 카메라를 감지합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b8def7a7ce8d3094a83fc0a30d0522bb2c2aa5a2f17279b4ebac6a33c6014c98"
+    },
+    {
+      "id": "hsk5-2347",
+      "word": "非洲",
+      "originalMeaningKo": "아프리카",
+      "originalExampleZh": "在非洲有许多孩子死于饥饿。",
+      "originalExampleKo": "아프리카에서 많은 아이들이 굶어 죽는다",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "f9c80c15d4109272014a6680396cfe0a68d066079d0b44daf12377a429024ad5"
+    },
+    {
+      "id": "hsk5-2348",
+      "word": "分别",
+      "originalMeaningKo": "각각",
+      "originalExampleZh": "分别的时候，大家都哭了。",
+      "originalExampleKo": "잠시만요, 잠시만요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7f6deec095735acfe3e27032899953acbc8d7185a45f588a1cb88f64edf1f91d"
+    },
+    {
+      "id": "hsk5-2349",
+      "word": "分布",
+      "originalMeaningKo": "분포",
+      "originalExampleZh": "树林分布在山的周围。",
+      "originalExampleKo": "주변을 둘러보세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ae471298f20421e984796fbdedb2313e814da89270c42e71a399430398419401"
+    },
+    {
+      "id": "hsk5-2350",
+      "word": "纷纷",
+      "originalMeaningKo": "팡팡",
+      "originalExampleZh": "客人们纷纷到来。",
+      "originalExampleKo": "모든 것이 완벽하게 작동합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "69e2c3dcb52b71135d1a7a606fe71e0f6cc9d0a3ca768c5a141c4062ab3c559a"
+    },
+    {
+      "id": "hsk5-2351",
+      "word": "分类",
+      "originalMeaningKo": "나누다",
+      "originalExampleZh": "请把垃圾分类。",
+      "originalExampleKo": "그럼 빨리 연락주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f51a73ec844c257906b25ac9b054d74a63c06a9e25c3ed76f6ea1574650aa36e"
+    },
+    {
+      "id": "hsk5-2352",
+      "word": "分离",
+      "originalMeaningKo": "떨어지다",
+      "originalExampleZh": "两个部分分离了。",
+      "originalExampleKo": "그 두 가지 공통점이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "17b8e822ad39e7595c37daec7d37edbb84baf11541f6f14f580ed451992a3b7b"
+    },
+    {
+      "id": "hsk5-2353",
+      "word": "分配",
+      "originalMeaningKo": "배당하다",
+      "originalExampleZh": "任务已经分配好了。",
+      "originalExampleKo": "문제가 해결되었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0f2babbf1f3dfe4a5337fc96c5ef510e67fb2acdaa2a0e3d90fe4a2bd2b655c9"
+    },
+    {
+      "id": "hsk5-2354",
+      "word": "分手",
+      "originalMeaningKo": "끝나다",
+      "originalExampleZh": "他们分手了。",
+      "originalExampleKo": "다들 일어나세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ce8750f32510536eacdc2a0da78e6974928c877f8a89f0d49903cb74628e6d90"
+    },
+    {
+      "id": "hsk5-2355",
+      "word": "分析",
+      "originalMeaningKo": "분석하다",
+      "originalExampleZh": "他分析了原因。",
+      "originalExampleKo": "그는 그 말을 지켰습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "be2062293dff641bb42cab639b28e1cb228eba7ca78b75dcf689f4c21a73907b"
+    },
+    {
+      "id": "hsk5-2356",
+      "word": "分享",
+      "originalMeaningKo": "나누다",
+      "originalExampleZh": "好东西要分享。",
+      "originalExampleKo": "좋은 것을 써보세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "904d30d7590adb8ecd1c96b59f868c7ac19a09d78975d73192f468ca2bce074d"
+    },
+    {
+      "id": "hsk5-2357",
+      "word": "奋斗",
+      "originalMeaningKo": "뛰다",
+      "originalExampleZh": "为理想奋斗。",
+      "originalExampleKo": "네 악기를 위해 준비했어.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7931c5ae734d9358b4947148ff974a41ee5a26e6a9dfeca4022c6c81a1cf67c4"
+    },
+    {
+      "id": "hsk5-2358",
+      "word": "丰富多彩",
+      "originalMeaningKo": "다채롭다",
+      "originalExampleZh": "我今天学会了“丰富多彩”的用法。",
+      "originalExampleKo": "나는 오늘 “丰富多彩”(다채롭다)의 쓰임을 배웠다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "c74a0a6b2adf38d09cec4b2aaddcb873f559b883ba35c9f7a78e50afcb435406"
+    },
+    {
+      "id": "hsk5-2359",
+      "word": "风格",
+      "originalMeaningKo": "풍",
+      "originalExampleZh": "这是他特有的风格。",
+      "originalExampleKo": "이것은 그의 가장 큰 실수입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b3dff0531e49739929c8c77e087968a591373273a041c74c6f7e591f652aed01"
+    },
+    {
+      "id": "hsk5-2360",
+      "word": "疯狂",
+      "originalMeaningKo": "극성맞다",
+      "originalExampleZh": "他简直疯狂地高兴。",
+      "originalExampleKo": "위치 정보",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "08eaf7463684989089e52b5d6af970579a88346f4502f290d23f3540bd9d5055"
+    },
+    {
+      "id": "hsk5-2361",
+      "word": "风俗",
+      "originalMeaningKo": "풍속",
+      "originalExampleZh": "我们去考察当地的风俗。",
+      "originalExampleKo": "저희는 배송 일정을 조정했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ce6c00be34bb9476ef4c641cf0e5623030240d21d269f1ab8f0644bc464d9b95"
+    },
+    {
+      "id": "hsk5-2362",
+      "word": "风险",
+      "originalMeaningKo": "리스크",
+      "originalExampleZh": "要防范风险。",
+      "originalExampleKo": "모든 것이 완벽하게 작동합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c87d20d20f6cce91b16b17bc6828ca1dc8113cc77ef0ae5e3407aa701cf5614a"
+    },
+    {
+      "id": "hsk5-2363",
+      "word": "否定",
+      "originalMeaningKo": "부정하다",
+      "originalExampleZh": "你不能否定他的成果。",
+      "originalExampleKo": "당신은 그의 말을 믿지 않을 수 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "539d5ac5432b7269689bc214140cbfb705c11e6b6187bff0d3cf1cd026102182"
+    },
+    {
+      "id": "hsk5-2364",
+      "word": "否认",
+      "originalMeaningKo": "부인하다",
+      "originalExampleZh": "他否认了这件事。",
+      "originalExampleKo": "그는 그것을 보았습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "02fc7491b7d5c3eab3ee1b3921229525590f3ec38af2ffdeb2089cbc80cf7697"
+    },
+    {
+      "id": "hsk5-2365",
+      "word": "夫妇",
+      "originalMeaningKo": "내외분",
+      "originalExampleZh": "那对夫妇有一个宝宝。",
+      "originalExampleKo": "그 가방은 아기가 있어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "51b8b6ff999b7a996131e675552c0dfa933106969b3ef39323e3e5f93fc0c3e0"
+    },
+    {
+      "id": "hsk5-2366",
+      "word": "扶",
+      "originalMeaningKo": "부축하다, 받쳐 주다",
+      "originalExampleZh": "他扶老人过马路。",
+      "originalExampleKo": "그는 식당에서 음식을 주문했어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "56a97ce7060b2139adc3594985373bef89a8c6bcd99fd0ecf8cbaf8498e72ed7"
+    },
+    {
+      "id": "hsk5-2367",
+      "word": "福",
+      "originalMeaningKo": "복, 행복, 좋은 운",
+      "originalExampleZh": "过年时门上有个福字。",
+      "originalExampleKo": "새해에는 축제에 흥정이 있습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "f2e7e218b26b1246ee7a2d8e3feb5f9c2615d6cc63adacf94844ae20f95114d2"
+    },
+    {
+      "id": "hsk5-2368",
+      "word": "服装",
+      "originalMeaningKo": "옷",
+      "originalExampleZh": "衣服和服装店都在二层。",
+      "originalExampleKo": "두 번째 단계에는 다양한 색상과 색상이 있습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "b04c5735f08c180c9e2c445518c191339eae9886d40241b88cac60aa81727768"
+    },
+    {
+      "id": "hsk5-2369",
+      "word": "副",
+      "originalMeaningKo": "부-",
+      "originalExampleZh": "副经理也来了。",
+      "originalExampleKo": "오늘 아침 회의가 시작됐습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "acd67dd9c46b556be77361eddad55f8c45cdd1211fd3d3f415243debd62863ad"
+    },
+    {
+      "id": "hsk5-2370",
+      "word": "富",
+      "originalMeaningKo": "부하다",
+      "originalExampleZh": "他家很富。",
+      "originalExampleKo": "그의 가족은 가난합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a96489eb3c039ea601fc467a95ee8d99ef419711b03b2fb4d93741e13ec49c8a"
+    },
+    {
+      "id": "hsk5-2371",
+      "word": "付出",
+      "originalMeaningKo": "들이다",
+      "originalExampleZh": "他为社会付出了很多。",
+      "originalExampleKo": "그는 춤을 추는 꿈을 꾸었다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "038a92b7ac0037357eb2e8d671993620833c5930f8916c9948250b51896ddea5"
+    },
+    {
+      "id": "hsk5-2372",
+      "word": "负担",
+      "originalMeaningKo": "부담",
+      "originalExampleZh": "他天天加班，负担很重。",
+      "originalExampleKo": "그는 잠시 말을 끊었다가, 그 말을 들은 적이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "de21ed6d9dee2793a5d072145c9de5a9fe8ee2026742fef5aa89679e37614cad"
+    },
+    {
+      "id": "hsk5-2373",
+      "word": "妇女",
+      "originalMeaningKo": "부인",
+      "originalExampleZh": "妇女在家园里种花。",
+      "originalExampleKo": "여성용 침대는 소파에 있습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "cdf70b242a7c743100e4047ec31b964c3d5f65426ad72ddc30303b7948df24e3"
+    },
+    {
+      "id": "hsk5-2374",
+      "word": "富有",
+      "originalMeaningKo": "부유하다",
+      "originalExampleZh": "他很富有。",
+      "originalExampleKo": "그는 화가 난다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ffdb6d030742f76165da7c73b59dacfa9fa76c173d764009cbec2cc15d339a69"
+    },
+    {
+      "id": "hsk5-2375",
+      "word": "复制",
+      "originalMeaningKo": "복사되다",
+      "originalExampleZh": "把文件复制一份。",
+      "originalExampleKo": "파일의 사본을 첨부해 주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "92555615fe781c823bfc6b9e224a35a40f054e4ed0617a1240559e3d81f0235a"
+    },
+    {
+      "id": "hsk5-2376",
+      "word": "改革",
+      "originalMeaningKo": "개혁하다",
+      "originalExampleZh": "改革带来了新的机制。",
+      "originalExampleKo": "새로운 경험을 해보시길 바랍니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2da150e96e413dcf9d7d0abbee861b8234a55da34c7b3881f49b1de88e11ea61"
+    },
+    {
+      "id": "hsk5-2377",
+      "word": "改进",
+      "originalMeaningKo": "개선하다",
+      "originalExampleZh": "方法需要改进。",
+      "originalExampleKo": "이 방법은 비용이 많이 듭니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f5b9859582693bb94985067790401e02635f2af128e7ab37bcb3d52978321da6"
+    },
+    {
+      "id": "hsk5-2378",
+      "word": "改善",
+      "originalMeaningKo": "고치다",
+      "originalExampleZh": "情况改善了。",
+      "originalExampleKo": "그 광고는 정말 재미있었어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "88cc554f46eaf8289a8d3de8018d989e69ff5c422b28321130eb02778eaa1567"
+    },
+    {
+      "id": "hsk5-2379",
+      "word": "改天",
+      "originalMeaningKo": "다음날",
+      "originalExampleZh": "万一下雨，就改天去。",
+      "originalExampleKo": "그것이 사라지면, 우리는 또 다른 하루를 보낼 것입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9a13ae43b2663ae09da1fbcfd7607eee02c5932114901abebdce356ce45e8fa3"
+    },
+    {
+      "id": "hsk5-2380",
+      "word": "改正",
+      "originalMeaningKo": "고치다",
+      "originalExampleZh": "请改正这个错误。",
+      "originalExampleKo": "이 문제를 해결해 주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a9d2b59d298c0c3cbeeb1ea651a85fb16367c226350be26b11837c4b8373c4d1"
+    },
+    {
+      "id": "hsk5-2381",
+      "word": "盖",
+      "originalMeaningKo": "가리개",
+      "originalExampleZh": "请把盖子盖上。",
+      "originalExampleKo": "카메라는 켜주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "7ad712f61f595b78a1482cef399c3897235bcb336bbc8aa7c02af39cf153d843"
+    },
+    {
+      "id": "hsk5-2382",
+      "word": "概括",
+      "originalMeaningKo": "스케치하다",
+      "originalExampleZh": "请概括一下内容。",
+      "originalExampleKo": "콘텐츠를 공유해 주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "38ca1e54c1fccbf5c1ae58beb5e5e5196e7ad7245e625742fe462533a1284384"
+    },
+    {
+      "id": "hsk5-2383",
+      "word": "概念",
+      "originalMeaningKo": "개념",
+      "originalExampleZh": "这是一个重要的概念。",
+      "originalExampleKo": "이건 정말 놀라운 경험이에요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5b197cc737d4c6f9f526b698781650d986677060a1f3f2341854151238e6dd1a"
+    },
+    {
+      "id": "hsk5-2384",
+      "word": "敢于",
+      "originalMeaningKo": "감히",
+      "originalExampleZh": "他敢于面对困难。",
+      "originalExampleKo": "그는 음식을 먹기를 꺼려합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b488ab05928fc23c593dbe72991231d712f1814bb1348fdc2b5fbbab48903187"
+    },
+    {
+      "id": "hsk5-2385",
+      "word": "刚好",
+      "originalMeaningKo": "때마침",
+      "originalExampleZh": "他刚好赶上了车。",
+      "originalExampleKo": "그는 단지 그 문제를 해결했을 뿐입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "fec74fd73a5840aca861cea668a29580825171383a67df52711ce8fbbe5e369b"
+    },
+    {
+      "id": "hsk5-2386",
+      "word": "高大",
+      "originalMeaningKo": "높다랗다",
+      "originalExampleZh": "这座楼很高大。",
+      "originalExampleKo": "이 옷은 정말 예쁘네요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2bc5866752c6e9cb005d4401193c564c30bf240ce0faacd5ac2bebbce4ccc9e1"
+    },
+    {
+      "id": "hsk5-2387",
+      "word": "高档",
+      "originalMeaningKo": "고급스럽다",
+      "originalExampleZh": "这是高档的商品。",
+      "originalExampleKo": "고급 제품입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "de9d3b13a521e2078eac6f65067b8ebb6203875c35822aa8092359a608f62e06"
+    },
+    {
+      "id": "hsk5-2388",
+      "word": "高度",
+      "originalMeaningKo": "높이",
+      "originalExampleZh": "他高度重视这件事。",
+      "originalExampleKo": "그는 이 문제를 해결했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5bac824f793ba83f93efae5ce06c5c15e151a3bbe6be5dfee0fd688a376a6654"
+    },
+    {
+      "id": "hsk5-2389",
+      "word": "高级",
+      "originalMeaningKo": "고등하다",
+      "originalExampleZh": "这是一家高级酒店。",
+      "originalExampleKo": "이곳은 고급 호텔이에요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3f30a991759ac09b72bce64c43e2a08cd584f0cf559da0809e35ad615c2d7d9c"
+    },
+    {
+      "id": "hsk5-2390",
+      "word": "高科技",
+      "originalMeaningKo": "하이테크",
+      "originalExampleZh": "高科技改变了生活。",
+      "originalExampleKo": "고관절 수술은 생명을 위협합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1a4845095af43c75bd1df9f7d591c43662f4adb3373fa6cb5a41adae0ad7c822"
+    },
+    {
+      "id": "hsk5-2391",
+      "word": "高效",
+      "originalMeaningKo": "고효율",
+      "originalExampleZh": "我认为电脑会帮助学生以高效方式使学得更好。",
+      "originalExampleKo": "소비자가 더 많은 온라인 상점을 이용하는 데 도움이 될 수 있다고 생각합니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "86bbed1253713fbbb0a1cf89bd1095ef68b6108931d405192f12a3f2babafec9"
+    },
+    {
+      "id": "hsk5-2392",
+      "word": "搞",
+      "originalMeaningKo": "놀다",
+      "originalExampleZh": "公司在搞促销，很多商品优惠。",
+      "originalExampleKo": "카메라는 카메라와 함께 작동합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5c1b430a2eec96f6caf440a5c9d7f023dcf9abb0cb840f8fba46006ef21e8cd4"
+    },
+    {
+      "id": "hsk5-2393",
+      "word": "告别",
+      "originalMeaningKo": "이별하다",
+      "originalExampleZh": "我们告别了故乡。",
+      "originalExampleKo": "저희 회사에 연락했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1d7b4be4a7b2fca8975722e87ec9beee02c757021887baffe908af8a50fd2fbe"
+    },
+    {
+      "id": "hsk5-2394",
+      "word": "歌词",
+      "originalMeaningKo": "가사",
+      "originalExampleZh": "歌词很美。",
+      "originalExampleKo": "가격은 저렴합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "451e7710cd2297e1bd4e65dcaae5262301a9cf054a1a11f37fca58681bceaa1f"
+    },
+    {
+      "id": "hsk5-2395",
+      "word": "歌曲",
+      "originalMeaningKo": "노래",
+      "originalExampleZh": "他唱了一首歌曲。",
+      "originalExampleKo": "그는 술을 마셨어.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4c37b86e430d0d235348c8eec2232aba8c858b340d3a74cdf9e90b69dabfe903"
+    },
+    {
+      "id": "hsk5-2396",
+      "word": "隔",
+      "originalMeaningKo": "두다",
+      "originalExampleZh": "我們每隔 3 呎種一棵樹。",
+      "originalExampleKo": "우리는 3피트 간격으로 나무를 심었어요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "9153597090b0f69be968aef2c224ad5cbb925ec4d73567b19956870305b9a63c"
+    },
+    {
+      "id": "hsk5-2397",
+      "word": "格外",
+      "originalMeaningKo": "별로",
+      "originalExampleZh": "今天格外寒冷。",
+      "originalExampleKo": "너무 매끄럽게 보여요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1487ec3f769896210152d956d8e8489276a3c9ab41cc636c4dd143e77067d811"
+    },
+    {
+      "id": "hsk5-2398",
+      "word": "个别",
+      "originalMeaningKo": "개별",
+      "originalExampleZh": "个别人还没到。",
+      "originalExampleKo": "한 쌍의 닭은 잘 자라지 않습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a9c4f6738880bdc97aee8df9351896194c6318f3751d9031571dffbe8cc000ba"
+    },
+    {
+      "id": "hsk5-2399",
+      "word": "各行各业",
+      "originalMeaningKo": "각계각층, 모든 업종",
+      "originalExampleZh": "我今天学会了“各行各业”的用法。",
+      "originalExampleKo": "나는 오늘 “各行各业”(각계각층, 모든 업종)의 쓰임을 배웠다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "b0218003fe6d62c487f5699af7f0d9d66b8b400e0345f985f2f50e4becd56b95"
+    },
+    {
+      "id": "hsk5-2400",
+      "word": "个人",
+      "originalMeaningKo": "개인",
+      "originalExampleZh": "两个人有冲突。",
+      "originalExampleKo": "둘 다 아직 멀었어요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "c8ec4121d6ffcb0649621b26a9f7149a947e672416f53ac58b4c1fa9a0e2bb44"
+    },
+    {
+      "id": "hsk5-2401",
+      "word": "个性",
+      "originalMeaningKo": "개성",
+      "originalExampleZh": "他性格积极，个性很强。",
+      "originalExampleKo": "그는 뛰어난 캐릭터와 뛰어난 능력을 가지고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "38211d6b0fdd891f4449f7601e03f62c79978f34dc96eb49d6add279156ae7d3"
+    },
+    {
+      "id": "hsk5-2402",
+      "word": "各自",
+      "originalMeaningKo": "각기",
+      "originalExampleZh": "大家各自回家了。",
+      "originalExampleKo": "집에서도 편하게 지내세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b2b0f0369b2635a8494689819e7e4a44b382ca4df2e0a25f708998bd1651a990"
+    },
+    {
+      "id": "hsk5-2403",
+      "word": "根",
+      "originalMeaningKo": "뿌리",
+      "originalExampleZh": "树上有一根枝。",
+      "originalExampleKo": "식당에 문제가 있어요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "5b839750db71c248bc28403f94e8edfee3a144fc4902f2b50811910c855ac533"
+    },
+    {
+      "id": "hsk5-2404",
+      "word": "根本",
+      "originalMeaningKo": "근본",
+      "originalExampleZh": "我根本不认识他。",
+      "originalExampleKo": "전혀 몰라요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5a4c93f29ec05ff83db13cfef5bdc28b2bf372e3aac2087c480a19d08c085ca6"
+    },
+    {
+      "id": "hsk5-2405",
+      "word": "更换",
+      "originalMeaningKo": "바꾸다",
+      "originalExampleZh": "请把旧的更换成新的。",
+      "originalExampleKo": "새 옷을 입고 노를 젓는다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f844ceca14db66d59f7c08b2826b7b848ab0343b7a63bedb41b49663b2e1d92d"
+    },
+    {
+      "id": "hsk5-2406",
+      "word": "更新",
+      "originalMeaningKo": "깨지다",
+      "originalExampleZh": "系统在自动更新。",
+      "originalExampleKo": "시스템이 자동으로 작동합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2793027748e182c4f1ae7e6d62d16d73ca5d066c6ab21822ae4b7c787041e60a"
+    },
+    {
+      "id": "hsk5-2407",
+      "word": "公布",
+      "originalMeaningKo": "게시하다",
+      "originalExampleZh": "考核结果下周公布。",
+      "originalExampleKo": "다음 주 금요일에 많은 분들이 찾아와주셨습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "8fcaeb63a84bb2debe5768ebda813e637c85d703d1ff9b89f2a59215e6c040e2"
+    },
+    {
+      "id": "hsk5-2408",
+      "word": "工程",
+      "originalMeaningKo": "엔지니어링",
+      "originalExampleZh": "这个工程在中期。",
+      "originalExampleKo": "이 프로젝트는 자체적으로 추진하고 있습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "f6ecc925e780ef0447e593401ead542a97c7f54b580529a5560f0148c0709728"
+    },
+    {
+      "id": "hsk5-2409",
+      "word": "工程师",
+      "originalMeaningKo": "엔지니어",
+      "originalExampleZh": "我父亲是工程师，母亲是公务员。",
+      "originalExampleKo": "나의 꿈은 꿈이고 나의 꿈은 꿈이야.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3ddf3b7947545d82569e8980f18cbcbc63d09414cc51de3c9f301f2ed172fc84"
+    },
+    {
+      "id": "hsk5-2410",
+      "word": "工具",
+      "originalMeaningKo": "공구",
+      "originalExampleZh": "这个工具用来切菜。",
+      "originalExampleKo": "이 제품은 내구성이 뛰어난 제품입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8446b9574e72279d0c95abd48631c992477033fb0eb88b37de005bd0d4fd4a60"
+    },
+    {
+      "id": "hsk5-2411",
+      "word": "功能",
+      "originalMeaningKo": "기능",
+      "originalExampleZh": "这个手机功能很多。",
+      "originalExampleKo": "이 제품은 많은 장점이 있습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "7131bcb5168efd2717aa3df61b1df293114e9eacdc1226e6c6e83010d0eceaf9"
+    },
+    {
+      "id": "hsk5-2412",
+      "word": "公平",
+      "originalMeaningKo": "공평하다",
+      "originalExampleZh": "这是一笔公平的买卖。",
+      "originalExampleKo": "이것은 정말 놀라운 경험입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1391bbeb0234bae9bae8ede9c2a48375f85ed88f8c387925b6eeb922dcbf1141"
+    },
+    {
+      "id": "hsk5-2413",
+      "word": "公务员",
+      "originalMeaningKo": "공무원",
+      "originalExampleZh": "我父亲是工程师，母亲是公务员。",
+      "originalExampleKo": "나의 꿈은 꿈이고 나의 꿈은 꿈이야.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "359513c6d95bb5c1932c8546e94ddf325e690f3e8ce6c19d05129688e0999c03"
+    },
+    {
+      "id": "hsk5-2414",
+      "word": "恭喜",
+      "originalMeaningKo": "축하하다, 축하합니다",
+      "originalExampleZh": "恭喜成為本店第一千位顧客！",
+      "originalExampleKo": "안녕하세요! 저희 회사 제니입니다!",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "dfe4cad50a39a180fed60e20711d4417a95890f71d7bb003b8168cb787ac37af"
+    },
+    {
+      "id": "hsk5-2415",
+      "word": "工业",
+      "originalMeaningKo": "공업",
+      "originalExampleZh": "这是一片工业地带。",
+      "originalExampleKo": "이건 정말 놀라운 경험이에요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1cb3472121b152c74b17431d0e67d3de650fa6f0f6d811d580dbf4dce3f1b850"
+    },
+    {
+      "id": "hsk5-2416",
+      "word": "工艺",
+      "originalMeaningKo": "공예",
+      "originalExampleZh": "这件工艺品很美。",
+      "originalExampleKo": "위치 정보",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0a81177dc405f4c82d6fa16274e288226ee3ff98f300c2e77ba616fbb3531891"
+    },
+    {
+      "id": "hsk5-2417",
+      "word": "公寓",
+      "originalMeaningKo": "아파트",
+      "originalExampleZh": "我們的公寓又安靜又乾淨。",
+      "originalExampleKo": "우리 아파트는 조용하고 깨끗해요",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "5751d0f3e3f8b9bce1fe967fd2521fdd0a649737aad02c93430868195f14917a"
+    },
+    {
+      "id": "hsk5-2418",
+      "word": "贡献",
+      "originalMeaningKo": "기여",
+      "originalExampleZh": "他为祖国做出了贡献。",
+      "originalExampleKo": "그는 그의 무덤에 갔습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4cabe43214c4f15f92a4b1dc610efd47e6e2864955305e7345500aa8402c7df7"
+    },
+    {
+      "id": "hsk5-2419",
+      "word": "共享",
+      "originalMeaningKo": "공유하다",
+      "originalExampleZh": "资源要共享。",
+      "originalExampleKo": "보험은 가입해야 합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3e9e2ad0fa464ee8c1fcd290b4bebd488beb790b92e76f1c38a7bb0c24f5c86c"
+    },
+    {
+      "id": "hsk5-2420",
+      "word": "沟通",
+      "originalMeaningKo": "통하다",
+      "originalExampleZh": "他们好好沟通了一下。",
+      "originalExampleKo": "모든 것이 완벽하게 작동합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "643463fcfd222ee79ba07cb40a25fb4f9c1382b35348f35770302254d428c995"
+    },
+    {
+      "id": "hsk5-2421",
+      "word": "构成",
+      "originalMeaningKo": "구성",
+      "originalExampleZh": "这个词由两个字构成。",
+      "originalExampleKo": "장소 명평5호",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "664361cf0884cfe4c27ff458e3c4b66da43d396c8e0b6a8aa2db1adf2adb3fce"
+    },
+    {
+      "id": "hsk5-2422",
+      "word": "古",
+      "originalMeaningKo": "옛날",
+      "originalExampleZh": "古时候有马车。",
+      "originalExampleKo": "옛날에는 껍데기가 있었어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "45f41944fc2de41b69fa21da412eb1471ed650afa5083d7f8ea201809778ac70"
+    },
+    {
+      "id": "hsk5-2423",
+      "word": "鼓",
+      "originalMeaningKo": "드럼",
+      "originalExampleZh": "他敲了敲鼓。",
+      "originalExampleKo": "그는 그 말을 지켰습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f66f00bc43556959d79a25b252affa9718a08672379ec27e2d0cc3ce785fa3bb"
+    },
+    {
+      "id": "hsk5-2424",
+      "word": "古代",
+      "originalMeaningKo": "고대",
+      "originalExampleZh": "这是一个古代的传说。",
+      "originalExampleKo": "이건 정말 놀라운 경험이에요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a350a8ab1764b686a85d6829d5697376f70932f25e55d9ce9339520815e15e82"
+    },
+    {
+      "id": "hsk5-2425",
+      "word": "古老",
+      "originalMeaningKo": "오래되다, 유서 깊다",
+      "originalExampleZh": "这本书很古老。",
+      "originalExampleKo": "이 책은 훌륭합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b0a5bc99b487bc9b300811b2c34d854dfb6abde24fd0b9fc4e71a06d4028c759"
+    },
+    {
+      "id": "hsk5-2426",
+      "word": "鼓掌",
+      "originalMeaningKo": "박수하다",
+      "originalExampleZh": "观众为他鼓掌。",
+      "originalExampleKo": "경찰이 그를 체포했어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5fd8a3d7d1a499ba202f5358abd2ad6281a58f156043d537e0b39ed9af4a9bb9"
+    },
+    {
+      "id": "hsk5-2427",
+      "word": "固定",
+      "originalMeaningKo": "고정하다",
+      "originalExampleZh": "时间固定在周五。",
+      "originalExampleKo": "시간이 지연되고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0c41310d6be1df1ac98c9caf89044a438d8b81689db88a340d982a5d997636bc"
+    },
+    {
+      "id": "hsk5-2428",
+      "word": "故乡",
+      "originalMeaningKo": "고향",
+      "originalExampleZh": "我想念故乡。",
+      "originalExampleKo": "나는 내 생일을 축하해.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "cc7e4928bd72e9893c87f5193d3c7bf41d05ff6ea796b7c1d0608a0f45963585"
+    },
+    {
+      "id": "hsk5-2429",
+      "word": "挂号",
+      "originalMeaningKo": "접수하다, 번호표를 받다",
+      "originalExampleZh": "寄挂号信是不是可以快一点？",
+      "originalExampleKo": "편지는 좀 더 빨리 나올 수 있나요?",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "710e7da8933747a8d7b4acf55ec001a4b93aacc3d7ac4fccccbbd90b89e0f92b"
+    },
+    {
+      "id": "hsk5-2430",
+      "word": "怪",
+      "originalMeaningKo": "탓하다",
+      "originalExampleZh": "这不怪你。",
+      "originalExampleKo": "그건 네 잘못이 아니야.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3678488bbc816bcb106ed996ccc46dc0bd38a20c1f2a04c118cded7681bb6bdd"
+    },
+    {
+      "id": "hsk5-2431",
+      "word": "关闭",
+      "originalMeaningKo": "닫다",
+      "originalExampleZh": "商店关闭了。",
+      "originalExampleKo": "그 광고는 정말 재미있었어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a3086806ea0264af755b828559237292c907861bf700067f409459734f40c3ec"
+    },
+    {
+      "id": "hsk5-2432",
+      "word": "观察",
+      "originalMeaningKo": "관찰하다",
+      "originalExampleZh": "我们观察了这个现象。",
+      "originalExampleKo": "우리는 이 문제를 해결했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "51f121a694a0993be44c43312ce3fa462ad15c1570d3d15eb6f31e2eafc37384"
+    },
+    {
+      "id": "hsk5-2433",
+      "word": "观点",
+      "originalMeaningKo": "관점",
+      "originalExampleZh": "两种观点对立。",
+      "originalExampleKo": "그 두 가지 공통점이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "71507e66682c55ce449bf55397e649663a7f068fb2d6254d31a948ca4a760948"
+    },
+    {
+      "id": "hsk5-2434",
+      "word": "观念",
+      "originalMeaningKo": "개념",
+      "originalExampleZh": "人们的观念变了。",
+      "originalExampleKo": "사람들의 입맛에는 차이가 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a5d437dca9e1525826a71360b97cc3972f5edb2a3c7b88cef43f1817216fea17"
+    },
+    {
+      "id": "hsk5-2435",
+      "word": "冠军",
+      "originalMeaningKo": "챔피언",
+      "originalExampleZh": "他是运动会的冠军，我是亚军。",
+      "originalExampleKo": "그 친구야, 나 혼자 산다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ca78b669c4a6c5e07798c26da7de75bc48277a01331c845369b63683a79bc82b"
+    },
+    {
+      "id": "hsk5-2436",
+      "word": "光临",
+      "originalMeaningKo": "왕림하다",
+      "originalExampleZh": "欢迎光临！",
+      "originalExampleKo": "안녕!",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "dad8ee1369f6e8469c082423165fde44da6825ba010cd0990e40bdf3f2da60e4"
+    },
+    {
+      "id": "hsk5-2437",
+      "word": "光明",
+      "originalMeaningKo": "광명",
+      "originalExampleZh": "天空中一片光明。",
+      "originalExampleKo": "가격은 저렴합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8142c873c803078120f706777eb302f73c490f556dedb1561441c9430e42e9ee"
+    },
+    {
+      "id": "hsk5-2438",
+      "word": "光线",
+      "originalMeaningKo": "광선",
+      "originalExampleZh": "大厅的光线很明亮。",
+      "originalExampleKo": "이 제품은 내구성이 뛰어납니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "cc1b1864e0f015816c4b586aff73c17a668fb2c8e823cc4dd937cfc0fe4ba9d6"
+    },
+    {
+      "id": "hsk5-2439",
+      "word": "广",
+      "originalMeaningKo": "넓다",
+      "originalExampleZh": "这条路很广。",
+      "originalExampleKo": "이 옷은 정말 예쁘네요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "656028defd0fe28fdc604bed2b2e5e9f77b10b73657350303acaceb6455eb424"
+    },
+    {
+      "id": "hsk5-2440",
+      "word": "广场",
+      "originalMeaningKo": "광장",
+      "originalExampleZh": "国庆的时候，广场上人特别多。",
+      "originalExampleKo": "국립기념일에는 행사가 잘 진행되고 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "df4077080bd5d39bed687407dd3a0de4cd788cd32debcd13f89d5b9f63e74dc4"
+    },
+    {
+      "id": "hsk5-2441",
+      "word": "广大",
+      "originalMeaningKo": "광대하다",
+      "originalExampleZh": "广大读者喜欢这本杂志。",
+      "originalExampleKo": "이 문제를 해결하기 위해 밸런타인데이가 필요합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d06fa16e918fe44af405d1bc99c1a2844bfa1d067573442acbc709121eb57408"
+    },
+    {
+      "id": "hsk5-2442",
+      "word": "广泛",
+      "originalMeaningKo": "폭넓다",
+      "originalExampleZh": "这个问题很广泛。",
+      "originalExampleKo": "위치 정보",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "cf288e3f1e1045d7c4f1a5ae8446daa82b6a12df14ae69ffd0d71c030d7797d4"
+    },
+    {
+      "id": "hsk5-2443",
+      "word": "规律",
+      "originalMeaningKo": "규칙",
+      "originalExampleZh": "自然有自然的规律。",
+      "originalExampleKo": "네이처는 장점이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e870a7bb90572d2f0cd966be25163f7e26eebcce10fb39a5f602ca059f2aa6b2"
+    },
+    {
+      "id": "hsk5-2444",
+      "word": "规模",
+      "originalMeaningKo": "규모",
+      "originalExampleZh": "公司要扩大规模。",
+      "originalExampleKo": "곧 회의가 열릴 것입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9aa2e5b8e5778ed4b5c49327ec11912a544cd0bc0d0265baf8727eb280ea4be9"
+    },
+    {
+      "id": "hsk5-2445",
+      "word": "规则",
+      "originalMeaningKo": "규칙",
+      "originalExampleZh": "游戏有游戏的规则。",
+      "originalExampleKo": "게임은 재미가 있어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "774f9c68158bbe23afe2eea06ea53497b32c99cb0020a76a7dea2f16e6cc1741"
+    },
+    {
+      "id": "hsk5-2446",
+      "word": "贵姓",
+      "originalMeaningKo": "성함이 어떻게 되십니까(성씨 높임말)",
+      "originalExampleZh": "您可不可以告诉我您贵姓？",
+      "originalExampleKo": "마지막 이름을 알려주실 수 있나요?",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "36e6fff7958bbae4e1f93714fc82cda1495c65d11d8f69fbe8135130ec633f61"
+    },
+    {
+      "id": "hsk5-2447",
+      "word": "柜子",
+      "originalMeaningKo": "농",
+      "originalExampleZh": "把盒子放进柜子里。",
+      "originalExampleKo": "상자 안에 넣어주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "a969b971549edb0486a6e07b49bb0aaacece02b2a1b5c43e49a3c7cb38c809f5"
+    },
+    {
+      "id": "hsk5-2448",
+      "word": "滚",
+      "originalMeaningKo": "구르다",
+      "originalExampleZh": "球滚到了桌子下面。",
+      "originalExampleKo": "테이블 아래에 있는 테이블입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "dcf729f997e89fb2d271e823b1d7f784fefc115c082ec075172b108a7f76452e"
+    },
+    {
+      "id": "hsk5-2449",
+      "word": "锅",
+      "originalMeaningKo": "솥",
+      "originalExampleZh": "锅里还剩一点儿汤。",
+      "originalExampleKo": "조금 더 작은 사이즈가 시장에 나와 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "dd1231494d5bc781a2fbf5453740cd38befbf6ec593b2ff9fea2fc33b2a21f6c"
+    },
+    {
+      "id": "hsk5-2450",
+      "word": "国画",
+      "originalMeaningKo": "중국화, 전통 중국 회화",
+      "originalExampleZh": "中国画有意、境之分。",
+      "originalExampleKo": "중국의 그림에는 관심 있고 의미 있는 요소가 있다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "8c3c568134528b663bc00f07b172c0e4a09f65667b5dd30641f43233b419efc0"
+    },
+    {
+      "id": "hsk5-2451",
+      "word": "国庆",
+      "originalMeaningKo": "국경절, 건국 기념일",
+      "originalExampleZh": "国庆有长假。",
+      "originalExampleKo": "내셔널 데이에는 긴 일정이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "c88a620d320aeb24b2b803ccb425fff9709f8a41acd2ba8903b3561f75790f43"
+    },
+    {
+      "id": "hsk5-2452",
+      "word": "果然",
+      "originalMeaningKo": "역시",
+      "originalExampleZh": "果然是他！",
+      "originalExampleKo": "그가 바로 그였습니다!",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "baf19cc41becf5753ce8cbebef5e760161f8cef0d7c31b7c7960d3f8b99ab1b1"
+    },
+    {
+      "id": "hsk5-2453",
+      "word": "果实",
+      "originalMeaningKo": "열매",
+      "originalExampleZh": "树上有几颗果实。",
+      "originalExampleKo": "벽에는 작은 구멍이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5fb97c171e51a08eb4e105fdf99606400daa09aba9bdf12c238b70d3b1ed3272"
+    },
+    {
+      "id": "hsk5-2454",
+      "word": "过度",
+      "originalMeaningKo": "지나치다",
+      "originalExampleZh": "运动过度对身体不好。",
+      "originalExampleKo": "온습도 PE 필름은 필수입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1c7662eac51cbdb5e73f41d822fce152582ea7ad94ac9e7dde42ba7107304d2e"
+    },
+    {
+      "id": "hsk5-2455",
+      "word": "过分",
+      "originalMeaningKo": "과도하다",
+      "originalExampleZh": "这样做有点儿过分。",
+      "originalExampleKo": "이것은 정말 놀라운 경험입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9ebeb9c80ee486fbceb1c7b85c9e0e0ac2adf53988ce9854c8e5a8e910cdf1b9"
+    },
+    {
+      "id": "hsk5-2456",
+      "word": "过敏",
+      "originalMeaningKo": "알레르기",
+      "originalExampleZh": "他对花粉过敏。",
+      "originalExampleKo": "그는 샤이니에게 관심이 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9ac446ed93a07ba286a0d28f621871d23d3da6e1b23fb7be30d7cd9289478d50"
+    },
+    {
+      "id": "hsk5-2457",
+      "word": "过期",
+      "originalMeaningKo": "기한이 지나다, 만료되다",
+      "originalExampleZh": "我的身份证过期了，我该怎么办？",
+      "originalExampleKo": "제 아이디가 바뀌었는데, 어떻게 해야 하나요?",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "4062fd060dbbec63fa0795d1c9002799fd7219168faf4cab4cf21187f14bfab4"
+    },
+    {
+      "id": "hsk5-2458",
+      "word": "过于",
+      "originalMeaningKo": "하도",
+      "originalExampleZh": "他吃得过于多。",
+      "originalExampleKo": "그는 너무 많이 먹어요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "f8a98427b199cc81489d9fe851928a27f1fbd3b54c6d5da3c679038a191866d0"
+    },
+    {
+      "id": "hsk5-2459",
+      "word": "哈",
+      "originalMeaningKo": "불다",
+      "originalExampleZh": "哈薩克是中亞最大的國家。",
+      "originalExampleKo": "대만은 동남아시아에서 가장 큰 도시입니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "e7515906ad098afa4ca5402f3c0f0f4b4b71f84274d87622619e300211e7686c"
+    },
+    {
+      "id": "hsk5-2460",
+      "word": "海关",
+      "originalMeaningKo": "세관",
+      "originalExampleZh": "过海关要打开行李。",
+      "originalExampleKo": "아침 일찍 문을 닫아야 합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4ee25f57938af70c53c1766872c62322718d76d0b0b91df77098f4366aa33e8d"
+    },
+    {
+      "id": "hsk5-2461",
+      "word": "海外",
+      "originalMeaningKo": "해외",
+      "originalExampleZh": "他在海外工作。",
+      "originalExampleKo": "그는 정말 화가 났어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9fd35e48a6d7e45bdc25e44fb8535d9c4327695c950b7a6f3b305c13f66a772c"
+    },
+    {
+      "id": "hsk5-2462",
+      "word": "海鲜",
+      "originalMeaningKo": "해산물",
+      "originalExampleZh": "这里的海鲜很鲜。",
+      "originalExampleKo": "여기 음식이 맛있어.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "13f5754b5f4c7b6a226f645ab50d473d609bfcdc49b4b45ef06a3b0511715278"
+    },
+    {
+      "id": "hsk5-2463",
+      "word": "含",
+      "originalMeaningKo": "물다",
+      "originalExampleZh": "她眼里含着泪水。",
+      "originalExampleKo": "그녀의 얼굴에 얼룩이 짙어졌습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "ca8a832ebc0f87548720d5ac6def432cddf8e938a6750d7377dda8b197d057aa"
+    },
+    {
+      "id": "hsk5-2464",
+      "word": "含量",
+      "originalMeaningKo": "함량",
+      "originalExampleZh": "糖的含量太高。",
+      "originalExampleKo": "기본 콘텐츠가 상당히 높습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f10db6ddf5b4cde9a93904a5f6b607cac9db871cbb9f1fff5d825934a505f97b"
+    },
+    {
+      "id": "hsk5-2465",
+      "word": "含有",
+      "originalMeaningKo": "도사리다",
+      "originalExampleZh": "水果含有多种营养。",
+      "originalExampleKo": "많은 고객님들께서 관심을 가져주셨습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "e39bf4bde6457a5fe7488cc9595c8a330614785ae65229d19349c85ddc9d559b"
+    },
+    {
+      "id": "hsk5-2466",
+      "word": "汗水",
+      "originalMeaningKo": "땀",
+      "originalExampleZh": "汗水從我的額頭上落下。",
+      "originalExampleKo": "그 옷은 제 삼겹살에서 벗겨져 버렸어요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "ebf05603886e7951aebfbe2f70b91471ae7dfae76b4704e269b9ffdbbd946a25"
+    },
+    {
+      "id": "hsk5-2467",
+      "word": "行",
+      "originalMeaningKo": "줄",
+      "originalExampleZh": "随你吧，我都行。",
+      "originalExampleKo": "잠시만 기다려 주십시오.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1093a2ea8d881231c5ebe3c69e6086ee23753496022eb063e52d2e84fdde5348"
+    },
+    {
+      "id": "hsk5-2468",
+      "word": "行业",
+      "originalMeaningKo": "업종",
+      "originalExampleZh": "他在这个行业干了一辈子。",
+      "originalExampleKo": "그는 그의 모든 삶에서 이것을 경험했습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "2368ecda445c6a60e6a781db9bb951377e33008928808a334f7d161c95ff3512"
+    },
+    {
+      "id": "hsk5-2469",
+      "word": "好评",
+      "originalMeaningKo": "호평",
+      "originalExampleZh": "她的新小说广受好评。",
+      "originalExampleKo": "그녀의 새로운 발명품이 공개되었습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "1aca397f04912c22772e3a288403f976bc16b558b441717ded93fd055138a921"
+    },
+    {
+      "id": "hsk5-2470",
+      "word": "好运",
+      "originalMeaningKo": "땡",
+      "originalExampleZh": "祝你好运。",
+      "originalExampleKo": "좋은 아침입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "b8a508c4f4040e505061d19e9422d319c5cbbff22c10eb54b85e4a81adb674a4"
+    },
+    {
+      "id": "hsk5-2471",
+      "word": "好转",
+      "originalMeaningKo": "펴지다",
+      "originalExampleZh": "他的病好转了。",
+      "originalExampleKo": "그의 얼굴 표정이 이상해.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "48dc74c80623500f62579317a006f9f128c60d9d198c695cbba93dc883d118db"
+    },
+    {
+      "id": "hsk5-2472",
+      "word": "好",
+      "originalMeaningKo": "되다",
+      "originalExampleZh": "他体力很好。",
+      "originalExampleKo": "그는 좋은 성적을 내고 있어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "21665a20d14c5a410756d22c8d2367c4c663483da0e146b3b81a3ca150e092fa"
+    },
+    {
+      "id": "hsk5-2473",
+      "word": "好奇",
+      "originalMeaningKo": "궁금하다",
+      "originalExampleZh": "他很好奇，什么都想知道。",
+      "originalExampleKo": "그는 현명하고 지식을 알고 싶어합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "4b254e1a07b9ca36caa8e39d04d8afabd3eae8c5657399d20116b9f1221de53a"
+    },
+    {
+      "id": "hsk5-2474",
+      "word": "合",
+      "originalMeaningKo": "닫다",
+      "originalExampleZh": "请把书合上。",
+      "originalExampleKo": "책을 꼭 닫아주세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8830b80d7ddd3381a7a677c0d3d6add7edac384baa5d72e12d787b05c7c9ca3d"
+    },
+    {
+      "id": "hsk5-2475",
+      "word": "合法",
+      "originalMeaningKo": "적법하다",
+      "originalExampleZh": "这是合法的交易。",
+      "originalExampleKo": "이것은 정말 놀라운 경험입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d573d6691e1953283a2002025a1cda51020780d77a28f91aa0fb745c33f025ed"
+    },
+    {
+      "id": "hsk5-2476",
+      "word": "盒饭",
+      "originalMeaningKo": "도시락",
+      "originalExampleZh": "他点了一份盒饭和一瓶饮料。",
+      "originalExampleKo": "그는 상자와 컵을 샀습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "df791d9d7f632dafd49ed5d3167cb789682a029f9c4f7b1121e55caadb5fe6de"
+    },
+    {
+      "id": "hsk5-2477",
+      "word": "合理",
+      "originalMeaningKo": "맞다",
+      "originalExampleZh": "价合理，我就买。",
+      "originalExampleKo": "정답이 맞으면 바로 연락드리겠습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9241922d17e054003caa3c3598e0b8ca593c12322587c32cb179fcf4a2fffa88"
+    },
+    {
+      "id": "hsk5-2478",
+      "word": "河流",
+      "originalMeaningKo": "하천",
+      "originalExampleZh": "密西西比河流经哪个城市？",
+      "originalExampleKo": "그럼 어떤 메뉴가 낙하산을 통과할까요?",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "41da9838c30a2daa2cbe8f105c0c118037631f31f176b030303e7641dd68a59d"
+    },
+    {
+      "id": "hsk5-2479",
+      "word": "合同",
+      "originalMeaningKo": "계약",
+      "originalExampleZh": "合同终止了。",
+      "originalExampleKo": "그 광고는 정말 재미있었어요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "9d8aaf0df7cdd8c20ab16ec2bd3ec54607e8611a4fde9b3a1c1d2b1b66cf5fb1"
+    },
+    {
+      "id": "hsk5-2480",
+      "word": "合影",
+      "originalMeaningKo": "함께 사진을 찍다; 단체 사진",
+      "originalExampleZh": "发给好朋友的请帖上有新郎新娘合影的照片。",
+      "originalExampleKo": "친구들과의 소통을 바탕으로 한 소통과 소통의 장이 마련돼 있다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "10d2770c6b596624cda2a44359819cb908965d840e48c1e639731f2d5775d9a3"
+    },
+    {
+      "id": "hsk5-2481",
+      "word": "合作",
+      "originalMeaningKo": "합작하다",
+      "originalExampleZh": "这是合作的前提。",
+      "originalExampleKo": "이것이 바로 여행의 목적입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8fdae4f1529e245fc6e34ed4992f43052dd031314ae8aac20d867530b904b0d2"
+    },
+    {
+      "id": "hsk5-2482",
+      "word": "黑",
+      "originalMeaningKo": "검다",
+      "originalExampleZh": "此时天已经黑了。",
+      "originalExampleKo": "이번에도 안 좋았어.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0318cf0d1e7a46b18a080a6aa13beafa7e49e49b327861f866f243f53e471237"
+    },
+    {
+      "id": "hsk5-2483",
+      "word": "红",
+      "originalMeaningKo": "빨갛다",
+      "originalExampleZh": "你的脸怎么这么红？",
+      "originalExampleKo": "너는 왜 이렇게 우울해.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "5bdbd50f6e917a56bb5732b66fe239ecead5012b50ad63d95f29fd173fac7ee4"
+    },
+    {
+      "id": "hsk5-2484",
+      "word": "猴子",
+      "originalMeaningKo": "원숭이",
+      "originalExampleZh": "我們在動物園裡看到了猴子。",
+      "originalExampleKo": "우리는 동물원에서 원숭이를 보았다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "70a07a66ce79c16d35633895d85be755ad4c65f10c0798b9d1e83f62f90b64e7"
+    },
+    {
+      "id": "hsk5-2485",
+      "word": "厚度",
+      "originalMeaningKo": "두께",
+      "originalExampleZh": "這款衛生紙主打三層厚度，擦拭起來既柔軟又不容易破。",
+      "originalExampleKo": "[잡담] 찐따님 ᄌᄉᄉᄉ 3개 구매했습니당 ᄒᄒᄒᄒᄒᄒᄒᄒᄒᄒᄒ",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "a85777b8ccff301fc60c8597edc554a2a2a87da6ad284c36e9df46a08452ca94"
+    },
+    {
+      "id": "hsk5-2486",
+      "word": "后果",
+      "originalMeaningKo": "다음",
+      "originalExampleZh": "不注意安全，后果很重大。",
+      "originalExampleKo": "다양한 색상과 색상이 준비되어 있습니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "dfa94591e8e89862ed5dcc61e9606028c64e21c6f58d4da8000d3c9ad71c3501"
+    },
+    {
+      "id": "hsk5-2487",
+      "word": "忽视",
+      "originalMeaningKo": "지나치다",
+      "originalExampleZh": "别忽视细节。",
+      "originalExampleKo": "너무 걱정하지 마세요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8741013d5c65f2a032aeae457caab914826e67e782940f26b19391eb2e98b37d"
+    },
+    {
+      "id": "hsk5-2488",
+      "word": "呼吸",
+      "originalMeaningKo": "호흡하다",
+      "originalExampleZh": "深呼吸，放松一下。",
+      "originalExampleKo": "빠르고 안전하게.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "0504ed8e2506e6378b0d68d3484a99f753406ccb388c7b944228b3742964dd76"
+    },
+    {
+      "id": "hsk5-2489",
+      "word": "湖",
+      "originalMeaningKo": "호",
+      "originalExampleZh": "湖两岸都是树。",
+      "originalExampleKo": "두 가지 색상으로 선을 그립니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "911abd60601e07e090d3da7a2f731caec5773b9f0c10a6c04345eee18711a218"
+    },
+    {
+      "id": "hsk5-2490",
+      "word": "蝴蝶",
+      "originalMeaningKo": "나비",
+      "originalExampleZh": "我抓到一隻漂亮的蝴蝶。",
+      "originalExampleKo": "나는 오늘 저녁을 먹었어.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "462cf7aa56df65542cb0c378dd37259137fa3df24149b8cfa5ba4354f824920a"
+    },
+    {
+      "id": "hsk5-2491",
+      "word": "胡同",
+      "originalMeaningKo": "골목",
+      "originalExampleZh": "他家住在城里的一条胡同儿里。",
+      "originalExampleKo": "그의 집은 모두 시골에 있습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": true,
+      "contentHash": "8323809e5f755b0934128d473f3b9dc6ab2e0e2e37ba244458b9ae5514c0f0d8"
+    },
+    {
+      "id": "hsk5-2492",
+      "word": "互动",
+      "originalMeaningKo": "상호작용하다, 교류하다",
+      "originalExampleZh": "他们经常互动。",
+      "originalExampleKo": "모든 것이 완벽하게 작동합니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "59692bdeadf57a24e6ed94184e43ff709f9965320ff68ac546b494e09fb0b17b"
+    },
+    {
+      "id": "hsk5-2493",
+      "word": "户外",
+      "originalMeaningKo": "실외",
+      "originalExampleZh": "他喜欢户外运动。",
+      "originalExampleKo": "그는 정말 맛있는 음식을 좋아해요.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "8d1e06e271539e87f5be2560b596f8ea7b523654b9db6e47d57c156971023475"
+    },
+    {
+      "id": "hsk5-2494",
+      "word": "花费",
+      "originalMeaningKo": "두다",
+      "originalExampleZh": "他花费了很多钱。",
+      "originalExampleKo": "그는 술을 마셨어.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "aa516e7796eee7e859fd854aeb1456c0d2c65e6d3d4f8d0fd29610e07880d17e"
+    },
+    {
+      "id": "hsk5-2495",
+      "word": "滑",
+      "originalMeaningKo": "타다",
+      "originalExampleZh": "路很滑，他摔倒了。",
+      "originalExampleKo": "그는 \"그 장면이 충격적이었다\"며 웃었다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "1d18c16fb30dbf945811efdd334dc09294e9f3286930f5f02e7167b8a4304ab4"
+    },
+    {
+      "id": "hsk5-2496",
+      "word": "划",
+      "originalMeaningKo": "긋다",
+      "originalExampleZh": "他划了一条线。",
+      "originalExampleKo": "그는 줄을 섰다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "f44b933ecf70e1a61d99292743c5126a9ff57e712c7e98f13419d95a35094f28"
+    },
+    {
+      "id": "hsk5-2497",
+      "word": "化",
+      "originalMeaningKo": "~화하다; 변화하다",
+      "originalExampleZh": "冰雪化了，地面很湿。",
+      "originalExampleKo": "쌀과 돼지고기를 섞어서 먹으면 맛이 좋아집니다.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "551539e74017f2c877be9680b4cb2de36fc3bf6925840fee98b4188da678b9e4"
+    },
+    {
+      "id": "hsk5-2498",
+      "word": "话费",
+      "originalMeaningKo": "휴대전화 통신요금",
+      "originalExampleZh": "上个月我在话费上花了很多钱。",
+      "originalExampleKo": "지난 주에 저는 온라인 상점에서 광고를 봤어요.",
+      "sentenceReplaced": true,
+      "pinyinCorrected": true,
+      "contentHash": "c7e8545a7da123d45113fa16c2d589c79d8082298276803353830bfa2128bdad"
+    },
+    {
+      "id": "hsk5-2499",
+      "word": "画面",
+      "originalMeaningKo": "화면",
+      "originalExampleZh": "摄影师拍下了美丽的画面。",
+      "originalExampleKo": "이 발명품은 엄청난 성공을 거두었습니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "d969839ae890bd3b6bb5e88dcdfc356cdd1db93bd2a75e2b3e7700ef2ae10f68"
+    },
+    {
+      "id": "hsk5-2500",
+      "word": "话题",
+      "originalMeaningKo": "화제",
+      "originalExampleZh": "这是热门的话题。",
+      "originalExampleKo": "핫도그입니다.",
+      "sentenceReplaced": false,
+      "pinyinCorrected": false,
+      "contentHash": "3a6aa767143a6a6f4d1a92366b861d03b17071ee9ce3d04990f2c508982097c7"
+    }
+  ]
+}

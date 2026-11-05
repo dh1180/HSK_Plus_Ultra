@@ -6,7 +6,7 @@ import { VOCABULARY, getLevelVocabulary } from '../src/data/vocabulary';
 import { buildStudyQueue } from '../src/lib/study';
 test('review evidence binds all reviewed entries to exactly the published content', () => {
   const byId = new Map(VOCABULARY.map(w => [w.id,w]));
-  assert.equal(new Set(manifest.entries.map(e => e.id)).size,2001);
+  assert.equal(new Set(manifest.entries.map(e => e.id)).size,2500);
   for (const e of manifest.entries) {
     const word = byId.get(e.id)!;
     const keys = ['exampleKo','examplePinyin','exampleZh','meaningKo','pinyin','word'] as const;
@@ -86,4 +86,28 @@ test('HSK 4 review covers every target and distinguishes grammatical senses and 
   assert.match(get('hsk4-1906').examplePinyin!,/cān jiā/);
   assert.match(get('hsk4-1978').examplePinyin!,/xià zài/);
   assert.equal(buildStudyQueue(words,{},1000).words.length,1000);
+});
+
+test('HSK 5 first 500 targets distinguish word boundaries, polyphonic senses and suffixes', () => {
+  const words = getLevelVocabulary(5).filter(w => Number(w.id.slice(5)) <= 2500);
+  assert.equal(words.length,500);
+  const reviewedIds = new Set(manifest.entries.map(e => e.id));
+  assert.ok(words.every(w => reviewedIds.has(w.id) && w.meaningStatus === 'editorial' && w.exampleZh && w.examplePinyin && w.exampleKo));
+  const get = (id: string) => words.find(w => w.id === id)!;
+  assert.match(get('hsk5-2006').examplePinyin!,/jì hǎo ān quán dài/);
+  assert.match(get('hsk5-2066').meaningKo,/꽂다/);
+  assert.match(get('hsk5-2132').meaningKo,/무게/);
+  assert.match(get('hsk5-2133').meaningKo,/부르다/);
+  assert.match(get('hsk5-2179').examplePinyin!,/chǔ de/);
+  assert.match(get('hsk5-2182').examplePinyin!,/rù kǒu chù/);
+  assert.match(get('hsk5-2210').exampleZh!,/问题仍然存在/);
+  assert.match(get('hsk5-2314').examplePinyin!,/pián yi de duō/);
+  assert.match(get('hsk5-2400').exampleZh!,/个人的看法/);
+  assert.match(get('hsk5-2459').exampleZh!,/^哈哈/);
+  assert.doesNotMatch(get('hsk5-2459').exampleZh!,/哈萨克/);
+  assert.match(get('hsk5-2478').exampleZh!,/这条河流很长/);
+  assert.match(get('hsk5-2497').exampleZh!,/自动化/);
+  assert.match(get('hsk5-2496').meaningKo,/노를 젓다/);
+  assert.doesNotMatch(get('hsk5-2496').meaningKo,/계획/);
+  assert.equal(buildStudyQueue(words,{},500).words.length,500);
 });
