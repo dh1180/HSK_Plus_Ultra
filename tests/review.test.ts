@@ -6,7 +6,7 @@ import { VOCABULARY, getLevelVocabulary } from '../src/data/vocabulary';
 import { buildStudyQueue } from '../src/lib/study';
 test('review evidence binds all reviewed entries to exactly the published content', () => {
   const byId = new Map(VOCABULARY.map(w => [w.id,w]));
-  assert.equal(new Set(manifest.entries.map(e => e.id)).size,3050);
+  assert.equal(new Set(manifest.entries.map(e => e.id)).size,3100);
   for (const e of manifest.entries) {
     const word = byId.get(e.id)!;
     const keys = ['exampleKo','examplePinyin','exampleZh','meaningKo','pinyin','word'] as const;
