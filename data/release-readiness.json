@@ -1,7 +1,7 @@
 {
   "total": 5400,
-  "reviewed": 3989,
-  "pending": 1411,
+  "reviewed": 4390,
+  "pending": 1010,
   "stale": [],
   "unknown": [],
   "duplicateCount": 0,
@@ -28,7 +28,7 @@
     },
     {
       "level": 6,
-      "pending": 1411
+      "pending": 1010
     }
   ],
   "releaseReady": false,

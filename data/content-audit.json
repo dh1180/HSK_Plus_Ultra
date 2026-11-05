@@ -3,12 +3,12 @@
   "scope": "All 5400 runtime entries; structural checks plus targeted AI-assisted editorial corrections. Not a linguistic certification.",
   "totalWords": 5400,
   "officialMetadataReferences": 5400,
-  "individuallyReviewedEntries": 3989,
-  "learningEligibleWords": 4015,
-  "editorialCorrections": 3715,
-  "visibleExamples": 4015,
-  "withheldExamples": 1385,
-  "draftMeanings": 1385,
+  "individuallyReviewedEntries": 4390,
+  "learningEligibleWords": 4407,
+  "editorialCorrections": 4107,
+  "visibleExamples": 4407,
+  "withheldExamples": 993,
+  "draftMeanings": 993,
   "levels": [
     {
       "level": 1,
@@ -43,8 +43,8 @@
     {
       "level": 6,
       "total": 1800,
-      "examples": 415,
-      "draftMeanings": 1385
+      "examples": 807,
+      "draftMeanings": 993
     }
   ],
   "candidateSnapshot": {

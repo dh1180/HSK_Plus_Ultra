@@ -6,7 +6,7 @@ import { VOCABULARY, getLevelVocabulary } from '../src/data/vocabulary';
 import { buildStudyQueue } from '../src/lib/study';
 test('review evidence binds all reviewed entries to exactly the published content', () => {
   const byId = new Map(VOCABULARY.map(w => [w.id,w]));
-  assert.equal(new Set(manifest.entries.map(e => e.id)).size,3989);
+  assert.equal(new Set(manifest.entries.map(e => e.id)).size,4390);
   for (const e of manifest.entries) {
     const word = byId.get(e.id)!;
     const keys = ['exampleKo','examplePinyin','exampleZh','meaningKo','pinyin','word'] as const;
@@ -134,4 +134,15 @@ test('HSK 5 second 500 targets preserve official metadata while publishing revie
   assert.equal(get('hsk5-2668').partOfSpeech,'명사(원문: 형용사)');
   assert.equal(manifest.entries.find(e => e.id === 'hsk5-2668')!.partOfSpeech,get('hsk5-2668').partOfSpeech);
   assert.equal(buildStudyQueue(words,{},500).words.length,500);
+});
+
+test('HSK adverb 大都 displays the reviewed pronunciation and preserves the official source', async () => {
+  const snapshot = (await import('../src/data/generated-hsk.json')).default;
+  const official = snapshot.words.find(word => word.id === 'hsk6-3847')!;
+  const word = VOCABULARY.find(word => word.id === official.id)!;
+  assert.equal(official.pinyin, 'dàdū');
+  assert.equal(official.partOfSpeechZh, '副');
+  assert.equal(word.pinyin, 'dàdōu');
+  assert.match(word.wordSource!, /원문 병음 dàdū/u);
+  assert.match(word.examplePinyin!, /dà dōu/u);
 });
