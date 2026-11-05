@@ -23,6 +23,7 @@ def main():
     parser.add_argument('--pinyin', required=True)
     parser.add_argument('--expected-count', required=True, type=int)
     parser.add_argument('--reviewer', required=True)
+    parser.add_argument('--pos', help='Explicit, identity-bound editorial POS exceptions; never changes official rows.')
     parser.add_argument('--audit', default='data/review/hsk4-review.json',
                         help='Separate audit file for this reviewed batch; preserves earlier batches.')
     args = parser.parse_args()
@@ -31,6 +32,7 @@ def main():
     overrides = read('src/data/content-overrides.json')
     meanings = read('src/data/korean-meanings.json')['meanings']
     pinyin_fixes = read(args.pinyin)
+    pos_fixes = read(args.pos) if args.pos else {}
     manifest = read('data/review/manifest.json')
     entries = {entry['id']: entry for entry in manifest['entries']}
     audit_path = ROOT / args.audit
@@ -47,6 +49,8 @@ def main():
         if key in seen:
             raise ValueError(f'Duplicate reviewed row: {key}')
         seen.add(key)
+        if entries.get(key, {}).get('partOfSpeech') is not None and key not in pos_fixes:
+            raise ValueError(f'Previously reviewed POS exception requires explicit --pos evidence: {key}')
         previous = overrides.get(key, candidates[key])
         replacement = len(fields) == 5
         zh = fields[3] if replacement else previous['exampleZh']
@@ -65,10 +69,20 @@ def main():
                 'license': 'CC BY-SA 4.0' if source == 'no7z/hsk-sentences-audio' else 'project-authored',
                 'reviewStatus': 'editorial',
                 'reviewNote': 'AI editorial review of definition, official target sense/POS, Chinese usage, Korean translation and pinyin. Not an official example/translation or independent human certification.'}
+        if key in pos_fixes:
+            fix = pos_fixes[key]
+            if (fix['word'], fix['pinyin'], fix['officialPartOfSpeechZh']) != (word['word'], word['pinyin'], word['partOfSpeechZh']):
+                raise ValueError(f'POS exception does not match the official lexical identity: {key}')
+            if not re.search('[가-힣]', fix['displayKo']) or not fix['references']:
+                raise ValueError(f'POS exception needs a display label and references: {key}')
+            item['partOfSpeech'] = fix['displayKo']
+            item['reviewNote'] += ' ' + fix['note']
         digest = hashlib.sha256(json.dumps({k: item[k] for k in CONTENT_KEYS}, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()
         entries[key] = {'id': key, 'word': word['word'], 'pinyin': word['pinyin'], 'contentHash': digest,
                         'reviewer': args.reviewer, 'reviewType': 'AI editorial',
                         'checks': ['definition', 'target-sense-and-pos', 'chinese-usage', 'korean-translation', 'pinyin'], 'decision': 'reviewed'}
+        if 'partOfSpeech' in item:
+            entries[key]['partOfSpeech'] = item['partOfSpeech']
         audit.append({'id': key, 'word': word['word'], 'originalMeaningKo': meanings[key],
                       'originalExampleZh': candidates[key]['exampleZh'], 'originalExampleKo': candidates[key]['exampleKo'],
                       'sentenceReplaced': zh != previous['exampleZh'], 'pinyinCorrected': py != previous['examplePinyin'],
@@ -76,7 +90,7 @@ def main():
         if key in prior_audit and prior_audit[key]['contentHash'] == digest:
             audit[-1] = prior_audit[key]
         overrides[key] = item
-    if len(seen) != args.expected_count or set(pinyin_fixes) - seen:
+    if len(seen) != args.expected_count or set(pinyin_fixes) - seen or set(pos_fixes) - seen:
         raise ValueError('Review count or pinyin correction coverage mismatch')
     manifest.update(reviewedCount=len(entries), scope='Per-ID AI editorial review only. See entry IDs and per-level release report for actual coverage; remaining entries are not reviewed.', entries=list(entries.values()))
     # Nothing is published until every import row has passed the integrity checks above.

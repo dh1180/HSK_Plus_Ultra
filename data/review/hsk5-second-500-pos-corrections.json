@@ -1,0 +1,13 @@
+{
+  "hsk5-2668": {
+    "word": "客服",
+    "pinyin": "kèfú",
+    "officialPartOfSpeechZh": "形",
+    "displayKo": "명사(원문: 형용사)",
+    "note": "Editorial usage-based POS supplement: customer service/personnel is nominal. The pinned official PDF row 2668 on PDF page 146 prints 形, which is preserved in generated-hsk.json. This is not a formal HSK publisher erratum.",
+    "references": [
+      "https://www.mdbg.net/chinese/dictionary?page=cc-cedict",
+      "https://dict.leo.org/pages/addinfo/addInfo.php?aiid=JcwgYw31g1K&lang=ch&lp=chde"
+    ]
+  }
+}

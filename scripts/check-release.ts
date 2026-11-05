@@ -7,7 +7,11 @@ export function contentHash(word: { word: string; pinyin: string; meaningKo: str
   return createHash('sha256').update(JSON.stringify(Object.fromEntries(keys.map(key => [key,word[key]])))).digest('hex');
 }
 const reviewed = new Map(manifest.entries.map(x => [x.id,x]));
-const stale = VOCABULARY.filter(w => reviewed.has(w.id) && reviewed.get(w.id)!.contentHash !== contentHash(w)).map(w => w.id);
+const stale = VOCABULARY.filter(w => {
+  const evidence = reviewed.get(w.id);
+  return evidence && (evidence.contentHash !== contentHash(w) ||
+    (evidence.partOfSpeech !== undefined && evidence.partOfSpeech !== w.partOfSpeech));
+}).map(w => w.id);
 const unknown = manifest.entries.filter(e => !VOCABULARY.some(w => w.id === e.id)).map(e => e.id);
 const duplicateCount = manifest.entries.length - reviewed.size;
 const pending = VOCABULARY.filter(w => !reviewed.has(w.id)).map(w => w.id);

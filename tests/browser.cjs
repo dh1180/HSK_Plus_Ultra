@@ -78,6 +78,18 @@ const wait = (fn) => new Promise((resolve,reject) => {
     await button('학습 닫기').click();
     await button('급수 선택으로 돌아가기').click();
 
+    // An editorial POS supplement remains visible alongside the original-source disclosure.
+    await button('HSK 5 바로가기').click();
+    await page.getByRole('textbox',{name:'단어 검색'}).fill('客服');
+    await page.getByRole('button',{name:/^客服,.*학습하기/}).click();
+    await button('客服, 뜻 보기').click();
+    await checkVisible('명사(원문: 형용사)');
+    await checkVisible('이 가게의 고객센터에 연락해 주세요.');
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), true);
+    await button('학습 닫기').click();
+    await button('남은 세션 종료 · 답변 기록은 유지').click();
+    await button('급수 선택으로 돌아가기').click();
+
     // Baseline responsive views and horizontal overflow at narrow/tablet widths.
     for (const width of [320,390,768,1440]) {
       await page.setViewportSize({width,height:width===320?568:900});

@@ -6,12 +6,13 @@ import { VOCABULARY, getLevelVocabulary } from '../src/data/vocabulary';
 import { buildStudyQueue } from '../src/lib/study';
 test('review evidence binds all reviewed entries to exactly the published content', () => {
   const byId = new Map(VOCABULARY.map(w => [w.id,w]));
-  assert.equal(new Set(manifest.entries.map(e => e.id)).size,2500);
+  assert.equal(new Set(manifest.entries.map(e => e.id)).size,3000);
   for (const e of manifest.entries) {
     const word = byId.get(e.id)!;
     const keys = ['exampleKo','examplePinyin','exampleZh','meaningKo','pinyin','word'] as const;
     const actual = createHash('sha256').update(JSON.stringify(Object.fromEntries(keys.map(key => [key,word[key]])))).digest('hex');
     assert.equal(actual,e.contentHash,e.id);
+    if (e.partOfSpeech !== undefined) assert.equal(word.partOfSpeech,e.partOfSpeech,e.id);
   }
   assert.equal(getLevelVocabulary(3).every(w => w.exampleZh && w.meaningStatus === 'editorial'),true);
   assert.equal(buildStudyQueue(getLevelVocabulary(3),{},500).words.length,500);
@@ -109,5 +110,28 @@ test('HSK 5 first 500 targets distinguish word boundaries, polyphonic senses and
   assert.match(get('hsk5-2497').exampleZh!,/自动化/);
   assert.match(get('hsk5-2496').meaningKo,/노를 젓다/);
   assert.doesNotMatch(get('hsk5-2496').meaningKo,/계획/);
+  assert.equal(buildStudyQueue(words,{},500).words.length,500);
+});
+
+test('HSK 5 second 500 targets preserve official metadata while publishing reviewed usage', async () => {
+  const words = getLevelVocabulary(5).filter(w => Number(w.id.slice(5)) > 2500 && Number(w.id.slice(5)) <= 3000);
+  assert.equal(words.length,500);
+  const reviewedIds = new Set(manifest.entries.map(e => e.id));
+  assert.ok(words.every(w => reviewedIds.has(w.id) && w.meaningStatus === 'editorial' && w.exampleZh && w.examplePinyin && w.exampleKo));
+  const get = (id: string) => words.find(w => w.id === id)!;
+  assert.match(get('hsk5-2525').exampleZh!,/姓名及电话号码/);
+  assert.doesNotMatch(get('hsk5-2525').exampleZh!,/阿尔及利亚/);
+  assert.match(get('hsk5-2623').exampleZh!,/看起来很精神/);
+  assert.match(get('hsk5-2623').examplePinyin!,/jīng shen$/);
+  assert.match(get('hsk5-2853').exampleZh!,/其作者/);
+  assert.match(get('hsk5-2822').examplePinyin!,/zhòng zhe/);
+  assert.match(get('hsk5-2674').examplePinyin!,/jì láo/);
+  assert.match(get('hsk5-2771').examplePinyin!,/le dāng shí/);
+  assert.match(get('hsk5-2799').examplePinyin!,/jiē shi$/);
+  assert.match(get('hsk5-2836').examplePinyin!,/wéi gù wèn/);
+  const snapshot = (await import('../src/data/generated-hsk.json')).default;
+  assert.equal(snapshot.words.find(w => w.id === 'hsk5-2668')!.partOfSpeechZh,'形');
+  assert.equal(get('hsk5-2668').partOfSpeech,'명사(원문: 형용사)');
+  assert.equal(manifest.entries.find(e => e.id === 'hsk5-2668')!.partOfSpeech,get('hsk5-2668').partOfSpeech);
   assert.equal(buildStudyQueue(words,{},500).words.length,500);
 });
