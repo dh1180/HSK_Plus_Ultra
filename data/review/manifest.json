@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedCount": 3899,
+  "reviewedCount": 3989,
   "scope": "Per-ID AI editorial review only. See entry IDs and per-level release report for actual coverage; remaining entries are not reviewed.",
   "limitations": "AI editorial review, not independent human certification. Structural tests do not establish linguistic correctness.",
   "entries": [
@@ -62378,6 +62378,1446 @@
       "word": "电饭锅",
       "pinyin": "diànfànguō",
       "contentHash": "26fe2a5307fe98c33666172418f3f32ed5d97cacce48febc7f1ec88729efac0c",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3901",
+      "word": "电力",
+      "pinyin": "diànlì",
+      "contentHash": "b16b0947f731e86802b0f43394de45178ad2d9ff2ddd08b8b8fc7fd4caa5ae34",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3902",
+      "word": "店铺",
+      "pinyin": "diànpù",
+      "contentHash": "e683e947bd2a849909cadf7ef8ddadead41f641b2dea6313c275a61be4492533",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3903",
+      "word": "电源",
+      "pinyin": "diànyuán",
+      "contentHash": "a41aeec806dd4ef672e110c99e2b7677e8e1b64c7526cc6695310546d9891df3",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3904",
+      "word": "吊",
+      "pinyin": "diào",
+      "contentHash": "5e74ba8456dd1d52d60fec3bbfb8b7a28d137407c2317ff0be0409b26e43838f",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3905",
+      "word": "调动",
+      "pinyin": "diàodòng",
+      "contentHash": "f649ee4b0fed6ac5d37326e6c98d83a14113ddf7b9d53a4354dbf303e980948f",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3906",
+      "word": "钓鱼",
+      "pinyin": "diàoyú",
+      "contentHash": "4124876bc64f60d5bd7a1f9609045b2ee3a3334db3a9e751582c57fc36e3c136",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3907",
+      "word": "跌",
+      "pinyin": "diē",
+      "contentHash": "8a38f4849e95548760a7d58bfab020bde45d24233d63bb9baa0a0df8d3c16865",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3908",
+      "word": "顶",
+      "pinyin": "dǐng",
+      "contentHash": "c1544ed29427f226cd82e1819cdad13a6310cac1ca3b2fbc5488a5d761f97ef7",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3909",
+      "word": "订单",
+      "pinyin": "dìngdān",
+      "contentHash": "2fba2d479e7acfd99588aab443ee7c6af8d792e1a816a31b6f383915f0827eb6",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3910",
+      "word": "订婚",
+      "pinyin": "dìnghūn",
+      "contentHash": "8e00f49133c483805e9f45ab9eb2bdd4f281364426fad38ee03038ce90c3d9f2",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3911",
+      "word": "定价",
+      "pinyin": "dìngjià",
+      "contentHash": "59319b7b0d306720977b8132c72eed1a251213468d5eff8d15975b56741f8263",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3912",
+      "word": "定时",
+      "pinyin": "dìngshí",
+      "contentHash": "860fecc031437e800ce7a50cce65c5b87b54afd80a037d8fcada621c3e7afb82",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3913",
+      "word": "定位",
+      "pinyin": "dìngwèi",
+      "contentHash": "0e27f10beeae4a5066b869232b94fcc1d2c7994e4e7ec49402ab0e3ee85743cc",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3914",
+      "word": "定义",
+      "pinyin": "dìngyì",
+      "contentHash": "4c6059b8231a435e2983a6991b79f34419676340d54fe99911ca921ed567c7a6",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3915",
+      "word": "定制",
+      "pinyin": "dìngzhì",
+      "contentHash": "fc903e6ea1cefdbdefeee0d5aec53b645350f6b1c612b4c6a225ebb412dca062",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3916",
+      "word": "栋",
+      "pinyin": "dòng",
+      "contentHash": "e9ffdf236fab356d35cef5e55871669af5081fd11f1f12b88d51aad661d22cfc",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3917",
+      "word": "动机",
+      "pinyin": "dòngjī",
+      "contentHash": "3618a086f306dd8ccc81591eac3cb1ef2e5613e9fac9eddc24f654643bf45d12",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3918",
+      "word": "动力",
+      "pinyin": "dònglì",
+      "contentHash": "a3491a05cf13a0c55934ca89a1e384dbd3ea67466622921d5abe672fa2b5e33d",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3919",
+      "word": "动漫",
+      "pinyin": "dòngmàn",
+      "contentHash": "02d43cbce3b8e25b5d7caf5f057dd6d414c1552eddb444d9932d14ad256d2830",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3920",
+      "word": "动态",
+      "pinyin": "dòngtài",
+      "contentHash": "6ae7183e900d6113db752619315fc24097ed196c1f2536e0cbd8b0460c0c4b4b",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3921",
+      "word": "动听",
+      "pinyin": "dòngtīng",
+      "contentHash": "b5a7ad3580e165d35a9b1ecb06fb8313ecc8427687b651122735443bc7933677",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3922",
+      "word": "逗",
+      "pinyin": "dòu",
+      "contentHash": "a754d71fde313f47fe27c74171da6a78a08428ce54442302e2ff4d3eca20e04e",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3923",
+      "word": "斗争",
+      "pinyin": "dòuzhēng",
+      "contentHash": "3cd80d66759023750ab8db3b013b92400375ed2d22cfc033a43796c10a6693ab",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3924",
+      "word": "都市",
+      "pinyin": "dūshì",
+      "contentHash": "7bb5957761a03b75656bbdb48a97a97320fcee3d5da6fe3d4a1a7986b3a1e3a0",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3925",
+      "word": "毒",
+      "pinyin": "dú",
+      "contentHash": "2e083d834f6a134031ab3107792d35e90faab8d406c750d02f5373bef14f949e",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3926",
+      "word": "渡",
+      "pinyin": "dù",
+      "contentHash": "e1beb5d70b4d92f50a40ce91dfc8a432dc11480114f3932a0d20dd6f5029383c",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3927",
+      "word": "端",
+      "pinyin": "duān",
+      "contentHash": "f924edefb271fb258eb4e244d3ba2a93b854712b72d726726a2ad69d3e4eeb7b",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3928",
+      "word": "短缺",
+      "pinyin": "duǎnquē",
+      "contentHash": "8a243fe44d58c818d4c3a3c36acc1ebd98bfe3ca8a0dea4d5c4b0b90e3e7520d",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3929",
+      "word": "对称",
+      "pinyin": "duìchèn",
+      "contentHash": "6cfac1238c56c63ced5dc42a0c21e443e4bb0c9be5592fe2b473f8c57c61de20",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3930",
+      "word": "对接",
+      "pinyin": "duìjiē",
+      "contentHash": "53d570d09cc1dcb8187e665281a59f4635c664ded80e42a84f0fc52b5250cfe5",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3931",
+      "word": "对抗",
+      "pinyin": "duìkàng",
+      "contentHash": "a444a0e289f17139d20ccf2ce352d254ea5fda58fff2065b8783b7ed3e40c3aa",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3932",
+      "word": "对立",
+      "pinyin": "duìlì",
+      "contentHash": "7bbf5dcb0522b58ca67577f6f1d8cfc5ead13d938ac4ce6480b7403dec041110",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3933",
+      "word": "对应",
+      "pinyin": "duìyìng",
+      "contentHash": "6b0a1dd2481d8accf8a7ce4bf04f5d76a27d2f9c86c9e8cf16201e37ae79ffff",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3934",
+      "word": "蹲",
+      "pinyin": "dūn",
+      "contentHash": "bb895e935abd77b77e2a8061b850029d27b91bd03ba88426be832ef7a0751d01",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3935",
+      "word": "顿时",
+      "pinyin": "dùnshí",
+      "contentHash": "052624d1a2c5d32101025790ad6d90f6b88f1d1696eda1174273eb963594eb24",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3936",
+      "word": "多才多艺",
+      "pinyin": "duōcái-duōyì",
+      "contentHash": "a3fcc1dc33f97c08e4afa658e511cea59607e123bae0e61e94fff76c3d1615e4",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3937",
+      "word": "多亏",
+      "pinyin": "duōkuī",
+      "contentHash": "8b1577450bc01030d6f440f63bf0c2dc865e131b63325c5e6feec28afff77105",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3938",
+      "word": "多媒体",
+      "pinyin": "duōméitǐ",
+      "contentHash": "219f674f2e6b7348e9a66e467d8727d4e302b8f10bb6f413e1fd63eaf8ce22e5",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3939",
+      "word": "多余",
+      "pinyin": "duōyú",
+      "contentHash": "d68e6b6e1d553278e28df9d4270d4eb8ac8585b3e071c3a4110f046e405d323b",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3940",
+      "word": "多元",
+      "pinyin": "duōyuán",
+      "contentHash": "941597af10601313a1acc6d2b4bfa313fff92751f6ac5f0eda490e4237c8ff3d",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3941",
+      "word": "夺",
+      "pinyin": "duó",
+      "contentHash": "f70899d3a6b7fb8517624eb33d302e28d159fa1348e4eb83aa4dedaa8ac73624",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3942",
+      "word": "夺取",
+      "pinyin": "duóqǔ",
+      "contentHash": "7864f6dc5c7b684966ee9ca0a0ff489447a6ed3111bce6ba9718496976c53195",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3943",
+      "word": "躲避",
+      "pinyin": "duǒbì",
+      "contentHash": "efa0ac3d4ef397c610323fc04647c8309f94c08a0e8b3a6468511f415234e1dc",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3944",
+      "word": "恶心",
+      "pinyin": "ěxin",
+      "contentHash": "39f9b43a7bd85bfd64f3893117bf4ba7ce040da8338b70bcffa424a49404d874",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3945",
+      "word": "恶劣",
+      "pinyin": "èliè",
+      "contentHash": "694935a35f120696d6a585e709f0cb237e9020250533628298c6889f3b9e4b0a",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3946",
+      "word": "儿科",
+      "pinyin": "érkē",
+      "contentHash": "f70748e652bf5f6de90a5c3ac6ce7f109eb7bcb76cc52ea8732a3282910519b2",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3947",
+      "word": "耳环",
+      "pinyin": "ěrhuán",
+      "contentHash": "72c9c21aa77d38bb15f300a8c295e9a5b46c21d11b5d286672fb8c80f17c37e1",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3948",
+      "word": "二氧化碳",
+      "pinyin": "èryǎnghuàtàn",
+      "contentHash": "4976e4c661ded368419e934c529cecc44dfec8952e3d8b4c6ada30eebbe86f4f",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3949",
+      "word": "发病",
+      "pinyin": "fābìng",
+      "contentHash": "dc7a3146e3cb950a68176a104ba87b2becd7ff6f5b5fa32650079c7533c2f1cf",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3950",
+      "word": "发愁",
+      "pinyin": "fāchóu",
+      "contentHash": "5f2cd84780a5c6bad09cb0fd3ed71f8d52dc1cd4364e90db3302d90b080e3b95",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3951",
+      "word": "发电",
+      "pinyin": "fādiàn",
+      "contentHash": "d48dee2b2090b21b335d1345eac44c60bf504376ac253957f36d284164d9e025",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3952",
+      "word": "发动",
+      "pinyin": "fādòng",
+      "contentHash": "f823ca79804b95abf7db98a6bc0d582e1f438fc48b1f461ac9e6d4f795137a99",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3953",
+      "word": "发放",
+      "pinyin": "fāfàng",
+      "contentHash": "c0cb36651fecaa00107cfdb4eed0bc7e7919ddc1a49c4df6b39d94d52fc43a1b",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3954",
+      "word": "发光",
+      "pinyin": "fāguāng",
+      "contentHash": "471a6950740ecb4302fbcc32fa9d46f75c78897465f2f747048b5ec2a7f39367",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3955",
+      "word": "发票",
+      "pinyin": "fāpiào",
+      "contentHash": "0e046da57e33b3ff72e2a83a45c168e51cfec316d3553ea27d81ed025466e93d",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3956",
+      "word": "发行",
+      "pinyin": "fāxíng",
+      "contentHash": "c941a91622bc550a1e5cea75e06815e972be119be708a0fa7352756a83efcb6c",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3957",
+      "word": "发炎",
+      "pinyin": "fāyán",
+      "contentHash": "6cc5b9b882480de55d967884af5327dd6dda5c71cc64ebbd8cb11842bee17a5a",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3958",
+      "word": "发育",
+      "pinyin": "fāyù",
+      "contentHash": "a8e146c06cbf5c8c7e7c03cd02494663ae11016bc704955550d1e6132077cc7f",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3959",
+      "word": "法定",
+      "pinyin": "fǎdìng",
+      "contentHash": "3a5e38890bcaea1afa0cb545632e6fe37018737f615a589b1091ba742dd32204",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3960",
+      "word": "法官",
+      "pinyin": "fǎguān",
+      "contentHash": "305f573c6f7a9153880a4ddbaed619216c4b62a905346d092d957991d0248123",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3961",
+      "word": "法规",
+      "pinyin": "fǎguī",
+      "contentHash": "dc9cb738329028f6c362c9c7ea1351373294e8aebd3036289a8106d572cf8dbc",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3962",
+      "word": "番",
+      "pinyin": "fān",
+      "contentHash": "5ea4ffe01b426e077d41614eda11bb3122d3996d0b33d2857419963ca25b188a",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3963",
+      "word": "繁忙",
+      "pinyin": "fánmáng",
+      "contentHash": "8b6c9c84cf87578a1e37898d3ebc8e0a82d3de31053b8244fbcd3e3906204fb7",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3964",
+      "word": "凡是",
+      "pinyin": "fánshì",
+      "contentHash": "ead104a066c19ebf2a751826cd21ac66db85c01de636c531749bd0360343c6d3",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3965",
+      "word": "繁殖",
+      "pinyin": "fánzhí",
+      "contentHash": "ba84fd7c83a81cf9bf40535be812f02631e06a6164a9e0717711a14443198e87",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3966",
+      "word": "反馈",
+      "pinyin": "fǎnkuì",
+      "contentHash": "95da7d090f80cc9622bfe78f5b22380ac0dd1d30e249acef4e2689bb2dd28d07",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3967",
+      "word": "反思",
+      "pinyin": "fǎnsī",
+      "contentHash": "e3136d462499b4846db20f023b1ea61ec992a2bbc09a91b39590e34bffb2dbff",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3968",
+      "word": "犯",
+      "pinyin": "fàn",
+      "contentHash": "6ebe9aaae9b5b0cd11a693133aaf801953e6d6b80cdc789484bf408579223066",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3969",
+      "word": "方方面面",
+      "pinyin": "fāngfāngmiànmiàn",
+      "contentHash": "a8ee91d56c0b3c67ae9490b06e742ca5ba0799a16269d1106507e18d16922fb7",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3970",
+      "word": "方位",
+      "pinyin": "fāngwèi",
+      "contentHash": "470a04a12c84ed0e82d0b47696940543d43512c94e3a4c2d552417f4780a3fad",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3971",
+      "word": "方言",
+      "pinyin": "fāngyán",
+      "contentHash": "26559557def385f76965211310c4f4e28b727bb7380bc62173a0f01f89708a10",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3972",
+      "word": "妨碍",
+      "pinyin": "fáng’ài",
+      "contentHash": "549764d0b3de608aab48548bc293babbf9480215e40a4e50fcc8410004c2f33f",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3973",
+      "word": "房价",
+      "pinyin": "fángjià",
+      "contentHash": "8c03b2b6ef1bdda30569eb2f46a941466d546c54acba805efab7e14eaa2cdf0e",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3974",
+      "word": "防治",
+      "pinyin": "fángzhì",
+      "contentHash": "d5b65acd587c9d4d449385ba57f7012af4c4dda4eeaeb3b4f7a1f44e9dd7f4e5",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3975",
+      "word": "访谈",
+      "pinyin": "fǎngtán",
+      "contentHash": "5d1f5f3c05e2cfbbece9667b17db2158f775c20f71f442660d728f555caff02c",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3976",
+      "word": "放大",
+      "pinyin": "fàngdà",
+      "contentHash": "5844881caae5d434a28ddbadab15c1e0f487325fbc851f696c55d8f142eb128e",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3977",
+      "word": "放飞",
+      "pinyin": "fàngfēi",
+      "contentHash": "f25c59773aad903ca030297a83ab55d57e7b8f7ec8ba5fd3d05c568ebe4a0ac3",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3978",
+      "word": "飞速",
+      "pinyin": "fēisù",
+      "contentHash": "f345c3e3a6485dc8be027cc79b092e38a510d678b192ab9ef39d82b5c21d862b",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3979",
+      "word": "肥",
+      "pinyin": "féi",
+      "contentHash": "90fadaecf9cc60f23b30ed07a2aed16d5e632686bdacd056988e0e8f6c834708",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3980",
+      "word": "肥胖",
+      "pinyin": "féipàng",
+      "contentHash": "8106bbe5dade390427f7a0020b136dcd5bed8ef40bb239e79f8e6615f9c7bc27",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3981",
+      "word": "肥沃",
+      "pinyin": "féiwò",
+      "contentHash": "8bf022c9b70b8a42bbd97b2e09e19e2eb30ebeb55fbf53a614f702d013e62879",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3982",
+      "word": "肺",
+      "pinyin": "fèi",
+      "contentHash": "f2ca0ffc45b6f080dbe355468d7219c70c638630d0cc9b4ee8e068cedd6211fd",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3983",
+      "word": "肺炎",
+      "pinyin": "fèiyán",
+      "contentHash": "440a8f33ce342b0d03b677686052a6dd021365af9993395118770439441e028e",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3984",
+      "word": "分工",
+      "pinyin": "fēngōng",
+      "contentHash": "9dcc78f4eacbbf0f8ef443b822e1ff606edc52154f38bf822e4cea19648108d0",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3985",
+      "word": "分级",
+      "pinyin": "fēnjí",
+      "contentHash": "8219f4e8aef1bc7490453ec5e1aa509875fb5a80b8d08e463dde154a098740e9",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3986",
+      "word": "分期",
+      "pinyin": "fēnqī",
+      "contentHash": "6636b28f34df83aa4647fa2d5c7d0f543f6361af8f73ffbf6606c45cd63a0fdc",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3987",
+      "word": "分散",
+      "pinyin": "fēnsàn",
+      "contentHash": "42d5930868637dda6b16c33706c58dcf1900b538d4a1af245d4fd61442e7e44a",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3988",
+      "word": "氛围",
+      "pinyin": "fēnwéi",
+      "contentHash": "0ea21113c1f37e40a1d8315d77bbf73a5ed075e0f383372e5c6199e998773325",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3989",
+      "word": "粉",
+      "pinyin": "fěn",
+      "contentHash": "e41e036bc14dcafb6432225396086949b482f77aba1bf9afb2b1bfdcd0789684",
+      "reviewer": "Codex",
+      "reviewType": "AI editorial",
+      "checks": [
+        "definition",
+        "target-sense-and-pos",
+        "chinese-usage",
+        "korean-translation",
+        "pinyin"
+      ],
+      "decision": "reviewed"
+    },
+    {
+      "id": "hsk6-3990",
+      "word": "愤怒",
+      "pinyin": "fènnù",
+      "contentHash": "df6cf507786f3a7a10bcf9e96850a075504e969f2aa90f0d798545181cb5f453",
       "reviewer": "Codex",
       "reviewType": "AI editorial",
       "checks": [
