@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Text,
   View,
+  useWindowDimensions,
 } from 'react-native';
 import { matchesWord } from '../lib/search';
 import { getLevelVocabulary } from '../data/vocabulary';
@@ -40,6 +41,7 @@ export function LevelScreen({
   resumeCard,
   onReviewWord,
 }: Props) {
+  const { height } = useWindowDimensions();
   const [tab, setTab] = useState<WordTab>('ALL');
   const [query, setQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState(50);
@@ -202,7 +204,7 @@ export function LevelScreen({
 
         <View
           onLayout={({ nativeEvent }) => setWordListY(nativeEvent.layout.y)}
-          style={styles.wordSection}
+          style={[styles.wordSection, { minHeight: height }]}
         >
           <View style={styles.tabs}>
             <TabButton

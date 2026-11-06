@@ -149,11 +149,7 @@ export function StudyScreen({
           onPress={() => {
             if (!revealed) setRevealed(true);
           }}
-          style={({ pressed }) => [
-            styles.card,
-            !revealed && styles.cardHidden,
-            !revealed && pressed && styles.cardPressed,
-          ]}
+          style={styles.card}
         >
           <View style={styles.cardActions}>
             <View style={[styles.levelDot, { backgroundColor: accent }]} />
@@ -169,14 +165,13 @@ export function StudyScreen({
             </Pressable>
           </View>
 
-          <View style={[styles.wordZone, revealed && styles.wordZoneRevealed]}>
+          <View style={styles.wordZone}>
             <Text style={styles.word} adjustsFontSizeToFit numberOfLines={1}>{word.word}</Text>
-            {!revealed ? (
-              <View style={styles.tapHintWrap}>
-                <Text style={styles.tapHint}>뜻을 먼저 떠올린 뒤 눌러서 확인</Text>
-              </View>
-            ) : null}
           </View>
+
+          {!revealed && <View style={styles.tapHintWrap}>
+            <Text style={styles.tapHint}>뜻을 먼저 떠올린 뒤 눌러서 확인</Text>
+          </View>}
 
           {revealed ? (
             <View style={styles.revealZone}>
@@ -352,12 +347,6 @@ const styles = StyleSheet.create({
     shadowRadius: 14,
     elevation: 2,
   },
-  cardHidden: {
-    minHeight: 285,
-  },
-  cardPressed: {
-    transform: [{ scale: 0.995 }],
-  },
   cardActions: {
     minHeight: 38,
     flexDirection: 'row',
@@ -387,13 +376,10 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   wordZone: {
-    minHeight: 198,
+    minHeight: 128,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 4,
-  },
-  wordZoneRevealed: {
-    minHeight: 108,
   },
   word: {
     color: COLORS.text,
@@ -403,7 +389,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   tapHintWrap: {
-    marginTop: 18,
+    alignSelf: 'center',
+    marginTop: 8,
+    marginBottom: 14,
     backgroundColor: '#F7F5F1',
     paddingHorizontal: 13,
     paddingVertical: 7,

@@ -23,8 +23,6 @@ export function SettingsScreen({ data, recovery, onBack, onReplace, onReset }: P
   return <SafeAreaView style={styles.safe}>
     <View style={styles.header}>{button('돌아가기',onBack)}<Text accessibilityRole="header" style={styles.title}>설정 및 기록 관리</Text></View>
     <ScrollView contentContainerStyle={styles.content}>
-      {busy && <ActivityIndicator accessibilityLabel="처리 중" />}
-      {!!message && !pending && <Text accessibilityRole="alert" style={styles.notice}>{message}</Text>}
       <View style={styles.card}>
         <Text style={styles.heading}>내 학습 기록</Text>
         <Text style={styles.body}>{recovery ? '기록을 읽지 못했습니다. 원본을 내보내 보관한 뒤 백업을 복원하거나 초기화할 수 있습니다.' : `학습한 단어 ${Object.keys(data.progress).length}개 · 한 번에 ${data.dailyTarget}개`}</Text>
@@ -32,6 +30,8 @@ export function SettingsScreen({ data, recovery, onBack, onReplace, onReset }: P
         {button(recovery ? '손상된 원본 내보내기' : '기록 백업 내보내기',() => { void run(async () => { await exportFile(recovery ? JSON.stringify(await loadRawData(),null,2) : serializeBackup(data), recovery ? 'hsk-recovery-original.json' : undefined); setMessage('백업 저장 화면을 열었습니다. 선택한 위치에 저장되었는지 확인해 주세요.'); }); })}
         {button('백업 파일 불러오기',() => { void run(async () => { const raw = await importFile(); if (raw !== null) setPending(parseBackup(raw)); }); })}
         {button('학습 기록 초기화',() => setPending('reset'),true)}
+        {busy && <ActivityIndicator accessibilityLabel="처리 중" />}
+        {!!message && !pending && <Text accessibilityRole="alert" style={styles.notice}>{message}</Text>}
       </View>
       <View style={styles.card}>
         <Text style={styles.heading}>개인정보 안내</Text>
