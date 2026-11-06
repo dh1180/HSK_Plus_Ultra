@@ -26,6 +26,7 @@ export function buildStudyQueue(
   progress: ProgressMap,
   target: number,
   now = new Date(),
+  { reviewOnly = false }: { reviewOnly?: boolean } = {},
 ): QueueBreakdown {
   const limit = Number.isFinite(target) ? Math.max(0, Math.floor(target)) : 0;
   const eligible = vocabulary.filter(word => word.meaningStatus !== 'dictionary-draft');
@@ -44,7 +45,7 @@ export function buildStudyQueue(
   // 남는 학습량을 새 단어로 채운다.
   const reviewWords = due.slice(0, limit);
   const remaining = Math.max(0, limit - reviewWords.length);
-  const newWords = unseen.slice(0, remaining);
+  const newWords = reviewOnly ? [] : unseen.slice(0, remaining);
 
   // 어떤 단어가 선택되는지는 SRS 우선순위를 유지하되,
   // 실제 카드가 나오는 순서는 매 세션마다 섞어서 순서 암기를 막는다.
@@ -63,6 +64,6 @@ export function countLevelStats(vocabulary: VocabularyWord[], progress: Progress
   return {
     studied: entries.length,
     longTerm: entries.filter((item) => item.stage === 'LONG_TERM').length,
-    due: vocabulary.filter((word) => isDue(progress[word.id], now)).length,
+    due: vocabulary.filter((word) => word.meaningStatus !== 'dictionary-draft' && isDue(progress[word.id], now)).length,
   };
 }

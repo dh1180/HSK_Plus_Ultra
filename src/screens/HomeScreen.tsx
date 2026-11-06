@@ -1,111 +1,98 @@
 import { SafeAreaView } from 'react-native-safe-area-context';
-import React from 'react';
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  Pressable,
-  useWindowDimensions,
-} from 'react-native';
-import { HskLevel, ProgressMap } from '../types';
+import React, { useEffect, useState } from 'react';
+import { AppState, Pressable, ScrollView, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { getLevelVocabulary } from '../data/vocabulary';
+import { countLevelStats } from '../lib/study';
 import { COLORS, LEVEL_META } from '../theme';
-import { getLevelVocabulary, VOCABULARY } from '../data/vocabulary';
+import { HskLevel, ProgressMap } from '../types';
 
 interface Props {
   progress: ProgressMap;
+  dailyTarget: number;
+  resumeCard: React.ReactNode;
   onSelectLevel: (level: HskLevel) => void;
+  onReview: (level: HskLevel) => void;
   onSettings: () => void;
 }
 
 const levels: HskLevel[] = [1, 2, 3, 4, 5, 6];
+const vocabulary = levels.map(level => ({ level, words: getLevelVocabulary(level) }));
 
-export function HomeScreen({ progress, onSelectLevel, onSettings }: Props) {
-  const { width } = useWindowDimensions();
-  const cardWidth = Math.min(Math.max(width * 0.78, 250), width - 44, 380);
+export function HomeScreen({ progress, dailyTarget, resumeCard, onSelectLevel, onReview, onSettings }: Props) {
+  const [now, setNow] = useState(() => new Date());
+  const { width, fontScale } = useWindowDimensions();
+  const columns = fontScale > 1.4 || width < 360 ? 1 : width >= 760 ? 3 : 2;
+
+  useEffect(() => {
+    const timer = setInterval(() => setNow(new Date()), 30_000);
+    const subscription = AppState.addEventListener('change', state => {
+      if (state === 'active') setNow(new Date());
+    });
+    return () => { clearInterval(timer); subscription.remove(); };
+  }, []);
+
+  const cards = vocabulary.map(({ level, words }) => ({
+    level, total: words.length, ...countLevelStats(words, progress, now),
+  }));
+  const due = cards.reduce((total, card) => total + card.due, 0);
+  const priority = cards.reduce((best, card) => card.due > best.due ? card : best, cards[0]!);
 
   return (
     <SafeAreaView style={styles.safe}>
-      <ScrollView contentContainerStyle={styles.page} showsVerticalScrollIndicator={false}>
-        <View style={styles.header}>
-          <View>
-            <Text style={styles.brand}>HSK Plus Ultra</Text>
-            <Text style={styles.subtitle}>기억할 때까지, 필요한 순간에 다시</Text>
+      <ScrollView contentContainerStyle={styles.scroll}>
+        <View style={styles.page}>
+          <View style={styles.header}>
+            <View style={styles.brandBlock}>
+              <Text style={styles.eyebrow}>HSK 3.0 · 중국어 어휘</Text>
+              <Text accessibilityRole="header" style={styles.brand}>HSK Plus Ultra</Text>
+            </View>
+            <Pressable accessibilityRole="button" accessibilityLabel="설정 · 기록 백업" onPress={onSettings} style={styles.settings}>
+              <Text style={styles.settingsText}>설정</Text>
+            </Pressable>
           </View>
 
-        </View>
-
-        <Pressable accessibilityRole="button" onPress={onSettings} style={{ marginHorizontal: 22, marginTop: 18, minHeight: 44, padding: 12, borderRadius: 12, backgroundColor: '#FFFFFF' }}><Text style={{ color: COLORS.text, fontWeight: '700' }}>설정 · 기록 백업</Text></Pressable>
-
-        <View style={styles.ruleCard}>
-          <Text style={styles.ruleTitle}>학습 주기</Text>
-          <Text style={styles.ruleText}>30분 → 3일 → 7일 → 21일 → 장기 기억</Text>
-        </View>
-
-        <Text style={styles.sectionTitle}>목표 급수를 선택하세요</Text>
-        <View style={styles.levelShortcuts}>{levels.map(level => <Pressable key={level} accessibilityRole="button" accessibilityLabel={`HSK ${level} 바로가기`} onPress={() => onSelectLevel(level)} style={[styles.shortcut, { backgroundColor: LEVEL_META[level].soft }]}><Text style={{ color: COLORS.text, fontWeight: '800' }}>{level}급</Text></Pressable>)}</View>
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          decelerationRate="fast"
-          snapToInterval={cardWidth + 16}
-          contentContainerStyle={styles.carousel}
-        >
-          {levels.map((level) => {
-            const meta = LEVEL_META[level];
-            const demoWords = getLevelVocabulary(level);
-            const studied = demoWords.filter((word) => progress[word.id]).length;
-            const ratio = demoWords.length ? studied / demoWords.length : 0;
-
-            return (
-              <Pressable
-                key={level}
-                accessibilityRole="button"
-                accessibilityLabel={`HSK ${level} 학습하기`}
-                onPress={() => onSelectLevel(level)}
-                style={({ pressed }) => [
-                  styles.levelCard,
-                  { width: cardWidth, backgroundColor: meta.soft },
-                  pressed && styles.pressed,
-                ]}
-              >
-                <View style={styles.cardTopRow}>
-                  <View>
-                    <Text style={styles.wordCount}>누적 {meta.cumulativeWords.toLocaleString()}단어</Text>
-                    <Text style={styles.newCount}>이 급수 신규 {meta.newWords.toLocaleString()}단어</Text>
-                  </View>
-                  <View style={[styles.levelPill, { backgroundColor: meta.accent }]}>
-                    <Text style={styles.levelPillText}>HSK {level}</Text>
-                  </View>
-                </View>
-
-                <Text style={styles.hanzi}>{meta.sample}</Text>
-                <Text style={styles.levelName}>HSK {level}</Text>
-
-                <View style={styles.progressTrack}>
-                  <View
-                    style={[
-                      styles.progressFill,
-                      { width: `${Math.round(ratio * 100)}%`, backgroundColor: meta.accent },
-                    ]}
-                  />
-                </View>
-                <Text style={styles.progressLabel}>학습한 단어 {studied} / {demoWords.length}</Text>
-
-                <View style={[styles.startButton, { backgroundColor: meta.accent }]}>
-                  <Text style={styles.startButtonText}>학습하기</Text>
-                  <Text style={styles.arrow}>›</Text>
-                </View>
+          {resumeCard || <View style={styles.hero}>
+            <Text style={styles.heroLabel}>지금 할 학습</Text>
+            <Text accessibilityRole="header" style={styles.heroTitle}>복습 대기 {due.toLocaleString()}개</Text>
+            <Text style={styles.heroCopy}>
+              {due ? `HSK ${priority.level}에 복습할 단어가 가장 많아요.`
+                : '지금 복습할 단어가 없어요. 아래에서 급수를 골라 학습을 시작하세요.'}
+            </Text>
+            {due > 0 && (
+              <Pressable accessibilityRole="button" onPress={() => onReview(priority.level)} style={styles.review}>
+                <Text style={styles.reviewText}>HSK {priority.level} 복습만 {Math.min(dailyTarget, priority.due)}개 시작</Text>
               </Pressable>
-            );
-          })}
-        </ScrollView>
+            )}
+          </View>}
 
-        <View style={styles.note}>
-          <Text style={styles.noteTitle}>HSK 3.0 기준</Text>
-          <Text style={styles.noteText}>
-            HSK 1~6 총 5,400개 항목이 있습니다. 급수별 신규 어휘를 학습하며, 하위 급수 단어는 각 급수에서 복습합니다. 현재 {VOCABULARY.filter(word => word.meaningStatus !== 'dictionary-draft').length.toLocaleString()}개를 학습할 수 있습니다. 나머지 자동 매핑 뜻은 검토 중입니다.
-          </Text>
+          <Text accessibilityRole="header" style={styles.heading}>급수별 학습</Text>
+          <View style={styles.grid}>
+            {cards.map(({ level, total, studied, due: levelDue }) => {
+              const meta = LEVEL_META[level];
+              return (
+                <Pressable
+                  key={level}
+                  accessibilityRole="button"
+                  accessibilityLabel={`HSK ${level} 바로가기`}
+                  accessibilityHint={`학습 ${studied}개, 복습 대기 ${levelDue}개`}
+                  onPress={() => onSelectLevel(level)}
+                  style={({ pressed }) => [styles.cell, { flexBasis: columns === 1 ? '100%' : columns === 2 ? '48%' : '31%' }, pressed && styles.pressed]}
+                >
+                  <View style={styles.cardTop}>
+                    <Text style={[styles.badge, { backgroundColor: meta.soft, color: meta.accent }]}>{meta.sample}</Text>
+                    <Text style={styles.level}>HSK {level}</Text>
+                  </View>
+                  <Text style={[styles.due, levelDue > 0 && { color: meta.accent }]}>
+                    {levelDue ? `복습 대기 ${levelDue}개` : '복습 대기 없음'}
+                  </Text>
+                  <View style={styles.track}>
+                    <View style={[styles.fill, { width: `${studied / total * 100}%`, backgroundColor: meta.accent }]} />
+                  </View>
+                  <Text style={styles.progress}>학습 {studied.toLocaleString()} / {total.toLocaleString()}개</Text>
+                </Pressable>
+              );
+            })}
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -113,49 +100,30 @@ export function HomeScreen({ progress, onSelectLevel, onSettings }: Props) {
 }
 
 const styles = StyleSheet.create({
-  levelShortcuts: { flexDirection: 'row', gap: 6, paddingHorizontal: 22, marginBottom: 16 },
-  shortcut: { flex: 1, maxWidth: 70, minHeight: 44, alignItems: 'center', justifyContent: 'center', borderRadius: 12 },
   safe: { flex: 1, backgroundColor: COLORS.background },
-  page: { paddingTop: 18, paddingBottom: 40 },
-  header: {
-    paddingHorizontal: 22,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  brand: { fontSize: 26, fontWeight: '800', color: COLORS.text, letterSpacing: -0.6 },
-  subtitle: { marginTop: 5, color: COLORS.subtext, fontSize: 14 },
-  streak: { backgroundColor: '#FFFFFF', borderRadius: 18, paddingHorizontal: 13, paddingVertical: 8 },
-  streakText: { fontWeight: '700', color: COLORS.text },
-  ruleCard: {
-    marginHorizontal: 22,
-    marginTop: 22,
-    padding: 16,
-    borderRadius: 18,
-    backgroundColor: '#FFFFFF',
-    borderWidth: 1,
-    borderColor: COLORS.line,
-  },
-  ruleTitle: { fontWeight: '800', color: COLORS.text, fontSize: 14 },
-  ruleText: { marginTop: 6, color: COLORS.subtext, fontSize: 14, lineHeight: 20 },
-  sectionTitle: { marginHorizontal: 22, marginTop: 28, marginBottom: 14, fontSize: 18, fontWeight: '800', color: COLORS.text },
-  carousel: { paddingHorizontal: 22, paddingBottom: 8, gap: 16 },
-  levelCard: { minHeight: 468, borderRadius: 32, padding: 24, justifyContent: 'space-between' },
-  pressed: { opacity: 0.88, transform: [{ scale: 0.99 }] },
-  cardTopRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' },
-  wordCount: { color: COLORS.text, fontSize: 14, fontWeight: '700' },
-  newCount: { color: COLORS.subtext, fontSize: 12, marginTop: 4 },
-  levelPill: { borderRadius: 999, paddingHorizontal: 12, paddingVertical: 7 },
-  levelPillText: { color: '#FFFFFF', fontWeight: '800', fontSize: 12 },
-  hanzi: { textAlign: 'center', fontSize: 112, lineHeight: 132, color: COLORS.text, fontWeight: '500' },
-  levelName: { textAlign: 'center', fontSize: 26, fontWeight: '800', color: COLORS.text },
-  progressTrack: { height: 6, overflow: 'hidden', borderRadius: 99, backgroundColor: 'rgba(255,255,255,0.7)' },
-  progressFill: { height: '100%', borderRadius: 99 },
-  progressLabel: { textAlign: 'center', color: COLORS.subtext, fontSize: 12, marginTop: -9 },
-  startButton: { height: 52, borderRadius: 18, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 },
-  startButtonText: { color: '#FFFFFF', fontWeight: '800', fontSize: 16 },
-  arrow: { color: '#FFFFFF', fontSize: 26, marginTop: -2 },
-  note: { marginHorizontal: 22, marginTop: 24, padding: 18, backgroundColor: '#ECEAE5', borderRadius: 18 },
-  noteTitle: { fontSize: 13, fontWeight: '800', color: COLORS.text },
-  noteText: { fontSize: 12, color: COLORS.subtext, lineHeight: 18, marginTop: 5 },
+  scroll: { alignItems: 'center' },
+  page: { width: '100%', maxWidth: 960, paddingHorizontal: 20, paddingTop: 20, paddingBottom: 36 },
+  header: { flexDirection: 'row', alignItems: 'center', gap: 12, marginBottom: 20 },
+  brandBlock: { flex: 1 },
+  eyebrow: { color: COLORS.subtext, fontSize: 13, fontWeight: '700' },
+  brand: { fontSize: 27, fontWeight: '900', color: COLORS.text, marginTop: 4 },
+  settings: { minHeight: 44, justifyContent: 'center', paddingHorizontal: 14, borderRadius: 12, backgroundColor: COLORS.surface },
+  settingsText: { color: COLORS.text, fontWeight: '700' },
+  hero: { backgroundColor: COLORS.yellowSoft, borderWidth: 1, borderColor: COLORS.yellowLine, padding: 20, borderRadius: 22, gap: 7 },
+  heroLabel: { color: '#6E5014', fontSize: 13, fontWeight: '800' },
+  heroTitle: { color: COLORS.text, fontSize: 28, fontWeight: '900' },
+  heroCopy: { color: COLORS.subtext, fontSize: 14, lineHeight: 21 },
+  review: { minHeight: 48, padding: 12, marginTop: 7, justifyContent: 'center', alignItems: 'center', backgroundColor: COLORS.yellow, borderRadius: 12 },
+  reviewText: { color: COLORS.text, fontWeight: '800' },
+  heading: { marginTop: 23, marginBottom: 12, color: COLORS.text, fontSize: 19, fontWeight: '900' },
+  grid: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', rowGap: 12 },
+  cell: { padding: 13, gap: 8, borderRadius: 16, borderWidth: 1, borderColor: COLORS.line, backgroundColor: COLORS.surface },
+  pressed: { opacity: 0.78 },
+  cardTop: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 8 },
+  badge: { fontSize: 18, fontWeight: '800', paddingHorizontal: 9, paddingVertical: 4, borderRadius: 8, overflow: 'hidden' },
+  level: { color: COLORS.text, fontSize: 16, fontWeight: '900' },
+  due: { color: COLORS.subtext, fontSize: 13, fontWeight: '800' },
+  track: { height: 5, borderRadius: 5, overflow: 'hidden', backgroundColor: COLORS.line },
+  fill: { height: '100%', borderRadius: 5 },
+  progress: { color: COLORS.subtext, fontSize: 12 },
 });

@@ -36,6 +36,10 @@ test('overdue reviews have selection priority; future and long-term words are ex
   const full = buildStudyQueue(words, progress, 10, now);
   assert.equal(full.reviewCount, 2); assert.equal(full.newCount, 1);
   assert.deepEqual(new Set(full.words.map(w => w.id)), new Set([a.id,b.id,e.id]));
+  const reviewOnly = buildStudyQueue(words, progress, 10, now, { reviewOnly: true });
+  assert.equal(reviewOnly.newCount, 0);
+  assert.deepEqual(new Set(reviewOnly.words.map(w => w.id)), new Set([a.id,b.id]));
+  assert.equal(buildStudyQueue(words, {}, 10, now, { reviewOnly: true }).words.length, 0);
   assert.equal(buildStudyQueue(words, progress, -1, now).words.length, 0);
 });
 test('persisted NEW records are still eligible for study', () => {

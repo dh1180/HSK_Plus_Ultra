@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Text,
   View,
+  useWindowDimensions,
 } from 'react-native';
 import { matchesWord } from '../lib/search';
 import { getLevelVocabulary } from '../data/vocabulary';
@@ -24,6 +25,8 @@ interface Props {
   onChangeTarget: (value: number) => void;
   onBack: () => void;
   onStartStudy: () => void;
+  onStartReview: () => void;
+  resumeCard: React.ReactNode;
   onReviewWord: (word: VocabularyWord) => void;
 }
 
@@ -34,8 +37,11 @@ export function LevelScreen({
   onChangeTarget,
   onBack,
   onStartStudy,
+  onStartReview,
+  resumeCard,
   onReviewWord,
 }: Props) {
+  const { height } = useWindowDimensions();
   const [tab, setTab] = useState<WordTab>('ALL');
   const [query, setQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState(50);
@@ -108,7 +114,7 @@ export function LevelScreen({
           <Text style={styles.heroHanzi}>{meta.sample}</Text>
         </View>
 
-        <View style={styles.autoCard}>
+        {resumeCard ? <View style={styles.resume}>{resumeCard}</View> : <View style={styles.autoCard}>
           <View style={styles.cardHeader}>
             <Text style={styles.cardTitle}>자동 학습</Text>
             <Text style={styles.cardLink}>복습 우선</Text>
@@ -147,7 +153,7 @@ export function LevelScreen({
             <View style={styles.infoRow}>
               <View>
                 <Text style={styles.infoTitle}>복습 단어</Text>
-                <Text style={styles.infoSub}>지금 복습 시간이 된 단어</Text>
+                <Text style={styles.infoSub}>복습 대기 {stats.due}개 중 이번 학습에 포함</Text>
               </View>
               <Text style={styles.infoNumber}>{queue.reviewCount}</Text>
             </View>
@@ -160,7 +166,7 @@ export function LevelScreen({
             onPress={onStartStudy}
             style={({ pressed }) => [
               styles.studyButton,
-              { backgroundColor: queue.words.length ? meta.accent : '#C9C6C0' },
+              { backgroundColor: queue.words.length ? COLORS.yellow : '#E8E5DF' },
               pressed && queue.words.length > 0 && { opacity: 0.86 },
             ]}
           >
@@ -168,7 +174,12 @@ export function LevelScreen({
               {queue.words.length ? `${queue.words.length}개 학습하기` : '지금 학습할 단어가 없습니다'}
             </Text>
           </Pressable>
-        </View>
+          {queue.reviewCount > 0 && queue.newCount > 0 && (
+            <Pressable accessibilityRole="button" onPress={onStartReview} style={styles.reviewButton}>
+              <Text style={[styles.targetText, { color: meta.accent }]}>복습만 {queue.reviewCount}개</Text>
+            </Pressable>
+          )}
+        </View>}
 
         <Text style={styles.sectionTitle}>HSK {level} 학습 정보</Text>
         <View style={styles.statsCard}>
@@ -193,7 +204,7 @@ export function LevelScreen({
 
         <View
           onLayout={({ nativeEvent }) => setWordListY(nativeEvent.layout.y)}
-          style={styles.wordSection}
+          style={[styles.wordSection, { minHeight: height }]}
         >
           <View style={styles.tabs}>
             <TabButton
@@ -367,8 +378,10 @@ const styles = StyleSheet.create({
   infoSub: { marginTop: 3, color: COLORS.subtext, fontSize: 11 },
   infoNumber: { color: COLORS.text, fontSize: 18, fontWeight: '800' },
   divider: { height: 1, backgroundColor: COLORS.line },
-  studyButton: { height: 54, borderRadius: 18, alignItems: 'center', justifyContent: 'center', marginTop: 14 },
-  studyButtonText: { color: '#FFFFFF', fontWeight: '900', fontSize: 16 },
+  studyButton: { minHeight: 54, padding: 10, borderRadius: 18, alignItems: 'center', justifyContent: 'center', marginTop: 14 },
+  reviewButton: { minHeight: 44, marginTop: 8, padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 14, borderWidth: 1, borderColor: COLORS.line },
+  studyButtonText: { color: COLORS.text, fontWeight: '900', fontSize: 16 },
+  resume: { marginTop: 16 },
   sectionTitle: { marginTop: 28, marginBottom: 10, fontSize: 17, fontWeight: '900', color: COLORS.text },
   statsCard: { backgroundColor: '#FFFFFF', borderRadius: 22, paddingHorizontal: 18, borderWidth: 1, borderColor: COLORS.line, overflow: 'hidden' },
   statRow: { height: 58, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
