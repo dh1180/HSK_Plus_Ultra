@@ -1,16 +1,17 @@
 import { HskLevel } from './types';
 
 export const COLORS = {
-  background: '#FAF7EE',
-  yellow: '#FFD355',
-  yellowSoft: '#FFF2C7',
-  yellowLine: '#EEDB9B',
+  background: '#FFF9EA',
+  yellow: '#F9CB3D',
+  yellowSoft: '#FFF0B9',
+  yellowLine: '#EDD68E',
+  ink: '#322A12',
   surface: '#FFFFFF',
-  text: '#1F1F1F',
-  subtext: '#625F5B',
-  line: '#E8E5DF',
+  text: '#292414',
+  subtext: '#665E49',
+  line: '#EBE2CC',
   danger: '#B73E39',
-  success: '#5EB694',
+  success: '#167452',
 };
 
 export const LEVEL_META: Record<

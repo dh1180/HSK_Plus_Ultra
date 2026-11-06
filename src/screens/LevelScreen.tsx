@@ -93,6 +93,7 @@ export function LevelScreen({
       <ScrollView
         ref={scrollRef}
         contentContainerStyle={styles.page}
+        keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.nav}>
@@ -103,7 +104,7 @@ export function LevelScreen({
           <View style={styles.navSpacer} />
         </View>
 
-        <View style={[styles.hero, { backgroundColor: meta.soft }]}>
+        <View style={styles.hero}>
           <View>
             <Text style={styles.heroEyebrow}>HSK 3.0</Text>
             <Text style={styles.heroTitle}>HSK {level}</Text>
@@ -111,7 +112,7 @@ export function LevelScreen({
               신규 {meta.newWords.toLocaleString()} · 누적 {meta.cumulativeWords.toLocaleString()}단어
             </Text>
           </View>
-          <Text style={styles.heroHanzi}>{meta.sample}</Text>
+          <Text style={[styles.heroHanzi, { color: meta.accent }]}>{meta.sample}</Text>
         </View>
 
         {resumeCard ? <View style={styles.resume}>{resumeCard}</View> : <View style={styles.autoCard}>
@@ -120,7 +121,7 @@ export function LevelScreen({
             <Text style={styles.cardLink}>복습 우선</Text>
           </View>
 
-          <Text style={styles.dataNote}>자동 학습 가능 {vocabulary.length - draftCount}개 · 뜻 검토 대기 {draftCount}개</Text>
+          {draftCount > 0 && <Text style={styles.dataNote}>자동 학습 가능 {vocabulary.length - draftCount}개 · 뜻 검토 대기 {draftCount}개</Text>}
           <Text style={styles.label}>한 번에 학습할 단어 수</Text>
           <View style={styles.targetRow}>
             {[10, 20, 30].map((value) => (
@@ -131,7 +132,7 @@ export function LevelScreen({
                 onPress={() => onChangeTarget(value)}
                 style={[
                   styles.targetChip,
-                  dailyTarget === value && { backgroundColor: meta.accent, borderColor: meta.accent },
+                  dailyTarget === value && styles.targetChipActive,
                 ]}
               >
                 <Text style={[styles.targetText, dailyTarget === value && styles.targetTextActive]}>
@@ -174,11 +175,10 @@ export function LevelScreen({
               {queue.words.length ? `${queue.words.length}개 학습하기` : '지금 학습할 단어가 없습니다'}
             </Text>
           </Pressable>
-          {queue.reviewCount > 0 && queue.newCount > 0 && (
-            <Pressable accessibilityRole="button" onPress={onStartReview} style={styles.reviewButton}>
-              <Text style={[styles.targetText, { color: meta.accent }]}>복습만 {queue.reviewCount}개</Text>
-            </Pressable>
-          )}
+          <Pressable accessibilityRole="button" disabled={!queue.reviewCount} onPress={onStartReview}
+            style={[styles.reviewButton, !queue.reviewCount && styles.reviewDisabled]}>
+            <Text style={styles.targetText}>{queue.reviewCount ? '복습만 ' + queue.reviewCount + '개' : '복습 대기 없음'}</Text>
+          </Pressable>
         </View>}
 
         <Text style={styles.sectionTitle}>HSK {level} 학습 정보</Text>
@@ -358,22 +358,24 @@ const styles = StyleSheet.create({
   backText: { fontSize: 38, lineHeight: 40, color: COLORS.text, fontWeight: '300' },
   navTitle: { fontSize: 18, fontWeight: '800', color: COLORS.text },
   navSpacer: { width: 44 },
-  hero: { marginTop: 14, borderRadius: 26, padding: 22, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  hero: { marginTop: 14, borderRadius: 24, backgroundColor: COLORS.yellowSoft, borderWidth: 1, borderColor: COLORS.yellowLine, padding: 22, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   heroEyebrow: { color: COLORS.subtext, fontSize: 12, fontWeight: '700' },
   heroTitle: { marginTop: 4, fontSize: 30, color: COLORS.text, fontWeight: '900' },
   heroSub: { marginTop: 6, color: COLORS.subtext, fontSize: 13 },
-  heroHanzi: { fontSize: 70, color: COLORS.text, fontWeight: '500' },
+  heroHanzi: { fontSize: 58, minWidth: 76, textAlign: 'center', borderRadius: 17, backgroundColor: COLORS.surface, overflow: 'hidden', fontWeight: '800' },
   autoCard: { marginTop: 18, backgroundColor: '#FFFFFF', borderRadius: 26, padding: 20, borderWidth: 1, borderColor: COLORS.line },
   cardHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   cardTitle: { fontSize: 18, fontWeight: '900', color: COLORS.text },
-  cardLink: { color: COLORS.subtext, fontSize: 13 },
+  cardLink: { color: COLORS.ink, backgroundColor: COLORS.yellowSoft, borderRadius: 12, overflow: 'hidden', paddingHorizontal: 9, paddingVertical: 5, fontSize: 11, fontWeight: '800' },
   label: { marginTop: 20, color: COLORS.subtext, fontSize: 12, fontWeight: '700' },
   targetRow: { flexDirection: 'row', gap: 8, marginTop: 9 },
-  targetChip: { minHeight: 44, justifyContent: 'center', borderWidth: 1, borderColor: COLORS.line, borderRadius: 99, paddingHorizontal: 15, paddingVertical: 8 },
+  targetChip: { minHeight: 44, flex: 1, alignItems: 'center', justifyContent: 'center', borderWidth: 1, borderColor: COLORS.line, borderRadius: 99, paddingHorizontal: 15, paddingVertical: 8 },
   targetText: { color: COLORS.text, fontSize: 13, fontWeight: '700' },
-  targetTextActive: { color: '#FFFFFF' },
+  targetChipActive: { backgroundColor: COLORS.yellowSoft, borderColor: COLORS.yellowLine },
+  targetTextActive: { color: COLORS.ink },
+  reviewDisabled: { opacity: 0.55 },
   rows: { marginTop: 18, borderTopWidth: 1, borderTopColor: COLORS.line },
-  infoRow: { minHeight: 72, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  infoRow: { minHeight: 52, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   infoTitle: { color: COLORS.text, fontSize: 15, fontWeight: '800' },
   infoSub: { marginTop: 3, color: COLORS.subtext, fontSize: 11 },
   infoNumber: { color: COLORS.text, fontSize: 18, fontWeight: '800' },

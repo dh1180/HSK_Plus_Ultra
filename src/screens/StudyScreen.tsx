@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Text,
   View,
+  useWindowDimensions,
 } from 'react-native';
 import * as Speech from 'expo-speech';
 import { ProgressMap, StudyAnswer, VocabularyWord } from '../types';
@@ -16,6 +17,7 @@ import { reviewTimingText, STAGE_LABEL, transitionStage } from '../lib/srs';
 
 interface Props {
   word: VocabularyWord;
+  cardKey: number;
   completed: number;
   total: number;
   accent: string;
@@ -28,6 +30,7 @@ interface Props {
 
 export function StudyScreen({
   word,
+  cardKey,
   completed,
   total,
   accent,
@@ -37,9 +40,13 @@ export function StudyScreen({
   onAnswer,
   onClose,
 }: Props) {
-  const [revealed, setRevealed] = useState(false);
-  const [speechError, setSpeechError] = useState(false);
-  const [linkError, setLinkError] = useState(false);
+  const { width, height, fontScale } = useWindowDimensions();
+  const wide = width >= 560 && height / width < 0.78 && fontScale <= 1.3;
+  const compact = height < 580;
+  const [revealedCard, setRevealedCard] = useState<number | null>(null);
+  const revealed = revealedCard === cardKey;
+  const [speechErrorCard, setSpeechError] = useState<number | null>(null);
+  const [linkErrorCard, setLinkError] = useState<number | null>(null);
   const speechRequest = useRef(0);
   const item = progress[word.id];
   const currentStage = item?.stage ?? 'NEW';
@@ -55,7 +62,7 @@ export function StudyScreen({
           target?.closest('input, textarea, select, [contenteditable="true"]')) return;
       if (!revealed && event.code === 'Space' && !target?.closest('button, a, [role="button"], [role="link"]')) {
         event.preventDefault();
-        setRevealed(true);
+        setRevealedCard(cardKey);
       } else if (revealed && !locked && (event.key === '1' || event.key === '2')) {
         event.preventDefault();
         onAnswer(event.key === '1' ? 'RELEARN' : 'KNOWN');
@@ -63,18 +70,14 @@ export function StudyScreen({
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [revealed, locked, onAnswer]);
-
-  useEffect(() => {
-    setRevealed(false);
-  }, [word.id]);
+  }, [cardKey, revealed, locked, onAnswer]);
 
   useEffect(() => {
     return () => {
       speechRequest.current++;
       void Speech.stop().catch(() => undefined);
     };
-  }, []);
+  }, [cardKey]);
 
   const knownNext = useMemo(
     () => (isRetry ? STAGE_LABEL[currentStage] : STAGE_LABEL[transitionStage(currentStage, 'KNOWN')]),
@@ -87,7 +90,7 @@ export function StudyScreen({
 
   const speak = async (text: string, rate: number) => {
     const request = ++speechRequest.current;
-    setSpeechError(false);
+    setSpeechError(null);
     try {
       await Speech.stop();
       const voices = await Speech.getAvailableVoicesAsync();
@@ -97,10 +100,10 @@ export function StudyScreen({
       Speech.speak(text, {
         voice: voice.identifier,
         language: 'zh-CN', rate, pitch: 1.0,
-        onError: () => { if (request === speechRequest.current) setSpeechError(true); },
+        onError: () => { if (request === speechRequest.current) setSpeechError(cardKey); },
       });
     } catch {
-      if (request === speechRequest.current) setSpeechError(true);
+      if (request === speechRequest.current) setSpeechError(cardKey);
     }
   };
 
@@ -109,151 +112,144 @@ export function StudyScreen({
 
   return (
     <SafeAreaView style={styles.safe}>
-      <View style={styles.topBar}>
-        <Pressable accessibilityRole="button" accessibilityLabel="학습 닫기" onPress={onClose} hitSlop={12} style={styles.closeButton}>
-          <Text style={styles.close}>×</Text>
-        </Pressable>
+      <View style={[styles.shell, wide && styles.shellWide]}>
+        <View style={styles.topBar}>
+          <Pressable accessibilityRole="button" accessibilityLabel="학습 닫기" onPress={onClose} hitSlop={12} style={styles.closeButton}>
+            <Text style={styles.close}>×</Text>
+          </Pressable>
 
-        <View style={styles.counterWrap}>
-          <Text style={styles.counter}>{completed} / {total} 완료</Text>
-          <View style={styles.track}>
-            <View
-              style={[
-                styles.fill,
-                {
-                  width: `${(completed / total) * 100}%`,
-                  backgroundColor: accent,
-                },
-              ]}
-            />
+          <View style={styles.counterWrap}>
+            <Text style={styles.counter}>{completed} / {total} 완료</Text>
+            <View style={styles.track}>
+              <View
+                style={[
+                  styles.fill,
+                  {
+                    width: `${(completed / total) * 100}%`,
+                    backgroundColor: accent,
+                  },
+                ]}
+              />
+            </View>
+          </View>
+
+          <View style={styles.closeButton} />
+        </View>
+
+        <View testID="study-card-frame" style={[styles.card, wide && styles.cardWide]}>
+          <View style={[styles.prompt, compact && styles.promptCompact, wide && styles.promptWide]}>
+            <View style={styles.cardActions}>
+              <Text numberOfLines={1} style={[styles.stageLabel, { color: accent }]}>
+                {readOnly ? '미리 보기' : isRetry ? '다시 학습' : 'HSK ' + word.level}
+              </Text>
+              <Pressable accessibilityRole="button" accessibilityLabel="중국어 단어 듣기"
+                onPress={speakWord} style={({ pressed }) => [styles.wordAudioButton, pressed && styles.pressed]}>
+                <Text style={styles.wordAudioText}>🔊 단어 듣기</Text>
+              </Pressable>
+            </View>
+            <Pressable accessibilityRole="button"
+              accessibilityLabel={revealed ? word.word + ', ' + word.meaningKo : word.word + ', 뜻 보기'}
+              onPress={() => setRevealedCard(cardKey)} style={styles.wordZone}>
+              <Text style={[styles.word, compact && styles.wordCompact]} adjustsFontSizeToFit numberOfLines={1}>{word.word}</Text>
+            </Pressable>
+            <Text numberOfLines={1} style={styles.stageTiming}>{reviewTimingText(item)}</Text>
+          </View>
+
+          <View style={[styles.detail, wide && styles.detailWide]}>
+            {revealed ? (
+              <ScrollView key={cardKey} style={styles.scrollView} contentContainerStyle={styles.revealZone}>
+                <Text style={styles.detailLabel}>정답 확인</Text>
+                <Text style={styles.pinyin}>{word.pinyin}</Text>
+                <Text style={styles.meaning}>{word.meaningKo}</Text>
+                <Text style={styles.qualityNote}>{word.meaningStatus === 'dictionary-draft'
+                  ? '자동 매핑 뜻 · 의미와 품사 검토 필요'
+                  : word.meaningStatus === 'editorial' ? 'AI 보조 교정 · 교사 검수 전' : '프로젝트 작성 뜻'}</Text>
+                {word.partOfSpeech ? <Text style={styles.pos}>{word.partOfSpeech}</Text> : null}
+                {word.exampleZh ? (
+                  <View style={styles.exampleBox}>
+                    <View style={styles.exampleHeader}>
+                      <Text style={styles.exampleLabel}>예문</Text>
+                      <Pressable
+                        accessibilityRole="button"
+                        accessibilityLabel="중국어 예문 듣기"
+                        onPress={speakExample}
+                        hitSlop={8}
+                        style={({ pressed }) => [
+                          styles.exampleSpeakerButton,
+                          { borderColor: `${accent}80` },
+                          pressed && styles.pressed,
+                        ]}
+                      >
+                        <Text style={[styles.exampleSpeakerText, { color: accent }]}>🔊 예문 듣기</Text>
+                      </Pressable>
+                    </View>
+                    <Text style={styles.exampleZh}>{word.exampleZh.split(word.word).map((part, partIndex) => (
+                      <React.Fragment key={partIndex}>{partIndex > 0 && <Text style={{ color: accent, fontWeight: '900' }}>{word.word}</Text>}{part}</React.Fragment>
+                    ))}</Text>
+                    {word.examplePinyin ? <Text style={styles.examplePinyin}>{word.examplePinyin}</Text> : null}
+                    {word.exampleKo ? <Text style={styles.exampleKo}>{word.exampleKo}</Text> : null}
+                    <Text style={styles.qualityNote}>{word.exampleSource}</Text>
+                  </View>
+                ) : <Text style={styles.qualityNote}>예문 검토 중 · 확인되지 않은 자동 생성 예문은 표시하지 않습니다.</Text>}
+                {word.wordSourceUrl && <Pressable accessibilityRole="link" accessibilityLabel="공식 어휘 원문 보기" onPress={() => { setLinkError(null); void Linking.openURL(word.wordSourceUrl!).catch(() => setLinkError(cardKey)); }} style={{ minHeight: 44, justifyContent: 'center' }}><Text style={styles.qualityNote}>{word.wordSource} · 원문 보기</Text></Pressable>}
+              </ScrollView>
+            ) : (
+              <Pressable accessibilityRole="button" onPress={() => setRevealedCard(cardKey)} style={styles.cover}>
+                <Text style={styles.coverIndex}>01 / 떠올리기</Text>
+                <Text style={styles.coverTitle}>뜻을 떠올려 보세요</Text>
+                <Text style={styles.tapHint}>뜻·병음·예문 보기  ↓</Text>
+              </Pressable>
+            )}
           </View>
         </View>
 
-        <View style={styles.closeButton} />
-      </View>
-
-      <ScrollView
-        style={styles.scrollView}
-        contentContainerStyle={styles.scroll}
-        showsVerticalScrollIndicator={false}
-      >
-        <View style={styles.stageRow}>
-          <View style={[styles.stageChip, { backgroundColor: `${accent}18` }]}>
-            <Text style={[styles.stageLabel, { color: accent }]}>{reviewTimingText(item)}</Text>
-          </View>
-        </View>
-
-        <Pressable
-          accessibilityRole="button"
-          accessibilityLabel={revealed ? `${word.word}, ${word.meaningKo}` : `${word.word}, 뜻 보기`}
-          onPress={() => {
-            if (!revealed) setRevealed(true);
-          }}
-          style={styles.card}
-        >
-          <View style={styles.cardActions}>
-            <View style={[styles.levelDot, { backgroundColor: accent }]} />
+        <View style={styles.bottom}>
+          {(linkErrorCard === cardKey || speechErrorCard === cardKey) && (
+            <View style={styles.studyNotice}>
+              <Text accessibilityRole="alert" style={styles.studyNoticeText}>
+                {linkErrorCard === cardKey ? '공식 원문을 열지 못했습니다. 인터넷 연결을 확인해 주세요.' :
+                  '음성을 재생하지 못했습니다. 기기의 중국어 음성 설정을 확인해 주세요.'}
+              </Text>
+              <Pressable accessibilityRole="button" accessibilityLabel="안내 닫기"
+                onPress={() => { setLinkError(null); setSpeechError(null); }} style={styles.closeButton}>
+                <Text style={styles.close}>×</Text>
+              </Pressable>
+            </View>
+          )}
+          <Text numberOfLines={1} style={styles.answerGuide}>
+            {readOnly || isDraft ? '미리 보기 · 학습 기록에 반영하지 않아요' :
+              Platform.OS === 'web' ? 'Space 뜻 보기   ·   1 다시 학습   ·   2 알고 있음' : '뜻을 확인한 뒤 기억 상태를 선택하세요'}
+          </Text>
+          <View style={styles.buttons}>
             <Pressable
               accessibilityRole="button"
-              accessibilityLabel="중국어 단어 듣기"
-              onPress={(event) => { event.stopPropagation(); speakWord(); }}
-              hitSlop={8}
-              style={({ pressed }) => [styles.wordAudioButton, pressed && styles.pressed]}
+              disabled={!revealed || locked}
+              accessibilityState={{ disabled: !revealed || locked }}
+              onPress={() => onAnswer('RELEARN')}
+              style={({ pressed }) => [styles.actionButton, styles.relearnButton, (!revealed || locked) && styles.disabled, pressed && styles.pressed]}
             >
-              <Text style={styles.wordAudioIcon}>🔊</Text>
-              <Text style={styles.wordAudioText}>단어 듣기</Text>
+              <Text style={styles.relearnText}>다시 학습</Text>
+              <Text style={styles.relearnSub}>다음: {relearnNext}</Text>
+            </Pressable>
+
+            <Pressable
+              accessibilityRole="button"
+              disabled={!revealed || locked}
+              accessibilityState={{ disabled: !revealed || locked }}
+              onPress={() => onAnswer('KNOWN')}
+              style={({ pressed }) => [
+                styles.actionButton,
+                (!revealed || locked) && styles.disabled,
+                { backgroundColor: COLORS.yellow },
+                pressed && styles.pressed,
+              ]}
+            >
+              <Text style={styles.knownText}>알고 있음</Text>
+              <Text style={styles.knownSub}>다음: {knownNext}</Text>
             </Pressable>
           </View>
 
-          <View style={styles.wordZone}>
-            <Text style={styles.word} adjustsFontSizeToFit numberOfLines={1}>{word.word}</Text>
-          </View>
-
-          {!revealed && <View style={styles.tapHintWrap}>
-            <Text style={styles.tapHint}>뜻을 먼저 떠올린 뒤 눌러서 확인</Text>
-          </View>}
-
-          {revealed ? (
-            <View style={styles.revealZone}>
-              <Text style={styles.pinyin}>{word.pinyin}</Text>
-              <Text style={styles.meaning}>{word.meaningKo}</Text>
-              <Text style={styles.qualityNote}>{word.meaningStatus === 'dictionary-draft'
-                ? '자동 매핑 뜻 · 의미와 품사 검토 필요'
-                : word.meaningStatus === 'editorial' ? 'AI 보조 교정 · 교사 검수 전' : '프로젝트 작성 뜻'}</Text>
-              {word.partOfSpeech ? <Text style={styles.pos}>{word.partOfSpeech}</Text> : null}
-              {word.exampleZh ? (
-                <View style={styles.exampleBox}>
-                  <View style={styles.exampleHeader}>
-                    <Text style={styles.exampleLabel}>예문</Text>
-                    <Pressable
-                      accessibilityRole="button"
-                      accessibilityLabel="중국어 예문 듣기"
-                      onPress={(event) => { event.stopPropagation(); speakExample(); }}
-                      hitSlop={8}
-                      style={({ pressed }) => [
-                        styles.exampleSpeakerButton,
-                        { borderColor: `${accent}80` },
-                        pressed && styles.pressed,
-                      ]}
-                    >
-                      <Text style={[styles.exampleSpeakerText, { color: accent }]}>🔊 예문 듣기</Text>
-                    </Pressable>
-                  </View>
-                  <Text style={styles.exampleZh}>{word.exampleZh.split(word.word).map((part, partIndex) => (
-                    <React.Fragment key={partIndex}>{partIndex > 0 && <Text style={{ color: accent, fontWeight: '900' }}>{word.word}</Text>}{part}</React.Fragment>
-                  ))}</Text>
-                  {word.examplePinyin ? <Text style={styles.examplePinyin}>{word.examplePinyin}</Text> : null}
-                  {word.exampleKo ? <Text style={styles.exampleKo}>{word.exampleKo}</Text> : null}
-                  <Text style={styles.qualityNote}>{word.exampleSource}</Text>
-                </View>
-              ) : <Text style={styles.qualityNote}>예문 검토 중 · 확인되지 않은 자동 생성 예문은 표시하지 않습니다.</Text>}
-              {word.wordSourceUrl && <Pressable accessibilityRole="link" accessibilityLabel="공식 어휘 원문 보기" onPress={event => { event.stopPropagation(); setLinkError(false); void Linking.openURL(word.wordSourceUrl!).catch(() => setLinkError(true)); }} style={{ minHeight: 44, justifyContent: 'center' }}><Text style={styles.qualityNote}>{word.wordSource} · 원문 보기</Text></Pressable>}
-            </View>
-          ) : null}
-        </Pressable>
-      </ScrollView>
-
-      <View style={styles.bottom}>
-        {linkError && <Text accessibilityRole="alert" style={styles.qualityNote}>공식 원문을 열지 못했습니다. 인터넷 연결을 확인해 주세요.</Text>}
-        {speechError && <Text accessibilityRole="alert" style={styles.qualityNote}>음성을 재생하지 못했습니다. 기기의 중국어(중국 본토) 음성을 설치하고 무음 모드·음량을 확인해 주세요.</Text>}
-        <Text style={styles.answerGuide}>
-          {readOnly && !isDraft ? '미리보기 · 중단한 세션을 마친 뒤 학습할 수 있습니다' : isDraft ? '뜻 검토 중 · 참고 열람만 가능하며 학습 기록에 반영하지 않습니다' : isRetry
-            ? '다시 학습한 단어 · 알고 있을 때까지 이번 학습에서 반복됩니다'
-            : revealed
-              ? '기억 상태를 선택하세요'
-              : '카드를 눌러 뜻을 확인한 뒤 선택하세요'}
-        </Text>
-        <View style={styles.buttons}>
-          <Pressable
-            accessibilityRole="button"
-            disabled={!revealed || locked}
-            accessibilityState={{ disabled: !revealed || locked }}
-            onPress={() => onAnswer('RELEARN')}
-            style={({ pressed }) => [styles.actionButton, styles.relearnButton, (!revealed || locked) && styles.disabled, pressed && styles.pressed]}
-          >
-            <Text style={styles.relearnText}>다시 학습</Text>
-            <Text style={styles.relearnSub}>다음: {relearnNext}</Text>
-          </Pressable>
-
-          <Pressable
-            accessibilityRole="button"
-            disabled={!revealed || locked}
-            accessibilityState={{ disabled: !revealed || locked }}
-            onPress={() => onAnswer('KNOWN')}
-            style={({ pressed }) => [
-              styles.actionButton,
-              (!revealed || locked) && styles.disabled,
-              { backgroundColor: COLORS.yellow },
-              pressed && styles.pressed,
-            ]}
-          >
-            <Text style={styles.knownText}>알고 있음</Text>
-            <Text style={styles.knownSub}>다음: {knownNext}</Text>
-          </Pressable>
         </View>
-        {Platform.OS === 'web' && !locked && (
-          <Text style={styles.keyboardHint}>{revealed ? '1 다시 학습  ·  2 알고 있음' : 'Space 뜻 보기'}</Text>
-        )}
       </View>
     </SafeAreaView>
   );
@@ -261,18 +257,19 @@ export function StudyScreen({
 
 const styles = StyleSheet.create({
   disabled: { opacity: 0.45 },
-  keyboardHint: { color: COLORS.subtext, fontSize: 12, textAlign: 'center', marginTop: 6 },
   qualityNote: { color: COLORS.subtext, fontSize: 12, lineHeight: 18, marginTop: 10, textAlign: 'left' },
   safe: {
     flex: 1,
     backgroundColor: COLORS.background,
   },
+  shell: { flex: 1, width: '100%', alignSelf: 'center' },
+  shellWide: { maxWidth: 1000, maxHeight: 750, marginVertical: 'auto' },
   topBar: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 14,
     paddingTop: 6,
-    height: 62,
+    minHeight: 56,
   },
   closeButton: {
     width: 44,
@@ -308,118 +305,54 @@ const styles = StyleSheet.create({
     height: 5,
     borderRadius: 99,
   },
-  scrollView: {
-    flex: 1,
-  },
-  scroll: {
-    flexGrow: 1,
-    paddingHorizontal: 16,
-    paddingBottom: 10,
-  },
-  stageRow: {
-    alignItems: 'center',
-    marginTop: 16,
-    marginBottom: 12,
-  },
-  stageChip: {
-    borderRadius: 99,
-    paddingHorizontal: 14,
-    paddingVertical: 7,
-  },
-  stageLabel: {
-    fontSize: 12,
-    fontWeight: '800',
-  },
+  scrollView: { flex: 1 },
   card: {
-    width: '100%',
-    maxWidth: 520,
+    flex: 1,
+    minHeight: 0,
     alignSelf: 'center',
-    backgroundColor: '#FFFFFF',
+    width: '94%',
+    maxWidth: 700,
+    marginVertical: 6,
     borderRadius: 24,
     borderWidth: 1,
-    borderColor: '#E9E6DF',
-    paddingHorizontal: 20,
-    paddingTop: 17,
-    paddingBottom: 20,
-    shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 5 },
-    shadowOpacity: 0.05,
-    shadowRadius: 14,
-    elevation: 2,
+    borderColor: COLORS.yellowLine,
+    backgroundColor: COLORS.surface,
+    overflow: 'hidden',
   },
-  cardActions: {
-    minHeight: 38,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  levelDot: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
-  },
-  wordAudioButton: {
-    minHeight: 44,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 5,
-    borderRadius: 99,
-    paddingHorizontal: 11,
-    backgroundColor: '#F7F5F1',
-  },
-  wordAudioIcon: {
-    fontSize: 15,
-  },
-  wordAudioText: {
-    color: COLORS.subtext,
-    fontSize: 11,
-    fontWeight: '800',
-  },
-  wordZone: {
-    minHeight: 128,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 4,
-  },
-  word: {
-    color: COLORS.text,
-    fontSize: 66,
-    lineHeight: 82,
-    fontWeight: '500',
-    textAlign: 'center',
-  },
-  tapHintWrap: {
-    alignSelf: 'center',
-    marginTop: 8,
-    marginBottom: 14,
-    backgroundColor: '#F7F5F1',
-    paddingHorizontal: 13,
-    paddingVertical: 7,
-    borderRadius: 99,
-  },
-  tapHint: {
-    color: COLORS.subtext,
-    fontSize: 11,
-    fontWeight: '700',
-  },
-  revealZone: {
-    alignItems: 'center',
-    borderTopWidth: 1,
-    borderTopColor: COLORS.line,
-    paddingTop: 18,
-  },
+  cardWide: { flexDirection: 'row', maxWidth: 940 },
+  prompt: { minHeight: 164, backgroundColor: COLORS.yellowSoft, paddingHorizontal: 18, paddingVertical: 8 },
+  promptCompact: { minHeight: 108, paddingVertical: 4 },
+  promptWide: { flex: 2, justifyContent: 'center', paddingHorizontal: 22 },
+  cardActions: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: 8 },
+  stageLabel: { fontSize: 12, fontWeight: '900', flex: 1 },
+  stageTiming: { color: COLORS.subtext, fontSize: 11, textAlign: 'center', marginBottom: 3 },
+  wordAudioButton: { minHeight: 44, justifyContent: 'center', borderRadius: 99, paddingHorizontal: 12, backgroundColor: COLORS.surface },
+  wordAudioText: { color: COLORS.text, fontSize: 12, fontWeight: '800' },
+  wordZone: { flex: 1, minHeight: 54, justifyContent: 'center', alignItems: 'stretch', paddingHorizontal: 4 },
+  word: { color: COLORS.text, fontSize: 59, fontWeight: '800', textAlign: 'center' },
+  wordCompact: { fontSize: 42 },
+  detail: { flex: 1, minHeight: 0, borderTopWidth: 1, borderTopColor: COLORS.yellowLine },
+  detailWide: { flex: 3, borderTopWidth: 0, borderLeftWidth: 1, borderLeftColor: COLORS.yellowLine },
+  cover: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 12, gap: 7 },
+  coverIndex: { color: COLORS.subtext, fontSize: 11, fontWeight: '800' },
+  coverTitle: { color: COLORS.text, fontSize: 20, fontWeight: '900', textAlign: 'center' },
+  tapHint: { color: COLORS.text, fontSize: 12, fontWeight: '800', backgroundColor: COLORS.yellowSoft, borderRadius: 14, paddingVertical: 6, paddingHorizontal: 12, overflow: 'hidden' },
+  revealZone: { padding: 14, alignItems: 'stretch' },
+  detailLabel: { color: COLORS.subtext, fontSize: 11, fontWeight: '900', marginBottom: 4 },
+  studyNotice: { position: 'absolute', bottom: '100%', alignSelf: 'center', width: '100%', maxWidth: 650, backgroundColor: COLORS.yellowSoft, borderWidth: 1, borderColor: COLORS.yellowLine, borderRadius: 12, paddingLeft: 12, flexDirection: 'row', alignItems: 'center', zIndex: 2 },
+  studyNoticeText: { flex: 1, color: COLORS.text, fontSize: 12 },
   pinyin: {
     color: COLORS.text,
     fontSize: 22,
     fontWeight: '800',
-    textAlign: 'center',
+    textAlign: 'left',
   },
   meaning: {
     color: COLORS.text,
     fontSize: 17,
     fontWeight: '800',
     marginTop: 6,
-    textAlign: 'center',
+    textAlign: 'left',
   },
   pos: {
     color: COLORS.subtext,
@@ -428,7 +361,7 @@ const styles = StyleSheet.create({
   },
   exampleBox: {
     width: '100%',
-    backgroundColor: '#F8F7F4',
+    backgroundColor: COLORS.background,
     borderRadius: 16,
     padding: 14,
     marginTop: 16,
@@ -477,11 +410,12 @@ const styles = StyleSheet.create({
   },
   bottom: {
     paddingHorizontal: 16,
-    paddingTop: 9,
+    zIndex: 1,
+    paddingTop: 5,
     paddingBottom: 12,
     backgroundColor: COLORS.background,
     borderTopWidth: 1,
-    borderTopColor: '#ECE9E2',
+    borderTopColor: COLORS.line,
   },
   answerGuide: {
     color: COLORS.subtext,
@@ -493,13 +427,13 @@ const styles = StyleSheet.create({
   buttons: {
     flexDirection: 'row',
     gap: 10,
-    maxWidth: 520,
+    maxWidth: 700,
     width: '100%',
     alignSelf: 'center',
   },
   actionButton: {
     flex: 1,
-    minHeight: 60,
+    minHeight: 53,
     borderRadius: 18,
     alignItems: 'center',
     justifyContent: 'center',
@@ -533,6 +467,5 @@ const styles = StyleSheet.create({
   },
   pressed: {
     opacity: 0.78,
-    transform: [{ scale: 0.99 }],
   },
 });

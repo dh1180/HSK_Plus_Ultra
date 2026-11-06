@@ -147,6 +147,29 @@ const wait = (fn) => new Promise((resolve,reject) => {
       }
       await button('학습 닫기').click(); await endSession(); await button('급수 선택으로 돌아가기').click();
     }
+    // The recorded jump was the outer card growing on reveal and shrinking on the next word.
+    for (const [width, height] of [[390, 844], [844, 390], [1726, 1080]]) {
+      await page.setViewportSize({width, height});
+      await button('HSK 1 바로가기').click();
+      await page.getByRole('button',{name:/^\d+개 학습하기$/}).click();
+      const frame = page.getByTestId('study-card-frame');
+      const known = page.getByRole('button', {name:/알고 있음/});
+      const close = button('학습 닫기');
+      const geometry = () => Promise.all([frame.boundingBox(), known.boundingBox(), close.boundingBox()]);
+      const covered = await geometry();
+      assert.ok(covered.every(Boolean));
+      await page.getByRole('button', {name:/뜻 보기$/}).click();
+      await checkVisible('정답 확인');
+      assert.deepEqual(await geometry(), covered, 'Reveal keeps the whole card, header and buttons in place');
+      await known.click();
+      await page.getByRole('button', {name:/뜻 보기$/}).waitFor();
+      assert.equal(await known.isDisabled(), true);
+      assert.deepEqual(await geometry(), covered, 'Next word keeps the study shell in place');
+      await close.click();
+      await endSession();
+      await button('급수 선택으로 돌아가기').click();
+    }
+
     // The home shortcut starts a due-only session in the correct level.
     await page.evaluate(() => {
       const key = 'hsk-plus-ultra:state:v2';

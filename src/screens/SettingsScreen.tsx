@@ -61,8 +61,8 @@ export function SettingsScreen({ data, recovery, onBack, onReplace, onReset }: P
   </SafeAreaView>;
 }
 const styles = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: COLORS.background }, header: { padding: 16, gap: 12 }, title: { fontSize: 23, fontWeight: '800', color: COLORS.text },
-  content: { padding: 18, paddingBottom: 40, gap: 18, width: '100%', maxWidth: 720, alignSelf: 'center' }, card: { padding: 20, borderRadius: 20, backgroundColor: '#FFFFFF', gap: 10 },
+  safe: { flex: 1, backgroundColor: COLORS.background }, header: { width: '100%', maxWidth: 720, alignSelf: 'center', padding: 16, gap: 12 }, title: { fontSize: 23, fontWeight: '800', color: COLORS.text },
+  content: { padding: 18, paddingBottom: 40, gap: 18, width: '100%', maxWidth: 720, alignSelf: 'center' }, card: { padding: 20, borderRadius: 22, backgroundColor: COLORS.surface, borderWidth: 1, borderColor: COLORS.line, gap: 10 },
   heading: { fontSize: 18, fontWeight: '800', color: COLORS.text }, body: { fontSize: 14, lineHeight: 23, color: COLORS.subtext }, button: { padding: 14, minHeight: 48, borderRadius: 12, borderWidth: 1, borderColor: COLORS.line, backgroundColor: '#FFFFFF', alignItems: 'center' }, buttonText: { color: COLORS.text, fontSize: 14, fontWeight: '700' }, destructive: { backgroundColor: '#FFF0F2', borderColor: '#F0CCD1' },
   notice: { padding: 14, color: COLORS.text, backgroundColor: '#FFF2D4', borderRadius: 12 }, overlay: { flex: 1, justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.4)', padding: 22 }, dialog: { width: '100%', maxWidth: 480, alignSelf: 'center', padding: 24, gap: 14, borderRadius: 24, backgroundColor: '#FFFFFF' },
 });
