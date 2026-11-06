@@ -25,6 +25,7 @@ interface Props {
   onBack: () => void;
   onStartStudy: () => void;
   onStartReview: () => void;
+  resumeCard: React.ReactNode;
   onReviewWord: (word: VocabularyWord) => void;
 }
 
@@ -36,6 +37,7 @@ export function LevelScreen({
   onBack,
   onStartStudy,
   onStartReview,
+  resumeCard,
   onReviewWord,
 }: Props) {
   const [tab, setTab] = useState<WordTab>('ALL');
@@ -110,7 +112,7 @@ export function LevelScreen({
           <Text style={styles.heroHanzi}>{meta.sample}</Text>
         </View>
 
-        <View style={styles.autoCard}>
+        {resumeCard ? <View style={styles.resume}>{resumeCard}</View> : <View style={styles.autoCard}>
           <View style={styles.cardHeader}>
             <Text style={styles.cardTitle}>자동 학습</Text>
             <Text style={styles.cardLink}>복습 우선</Text>
@@ -162,7 +164,7 @@ export function LevelScreen({
             onPress={onStartStudy}
             style={({ pressed }) => [
               styles.studyButton,
-              { backgroundColor: queue.words.length ? meta.accent : '#C9C6C0' },
+              { backgroundColor: queue.words.length ? COLORS.yellow : '#E8E5DF' },
               pressed && queue.words.length > 0 && { opacity: 0.86 },
             ]}
           >
@@ -175,7 +177,7 @@ export function LevelScreen({
               <Text style={[styles.targetText, { color: meta.accent }]}>복습만 {queue.reviewCount}개</Text>
             </Pressable>
           )}
-        </View>
+        </View>}
 
         <Text style={styles.sectionTitle}>HSK {level} 학습 정보</Text>
         <View style={styles.statsCard}>
@@ -376,7 +378,8 @@ const styles = StyleSheet.create({
   divider: { height: 1, backgroundColor: COLORS.line },
   studyButton: { minHeight: 54, padding: 10, borderRadius: 18, alignItems: 'center', justifyContent: 'center', marginTop: 14 },
   reviewButton: { minHeight: 44, marginTop: 8, padding: 10, alignItems: 'center', justifyContent: 'center', borderRadius: 14, borderWidth: 1, borderColor: COLORS.line },
-  studyButtonText: { color: '#FFFFFF', fontWeight: '900', fontSize: 16 },
+  studyButtonText: { color: COLORS.text, fontWeight: '900', fontSize: 16 },
+  resume: { marginTop: 16 },
   sectionTitle: { marginTop: 28, marginBottom: 10, fontSize: 17, fontWeight: '900', color: COLORS.text },
   statsCard: { backgroundColor: '#FFFFFF', borderRadius: 22, paddingHorizontal: 18, borderWidth: 1, borderColor: COLORS.line, overflow: 'hidden' },
   statRow: { height: 58, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },

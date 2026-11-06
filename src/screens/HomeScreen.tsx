@@ -9,7 +9,7 @@ import { HskLevel, ProgressMap } from '../types';
 interface Props {
   progress: ProgressMap;
   dailyTarget: number;
-  hasSession: boolean;
+  resumeCard: React.ReactNode;
   onSelectLevel: (level: HskLevel) => void;
   onReview: (level: HskLevel) => void;
   onSettings: () => void;
@@ -18,7 +18,7 @@ interface Props {
 const levels: HskLevel[] = [1, 2, 3, 4, 5, 6];
 const vocabulary = levels.map(level => ({ level, words: getLevelVocabulary(level) }));
 
-export function HomeScreen({ progress, dailyTarget, hasSession, onSelectLevel, onReview, onSettings }: Props) {
+export function HomeScreen({ progress, dailyTarget, resumeCard, onSelectLevel, onReview, onSettings }: Props) {
   const [now, setNow] = useState(() => new Date());
   const { width, fontScale } = useWindowDimensions();
   const columns = fontScale > 1.4 || width < 360 ? 1 : width >= 760 ? 3 : 2;
@@ -51,20 +51,19 @@ export function HomeScreen({ progress, dailyTarget, hasSession, onSelectLevel, o
             </Pressable>
           </View>
 
-          <View style={styles.hero}>
+          {resumeCard || <View style={styles.hero}>
             <Text style={styles.heroLabel}>지금 할 학습</Text>
             <Text accessibilityRole="header" style={styles.heroTitle}>복습 대기 {due.toLocaleString()}개</Text>
             <Text style={styles.heroCopy}>
-              {hasSession ? '이어하기에서 진행 중인 학습으로 돌아갈 수 있어요.'
-                : due ? `HSK ${priority.level}에 복습할 단어가 가장 많아요.`
+              {due ? `HSK ${priority.level}에 복습할 단어가 가장 많아요.`
                 : '지금 복습할 단어가 없어요. 아래에서 급수를 골라 학습을 시작하세요.'}
             </Text>
-            {!hasSession && due > 0 && (
+            {due > 0 && (
               <Pressable accessibilityRole="button" onPress={() => onReview(priority.level)} style={styles.review}>
                 <Text style={styles.reviewText}>HSK {priority.level} 복습만 {Math.min(dailyTarget, priority.due)}개 시작</Text>
               </Pressable>
             )}
-          </View>
+          </View>}
 
           <Text accessibilityRole="header" style={styles.heading}>급수별 학습</Text>
           <View style={styles.grid}>
@@ -110,12 +109,12 @@ const styles = StyleSheet.create({
   brand: { fontSize: 27, fontWeight: '900', color: COLORS.text, marginTop: 4 },
   settings: { minHeight: 44, justifyContent: 'center', paddingHorizontal: 14, borderRadius: 12, backgroundColor: COLORS.surface },
   settingsText: { color: COLORS.text, fontWeight: '700' },
-  hero: { backgroundColor: '#164C45', padding: 20, borderRadius: 22, gap: 7 },
-  heroLabel: { color: '#BCE5DA', fontSize: 13, fontWeight: '800' },
-  heroTitle: { color: '#FFFFFF', fontSize: 28, fontWeight: '900' },
-  heroCopy: { color: '#E4F4EF', fontSize: 14, lineHeight: 21 },
-  review: { alignSelf: 'flex-start', minHeight: 44, padding: 12, marginTop: 7, justifyContent: 'center', backgroundColor: '#E0F6EE', borderRadius: 12 },
-  reviewText: { color: '#164C45', fontWeight: '800' },
+  hero: { backgroundColor: COLORS.yellowSoft, borderWidth: 1, borderColor: COLORS.yellowLine, padding: 20, borderRadius: 22, gap: 7 },
+  heroLabel: { color: '#6E5014', fontSize: 13, fontWeight: '800' },
+  heroTitle: { color: COLORS.text, fontSize: 28, fontWeight: '900' },
+  heroCopy: { color: COLORS.subtext, fontSize: 14, lineHeight: 21 },
+  review: { minHeight: 48, padding: 12, marginTop: 7, justifyContent: 'center', alignItems: 'center', backgroundColor: COLORS.yellow, borderRadius: 12 },
+  reviewText: { color: COLORS.text, fontWeight: '800' },
   heading: { marginTop: 23, marginBottom: 12, color: COLORS.text, fontSize: 19, fontWeight: '900' },
   grid: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', rowGap: 12 },
   cell: { padding: 13, gap: 8, borderRadius: 16, borderWidth: 1, borderColor: COLORS.line, backgroundColor: COLORS.surface },

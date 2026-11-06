@@ -1,7 +1,10 @@
 import { HskLevel } from './types';
 
 export const COLORS = {
-  background: '#F6F5F1',
+  background: '#FAF7EE',
+  yellow: '#FFD355',
+  yellowSoft: '#FFF2C7',
+  yellowLine: '#EEDB9B',
   surface: '#FFFFFF',
   text: '#1F1F1F',
   subtext: '#625F5B',

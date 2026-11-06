@@ -30,12 +30,32 @@ const wait = (fn) => new Promise((resolve,reject) => {
   page.on('pageerror', e => errors.push(e.message));
   const button = (name) => page.getByRole('button', {name, exact:true});
   const checkVisible = async (text) => { await page.getByText(text,{exact:true}).waitFor({state:'visible'}); };
+  const endSession = async () => {
+    await button('남은 세션 종료 · 답변 기록은 유지').click();
+    await button('세션 종료 확인').click();
+  };
   try {
     await page.goto(url);
     // A real v1 user retains history through the v2 migration.
     await page.evaluate(() => localStorage.setItem('hsk-plus-ultra:progress:v1',JSON.stringify({'hsk1-0001':{stage:'LONG_TERM',nextReviewAt:null,lastReviewedAt:'2026-09-19T12:00:00.000Z',seenCount:1,knownCount:1,relearnCount:0}})));
     await page.reload();
     await button('HSK 2 바로가기').click();
+    const heading = page.getByText('HSK 2 단어', {exact:true});
+    const top = (await heading.boundingBox()).y;
+    await page.evaluate(() => {
+      window.showedSaveBanner = false;
+      const observer = new MutationObserver(records => {
+        if (records.some(record => [...record.addedNodes].some(node => node.textContent === '저장 중…'))) {
+          window.showedSaveBanner = true;
+        }
+      });
+      observer.observe(document.body, {subtree:true, childList:true});
+      window.stopSaveObserver = () => observer.disconnect();
+    });
+    await button('10개').click();
+    await wait(() => page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:state:v2') || '{}').dailyTarget === 10));
+    assert.equal((await heading.boundingBox()).y, top);
+    assert.equal(await page.evaluate(() => { window.stopSaveObserver(); return window.showedSaveBanner; }), false);
     await page.getByRole('textbox', {name:'단어 검색'}).fill('zuobian');
     await button('左边, zuǒbian, 왼쪽, 학습하기').click();
     assert.equal(await page.getByRole('button', {name:/알고 있음/}).isDisabled(), true);
@@ -44,6 +64,13 @@ const wait = (fn) => new Promise((resolve,reject) => {
     await page.getByRole('button', {name:/다시 학습 다음/}).click();
     await wait(async () => Boolean(await page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:state:v2') || '{}').session?.retryIds.includes('hsk2-0500'))));
     await page.reload();
+    await checkVisible('0 / 1개 완료 · 1개 남음 · 다시 학습 1개 포함');
+    if(process.env.SCREENSHOT_DIR) {
+      await fs.mkdir(process.env.SCREENSHOT_DIR,{recursive:true});
+      await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,'resume-390.png')});
+    }
+    await button('남은 세션 종료 · 답변 기록은 유지').click();
+    await button('취소').click();
     await button('중단한 학습 이어하기').click();
     await button('左边, 뜻 보기').waitFor();
     assert.equal(await page.getByRole('button', {name:/알고 있음/}).isDisabled(), true);
@@ -77,7 +104,7 @@ const wait = (fn) => new Promise((resolve,reject) => {
     await checkVisible('공식 HSK 시험 대강 · PDF 176쪽 · 원문 병음 dàdū · 원문 보기');
     assert.equal(await page.getByRole('button',{name:/알고 있음/}).isEnabled(), true);
     await button('학습 닫기').click();
-    await button('남은 세션 종료 · 답변 기록은 유지').click();
+    await endSession();
     await button('급수 선택으로 돌아가기').click();
 
     // An editorial POS supplement remains visible alongside the original-source disclosure.
@@ -89,7 +116,7 @@ const wait = (fn) => new Promise((resolve,reject) => {
     await checkVisible('이 가게의 고객센터에 연락해 주세요.');
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), true);
     await button('학습 닫기').click();
-    await button('남은 세션 종료 · 답변 기록은 유지').click();
+    await endSession();
     await button('급수 선택으로 돌아가기').click();
 
     // Baseline responsive views and horizontal overflow at narrow/tablet widths.
@@ -111,7 +138,7 @@ const wait = (fn) => new Promise((resolve,reject) => {
         await fs.mkdir(process.env.SCREENSHOT_DIR,{recursive:true});
         await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,`study-${width}.png`)});
       }
-      await button('학습 닫기').click(); await button('남은 세션 종료 · 답변 기록은 유지').click(); await button('급수 선택으로 돌아가기').click();
+      await button('학습 닫기').click(); await endSession(); await button('급수 선택으로 돌아가기').click();
     }
     // The home shortcut starts a due-only session in the correct level.
     await page.evaluate(() => {

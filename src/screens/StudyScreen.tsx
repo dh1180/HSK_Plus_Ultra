@@ -248,7 +248,7 @@ export function StudyScreen({
             style={({ pressed }) => [
               styles.actionButton,
               (!revealed || locked) && styles.disabled,
-              { backgroundColor: accent },
+              { backgroundColor: COLORS.yellow },
               pressed && styles.pressed,
             ]}
           >
@@ -534,13 +534,12 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   knownText: {
-    color: '#FFFFFF',
+    color: COLORS.text,
     fontWeight: '900',
     fontSize: 15,
   },
   knownSub: {
-    color: '#FFFFFF',
-    opacity: 0.82,
+    color: COLORS.text,
     fontSize: 10,
     fontWeight: '700',
   },
