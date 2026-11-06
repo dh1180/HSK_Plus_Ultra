@@ -33,7 +33,7 @@ export function ResumeCard({ level, total, remaining, retryCount, onResume, onEn
         </>
       ) : (
         <>
-          <Pressable accessibilityRole="button" accessibilityLabel="중단한 학습 이어하기" onPress={onResume} style={styles.primary}><Text style={styles.label}>남은 {remaining}개 이어하기 ›</Text></Pressable>
+          <Pressable accessibilityRole="button" accessibilityLabel="중단한 학습 이어하기" onPress={onResume} style={styles.primary}><Text style={[styles.label, { color: COLORS.surface }]}>남은 {remaining}개 이어하기 ›</Text></Pressable>
           <Pressable accessibilityRole="button" onPress={() => setConfirmEnd(true)} style={styles.secondary}><Text style={styles.detail}>남은 세션 종료 · 답변 기록은 유지</Text></Pressable>
         </>
       )}
@@ -42,13 +42,13 @@ export function ResumeCard({ level, total, remaining, retryCount, onResume, onEn
 }
 
 const styles = StyleSheet.create({
-  card: { padding: 18, gap: 8, borderRadius: 20, backgroundColor: COLORS.yellowSoft, borderWidth: 1, borderColor: COLORS.yellowLine },
+  card: { padding: 18, gap: 8, borderRadius: 20, backgroundColor: COLORS.yellow, borderWidth: 1, borderColor: COLORS.yellowLine },
   eyebrow: { color: '#6E5014', fontSize: 13, fontWeight: '800' },
   title: { color: COLORS.text, fontSize: 24, fontWeight: '900' },
   detail: { color: COLORS.subtext, fontSize: 14 },
-  track: { height: 6, borderRadius: 6, overflow: 'hidden', backgroundColor: COLORS.yellowLine, marginVertical: 4 },
+  track: { height: 6, borderRadius: 6, overflow: 'hidden', backgroundColor: COLORS.yellowSoft, marginVertical: 4 },
   fill: { height: '100%', backgroundColor: '#88600B' },
-  primary: { minHeight: 48, padding: 12, justifyContent: 'center', alignItems: 'center', backgroundColor: COLORS.yellow, borderRadius: 12 },
+  primary: { minHeight: 48, padding: 12, justifyContent: 'center', alignItems: 'center', backgroundColor: COLORS.ink, borderRadius: 14 },
   secondary: { minHeight: 44, padding: 8, justifyContent: 'center', alignItems: 'center' },
   actions: { flexDirection: 'row', flexWrap: 'wrap', gap: 12 },
   label: { color: COLORS.text, fontWeight: '800', fontSize: 15 },
