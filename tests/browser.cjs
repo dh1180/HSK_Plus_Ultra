@@ -69,13 +69,27 @@ const wait = (fn) => new Promise((resolve,reject) => {
     await checkVisible('검색 결과가 없습니다.');
     await button('급수 선택으로 돌아가기').click();
     await button('HSK 6 바로가기').click();
-    // A known unreviewed entry is picked from the runtime's original metadata below.
-    await page.getByRole('textbox',{name:'단어 검색'}).fill('拜访');
-    const draft = page.getByRole('button',{name:/拜访,.*참고 열람/});
-    await draft.click(); await button('拜访, 뜻 보기').click();
-    await checkVisible('자동 매핑 뜻 · 의미와 품사 검토 필요');
-    assert.equal(await page.getByRole('button',{name:/알고 있음/}).isDisabled(), true);
+    await page.getByRole('textbox',{name:'단어 검색'}).fill('大都');
+    await page.getByRole('button',{name:/^大都,.*학습하기/}).click();
+    await button('大都, 뜻 보기').click();
+    await checkVisible('dàdōu');
+    await checkVisible('이곳의 상점은 대부분 저녁 여덟 시에 문을 닫는다.');
+    await checkVisible('공식 HSK 시험 대강 · PDF 176쪽 · 원문 병음 dàdū · 원문 보기');
+    assert.equal(await page.getByRole('button',{name:/알고 있음/}).isEnabled(), true);
     await button('학습 닫기').click();
+    await button('남은 세션 종료 · 답변 기록은 유지').click();
+    await button('급수 선택으로 돌아가기').click();
+
+    // An editorial POS supplement remains visible alongside the original-source disclosure.
+    await button('HSK 5 바로가기').click();
+    await page.getByRole('textbox',{name:'단어 검색'}).fill('客服');
+    await page.getByRole('button',{name:/^客服,.*학습하기/}).click();
+    await button('客服, 뜻 보기').click();
+    await checkVisible('명사(원문: 형용사)');
+    await checkVisible('이 가게의 고객센터에 연락해 주세요.');
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), true);
+    await button('학습 닫기').click();
+    await button('남은 세션 종료 · 답변 기록은 유지').click();
     await button('급수 선택으로 돌아가기').click();
 
     // Baseline responsive views and horizontal overflow at narrow/tablet widths.
@@ -147,6 +161,6 @@ const wait = (fn) => new Promise((resolve,reject) => {
     stored = await page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:state:v2')).progress);
     assert.equal(stored['hsk2-0302'].stage,'LONG_TERM');
     assert.deepEqual(errors, []);
-    console.log('Browser checks passed: v1 migration, paused session reload, backup download/restore, reset confirmation, invalid import preserves original, whole-list search, single-word retry concealment, unique summary, persistence/reload, pagination, empty search, draft preview, 4 viewport widths, corrupt storage, write failure/recovery, no uncaught page errors.');
+    console.log('Browser checks passed: v1 migration, paused session reload, backup download/restore, reset confirmation, invalid import preserves original, whole-list search, single-word retry concealment, unique summary, persistence/reload, pagination, empty search, HSK 6 pronunciation, 4 viewport widths, corrupt storage, write failure/recovery, no uncaught page errors.');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => server.close());

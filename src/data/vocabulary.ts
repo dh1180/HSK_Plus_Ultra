@@ -2,6 +2,7 @@ import { HskLevel, VocabularyWord } from '../types';
 import generatedHsk from './generated-hsk.json';
 import koreanMeaningData from './korean-meanings.json';
 import contentOverrides from './content-overrides.json';
+import pinyinOverrides from './pinyin-overrides.json';
 import { HSK1_001_100 } from './hsk1-001-100';
 import { HSK1_101_200 } from './hsk1-101-200';
 import { HSK1_201_300 } from './hsk1-201-300';
@@ -122,6 +123,7 @@ const UPPER_LEVEL_CURATED: VocabularyWord[] = [
 const curatedById = new Map(UPPER_LEVEL_CURATED.map((word) => [word.id, word]));
 const upperMeaningById = (koreanMeaningData as KoreanMeaningData).meanings;
 const overrides: Record<string, { word: string; pinyin: string; meaningKo: string; partOfSpeech?: string; exampleZh: string; examplePinyin: string; exampleKo: string; source?: string; sourceId?: string | null; sourceUrl?: string; license?: string; reviewNote?: string }> = contentOverrides;
+const pinyinById: Record<string, { word: string; officialPinyin: string; officialPartOfSpeechZh: string; displayPinyin: string }> = pinyinOverrides;
 
 const POS_LABEL: Record<string, string> = {
   名: '명사',
@@ -137,6 +139,9 @@ const POS_LABEL: Record<string, string> = {
   叹: '감탄사',
   方: '방위사',
   区: '구별사',
+  前缀: '접두사',
+  后缀: '접미사',
+  数量: '수량사',
 };
 
 function formatPartOfSpeech(raw: string) {
@@ -160,6 +165,12 @@ const generatedUpperVocabulary: VocabularyWord[] = (generatedHsk.words as Genera
 
     const curated = curatedById.get(item.id);
     const correction = overrides[item.id];
+    const pronunciation = pinyinById[item.id];
+    if (pronunciation && (pronunciation.word !== item.word ||
+        pronunciation.officialPinyin !== item.pinyin ||
+        pronunciation.officialPartOfSpeechZh !== item.partOfSpeechZh)) {
+      throw new Error(`Stale pronunciation correction for ${item.id}: vocabulary identity changed`);
+    }
     if (correction && (correction.word !== item.word || correction.pinyin !== item.pinyin)) {
       throw new Error(`Stale content correction for ${item.id}: vocabulary identity changed`);
     }
@@ -167,7 +178,7 @@ const generatedUpperVocabulary: VocabularyWord[] = (generatedHsk.words as Genera
       id: item.id,
       level: item.level as HskLevel,
       word: item.word,
-      pinyin: curated?.pinyin ?? item.pinyin,
+      pinyin: pronunciation?.displayPinyin ?? curated?.pinyin ?? item.pinyin,
       meaningKo: correction?.meaningKo ?? curated?.meaningKo ?? meaningKo,
       meaningStatus: correction ? 'editorial' : curated ? 'project-authored' : 'dictionary-draft',
       partOfSpeech: correction?.partOfSpeech ?? formatPartOfSpeech(item.partOfSpeechZh) ?? curated?.partOfSpeech,
@@ -186,7 +197,16 @@ const officialById = new Map((generatedHsk.words as GeneratedWord[]).map(word =>
 export const VOCABULARY: VocabularyWord[] = [
   ...HSK1_VOCABULARY,
   ...generatedUpperVocabulary,
-].map(word => ({ ...word, wordSource: `공식 HSK 시험 대강 · PDF ${officialById.get(word.id)!.officialPdfPage}쪽`, wordSourceUrl: `${generatedHsk.officialReference.url}#page=${officialById.get(word.id)!.officialPdfPage}` }));
+].map(word => {
+  const official = officialById.get(word.id)!;
+  const pronunciation = pinyinById[word.id];
+  const originalPinyin = pronunciation ? ` · 원문 병음 ${official.pinyin}` : '';
+  return {
+    ...word,
+    wordSource: `공식 HSK 시험 대강 · PDF ${official.officialPdfPage}쪽${originalPinyin}`,
+    wordSourceUrl: `${generatedHsk.officialReference.url}#page=${official.officialPdfPage}`,
+  };
+});
 
 export function getLevelVocabulary(level: HskLevel) {
   return VOCABULARY.filter((word) => word.level === level);
