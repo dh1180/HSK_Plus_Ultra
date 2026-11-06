@@ -56,14 +56,19 @@ function StudyApp() {
   },[mode]);
   useEffect(() => { answerLock.current = false; },[cardKey,mode]);
   const chooseLevel = (level: HskLevel) => { setSelectedLevel(level); setMode('LEVEL'); };
-  const begin = (words: VocabularyWord[]) => {
+  const begin = (words: VocabularyWord[], level = selectedLevel) => {
     if (!words.length || current.current.session) return;
-    persist(beginStudy(current.current,selectedLevel,words.map(w => w.id))); setCardKey(k => k + 1); setMode('STUDY');
+    persist(beginStudy(current.current,level,words.map(w => w.id))); setSelectedLevel(level); setCardKey(k => k + 1); setMode('STUDY');
   };
   const resume = () => { const s = current.current.session; if (s) { setSelectedLevel(s.level); setCardKey(k => k + 1); setMode('STUDY'); } };
   const startStudy = () => {
     if (current.current.session) { resume(); return; }
     begin(buildStudyQueue(getLevelVocabulary(selectedLevel),current.current.progress,current.current.dailyTarget).words);
+  };
+  const startReview = (level: HskLevel) => {
+    const { progress, dailyTarget, session } = current.current;
+    if (session) { resume(); return; }
+    begin(buildStudyQueue(getLevelVocabulary(level), progress, dailyTarget, new Date(), { reviewOnly: true }).words, level);
   };
   const manual = (word: VocabularyWord) => {
     if (word.meaningStatus !== 'dictionary-draft' && !current.current.session) { begin([word]); return; }
@@ -95,9 +100,9 @@ function StudyApp() {
     <StatusBar barStyle="dark-content" />
     {saving && !saveError && <Text accessibilityLiveRegion="polite" style={styles.message}>저장 중…</Text>}
     {saveError && <SafeAreaView edges={['top']} style={styles.notice}><Text accessibilityRole="alert" style={styles.message}>기기에 저장하지 못했습니다. 앱을 닫기 전에 다시 저장해 주세요.</Text><Pressable accessibilityRole="button" style={styles.button} onPress={() => persist(current.current)}><Text>다시 저장</Text></Pressable></SafeAreaView>}
-    {mode === 'HOME' && <HomeScreen progress={data.progress} onSelectLevel={chooseLevel} onSettings={() => setMode('SETTINGS')} />}
+    {mode === 'HOME' && <HomeScreen progress={data.progress} dailyTarget={data.dailyTarget} hasSession={Boolean(s)} onSelectLevel={chooseLevel} onReview={startReview} onSettings={() => setMode('SETTINGS')} />}
     {(mode === 'HOME' || mode === 'LEVEL') && s && <SafeAreaView edges={['bottom']} style={styles.notice}><Text style={styles.message}>HSK {s.level} · 중단한 학습 {s.originalIds.length - s.remainingIds.length} / {s.originalIds.length} 완료</Text><Pressable accessibilityRole="button" style={styles.button} onPress={resume}><Text>중단한 학습 이어하기</Text></Pressable><Pressable accessibilityRole="button" style={styles.button} onPress={() => persist({ ...current.current, session: null })}><Text>남은 세션 종료 · 답변 기록은 유지</Text></Pressable></SafeAreaView>}
-    {mode === 'LEVEL' && <LevelScreen level={selectedLevel} progress={data.progress} dailyTarget={data.dailyTarget} onChangeTarget={dailyTarget => persist({ ...current.current,dailyTarget })} onBack={() => setMode('HOME')} onStartStudy={startStudy} onReviewWord={manual} />}
+    {mode === 'LEVEL' && <LevelScreen level={selectedLevel} progress={data.progress} dailyTarget={data.dailyTarget} onChangeTarget={dailyTarget => persist({ ...current.current,dailyTarget })} onBack={() => setMode('HOME')} onStartStudy={startStudy} onStartReview={() => startReview(selectedLevel)} onReviewWord={manual} />}
     {(mode === 'STUDY' || mode === 'PREVIEW') && word && <StudyScreen key={cardKey} word={word} completed={mode === 'PREVIEW' ? 0 : s!.originalIds.length - s!.remainingIds.length} total={mode === 'PREVIEW' ? 1 : s!.originalIds.length} accent={LEVEL_META[word.level].accent} progress={data.progress} isRetry={mode === 'STUDY' && s!.retryIds.includes(word.id)} readOnly={mode === 'PREVIEW'} onAnswer={answer} onClose={() => { setPreview(null); setMode('LEVEL'); }} />}
     {mode === 'SUMMARY' && <SummaryScreen result={result} accent={LEVEL_META[selectedLevel].accent} onDone={() => setMode('LEVEL')} />}
   </View>;

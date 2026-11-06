@@ -2,6 +2,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Linking,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -44,6 +45,25 @@ export function StudyScreen({
   const currentStage = item?.stage ?? 'NEW';
   const isDraft = word.meaningStatus === 'dictionary-draft';
   const locked = isDraft || readOnly;
+
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+    const handleKey = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (event.defaultPrevented || event.repeat || event.isComposing ||
+          event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+          target?.closest('input, textarea, select, [contenteditable="true"]')) return;
+      if (!revealed && event.code === 'Space' && !target?.closest('button, a, [role="button"], [role="link"]')) {
+        event.preventDefault();
+        setRevealed(true);
+      } else if (revealed && !locked && (event.key === '1' || event.key === '2')) {
+        event.preventDefault();
+        onAnswer(event.key === '1' ? 'RELEARN' : 'KNOWN');
+      }
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [revealed, locked, onAnswer]);
 
   useEffect(() => {
     setRevealed(false);
@@ -153,7 +173,7 @@ export function StudyScreen({
             <Text style={styles.word} adjustsFontSizeToFit numberOfLines={1}>{word.word}</Text>
             {!revealed ? (
               <View style={styles.tapHintWrap}>
-                <Text style={styles.tapHint}>카드를 눌러 뜻 보기</Text>
+                <Text style={styles.tapHint}>뜻을 먼저 떠올린 뒤 눌러서 확인</Text>
               </View>
             ) : null}
           </View>
@@ -166,8 +186,6 @@ export function StudyScreen({
                 ? '자동 매핑 뜻 · 의미와 품사 검토 필요'
                 : word.meaningStatus === 'editorial' ? 'AI 보조 교정 · 교사 검수 전' : '프로젝트 작성 뜻'}</Text>
               {word.partOfSpeech ? <Text style={styles.pos}>{word.partOfSpeech}</Text> : null}
-              {word.wordSourceUrl && <Pressable accessibilityRole="link" accessibilityLabel="공식 어휘 원문 보기" onPress={event => { event.stopPropagation(); setLinkError(false); void Linking.openURL(word.wordSourceUrl!).catch(() => setLinkError(true)); }} style={{ minHeight: 44, justifyContent: 'center' }}><Text style={styles.qualityNote}>{word.wordSource} · 원문 보기</Text></Pressable>}
-
               {word.exampleZh ? (
                 <View style={styles.exampleBox}>
                   <View style={styles.exampleHeader}>
@@ -194,6 +212,7 @@ export function StudyScreen({
                   <Text style={styles.qualityNote}>{word.exampleSource}</Text>
                 </View>
               ) : <Text style={styles.qualityNote}>예문 검토 중 · 확인되지 않은 자동 생성 예문은 표시하지 않습니다.</Text>}
+              {word.wordSourceUrl && <Pressable accessibilityRole="link" accessibilityLabel="공식 어휘 원문 보기" onPress={event => { event.stopPropagation(); setLinkError(false); void Linking.openURL(word.wordSourceUrl!).catch(() => setLinkError(true)); }} style={{ minHeight: 44, justifyContent: 'center' }}><Text style={styles.qualityNote}>{word.wordSource} · 원문 보기</Text></Pressable>}
             </View>
           ) : null}
         </Pressable>
@@ -237,6 +256,9 @@ export function StudyScreen({
             <Text style={styles.knownSub}>다음: {knownNext}</Text>
           </Pressable>
         </View>
+        {Platform.OS === 'web' && !locked && (
+          <Text style={styles.keyboardHint}>{revealed ? '1 다시 학습  ·  2 알고 있음' : 'Space 뜻 보기'}</Text>
+        )}
       </View>
     </SafeAreaView>
   );
@@ -244,6 +266,7 @@ export function StudyScreen({
 
 const styles = StyleSheet.create({
   disabled: { opacity: 0.45 },
+  keyboardHint: { color: COLORS.subtext, fontSize: 12, textAlign: 'center', marginTop: 6 },
   qualityNote: { color: COLORS.subtext, fontSize: 12, lineHeight: 18, marginTop: 10, textAlign: 'left' },
   safe: {
     flex: 1,
@@ -330,7 +353,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   cardHidden: {
-    minHeight: 355,
+    minHeight: 285,
   },
   cardPressed: {
     transform: [{ scale: 0.995 }],
@@ -364,13 +387,13 @@ const styles = StyleSheet.create({
     fontWeight: '800',
   },
   wordZone: {
-    minHeight: 245,
+    minHeight: 198,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 4,
   },
   wordZoneRevealed: {
-    minHeight: 145,
+    minHeight: 108,
   },
   word: {
     color: COLORS.text,

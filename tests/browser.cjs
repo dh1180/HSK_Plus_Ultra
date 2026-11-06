@@ -95,6 +95,11 @@ const wait = (fn) => new Promise((resolve,reject) => {
     // Baseline responsive views and horizontal overflow at narrow/tablet widths.
     for (const width of [320,390,768,1440]) {
       await page.setViewportSize({width,height:width===320?568:900});
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), true);
+      if(process.env.SCREENSHOT_DIR && width === 390) {
+        await fs.mkdir(process.env.SCREENSHOT_DIR,{recursive:true});
+        await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,'home-390.png'),fullPage:true});
+      }
       await button('HSK 2 바로가기').click();
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), true);
       await page.getByRole('textbox',{name:'단어 검색'}).fill('爱好');
@@ -108,6 +113,22 @@ const wait = (fn) => new Promise((resolve,reject) => {
       }
       await button('학습 닫기').click(); await button('남은 세션 종료 · 답변 기록은 유지').click(); await button('급수 선택으로 돌아가기').click();
     }
+    // The home shortcut starts a due-only session in the correct level.
+    await page.evaluate(() => {
+      const key = 'hsk-plus-ultra:state:v2';
+      const data = JSON.parse(localStorage.getItem(key));
+      data.progress['hsk2-0500'].nextReviewAt = '2026-01-01T00:00:00.000Z';
+      localStorage.setItem(key, JSON.stringify(data));
+    });
+    await page.reload();
+    await button('HSK 2 복습만 1개 시작').click();
+    await button('左边, 뜻 보기').waitFor();
+    await page.keyboard.press('2');
+    await button('左边, 뜻 보기').waitFor();
+    await page.keyboard.press('Space');
+    await checkVisible('왼쪽');
+    await page.keyboard.press('2');
+    await checkVisible('이번 학습 완료');
     // A storage read failure must not become an empty writable progress map.
     await page.evaluate(() => localStorage.setItem('hsk-plus-ultra:state:v2', 'null'));
     await page.reload(); await checkVisible('학습 기록을 불러오지 못했습니다. 기존 기록은 보존됩니다.');
@@ -161,6 +182,6 @@ const wait = (fn) => new Promise((resolve,reject) => {
     stored = await page.evaluate(() => JSON.parse(localStorage.getItem('hsk-plus-ultra:state:v2')).progress);
     assert.equal(stored['hsk2-0302'].stage,'LONG_TERM');
     assert.deepEqual(errors, []);
-    console.log('Browser checks passed: v1 migration, paused session reload, backup download/restore, reset confirmation, invalid import preserves original, whole-list search, single-word retry concealment, unique summary, persistence/reload, pagination, empty search, HSK 6 pronunciation, 4 viewport widths, corrupt storage, write failure/recovery, no uncaught page errors.');
+    console.log('Browser checks passed: v1 migration, paused session reload, backup download/restore, reset confirmation, invalid import preserves original, whole-list search, single-word retry concealment, unique summary, persistence/reload, pagination, empty search, HSK 6 pronunciation, 4 viewport widths, due-only review, keyboard controls, corrupt storage, write failure/recovery, no uncaught page errors.');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => server.close());
